@@ -4,8 +4,7 @@ const SEO = ({ pageTitle, font, noindex = true }) => (
   <>
     <Head>
       <title>
-        {pageTitle &&
-          `${pageTitle} | Techstacks Ph - an agile web development agency`}
+        {pageTitle && `${pageTitle} | Techstacks Ph - web development agency`}
       </title>
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
       <meta

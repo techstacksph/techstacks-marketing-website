@@ -35,11 +35,7 @@ const FooterTwo = () => (
     <div className="tp-footer-area pt-120 p-relative">
       <div className="container">
         <div className="row">
-          <div
-            className="col-xl-12 wow tpfadeUp"
-            data-wow-duration=".3s"
-            data-wow-delay=".5s"
-          >
+          <div className="col-xl-12">
             <div className="footer-widget-info text-center">
               <h2 className="tp-footer-title pb-15 text-white">{title}</h2>
               <p>{text}</p>
@@ -50,11 +46,7 @@ const FooterTwo = () => (
             </div>
           </div>
         </div>
-        <div
-          className="tp-copyright-bottom wow tpfadeUp"
-          data-wow-duration=".5s"
-          data-wow-delay=".7s"
-        >
+        <div className="tp-copyright-bottom">
           <div className="row align-items-center">
             <div className="col-xl-4 col-lg-4 col-md-12 col-12">
               <div className="tp-copyright-logo-box text-md-center text-center text-lg-start mb-30">
