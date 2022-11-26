@@ -1,7 +1,7 @@
-import React from 'react';
-import Breadcrumb from '../components/common/breadcrumb/breadcrumb';
-import SEO from '../components/seo';
-import { FooterThree, HeaderSix, Wrapper } from '../layout';
+import React from 'react'
+import Breadcrumb from '../components/common/breadcrumb/breadcrumb'
+import SEO from '../components/seo'
+import { FooterTwo, HeaderSix, Wrapper } from '../layout'
 
 const ErrorPage = () => {
   return (
@@ -22,9 +22,9 @@ const ErrorPage = () => {
         </div>
       </div>
       {/* <!-- 404-area-end --> */}
-      <FooterThree />
+      <FooterTwo />
     </Wrapper>
-  );
-};
+  )
+}
 
-export default ErrorPage;
+export default ErrorPage
