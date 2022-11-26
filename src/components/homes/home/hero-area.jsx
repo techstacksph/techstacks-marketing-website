@@ -5,7 +5,7 @@ const hero_contents = {
   title: 'Building websites with a purpose',
   text: (
     <>
-      We specialize in designing and building beautiful, fast, secure, and
+      We specialize in designing and building beautiful, fast, secure, and&nbsp;
       <br />
       high converting, engaging websites with excellent performance and SEO
       score.
