@@ -1,5 +1,5 @@
 import React from 'react'
-import { FeatureOne, FeatureThree, FeatureTwo, Bulb } from '../../svg'
+import { CheckSquare } from 'react-feather'
 
 const feature_contents = {
   feature_img: '/assets/img/feature/featured-team.png',
@@ -10,35 +10,59 @@ const feature_contents = {
   feature_lists: [
     {
       id: 1,
-      icon: <FeatureOne />,
-      title: 'Modern Technology',
+      title: 'We are Modern.',
       subtitle: (
         <>
-          Work on cutting edge technology to develop and grow as a professional.
+          We work on cutting edge technology to develop and grow as a
+          professional. We use modern web technologies and strategies.
         </>
       ),
+      style: 1,
     },
     {
       id: 2,
-      icon: <FeatureTwo />,
-      title: 'Fun & Positive',
+      title: 'We have Fun.',
       subtitle: (
         <>
-          Fun, positive and collaborative environment. We believe we do best
+          Fun, positive, and collaborative environment. We believe we do best
           when we are having fun.
         </>
       ),
+      style: 2,
     },
     {
       id: 3,
-      icon: <Bulb />,
-      title: 'Team-work',
+      title: 'We Own.',
+      subtitle: <>Commitment is our way of living. A word is a word.</>,
+      style: 3,
+    },
+    {
+      id: 4,
+      title: 'We Care, We are a Team.',
       subtitle: (
         <>
-          We love to work together with our motivated peers in solving website
-          problems that will make web a better place.
+          We are one. We are a Team. Everyone is involved and nobody is left
+          behind.
         </>
       ),
+      style: 1,
+    },
+    {
+      id: 5,
+      title: 'We are down to earth.',
+      subtitle: (
+        <>
+          We are humble. We fail forward. Every downfall is an opportunity to
+          learn.
+        </>
+      ),
+      style: 2,
+    },
+    {
+      id: 6,
+      title: 'We Share & We love Green.',
+      subtitle: <>Sharing is caring and we care for the environment.</>,
+      style: 3,
     },
   ],
 }
@@ -50,7 +74,7 @@ const FeatureArea = () => {
   return (
     <div className="tp-feature-area pt-130 pb-20 p-relative">
       <div className="ce-chose-shape d-none d-lg-block">
-        <img src="/assets/img/hero/hero-shape-4.png" alt="" />
+        <img src="/assets/img/footer/team-shape-5.3.png" alt="" />
       </div>
       <div className="container">
         <div className="tp-fea-section-box">
@@ -89,15 +113,13 @@ const FeatureArea = () => {
             <div className="tp-fea-right-side">
               <div className="fea-wrapper-main">
                 {feature_lists.map((list, i) => {
-                  const { icon, id, subtitle, title } = list
+                  const { id, subtitle, title } = list
                   return (
                     <div key={id} className="tp-feature-list d-flex">
                       <div
-                        className={`tp-feature-list__icon-img fea-color-${
-                          i + 1
-                        } mr-25`}
+                        className={`tp-feature-list__icon-img fea-color-${list.style} mr-25`}
                       >
-                        {icon}
+                        <CheckSquare />
                       </div>
                       <div className="tp-feature-list__content">
                         <h4>{title}</h4>
