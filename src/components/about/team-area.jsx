@@ -187,7 +187,7 @@ const teams = [
     duration: '.5s',
     delay: '.7s',
     img: '/assets/img/team/nico.png',
-    name: 'Mark Nicolai "Nico" Santiago',
+    name: 'Mark Nicolai "Nico" San Pedro',
     title: 'WordPress / UI/UX Designer',
     social_links: [
       {
