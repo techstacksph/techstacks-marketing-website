@@ -17,7 +17,7 @@ const feature_contents = {
           professional. We use modern web technologies and strategies.
         </>
       ),
-      style: 1,
+      style: 2,
     },
     {
       id: 2,
@@ -28,13 +28,13 @@ const feature_contents = {
           when we are having fun.
         </>
       ),
-      style: 2,
+      style: 3,
     },
     {
       id: 3,
       title: 'We Own.',
       subtitle: <>Commitment is our way of living. A word is a word.</>,
-      style: 3,
+      style: 1,
     },
     {
       id: 4,
@@ -45,7 +45,7 @@ const feature_contents = {
           behind.
         </>
       ),
-      style: 1,
+      style: 2,
     },
     {
       id: 5,
@@ -56,13 +56,13 @@ const feature_contents = {
           learn.
         </>
       ),
-      style: 2,
+      style: 3,
     },
     {
       id: 6,
       title: 'We Share & We love Green.',
       subtitle: <>Sharing is caring and we care for the environment.</>,
-      style: 3,
+      style: 1,
     },
   ],
 }
