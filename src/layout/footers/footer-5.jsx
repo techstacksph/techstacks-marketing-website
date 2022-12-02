@@ -9,7 +9,7 @@ const footer_contents = {
     'We aim to help our clients capitalize on the advantage of digital presence to achieve business goals through an engaging online experiences.',
   btn_text: 'Contact us',
   copy_right: <>Copyright © {new Date().getFullYear()} Techstacks Ph.</>,
-  logo: '/assets/img/logo/logo-white.png',
+  logo: '/assets/img/logo/logo-green.png',
 }
 const { shapes, title, sm_text, btn_text, copy_right, logo } = footer_contents
 

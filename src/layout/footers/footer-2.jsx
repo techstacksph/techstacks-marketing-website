@@ -11,7 +11,6 @@ const footer_contents = {
   btn_text: 'Contact us',
   copy_right_text: <>Copyright © {new Date().getFullYear()} Techstacks Ph.</>,
   copy_right_menu: [],
-  // copy_right_menu: [{ label: 'Pricing Plan', link: '/pricing' }],
   social_links: [
     {
       icon: 'fab fa-instagram',
@@ -21,7 +20,6 @@ const footer_contents = {
   ],
 }
 const {
-  shapes,
   btn_text,
   copy_right_menu,
   copy_right_text,
