@@ -10,34 +10,6 @@ const teams = [
     img: '/assets/img/team/kai.png',
     name: 'Frances Kaye "Kai" Albis',
     title: 'Admin Officer',
-    social_links: [
-      {
-        link: 'https://facebook.com',
-        target: '_blank',
-        icon: 'fab fa-facebook-f',
-        name: 'Facebook',
-      },
-      {
-        link: 'https://twitter.com',
-        target: '_blank',
-        icon: 'fab fa-twitter',
-        name: 'Twitter',
-      },
-      {
-        link: 'https://www.youtube.com/',
-        target: '_blank',
-        icon: 'fab fa-youtube',
-        name: 'Youtube',
-      },
-      {
-        link: 'https://www.skype.com/en/',
-        target: '_blank',
-        icon: 'fab fa-skype',
-        name: 'Skype',
-      },
-    ],
-    home_5: true,
-    about_p: true,
   },
   {
     id: 9,
@@ -46,34 +18,6 @@ const teams = [
     img: '/assets/img/team/jv.png',
     name: 'Jayvee Ramos',
     title: 'IT Engineering Lead',
-    social_links: [
-      {
-        link: 'https://facebook.com',
-        target: '_blank',
-        icon: 'fab fa-facebook-f',
-        name: 'Facebook',
-      },
-      {
-        link: 'https://twitter.com',
-        target: '_blank',
-        icon: 'fab fa-twitter',
-        name: 'Twitter',
-      },
-      {
-        link: 'https://www.youtube.com/',
-        target: '_blank',
-        icon: 'fab fa-youtube',
-        name: 'Youtube',
-      },
-      {
-        link: 'https://www.skype.com/en/',
-        target: '_blank',
-        icon: 'fab fa-skype',
-        name: 'Skype',
-      },
-    ],
-    home_5: true,
-    about_p: true,
   },
   {
     id: 10,
@@ -82,34 +26,6 @@ const teams = [
     img: '/assets/img/team/franz.png',
     name: 'Francis "Franz" Bernardino',
     title: 'Frontend Developer',
-    social_links: [
-      {
-        link: 'https://facebook.com',
-        target: '_blank',
-        icon: 'fab fa-facebook-f',
-        name: 'Facebook',
-      },
-      {
-        link: 'https://twitter.com',
-        target: '_blank',
-        icon: 'fab fa-twitter',
-        name: 'Twitter',
-      },
-      {
-        link: 'https://www.youtube.com/',
-        target: '_blank',
-        icon: 'fab fa-youtube',
-        name: 'Youtube',
-      },
-      {
-        link: 'https://www.skype.com/en/',
-        target: '_blank',
-        icon: 'fab fa-skype',
-        name: 'Skype',
-      },
-    ],
-    home_5: true,
-    about_p: true,
   },
   {
     id: 11,
@@ -118,34 +34,6 @@ const teams = [
     img: '/assets/img/team/sam.png',
     name: 'Sammuel "Sam" Espiritu',
     title: 'Frontend Developer',
-    social_links: [
-      {
-        link: 'https://facebook.com',
-        target: '_blank',
-        icon: 'fab fa-facebook-f',
-        name: 'Facebook',
-      },
-      {
-        link: 'https://twitter.com',
-        target: '_blank',
-        icon: 'fab fa-twitter',
-        name: 'Twitter',
-      },
-      {
-        link: 'https://www.youtube.com/',
-        target: '_blank',
-        icon: 'fab fa-youtube',
-        name: 'Youtube',
-      },
-      {
-        link: 'https://www.skype.com/en/',
-        target: '_blank',
-        icon: 'fab fa-skype',
-        name: 'Skype',
-      },
-    ],
-    home_5: true,
-    about_p: true,
   },
   {
     id: 12,
@@ -154,33 +42,6 @@ const teams = [
     img: '/assets/img/team/toni.png',
     name: 'Toni Padua',
     title: 'Head UI/UX',
-    social_links: [
-      {
-        link: 'https://facebook.com',
-        target: '_blank',
-        icon: 'fab fa-facebook-f',
-        name: 'Facebook',
-      },
-      {
-        link: 'https://twitter.com',
-        target: '_blank',
-        icon: 'fab fa-twitter',
-        name: 'Twitter',
-      },
-      {
-        link: 'https://www.youtube.com/',
-        target: '_blank',
-        icon: 'fab fa-youtube',
-        name: 'Youtube',
-      },
-      {
-        link: 'https://www.skype.com/en/',
-        target: '_blank',
-        icon: 'fab fa-skype',
-        name: 'Skype',
-      },
-    ],
-    about_p: true,
   },
   {
     id: 13,
@@ -189,33 +50,6 @@ const teams = [
     img: '/assets/img/team/nico.png',
     name: 'Mark Nicolai "Nico" San Pedro',
     title: 'WordPress / UI/UX Designer',
-    social_links: [
-      {
-        link: 'https://facebook.com',
-        target: '_blank',
-        icon: 'fab fa-facebook-f',
-        name: 'Facebook',
-      },
-      {
-        link: 'https://twitter.com',
-        target: '_blank',
-        icon: 'fab fa-twitter',
-        name: 'Twitter',
-      },
-      {
-        link: 'https://www.youtube.com/',
-        target: '_blank',
-        icon: 'fab fa-youtube',
-        name: 'Youtube',
-      },
-      {
-        link: 'https://www.skype.com/en/',
-        target: '_blank',
-        icon: 'fab fa-skype',
-        name: 'Skype',
-      },
-    ],
-    about_p: true,
   },
   {
     id: 14,
@@ -224,33 +58,6 @@ const teams = [
     img: '/assets/img/team/aira.png',
     name: 'John Aira Feleo',
     title: 'Backend Developer',
-    social_links: [
-      {
-        link: 'https://facebook.com',
-        target: '_blank',
-        icon: 'fab fa-facebook-f',
-        name: 'Facebook',
-      },
-      {
-        link: 'https://twitter.com',
-        target: '_blank',
-        icon: 'fab fa-twitter',
-        name: 'Twitter',
-      },
-      {
-        link: 'https://www.youtube.com/',
-        target: '_blank',
-        icon: 'fab fa-youtube',
-        name: 'Youtube',
-      },
-      {
-        link: 'https://www.skype.com/en/',
-        target: '_blank',
-        icon: 'fab fa-skype',
-        name: 'Skype',
-      },
-    ],
-    about_p: true,
   },
   {
     id: 15,
@@ -259,68 +66,14 @@ const teams = [
     img: '/assets/img/team/andrey.png',
     name: 'Anrhey "Andrey" Ramos',
     title: 'Frontend Developer',
-    social_links: [
-      {
-        link: 'https://facebook.com',
-        target: '_blank',
-        icon: 'fab fa-facebook-f',
-        name: 'Facebook',
-      },
-      {
-        link: 'https://twitter.com',
-        target: '_blank',
-        icon: 'fab fa-twitter',
-        name: 'Twitter',
-      },
-      {
-        link: 'https://www.youtube.com/',
-        target: '_blank',
-        icon: 'fab fa-youtube',
-        name: 'Youtube',
-      },
-      {
-        link: 'https://www.skype.com/en/',
-        target: '_blank',
-        icon: 'fab fa-skype',
-        name: 'Skype',
-      },
-    ],
-    about_p: true,
   },
   {
     id: 15,
     duration: '.9s',
     delay: '1s',
-    img: '/assets/img/team/john.png',
-    name: 'John Cabangon',
-    title: 'UI/UX Designer',
-    social_links: [
-      {
-        link: 'https://facebook.com',
-        target: '_blank',
-        icon: 'fab fa-facebook-f',
-        name: 'Facebook',
-      },
-      {
-        link: 'https://twitter.com',
-        target: '_blank',
-        icon: 'fab fa-twitter',
-        name: 'Twitter',
-      },
-      {
-        link: 'https://www.youtube.com/',
-        target: '_blank',
-        icon: 'fab fa-youtube',
-        name: 'Youtube',
-      },
-      {
-        link: 'https://www.skype.com/en/',
-        target: '_blank',
-        icon: 'fab fa-skype',
-        name: 'Skype',
-      },
-    ],
-    about_p: true,
+    img: '/assets/img/team/kenneth.png',
+    name: 'Kenneth Gunabe',
+    title: 'Sr. Frontend Developer',
   },
 
   {
@@ -330,33 +83,6 @@ const teams = [
     img: '/assets/img/team/jayson.png',
     name: 'Jayson Timkang',
     title: 'Sales Executive',
-    social_links: [
-      {
-        link: 'https://facebook.com',
-        target: '_blank',
-        icon: 'fab fa-facebook-f',
-        name: 'Facebook',
-      },
-      {
-        link: 'https://twitter.com',
-        target: '_blank',
-        icon: 'fab fa-twitter',
-        name: 'Twitter',
-      },
-      {
-        link: 'https://www.youtube.com/',
-        target: '_blank',
-        icon: 'fab fa-youtube',
-        name: 'Youtube',
-      },
-      {
-        link: 'https://www.skype.com/en/',
-        target: '_blank',
-        icon: 'fab fa-skype',
-        name: 'Skype',
-      },
-    ],
-    about_p: true,
   },
   {
     id: 15,
@@ -365,33 +91,6 @@ const teams = [
     img: '/assets/img/team/third.png',
     name: 'Third Sugian',
     title: 'Owner/CTO',
-    social_links: [
-      {
-        link: 'https://facebook.com',
-        target: '_blank',
-        icon: 'fab fa-facebook-f',
-        name: 'Facebook',
-      },
-      {
-        link: 'https://twitter.com',
-        target: '_blank',
-        icon: 'fab fa-twitter',
-        name: 'Twitter',
-      },
-      {
-        link: 'https://www.youtube.com/',
-        target: '_blank',
-        icon: 'fab fa-youtube',
-        name: 'Youtube',
-      },
-      {
-        link: 'https://www.skype.com/en/',
-        target: '_blank',
-        icon: 'fab fa-skype',
-        name: 'Skype',
-      },
-    ],
-    about_p: true,
   },
 ]
 
