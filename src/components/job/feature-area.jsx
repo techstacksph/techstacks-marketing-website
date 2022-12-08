@@ -17,7 +17,7 @@ const feature_contents = {
           professional. We use modern web technologies and strategies.
         </>
       ),
-      style: 2,
+      style: 1,
     },
     {
       id: 2,
@@ -28,7 +28,7 @@ const feature_contents = {
           when we are having fun.
         </>
       ),
-      style: 3,
+      style: 1,
     },
     {
       id: 3,
@@ -45,7 +45,7 @@ const feature_contents = {
           behind.
         </>
       ),
-      style: 2,
+      style: 1,
     },
     {
       id: 5,
@@ -56,7 +56,7 @@ const feature_contents = {
           learn.
         </>
       ),
-      style: 3,
+      style: 1,
     },
     {
       id: 6,
