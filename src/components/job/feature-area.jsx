@@ -32,7 +32,7 @@ const feature_contents = {
     },
     {
       id: 3,
-      title: 'We Own.',
+      title: `We Own. We're thinkers and doers`,
       subtitle: <>Commitment is our way of living. A word is a word.</>,
       style: 1,
     },
