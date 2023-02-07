@@ -20,17 +20,6 @@ const feature_contents = {
       style: 1,
     },
     {
-      id: 2,
-      title: 'We have Fun.',
-      subtitle: (
-        <>
-          Fun, positive, and collaborative environment. We believe we do best
-          when we are having fun.
-        </>
-      ),
-      style: 1,
-    },
-    {
       id: 3,
       title: `We Own. We're thinkers and doers`,
       subtitle: <>Commitment is our way of living. A word is a word.</>,
@@ -38,7 +27,7 @@ const feature_contents = {
     },
     {
       id: 4,
-      title: 'We Care, We are a Team.',
+      title: 'We are a Team.',
       subtitle: (
         <>
           We are one. We are a Team. Everyone is involved and nobody is left
@@ -48,20 +37,9 @@ const feature_contents = {
       style: 1,
     },
     {
-      id: 5,
-      title: 'We are down to earth.',
-      subtitle: (
-        <>
-          We are humble. We fail forward. Every downfall is an opportunity to
-          learn.
-        </>
-      ),
-      style: 1,
-    },
-    {
       id: 6,
-      title: 'We Share & We love Green.',
-      subtitle: <>Sharing is caring and we care for the environment.</>,
+      title: 'We love Green.',
+      subtitle: <>We care for the environment.</>,
       style: 1,
     },
   ],
