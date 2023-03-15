@@ -5,7 +5,7 @@ import SEO from '../components/seo'
 export default function index() {
   return (
     <Wrapper>
-      <SEO noindex={false} pageTitle="Home" />
+      <SEO noindex={false} pageTitle="Homepage" />
       <HomeMain />
     </Wrapper>
   )
