@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import React from 'react'
 
 const services_items = [
@@ -32,6 +31,14 @@ const services_items = [
     delay: '1.3s',
     img: '/assets/img/service/service4.2.png',
     title: 'IT Dev team for hire',
+    border_effect: '',
+  },
+  {
+    id: 19,
+    duration: '1.2s',
+    delay: '1.3s',
+    img: '/assets/img/service/service4.6.png',
+    title: 'On-demand Website Maintenance',
     border_effect: '',
   },
 ]
