@@ -11,7 +11,7 @@ const Banner = () => (
           rel="noreferrer"
           className="tp-btn-yellow"
         >
-          Grab our free Website Audit!
+          Free Website Audit!
         </a>
       </div>
     </div>
