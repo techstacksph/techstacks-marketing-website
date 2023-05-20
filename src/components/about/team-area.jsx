@@ -48,7 +48,7 @@ const teams = [
     delay: '.7s',
     img: '/assets/img/team/neil.png',
     name: 'Neil Monzales',
-    title: 'Senior Fullstack Developer/DevOps',
+    title: 'Sr. Fullstack Developer/DevOps',
   },
   {
     id: 14,
