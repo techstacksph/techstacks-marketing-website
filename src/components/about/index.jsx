@@ -18,7 +18,7 @@ const About = () => {
       <HeaderSix />
       <Breadcrumb title="About Us" />
       <FeatureArea />
-      {/* <TeamArea /> */}
+      <TeamArea />
       <CtaTwo />
       <FooterTwo />
     </Wrapper>

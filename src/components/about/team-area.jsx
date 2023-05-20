@@ -1,5 +1,4 @@
 import React from 'react'
-import { team_data } from '../../data'
 import SingleTeam from '../common/single-team'
 
 const teams = [
@@ -17,7 +16,7 @@ const teams = [
     delay: '.7s',
     img: '/assets/img/team/jv.png',
     name: 'Jayvee Ramos',
-    title: 'IT Engineering Lead',
+    title: 'IT Engineering Manager',
   },
   {
     id: 10,
@@ -47,9 +46,9 @@ const teams = [
     id: 13,
     duration: '.5s',
     delay: '.7s',
-    img: '/assets/img/team/nico.png',
-    name: 'Mark Nicolai "Nico" San Pedro',
-    title: 'WordPress / UI/UX Designer',
+    img: '/assets/img/team/neil.png',
+    name: 'Neil Monzales',
+    title: 'Senior Fullstack Developer/DevOps',
   },
   {
     id: 14,
@@ -63,12 +62,12 @@ const teams = [
     id: 15,
     duration: '.9s',
     delay: '1s',
-    img: '/assets/img/team/andrey.png',
-    name: 'Anrhey "Andrey" Ramos',
-    title: 'Frontend Developer',
+    img: '/assets/img/team/ara.png',
+    name: 'Ara Belle Agarem',
+    title: 'Marketing and SEO Specialist',
   },
   {
-    id: 15,
+    id: 16,
     duration: '.9s',
     delay: '1s',
     img: '/assets/img/team/kenneth.png',
@@ -77,7 +76,7 @@ const teams = [
   },
 
   {
-    id: 15,
+    id: 17,
     duration: '.9s',
     delay: '1s',
     img: '/assets/img/team/jayson.png',
@@ -85,7 +84,7 @@ const teams = [
     title: 'Sales Executive',
   },
   {
-    id: 15,
+    id: 17,
     duration: '.9s',
     delay: '1s',
     img: '/assets/img/team/third.png',

@@ -113,7 +113,7 @@ const services_data = [
     duration: '1s',
     delay: '.5s',
     img: '/assets/img/service/service-6.png',
-    title: 'Modern Web Tech',
+    title: 'Modern Web',
     color: 'service-color-2',
     text_1: '',
     home_3: true,
