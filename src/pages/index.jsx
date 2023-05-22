@@ -9,6 +9,7 @@ export default function index() {
       <Banner />
 
       <SEO noindex={false} pageTitle="Home" />
+
       <HomeMain />
     </Wrapper>
   )
