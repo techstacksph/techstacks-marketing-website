@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import React from 'react'
 
 const SingleServiceTwo = ({ service, border }) => {
@@ -14,19 +13,11 @@ const SingleServiceTwo = ({ service, border }) => {
             <img src={service.img} alt="" />
           </div>
           <div className="tp-sv-content pl-60">
-            <h3 className=" tp-sv-title mb-35">
-              <Link href={`/service-details/${service.id}`}>
-                <a>{service.title}</a>
-              </Link>
-            </h3>
+            <h3 className=" tp-sv-title mb-35">{service.title}</h3>
             <p className="mb-30">{service.text_1}</p>
             <p>{service.text_2}</p>
             <div className="tp-sv-link mt-35 d-none">
-              <Link href={`/service-details/${service.id}`}>
-                <a>
-                  <i className="far fa-arrow-right" /> Learn More
-                </a>
-              </Link>
+              <i className="far fa-arrow-right" /> Learn More
             </div>
           </div>
         </div>
