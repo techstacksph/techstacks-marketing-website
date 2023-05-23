@@ -36,6 +36,14 @@ const teams = [
   },
   {
     id: 12,
+    duration: '.5s',
+    delay: '.7s',
+    img: '/assets/img/team/marcus2.png',
+    name: 'Marcus Leviticus Dela Cruz',
+    title: 'Frontend Developer',
+  },
+  {
+    id: 13,
     duration: '.3s',
     delay: '.5s',
     img: '/assets/img/team/toni.png',
@@ -43,15 +51,7 @@ const teams = [
     title: 'Head UI/UX',
   },
   {
-    id: 13,
-    duration: '.5s',
-    delay: '.7s',
-    img: '/assets/img/team/neil.png',
-    name: 'Neil Monzales',
-    title: 'Sr. Fullstack Developer/DevOps',
-  },
-  {
-    id: 14,
+    id: 15,
     duration: '.7s',
     delay: '.9s',
     img: '/assets/img/team/aira.png',
@@ -59,7 +59,7 @@ const teams = [
     title: 'Backend Developer',
   },
   {
-    id: 15,
+    id: 16,
     duration: '.9s',
     delay: '1s',
     img: '/assets/img/team/ara.png',
@@ -67,16 +67,23 @@ const teams = [
     title: 'Marketing and SEO Specialist',
   },
   {
-    id: 16,
+    id: 17,
     duration: '.9s',
     delay: '1s',
     img: '/assets/img/team/kenneth.png',
     name: 'Kenneth Gunabe',
     title: 'Sr. Frontend Developer',
   },
-
   {
-    id: 17,
+    id: 18,
+    duration: '.5s',
+    delay: '.7s',
+    img: '/assets/img/team/neil.png',
+    name: 'Neil Monzales',
+    title: 'Sr. Fullstack Developer/DevOps',
+  },
+  {
+    id: 19,
     duration: '.9s',
     delay: '1s',
     img: '/assets/img/team/jayson.png',
@@ -84,7 +91,7 @@ const teams = [
     title: 'Sales Executive',
   },
   {
-    id: 17,
+    id: 20,
     duration: '.9s',
     delay: '1s',
     img: '/assets/img/team/third.png',
