@@ -1,0 +1,47 @@
+@use '../utils' as *;
+
+.pp-root {
+  width: '100%';
+  min-height: 100vh;
+}
+
+.pp-header-content {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+  & h1 {
+    color: var(--tp-common-black);
+    font-weight: 700;
+    font-size: 100px;
+  }
+}
+
+.pp-content-body {
+  padding-bottom: 10rem;
+
+  & .pp-content-holder {
+    padding-bottom: 2rem;
+  }
+
+  & h2 {
+    color: var(--tp-common-black);
+    font-weight: 600;
+  }
+
+  & p {
+    color: var(--tp-common-black);
+    font-size: 16px;
+  }
+
+  & ul {
+    color: var(--tp-common-black);
+    font-size: 16px;
+    text-decoration: dotted;
+  }
+
+  & span {
+    color: #0671e0;
+  }
+}
