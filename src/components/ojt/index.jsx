@@ -6,8 +6,10 @@ import Breadcrumb from '../common/breadcrumb/breadcrumb'
 import OjtHeroArea from './ojt-hero'
 import ServiceAreaOjt from './ojt-benefits'
 import OjtCycleArea from './ojt-cycle'
+import SliderAreaOjt from './ojt-slider'
+import OjtDiscoveryArea from './ojt-discover'
 
-const OjtCorner = () => {
+function OjtCorner() {
   useEffect(() => {
     setTimeout(() => {
       animationCreate()
@@ -21,6 +23,8 @@ const OjtCorner = () => {
       <OjtHeroArea />
       <ServiceAreaOjt />
       <OjtCycleArea />
+      <SliderAreaOjt />
+      <OjtDiscoveryArea />
       <FooterTwo />
     </Wrapper>
   )
