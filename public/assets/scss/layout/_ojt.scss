@@ -14,3 +14,90 @@
   text-align: center;
   font-size: 20px;
 }
+
+.tp-ojt-hero-big-img {
+  position: relative;
+  z-index: 2;
+  @media #{$xs} {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  & img {
+    transform: translate(75px, -40px);
+    max-width: 80%;
+    @media #{$xss} {
+      transform: translate(-5px, 0px);
+      max-width: 100%;
+    }
+    @media #{$xxl} {
+      max-width: 100%;
+      transform: translate(0px, -60px);
+    }
+
+    @media #{$xl} {
+      transform: translate(0px, -50px);
+      max-width: 100%;
+    }
+
+    @media #{$lg} {
+      transform: translate(0px, -80px);
+      max-width: 100%;
+    }
+
+    @media #{$xs} {
+      transform: translate(-10px, -20px);
+      max-width: 100%;
+    }
+  }
+}
+
+.tp-ojt-hero-space {
+  padding-top: 220px;
+
+  @media (min-width: 320px) {
+    padding-top: 24px;
+  }
+  @media (min-width: 767px) {
+    padding-top: 50px;
+  }
+
+  @media (min-width: 992px) {
+    padding-top: 220px;
+  }
+}
+
+.tp-hero-title-ojt {
+  color: var(--tp-common-black);
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 35px;
+  letter-spacing: -2px;
+  @media (min-width: 320px) {
+    font-size: 24px;
+  }
+  @media #{$xl} {
+    font-size: 36px;
+  }
+
+  @media #{$lg} {
+    font-size: 24px;
+  }
+
+  @media #{$md} {
+    font-size: 50px;
+  }
+
+  @media #{$xs} {
+    font-size: 24px;
+    margin-bottom: 18px;
+  }
+  @media #{$sm} {
+    font-size: 24px;
+  }
+}
+
+.bg-color-hero-ojt {
+  background-color: #f7f8fd;
+}

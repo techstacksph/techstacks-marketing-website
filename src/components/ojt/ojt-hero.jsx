@@ -15,46 +15,14 @@ const hero_contents = {
   ),
   btn_text: `Inquire Now `,
   btn_text_2: 'About Us',
-  social_links: [
-    {
-      id: 1,
-      icon: 'fab fa-facebook-f social-icon-1',
-      title: 'Facebook',
-      link: 'https://facebook.com/techstacksph',
-    },
-    {
-      id: 2,
-      icon: 'fab fa-instagram social-icon-3',
-      title: 'Instagram',
-      link: 'https://www.instagram.com/techstacksph',
-    },
-    {
-      id: 3,
-      icon: 'fab fa-twitter social-icon-2',
-      title: 'Twitter',
-      link: 'https://twitter.com/techstacksph',
-      class: 'd-none',
-    },
-    {
-      id: 4,
-      icon: 'fab fa-youtube social-icon-3',
-      title: 'Youtube',
-      link: 'https://www.youtube.com/techstacksph',
-      class: 'd-none',
-    },
-  ],
   hero_img: '/assets/img/hero/ojt-hero.png',
 }
 
-const { title, text, btn_text, btn_text_2, social_links, hero_img } =
-  hero_contents
+const { title, text, btn_text, hero_img } = hero_contents
 
 const OjtHeroArea = () => {
   return (
-    <div className="tp-hero-area tp-hero-space p-relative z-index-1 fix">
-      <div className="tp-hero-shape">
-        <div className="shape-circle-yellow d-none" />
-      </div>
+    <div className="tp-hero-area tp-ojt-hero-space p-relative z-index-1 fix bg-color-hero-ojt">
       <div className="tp-hero-wapper">
         <div className="container">
           <div className="row align-items-center">
@@ -84,21 +52,16 @@ const OjtHeroArea = () => {
                       <a className="tp-btn mr-30">{btn_text}</a>
                     </Link>
                   </div>
-                  <div
-                    className="tp-hero-social pb-30 wow tpfadeIn"
-                    data-wow-duration=".7s"
-                    data-wow-delay="1.2s"
-                  ></div>
                 </div>
               </div>
             </div>
             <div className="col-xl-5 col-lg-5">
               <div
-                className="tp-hero-big-img wow fadeInRight"
+                className="tp-ojt-hero-big-img wow fadeInRight"
                 data-wow-duration=".7s"
                 data-wow-delay="1.2s"
               >
-                <img src={hero_img} alt="" />
+                <img src={hero_img} alt="" className="img-ojt-hero" />
               </div>
             </div>
           </div>
