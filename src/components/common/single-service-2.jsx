@@ -14,8 +14,12 @@ const SingleServiceTwo = ({ service, border }) => {
           </div>
           <div className="tp-sv-content pl-60">
             <h3 className=" tp-sv-title mb-35">{service.title}</h3>
-            <p className="mb-30">{service.text_1}</p>
-            <p>{service.text_2}</p>
+            <p className="mb-30">
+              {service?.text_1} <br />
+              {service?.text_2} <br />
+              {service?.text_3}
+            </p>
+
             <div className="tp-sv-link mt-35 d-none">
               <i className="far fa-arrow-right" /> Learn More
             </div>
