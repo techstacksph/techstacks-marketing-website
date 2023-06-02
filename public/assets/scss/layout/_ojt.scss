@@ -100,9 +100,72 @@
 
 .bg-color-hero-ojt {
   background-color: #f7f8fd;
-
 }
 .bg-color-hero-ojt-discovery {
-  background-color: #21CD9C;
+  background-color: #21cd9c;
+}
 
+.ojt-journey-root {
+  background-color: var(--tp-theme-1);
+  color: var(--tp-common-white);
+
+  .ojt-journey-header {
+    text-align: center;
+    font-size: 36px;
+  }
+
+  .ojt-journey-subheader {
+    text-align: center;
+    color: var(--tp-common-white);
+    font-size: 16px;
+  }
+
+  .ojt-journey-slider-container {
+    margin-top: 68px;
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+
+    .swiper-free-mode {
+      & > .swiper-wrapper {
+        transition-timing-function: linear;
+
+        .swiper-slide {
+          width: auto;
+        }
+      }
+    }
+  }
+
+  .ojt-journey-portfolio-container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 56px;
+    height: 745px;
+    margin-top: 72px;
+  }
+
+  .ojt-journey-portfolio-img {
+    position: absolute;
+    right: 0;
+  }
+
+  .ojt-journey-discover-card {
+    max-width: 772px;
+    width: 100%;
+    padding: 56px 54px;
+    background-color: var(--tp-common-white);
+    color: var(--tp-common-black);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+
+    & > h3 {
+      font-size: 40px;
+    }
+
+    & > p {
+      font-size: 20px;
+    }
+  }
 }
