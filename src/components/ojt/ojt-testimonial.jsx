@@ -3,26 +3,26 @@ import Link from 'next/link'
 import React from 'react'
 
 const hero_contents = {
-  title: 'Setting you up for Success',
+  title: 'Inspiring Testimonials from our Interns',
   text: (
     <>
-      With our training cycle, you'll have access to top-notch resources
+      Hear directly from our former OJT trainees as
       <br />
-      and guidance from experienced professionals to support
+      they share their remarkable experiences and the
       <br />
-      your growth and development.
+      invaluable impact of our program on their careers.
     </>
   ),
 
-  hero_img: '/assets/img/hero/discover-pic.png',
+  hero_img: '/assets/img/hero/testimonial.png',
 }
 
 const { title, text, btn_text, btn_text_2, social_links, hero_img } =
   hero_contents
 
-const OjtDiscoveryArea = () => {
+const OjtTestimonialArea = () => {
   return (
-    <div className="tp-hero-area tp-hero-space p-relative z-index-1 bg-color-hero-ojt-discovery ">
+    <div className="tp-hero-area tp-hero-space p-relative z-index-1 bg-img-hero-ojt-testimonials">
       <div className="tp-hero-shape">
         <div className="shape-circle-yellow d-none" />
       </div>
@@ -71,4 +71,4 @@ const OjtDiscoveryArea = () => {
   )
 }
 
-export default OjtDiscoveryArea
+export default OjtTestimonialArea

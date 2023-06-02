@@ -101,10 +101,6 @@
 .bg-color-hero-ojt {
   background-color: #f7f8fd;
 }
-.bg-color-hero-ojt-discovery {
-  background-color: #21cd9c;
-}
-
 .ojt-journey-root {
   background-color: var(--tp-theme-1);
   color: var(--tp-common-white);
@@ -162,10 +158,22 @@
 
     & > h3 {
       font-size: 40px;
+      font-weight: bold;
     }
 
     & > p {
       font-size: 20px;
+      color: black;
     }
+    & > link:hover {
+      color: #ff0000; /* color on hover */
+    }
+  }
+}
+.bg-img-hero-ojt-testimonials {
+  background-image: url('../../img/hero/bg-testimonial.png');
+  background-repeat: no-repeat;
+  img {
+    max-width: 90%;
   }
 }

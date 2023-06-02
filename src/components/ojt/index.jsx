@@ -6,9 +6,8 @@ import Breadcrumb from '../common/breadcrumb/breadcrumb'
 import OjtHeroArea from './ojt-hero'
 import ServiceAreaOjt from './ojt-benefits'
 import OjtCycleArea from './ojt-cycle'
-import SliderAreaOjt from './ojt-slider'
-import OjtDiscoveryArea from './ojt-discover'
 import OjtJourney from './ojt-journey'
+import OjtTestimonialArea from './ojt-testimonial'
 
 function OjtCorner() {
   useEffect(() => {
@@ -24,9 +23,8 @@ function OjtCorner() {
       <OjtHeroArea />
       <ServiceAreaOjt />
       <OjtCycleArea />
-      <SliderAreaOjt />
-      <OjtDiscoveryArea />
       <OjtJourney />
+      <OjtTestimonialArea />
       <FooterTwo />
     </Wrapper>
   )

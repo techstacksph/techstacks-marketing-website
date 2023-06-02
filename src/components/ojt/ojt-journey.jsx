@@ -57,13 +57,14 @@ const OjtJourney = () => {
 
       <div className="ojt-journey-portfolio-container">
         <div className="ojt-journey-discover-card">
-          <h3>Discover the Outstanding Works of Our OJT Interns</h3>
+          <h3>Discover the Outstanding Works of our OJT Interns</h3>
           <p>
             We believe in nurturing and empowering young talent. Explore their
             remarkable works and witness firsthand the passion, creativity, and
             innovation they bring to our projects.
           </p>
-          <Link href="#">EXPLORE THEIR WORKS</Link>
+          <Link href="#">EXPLORE THEIR WORKS</Link>{' '}
+          <i className="far fa-arrow-right" />
         </div>
       </div>
     </div>
