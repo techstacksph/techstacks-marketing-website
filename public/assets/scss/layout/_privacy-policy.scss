@@ -11,7 +11,11 @@
   justify-content: center;
   align-items: center;
   padding-top: 10rem;
-  padding-bottom: 5rem;
+
+  @media #{$md} {
+    padding-bottom: 5rem;
+  }
+
   & h1 {
     color: var(--tp-common-black);
     font-weight: 700;
@@ -23,7 +27,11 @@
 }
 
 .pp-content-body {
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
+
+  @media #{$md} {
+    padding-bottom: 5rem;
+  }
 
   & .pp-content-holder {
     padding-top: 5rem;
@@ -42,19 +50,30 @@
     color: var(--tp-common-black);
   }
 
+  & i {
+    text-align: justify;
+  }
+
   & p {
     color: var(--tp-common-black);
     font-size: 16px;
+    text-align: justify;
   }
 
   & ul {
-    padding-left: 3rem;
+    padding-left: 2rem;
+
+    @media #{$md} {
+      padding-left: 3rem;
+    }
+
     color: var(--tp-common-black);
     font-size: 16px;
   }
 
   & li {
     list-style: square;
+    text-align: justify;
   }
 
   & span {
