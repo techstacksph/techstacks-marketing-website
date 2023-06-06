@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import Link from 'next/link'
 
 const PrivacyPolicy = () => {
@@ -7,242 +6,362 @@ const PrivacyPolicy = () => {
       <div className="container">
         <div className="pp-header-content">
           <h1>Privacy Policy</h1>
+          <h2>Last updated May 19, 2023</h2>
         </div>
         <div className="pp-content-body">
           <div className="pp-content-holder">
-            <h2>WHO WE ARE</h2>
             <p>
-              Our website address is:{' '}
-              <span>
-                <Link href={'https://techstacksph.com'}>
-                  https://techstacksph.com
-                </Link>
-              </span>{' '}
-              under business name TECHSTACKS, [INC., SEC Registered no.
-              CS201205442] with principal address Cabanatuan City, Nueva Ecija,
-              Philippines, 3100.
-            </p>
-          </div>
-
-          <div className="pp-content-holder">
-            <h2>WHAT PERSONAL DATA WE COLLECT AND WHY WE COLLECT IT</h2>
-            <p>
-              Once you visit our website, personal data, such as name, email
-              address, contact numbers, personal account preferences;
-              transactional data, such as purchase information; and technical
-              data, such as information about cookies will be collected.
-              Sensitive personal data collected will be protected with strict
-              confidentiality. We will use you personal data only for the
-              purposes stated below
-            </p>
-            <ul>
-              <li>To contact you to know more about your request</li>
-              <li>
-                To fulfill your requests for certain products and services
-              </li>
-              <li>
-                To notify you of any corporate news, events, promotions, special
-                offers or new product information
-              </li>
-              <li>To customize the advertising and content you see</li>
-            </ul>
-            <p>
-              In addition to some of the specific uses of information we
-              describe in this Privacy Policy, we may use information that we
-              receive to:
+              This privacy notice for Techstacks IT Web Development Services
+              (&quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or
+              &quot;our&quot;), describes how and why we might collect, store,
+              use, and/or share (&quot;process&quot;) your information when you
+              use our services (&quot;Services&quot;), such as when you:
             </p>
             <ul>
               <li>
-                Provide, improve, test and monitor the effectiveness of our
-                Service
+                Visit our website at{' '}
+                <span>
+                  <Link href={'https://techstacksph.com'}>
+                    https://techstacksph.com
+                  </Link>
+                </span>
+                , or any website of ours that links to this privacy notice
               </li>
-              <li>Develop and test new products and features</li>
               <li>
-                Monitor metrics such as total number of visitors, traffic and
-                demographic patters
+                Engage with us in other related ways, including any sales,
+                marketing, or events
               </li>
-              <li>Diagnose or fix technology problems</li>
-              <li>Automatically update the website.</li>
             </ul>
           </div>
+          <div className="pp-content-holder">
+            <h4>WHAT INFORMATION DO WE COLLECT?</h4>
+            <h5>Personal information you disclose to us</h5>
+            <i>
+              In Short: We collect personal information that you provide to us.
+            </i>
+            <div className="pp-content-holder-p">
+              <p>
+                We collect personal information that you voluntarily provide to
+                us when you express an interest in obtaining information about
+                us or our products and Services, when you participate in
+                activities on the Services, or otherwise when you contact us.
+              </p>
+              <p>
+                Personal Information Provided by You. The personal information
+                that we collect depends on the context of your interactions with
+                us and the Services, the choices you make, and the products and
+                features you use. The personal information we collect may
+                include the following:
+              </p>
+              <ul>
+                <li>names</li>
+                <li>phone numbers</li>
+                <li>email addresses</li>
+                <li>contact preferences</li>
+                <li>mailing addresses</li>
+              </ul>
+              <p>
+                Sensitive Information. We do not process sensitive information.
+              </p>
+              <p>
+                All personal information that you provide to us must be true,
+                complete, and accurate, and you must notify us of any changes to
+                such personal information.
+              </p>
+            </div>
+          </div>
+          <div className="pp-content-holder">
+            <h4>Information automatically collected</h4>
+            <i>
+              In Short: Some information — such as your Internet Protocol (IP)
+              address and/or browser and device characteristics — is collected
+              automatically when you visit our Services.
+            </i>
+            <div className="pp-content-holder-p">
+              <p>
+                We automatically collect certain information when you visit,
+                use, or navigate the Services. This information does not reveal
+                your specific identity (like your name or contact information)
+                but may include device and usage information, such as your IP
+                address, browser and device characteristics, operating system,
+                language preferences, referring URLs, device name, country,
+                location, information about how and when you use our Services,
+                and other technical information. This information is primarily
+                needed to maintain the security and operation of our Services,
+                and for our internal analytics and reporting purposes.
+              </p>
+              <p>
+                Like many businesses, we also collect information through
+                cookies and similar technologies
+              </p>
+              <p>The information we collect includes:</p>
+              <ul>
+                <li>
+                  Log and Usage Data. Log and usage data is service-related,
+                  diagnostic, usage, and performance information our servers
+                  automatically collect when you access or use our Services and
+                  which we record in log files. Depending on how you interact
+                  with us, this log data may include your IP address, device
+                  information, browser type, and settings and information about
+                  your activity in the Services (such as the date/time stamps
+                  associated with your usage, pages and files viewed, searches,
+                  and other actions you take such as which features you use),
+                  device event information (such as system activity, error
+                  reports (sometimes called &quot;crash dumps&quot;), and
+                  hardware settings).
+                </li>
+                <li>
+                  Device Data. We collect device data such as information about
+                  your computer, phone, tablet, or other device you use to
+                  access the Services. Depending on the device used, this device
+                  data may include information such as your IP address (or proxy
+                  server), device and application identification numbers,
+                  location, browser type, hardware model, Internet service
+                  provider and/or mobile carrier, operating system, and system
+                  configuration information.
+                </li>
+                <li>
+                  Location Data. We collect location data such as information
+                  about your device&quot;s location, which can be either precise
+                  or imprecise. How much information we collect depends on the
+                  type and settings of the device you use to access the
+                  Services. You can opt out of allowing us to collect this
+                  information either by refusing access to the information or by
+                  disabling your Location setting on your device.
+                </li>
+              </ul>
+            </div>
+          </div>
 
           <div className="pp-content-holder">
-            <h2>COMMENTS</h2>
+            <h4>HOW DO WE PROCESS YOUR INFORMATION?</h4>
+            <i>
+              In Short: We process your information to provide, improve, and
+              administer our Services, communicate with you, for security and
+              fraud prevention, and to comply with law. We may also process your
+              information for other purposes with your consent.
+            </i>
+
+            <div className="pp-content-holder-p">
+              <p>
+                We process your personal information for a variety of reasons,
+                depending on how you interact with our Services, including:
+              </p>
+              <ul>
+                <li>
+                  To deliver and facilitate delivery of services to the user. We
+                  may process your information to provide you with the requested
+                  service.
+                </li>
+                <li>
+                  To respond to user inquiries/offer support to users. We may
+                  process your information to respond to your inquiries and
+                  solve any potential issues you might have with the requested
+                  service.
+                </li>
+                <li>
+                  To enable user-to-user communications. We may process your
+                  information if you choose to use any of our offerings that
+                  allow for communication with another user.
+                </li>
+                <li>
+                  To request feedback. We may process your information when
+                  necessary to request feedback and to contact you about your
+                  use of our Services.
+                </li>
+                <li>
+                  To send you marketing and promotional communications. We may
+                  process the personal information you send to us for our
+                  marketing purposes, if this is in accordance with your
+                  marketing preferences. You can opt out of our marketing emails
+                  at any time.{' '}
+                </li>
+                <li>
+                  To evaluate and improve our Services, products, marketing, and
+                  your experience. We may process your information when we
+                  believe it is necessary to identify usage trends, determine
+                  the effectiveness of our promotional campaigns, and to
+                  evaluate and improve our Services, products, marketing, and
+                  your experience.
+                </li>
+                <li>
+                  To identify usage trends. We may process information about how
+                  you use our Services to better understand how they are being
+                  used so we can improve them.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="pp-content-holder">
+            <h4>WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?</h4>
+            <i>
+              In Short: We may share information in specific situations
+              described in this section and/or with the following categories of
+              third parties.
+            </i>
+
+            <div className="pp-content-holder-p">
+              <p>
+                Vendors, Consultants, and Other Third-Party Service Providers.
+                We may share your data with third-party vendors, service
+                providers, contractors, or agents (&quot;third parties&quot;)
+                who perform services for us or on our behalf and require access
+                to such information to do that work. We have contracts in place
+                with our third parties, which are designed to help safeguard
+                your personal information. This means that they cannot do
+                anything with your personal information unless we have
+                instructed them to do it. They will also not share your personal
+                information with any organization apart from us. They also
+                commit to protect the data they hold on our behalf and to retain
+                it for the period we instruct. The categories of third parties
+                we may share personal information with are as follows:
+              </p>
+              <ul>
+                <li>Sales & Marketing Tools</li>
+              </ul>
+              <p>
+                We also may need to share your personal information in the
+                following situations:
+              </p>
+              <ul>
+                <li>
+                  Business Transfers. We may share or transfer your information
+                  in connection with, or during negotiations of, any merger,
+                  sale of company assets, financing, or acquisition of all or a
+                  portion of our business to another company.
+                </li>
+                <li>
+                  When we use Google Maps Platform APIs. We may share your
+                  information with certain Google Maps Platform APIs (e.g.,
+                  Google Maps API, Places API). We obtain and store on your
+                  device (&quot;cache&quot;) your location. You may revoke your
+                  consent anytime by contacting us at the contact details
+                  provided at the end of this document.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="pp-content-holder">
+            <h4>DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?</h4>
+            <i>
+              In Short: We may use cookies and other tracking technologies to
+              collect and store your information.
+            </i>
             <p>
-              When visitors leave comments on the site we collect the data shown
-              in the comments form, and also the visitor’s IP address and
-              browser user agent string to help spam detection.
+              We may use cookies and similar tracking technologies (like web
+              beacons and pixels) to access or store information. Specific
+              information about how we use such technologies and how you can
+              refuse certain cookies is set out in our Cookie Notice.
             </p>
           </div>
 
           <div className="pp-content-holder">
-            <h2>MEDIA</h2>
-            <p>
-              If you upload images to the website, you should avoid uploading
-              images with embedded location data (EXIF GPS) included. Visitors
-              to the website can download and extract any location data from
-              images on the website.
-            </p>
-          </div>
-          <div className="pp-content-holder">
-            <h2>CONTACT FORMS</h2>
-            <p>
-              Contact forms in our website capture personal data. We keep this
-              records for 10 years for customer service purposes only
-            </p>
-          </div>
+            <h4>HOW LONG DO WE KEEP YOUR INFORMATION?</h4>
+            <i>
+              In Short: We keep your information for as long as necessary to
+              fulfill the purposes outlined in this privacy notice unless
+              otherwise required by law.
+            </i>
 
-          <div className="pp-content-holder">
-            <h2>COOKIES</h2>
             <p>
-              If you leave a comment on our site you may opt-in to saving your
-              name, email address and website in cookies. These are for your
-              convenience so that you do not have to fill in your details again
-              when you leave another comment. These cookies will last for one
-              year. If you have an account and you log in to this site, we will
-              set a temporary cookie to determine if your browser accepts
-              cookies. This cookie contains no personal data and is discarded
-              when you close your browser.
+              We will only keep your personal information for as long as it is
+              necessary for the purposes set out in this privacy notice, unless
+              a longer retention period is required or permitted by law (such as
+              tax, accounting, or other legal requirements).
             </p>
-          </div>
 
-          <div className="pp-content-holder">
-            <h2>EMBEDDED CONTENT FROM OTHER WEBSITES</h2>
             <p>
-              Articles on this site may include embedded content (e.g. videos,
-              images, articles, etc.). Embedded content from other websites
-              behaves in the exact same way as if the visitor has visited the
-              other website.
+              When we have no ongoing legitimate business need to process your
+              personal information, we will either delete or anonymize such
+              information, or, if this is not possible (for example, because
+              your personal information has been stored in backup archives),
+              then we will securely store your personal information and isolate
+              it from any further processing until deletion is possible.
             </p>
-            <p>
-              These websites may collect data about you, use cookies, embed
-              additional third-party tracking, and monitor your interaction with
-              that embedded content, including tracking your interaction with
-              the embedded content if you have an account and are logged in to
-              that website.
-            </p>
-          </div>
 
-          <div className="pp-content-holder">
-            <h2>ANALYTICS</h2>
             <p>
-              Our website uses Google Analytics which provide different
-              statistics, behavior and data of all our website visitors. Website
-              collects analytical data from website visitors. Users can opt out
-              by simply emailing techstacks.2022@gmail.com .
+              <u> Cookies and similar technologies:</u> Most Web browsers are
+              set to accept cookies by default. If you prefer, you can usually
+              choose to set your browser to remove cookies and to reject
+              cookies. If you choose to remove cookies or reject cookies, this
+              could affect certain features or services of our Services. You may
+              also{' '}
+              <span>opt out of interest-based advertising by advertisers</span>{' '}
+              on our Services.
             </p>
-          </div>
 
-          <div className="pp-content-holder">
-            <h2>WHO WE SHARE YOUR DATA WITH</h2>
             <p>
-              Our website share site data to our partner, GoDaddy. All websites
-              data including collected personal data needs to be shared to
-              GoDaddy since they are the domain and hosting provider. Check
-              their privacy policy –{' '}
+              If you have questions or comments about your privacy rights, you
+              may email us at{' '}
               <span>
-                <Link
-                  href={
-                    'https://ph.godaddy.com/agreements/showdoc?pageid=PRIVACY'
-                  }
-                >
-                  https://ph.godaddy.com/agreements/showdoc?pageid=PRIVACY
-                </Link>
-              </span>
-            </p>
-          </div>
-
-          <div className="pp-content-holder">
-            <h2>HOW LONG WE RETAIN YOUR DATA</h2>
-            <p>
-              If you leave a comment, the comment and its metadata are retained
-              indefinitely. This is so we can recognize and approve any
-              follow-up comments automatically instead of holding them in a
-              moderation queue. We keep contact form entries for 1 year,
-              analytics records for a year, and customer purchase records for
-              ten years.
-            </p>
-            <p>
-              For users that register on our website (if any), we also store the
-              personal information they provide in their user profile. All users
-              can see, edit, or delete their personal information at any time
-              (except they cannot change their username). Website administrators
-              can also see and edit that information.
-            </p>
-          </div>
-
-          <div className="pp-content-holder">
-            <h2>HOW LONG WE RETAIN YOUR DATA</h2>
-            <p>
-              If you leave a comment, the comment and its metadata are retained
-              indefinitely. This is so we can recognize and approve any
-              follow-up comments automatically instead of holding them in a
-              moderation queue. We keep contact form entries for 1 year,
-              analytics records for a year, and customer purchase records for
-              ten years.
-            </p>
-            <p>
-              For users that register on our website (if any), we also store the
-              personal information they provide in their user profile. All users
-              can see, edit, or delete their personal information at any time
-              (except they cannot change their username). Website administrators
-              can also see and edit that information.
-            </p>
-          </div>
-
-          <div className="pp-content-holder">
-            <h2>WHAT RIGHTS YOU HAVE OVER YOUR DATA</h2>
-            <p>
-              If you have an account on this site, or have left comments, you
-              can request to receive an exported file of the personal data we
-              hold about you, including any data you have provided to us. You
-              can also request that we erase any personal data we hold about
-              you. This does not include any data we are obliged to keep for
-              administrative, legal, or security purposes.
-            </p>
-          </div>
-
-          <div className="pp-content-holder">
-            <h2>YOUR CONTACT INFORMATION</h2>
-            <p>
-              If you need to contact us with regards to Privacy, kindly email us
-              at{' '}
-              <span>
-                <Link href="mailto:techstacks.2022@gmail.com">
+                {' '}
+                <Link href={'mailto:techstacks.2022@gmail.com'}>
                   techstacks.2022@gmail.com
                 </Link>
               </span>
+              .
             </p>
           </div>
 
           <div className="pp-content-holder">
-            <h2>HOW WE PROTECT YOUR DATA</h2>
+            <h4>DO WE MAKE UPDATES TO THIS NOTICE?</h4>
+            <i>
+              In Short: Yes, we will update this notice as necessary to stay
+              compliant with relevant laws.
+            </i>
             <p>
-              We follow generally accepted standards to store and protect the
-              personal data we collect, both during transmission and once
-              received and stored, including utilization of encryption where
-              appropriate.
+              We may update this privacy notice from time to time. The updated
+              version will be indicated by an updated &quot;Revised&quot; date
+              and the updated version will be effective as soon as it is
+              accessible. If we make material changes to this privacy notice, we
+              may notify you either by prominently posting a notice of such
+              changes or by directly sending you a notification. We encourage
+              you to review this privacy notice frequently to be informed of how
+              we are protecting your information.
+            </p>
+          </div>
+
+          <div className="pp-content-holder">
+            <h4>HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</h4>
+            <p>
+              If you have questions or comments about this notice, you may email
+              us at{' '}
+              <span>
+                {' '}
+                <Link href={'mailto:techstacks.2022@gmail.com'}>
+                  techstacks.2022@gmail.com
+                </Link>
+              </span>{' '}
+              or contact us by post at:
             </p>
             <p>
-              We follow generally accepted standards to store and protect the
-              personal data we collect, both during transmission and once
-              received and stored, including utilization of encryption where
-              appropriate.
+              Techstacks IT Web Development Services
+              <br /> Purok Lambingan,
+              <br /> Daan Sarile Cabanatuan City,
+              <br /> Nueva Ecija 3100
+              <br /> Philippines
             </p>
-            <ul>
-              <li>
-                mandated by law, contract or similar obligations applicable to
-                our business operations;
-              </li>
-              <li>
-                for preserving, resolving, defending or enforcing our
-                legal/contractual rights; or
-              </li>
-              <li>
-                needed to maintain adequate and accurate business and financial
-                records.
-              </li>
-            </ul>
+          </div>
+
+          <div className="pp-content-holder">
+            <h4>
+              HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM
+              YOU?
+            </h4>
+            <p>
+              You have the right to request access to the personal information
+              we collect from you, change that information, or delete it. To
+              request to review, update, or delete your personal information,
+              please send an email to{' '}
+              <span>
+                {' '}
+                <Link href={'mailto:techstacks.2022@gmail.com'}>
+                  techstacks.2022@gmail.com.
+                </Link>
+              </span>
+            </p>
           </div>
         </div>
       </div>
