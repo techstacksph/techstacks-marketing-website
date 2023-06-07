@@ -47,7 +47,7 @@ const services_data = [
     title: 'Positive Work Environment',
     text_1: 'Providing a positive work environment',
     text_2: 'inspires creativity and drives innovation.',
-    text_3: 'Trainees thrive in team-centric environment.',
+    text_3: 'Trainees thrive in a cooperative setting.',
     home: true,
     service_p_2: true,
   },

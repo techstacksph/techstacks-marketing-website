@@ -113,7 +113,7 @@
   .ojt-journey-subheader {
     text-align: center;
     color: var(--tp-common-white);
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .ojt-journey-slider-container {
@@ -176,4 +176,60 @@
   img {
     max-width: 90%;
   }
+}
+.chat-bubble {
+  position: relative;
+  display: inline-block;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  padding: 60px 45px;
+  margin-bottom: 10px;
+  max-width: 80%;
+}
+.p {
+  font-family: var(--tp-ff-p);
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 15px;
+  line-height: 30px;
+}
+.user-name {
+  font-family: var(--tp-ff-p);
+  font-size: 18px;
+  font-weight: 200;
+  color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.chat-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  transform: translateX(-50%);
+  border-width: 10px;
+  border-style: solid;
+}
+
+.user-bubble {
+  color: #fff;
+  background-color: #007bff;
+}
+
+.user-bubble::after {
+  border-color: #007bff transparent transparent transparent;
+  bottom: -20px;
+}
+
+.bot-bubble {
+  color: #000;
+  background-color: #f1f1f1;
+}
+
+.bot-bubble::after {
+  border-color: #f1f1f1 transparent transparent transparent;
+  top: -20px;
 }

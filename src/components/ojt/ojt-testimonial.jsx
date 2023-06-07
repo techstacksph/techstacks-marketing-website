@@ -61,7 +61,20 @@ const OjtTestimonialArea = () => {
                 data-wow-duration=".7s"
                 data-wow-delay="1.2s"
               >
-                <img src={hero_img} alt="" />
+                {/* <img src={hero_img} alt="" /> */}
+                <div class="chat-bubble user-bubble">
+                  <div>
+                    <div>
+                      <p class="p">
+                        “Lorem ipsum dolorem doremi meow meow meow meow meow
+                        meow meow meow meow meow meow meow meow..”
+                      </p>
+                      <div class="user-name">
+                        dfgdfgdfrgdrgdr dfgdfg drgdfg gdfgdf dfgdf dfgd dfgd dfg
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
