@@ -15,10 +15,18 @@ const hero_contents = {
   ),
 
   hero_img: '/assets/img/hero/testimonial.png',
+  user_avatar: '/assets/img/ojt/slider-2/img-11.png',
 }
 
-const { title, text, btn_text, btn_text_2, social_links, hero_img } =
-  hero_contents
+const {
+  title,
+  text,
+  btn_text,
+  btn_text_2,
+  social_links,
+  hero_img,
+  user_avatar,
+} = hero_contents
 
 const OjtTestimonialArea = () => {
   return (
@@ -70,7 +78,13 @@ const OjtTestimonialArea = () => {
                         meow meow meow meow meow meow meow meow..”
                       </p>
                       <div class="user-name">
-                        dfgdfgdfrgdrgdr dfgdfg drgdfg gdfgdf dfgdf dfgd dfgd dfg
+                        <div className="user-avatar">
+                          <img src={user_avatar} alt="asdasd" />
+                        </div>
+                        <div>
+                          dfgdfgdfrgdrgdr dfgdfg drgdfg gdfgdf dfgdf dfgd dfgd
+                          dfg
+                        </div>
                       </div>
                     </div>
                   </div>

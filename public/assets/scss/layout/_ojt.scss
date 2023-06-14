@@ -233,3 +233,18 @@
   border-color: #f1f1f1 transparent transparent transparent;
   top: -20px;
 }
+.user-name {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.user-avatar > img {
+  width: 74px;
+  border-radius: 50%;
+  height: 74px;
+  
+}
+.user-avatar {
+  flex-shrink: 0;
+}
