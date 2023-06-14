@@ -15,7 +15,7 @@ const hero_contents = {
   ),
 
   hero_img: '/assets/img/hero/testimonial.png',
-  user_avatar: '/assets/img/ojt/slider-2/img-11.png',
+  user_avatar: '/assets/img/ojt/testimonials/Rinand.jpg',
 }
 
 const {
@@ -70,21 +70,24 @@ const OjtTestimonialArea = () => {
                 data-wow-delay="1.2s"
               >
                 {/* <img src={hero_img} alt="" /> */}
-                <div class="chat-bubble user-bubble">
+              </div>
+              <div class="chat-bubble user-bubble">
+                <div>
                   <div>
-                    <div>
-                      <p class="p">
-                        “Lorem ipsum dolorem doremi meow meow meow meow meow
-                        meow meow meow meow meow meow meow meow..”
-                      </p>
-                      <div class="user-name">
-                        <div className="user-avatar">
-                          <img src={user_avatar} alt="asdasd" />
-                        </div>
-                        <div>
-                          dfgdfgdfrgdrgdr dfgdfg drgdfg gdfgdf dfgdf dfgd dfgd
-                          dfg
-                        </div>
+                    <p class="p">
+                      “My time at Techstacks has been a transformative
+                      experience, particularly in the area of web development.
+                      Throughout my 500 hours at the company, I have gained a
+                      wealth of knowledge and expertise that has allowed me to
+                      grow both personally and professionally.”
+                    </p>
+                    <div class="user-name">
+                      <div className="user-avatar">
+                        <img src={user_avatar} alt="asdasd" />
+                      </div>
+                      <div>
+                        <div>John Rinand Sta. Ines</div>
+                        <div class="sub-name">Former Intern | NEUST</div>
                       </div>
                     </div>
                   </div>
