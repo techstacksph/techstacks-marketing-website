@@ -4,7 +4,6 @@ import { services_data } from '../../../data'
 import SingleServiceTwo from '../../common/single-service-2'
 
 const services_contents = {
-  shape_img: '/assets/img/service/service-shape.png',
   subtitle: 'Our Methodology',
   title: 'Systematic flow in the website lifecycle',
   btn_text: 'View all services',

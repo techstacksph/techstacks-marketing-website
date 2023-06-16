@@ -165,8 +165,11 @@
       font-size: 20px;
       color: black;
     }
-    & > link:hover {
-      color: #ff0000; /* color on hover */
+    & > a:hover {
+      color: #21cd9c; /* color on hover */
+    }
+    & > i:hover {
+      color: #21cd9c; /* color on hover */
     }
   }
 }

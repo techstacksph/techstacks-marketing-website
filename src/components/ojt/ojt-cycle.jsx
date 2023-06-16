@@ -32,6 +32,10 @@ const OjtCycleArea = () => {
             <div className="col-xl-7 col-lg-7">
               <div className="tp-hero-content">
                 <div className="tp-hero-text">
+                  <div className="circle-animation service">
+                    <span className="tp-circle-1" />
+                    <span className="tp-circle-2" />
+                  </div>
                   <h6
                     className="tp-hero-title-ojt wow tpfadeUp"
                     data-wow-duration=".3s"

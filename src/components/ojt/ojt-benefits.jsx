@@ -79,7 +79,6 @@ const services_data = [
 ]
 
 const services_contents = {
-  shape_img: '/assets/img/service/service-shape.png',
   subtitle: 'Our Methodology',
   title: 'Systematic flow in the website lifecycle',
   btn_text: 'View all services',
@@ -92,13 +91,6 @@ const ServiceAreaOjt = () => (
   <div className="tp-service-area pt-190 pb-100 grey-bg p-relative fix">
     <div className="tp-sv-shape-img z-index-1">
       <img src={shape_img} alt="" />
-    </div>
-    <div className="circle-animation service">
-      <span className="tp-circle-1" />
-      <span className="tp-circle-2" />
-    </div>
-    <div className="circle-animation service-two">
-      <span className="tp-circle-skye" />
     </div>
 
     <div className="container">

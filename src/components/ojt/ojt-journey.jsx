@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const Sliders = [
   ['img-1.png', 'img-2.png', 'img-3.png'],
-  ['img-1.png', 'img-2.png', 'img-3.png'],
+  ['img-11.png', 'img-12.png', 'img-13.png'],
 ]
 
 const OjtJourney = () => {
@@ -43,6 +43,7 @@ const OjtJourney = () => {
               {slider.map((img, imgI) => (
                 <SwiperSlide key={imgI}>
                   <img src={`/assets/img/ojt/slider-1/${img}`} />
+                  <img src={`/assets/img/ojt/slider-2/${img}`} />
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -63,7 +64,7 @@ const OjtJourney = () => {
             remarkable works and witness firsthand the passion, creativity, and
             innovation they bring to our projects.
           </p>
-          <Link href="#">EXPLORE THEIR WORKS</Link>{' '}
+          <a href="#">EXPLORE THEIR WORKS</a>{' '}
           <i className="far fa-arrow-right" />
         </div>
       </div>
