@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useRef, useEffect } from 'react';
 import Swiper from 'swiper';
+import { Autoplay } from 'swiper'
 import 'swiper/swiper-bundle.css';
 import Link from 'next/link';
 
@@ -47,7 +48,10 @@ const OjtTestimonialArea = () => {
   useEffect(() => {
     swiperRef.current = new Swiper('.swiper-container', {
       loop: true,
-      autoplay: false, // Disable autoplay
+      autoplay: {
+        delay: 5000, // Autoplay delay in milliseconds
+      },
+      modules:[Autoplay ],
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
