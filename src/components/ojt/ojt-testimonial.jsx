@@ -28,7 +28,14 @@ const hero_contents = {
         '“The OJT program at Techstacks was an incredible opportunity for me to learn and develop my skills. The hands-on experience and mentorship I received were invaluable. I\'m grateful for the chance to be a part of such a supportive and innovative organization.”',
       author: 'Jane Doe',
       position: 'Former Intern | ABC University',
-      avatar: '/assets/img/ojt/testimonials/Jane.jpg',
+      avatar: '/assets/img/ojt/testimonials/avatar.png',
+    },
+    {
+      quote:
+        '“Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.”',
+      author: 'Lorem Ipe',
+      position: 'Former Intern | ABC University',
+      avatar: '/assets/img/ojt/testimonials/avatar.png',
     },
   ],
   hero_img: '/assets/img/hero/testimonial.png',
@@ -40,9 +47,7 @@ const OjtTestimonialArea = () => {
   useEffect(() => {
     swiperRef.current = new Swiper('.swiper-container', {
       loop: true,
-      autoplay: {
-        delay: 5000, // Adjust the delay between slides (in milliseconds)
-      },
+      autoplay: false, // Disable autoplay
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -107,14 +112,21 @@ const OjtTestimonialArea = () => {
                       </div>
                     ))}
                   </div>
-                  <div className="swiper-button-next"></div>
-                  <div className="swiper-button-prev"></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <style jsx>{`
+        .swiper-container {
+          overflow: hidden; /* Hide the overflowing content */
+        }
+
+        .swiper-slide {
+          width: 100%; /* Set the width to match the container's width */
+        }
+      `}</style>
     </div>
   );
 };
