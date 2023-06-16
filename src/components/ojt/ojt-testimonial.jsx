@@ -1,6 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
-import Link from 'next/link'
-import React from 'react'
+import React, { useRef, useEffect } from 'react';
+import Swiper from 'swiper';
+import 'swiper/swiper-bundle.css';
+import Link from 'next/link';
 
 const hero_contents = {
   title: 'Inspiring Testimonials from our Interns',
@@ -13,22 +15,47 @@ const hero_contents = {
       invaluable impact of our program on their careers.
     </>
   ),
-
+  testimonials: [
+    {
+      quote:
+        '“My time at Techstacks has been a transformative experience, particularly in the area of web development. Throughout my 500 hours at the company, I have gained a wealth of knowledge and expertise that has allowed me to grow both personally and professionally.”',
+      author: 'John Rinand Sta. Ines',
+      position: 'Former Intern | NEUST',
+      avatar: '/assets/img/ojt/testimonials/Rinand.jpg',
+    },
+    {
+      quote:
+        '“The OJT program at Techstacks was an incredible opportunity for me to learn and develop my skills. The hands-on experience and mentorship I received were invaluable. I\'m grateful for the chance to be a part of such a supportive and innovative organization.”',
+      author: 'Jane Doe',
+      position: 'Former Intern | ABC University',
+      avatar: '/assets/img/ojt/testimonials/Jane.jpg',
+    },
+  ],
   hero_img: '/assets/img/hero/testimonial.png',
-  user_avatar: '/assets/img/ojt/testimonials/Rinand.jpg',
-}
-
-const {
-  title,
-  text,
-  btn_text,
-  btn_text_2,
-  social_links,
-  hero_img,
-  user_avatar,
-} = hero_contents
+};
 
 const OjtTestimonialArea = () => {
+  const swiperRef = useRef(null);
+
+  useEffect(() => {
+    swiperRef.current = new Swiper('.swiper-container', {
+      loop: true,
+      autoplay: {
+        delay: 5000, // Adjust the delay between slides (in milliseconds)
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+    return () => {
+      if (swiperRef.current) {
+        swiperRef.current.destroy();
+      }
+    };
+  }, []);
+
   return (
     <div className="tp-hero-area tp-hero-space p-relative z-index-1 bg-img-hero-ojt-testimonials">
       <div className="tp-hero-shape">
@@ -45,52 +72,43 @@ const OjtTestimonialArea = () => {
                     data-wow-duration=".3s"
                     data-wow-delay=".6s"
                   >
-                    {title}
+                    {hero_contents.title}
                   </h6>
                   <p
                     className="wow tpfadeUp"
                     data-wow-duration=".5s"
                     data-wow-delay=".8s"
                   >
-                    {text}
+                    {hero_contents.text}
                   </p>
-
-                  <div
-                    className="tp-hero-social pb-30 wow tpfadeIn"
-                    data-wow-duration=".7s"
-                    data-wow-delay="1.2s"
-                  ></div>
                 </div>
               </div>
+              <div className="tp-hero-social pb-30 wow tpfadeIn" data-wow-duration=".7s" data-wow-delay="1.2s"></div>
             </div>
             <div className="col-xl-5 col-lg-5">
-              <div
-                className="tp-hero-big-img wow fadeInRight"
-                data-wow-duration=".7s"
-                data-wow-delay="1.2s"
-              >
-                {/* <img src={hero_img} alt="" /> */}
+              <div className="tp-hero-big-img wow fadeInRight" data-wow-duration=".7s" data-wow-delay="1.2s">
+                {/* <img src={hero_contents.hero_img} alt="" /> */}
               </div>
-              <div class="chat-bubble user-bubble">
-                <div>
-                  <div>
-                    <p class="p">
-                      “My time at Techstacks has been a transformative
-                      experience, particularly in the area of web development.
-                      Throughout my 500 hours at the company, I have gained a
-                      wealth of knowledge and expertise that has allowed me to
-                      grow both personally and professionally.”
-                    </p>
-                    <div class="user-name">
-                      <div className="user-avatar">
-                        <img src={user_avatar} alt="asdasd" />
+              <div className="chat-bubble user-bubble">
+                <div className="swiper-container">
+                  <div className="swiper-wrapper">
+                    {hero_contents.testimonials.map((testimonial, index) => (
+                      <div key={index} className="swiper-slide">
+                        <p className="p">{testimonial.quote}</p>
+                        <div className="user-name">
+                          <div className="user-avatar">
+                            <img src={testimonial.avatar} alt="Avatar" />
+                          </div>
+                          <div>
+                            <div>{testimonial.author}</div>
+                            <div className="sub-name">{testimonial.position}</div>
+                          </div>
+                        </div>
                       </div>
-                      <div>
-                        <div>John Rinand Sta. Ines</div>
-                        <div class="sub-name">Former Intern | NEUST</div>
-                      </div>
-                    </div>
+                    ))}
                   </div>
+                  <div className="swiper-button-next"></div>
+                  <div className="swiper-button-prev"></div>
                 </div>
               </div>
             </div>
@@ -98,7 +116,7 @@ const OjtTestimonialArea = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default OjtTestimonialArea
+export default OjtTestimonialArea;
