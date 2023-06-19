@@ -64,8 +64,11 @@ const OjtJourney = () => {
             remarkable works and witness firsthand the passion, creativity, and
             innovation they bring to our projects.
           </p>
-          <a href="#">EXPLORE THEIR WORKS</a>{' '}
-          <i className="far fa-arrow-right" />
+          <Link href="/ojt/works">
+            <a>
+              EXPLORE THEIR WORKS <i className="far fa-arrow-right" />
+            </a>
+          </Link>
         </div>
       </div>
     </div>
