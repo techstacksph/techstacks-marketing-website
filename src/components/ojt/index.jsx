@@ -8,6 +8,7 @@ import ServiceAreaOjt from './ojt-benefits'
 import OjtCycleArea from './ojt-cycle'
 import OjtJourney from './ojt-journey'
 import OjtTestimonialArea from './ojt-testimonial'
+import OJTProgramJoin from './ojt-program-join'
 
 function OjtCorner() {
   useEffect(() => {
@@ -25,6 +26,7 @@ function OjtCorner() {
       <OjtCycleArea />
       <OjtJourney />
       <OjtTestimonialArea />
+      <OJTProgramJoin />
       <FooterTwo />
     </Wrapper>
   )
