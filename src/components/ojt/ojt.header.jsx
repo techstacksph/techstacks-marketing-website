@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
-import Swiper from 'swiper';
-import { Autoplay, Pagination } from 'swiper';
-import 'swiper/swiper-bundle.css';
+import React, { useEffect, useRef } from 'react'
+import Swiper from 'swiper'
+import { Autoplay, Pagination } from 'swiper'
+import 'swiper/swiper-bundle.css'
 
 const HeaderWithSlider = () => {
-  const sliderRef = React.createRef();
+  const sliderRef = useRef()
 
   useEffect(() => {
     const swiper = new Swiper(sliderRef.current, {
@@ -20,12 +20,12 @@ const HeaderWithSlider = () => {
         disableOnInteraction: false,
       },
       modules: [Autoplay, Pagination],
-    });
+    })
 
     return () => {
-      swiper.destroy();
-    };
-  }, []);
+      swiper.destroy()
+    }
+  }, [])
 
   return (
     <div className="header-container">
@@ -52,13 +52,12 @@ const HeaderWithSlider = () => {
                 alt="Slide 1"
               />
             </div>
-           
           </div>
-          <div className="swiper-pagination"></div> 
+          <div className="swiper-pagination"></div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default HeaderWithSlider;
+export default HeaderWithSlider
