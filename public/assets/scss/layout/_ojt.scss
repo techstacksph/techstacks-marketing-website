@@ -278,6 +278,7 @@
   bottom: 0;
   height: 100%;
   width: 100%;
+  z-index: 2000;
 }
 
 .ojt-portfolio-modal-content {
@@ -287,10 +288,12 @@
   translate: -50% -50%;
   width: 100%;
   max-width: 952px;
+  z-index: 2001;
 }
 
 .ojt-portfolio-modal-content-container {
   display: flex;
+  flex-wrap: wrap;
   gap: 50px;
 
   & > img {
