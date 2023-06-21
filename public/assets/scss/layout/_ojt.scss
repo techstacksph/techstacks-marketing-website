@@ -321,11 +321,26 @@
   }
 }
 
-.ojt-portfolio-items-container {
+.ojt-works-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
+  gap: 92px;
+
+  & > .tab-buttons {
+    display: flex;
+    gap: 20px;
+
+    & > .tp-btn-white,
+    & > .tp-btn {
+      padding: 0 16px;
+      height: 42px;
+      line-height: 1.2;
+    }
+  }
 
   & > .ojt-portfolio-items {
     gap: 60px 23px;

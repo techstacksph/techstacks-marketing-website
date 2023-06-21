@@ -58,17 +58,10 @@ const PortfolioButton = ({ img, color, title }) => {
 
 const OJTPortfolio = () => {
   return (
-    <div className="ojt-portfolio-items-container">
-      <div className="ojt-portfolio-items">
-        {WORKS_CONTENT.map(([img, color, title], i) => (
-          <PortfolioButton
-            key={i}
-            img={img}
-            color={color}
-            title={title}
-          ></PortfolioButton>
-        ))}
-      </div>
+    <div className="ojt-portfolio-items">
+      {WORKS_CONTENT.map(([img, color, title], i) => (
+        <PortfolioButton key={i} img={img} color={color} title={title} />
+      ))}
     </div>
   )
 }
