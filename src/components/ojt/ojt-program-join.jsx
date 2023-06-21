@@ -3,7 +3,7 @@ import Link from 'next/link'
 const OJTProgramJoin = () => {
   return (
     <div className="ojt-join-container">
-      <div className="ojt-join-content-container">
+      <div className="ojt-join-content-container container">
         <div className="ojt-join-content">
           <h2>
             Transform your Passion into a Career and join our OJT Program today

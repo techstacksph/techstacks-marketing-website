@@ -56,7 +56,7 @@ const OjtJourney = () => {
         className="ojt-journey-portfolio-img"
       />
 
-      <div className="ojt-journey-portfolio-container">
+      <div className="ojt-journey-portfolio-container container">
         <div className="ojt-journey-discover-card">
           <h3>Discover the Outstanding Works of our OJT Interns</h3>
           <p>
