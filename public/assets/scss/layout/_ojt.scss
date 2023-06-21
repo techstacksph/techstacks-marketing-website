@@ -164,11 +164,13 @@
       font-size: 20px;
       color: black;
     }
-    & > a:hover {
-      color: #21cd9c; /* color on hover */
+    & > a {
+      color: #21cd9c;
+      font-weight: bold;
     }
-    & > i:hover {
-      color: #21cd9c; /* color on hover */
+    & > i {
+      color: #21cd9c;
+      font-weight: bold;
     }
   }
 }
