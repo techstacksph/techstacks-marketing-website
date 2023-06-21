@@ -3,6 +3,7 @@ import { Provider } from 'react-redux'
 import { ToastContainer } from 'react-toastify'
 import Messenger from '../components/messenger'
 import { store } from '../redux/store'
+import CookieConsentComponent from '../components/cookie'
 
 if (typeof window !== 'undefined') {
   require('bootstrap/dist/js/bootstrap')
@@ -17,6 +18,7 @@ const MyApp = ({ Component, pageProps }) => (
       <Messenger />
       <Component {...pageProps} />
       <ToastContainer />
+      <CookieConsentComponent />
     </Provider>
   </>
 )

@@ -105,9 +105,9 @@ const Footer = () => (
               <div className="col-xl-7 col-lg-7 col-md-7 col-12">
                 <div className="tp-copyright-right text-md-end text-start">
                   {conditions.map((c, i) => (
-                    <a key={i} href="#">
+                    <Link key={i} href="/privacy-policy">
                       {c}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>
