@@ -3,15 +3,16 @@ const Banner = () => (
     <div className="container-xl">
       <div className="d-flex flex-column gap-2 flex-md-row align-items-center justify-content-between">
         <p className="banner-text m-0 text-white">
-          Do you want to increase traffic and enhance your website performance?
+          We have launched our online shop 🎉
         </p>
         <a
-          href="https://forms.gle/jxMz3qF5YcpNn9yj7"
+          href="https://shop.techstacksph.com/"
           target="_blank"
           rel="noreferrer"
-          className="tp-btn-yellow"
+          className="tp-btn-yellow d-flex align-items-center"
+          style={{ maxHeight: 40 }}
         >
-          Free Website Audit!
+          Shop now
         </a>
       </div>
     </div>
