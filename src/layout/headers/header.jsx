@@ -1,9 +1,9 @@
-import React from 'react'
 import Link from 'next/link'
-import useSticky from '../../hooks/use-sticky'
+import React from 'react'
 import Sidebar from '../../components/common/off-canvas'
-import NavMenus from './nav-menus'
+import useSticky from '../../hooks/use-sticky'
 import MobileMenu from './mobile-menu'
+import NavMenus from './nav-menus'
 
 const Header = () => {
   const { headerSticky } = useSticky()
@@ -54,9 +54,7 @@ const Header = () => {
           </div>
         </div>
       </header>
-
       <MobileMenu logo="techstacks-logo.png" />
-
       <Sidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
     </React.Fragment>
   )

@@ -1,7 +1,7 @@
-import React from 'react'
-import useSticky from '../../hooks/use-sticky'
-import Sidebar from '../../components/common/off-canvas'
 import Link from 'next/link'
+import React from 'react'
+import Sidebar from '../../components/common/off-canvas'
+import useSticky from '../../hooks/use-sticky'
 
 const MobileMenu = ({ logo, bg, transparent = true }) => {
   const { headerSticky } = useSticky()

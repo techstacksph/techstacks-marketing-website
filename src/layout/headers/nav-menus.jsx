@@ -11,7 +11,7 @@ const NavMenus = () => (
       ${menu.mega_menu ? 'has-mega-menu' : ''}`}
       >
         <Link href={menu.link}>
-          <a>
+          <a target={menu?.external ? '_blank' : '_self'}>
             {menu.title}&nbsp;
             {menu?.has_dropdown && <i className="fal fa-angle-down" />}
           </a>
@@ -20,7 +20,10 @@ const NavMenus = () => (
           <ul className="submenu text-start">
             {menu.sub_menus.map((sub_m, i) => (
               <li key={i}>
-                <Link href={sub_m.link}>
+                <Link
+                  href={sub_m.link}
+                  target={sub_m?.external ? '_blank' : '_self'}
+                >
                   <a>{sub_m.title}</a>
                 </Link>
               </li>
