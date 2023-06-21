@@ -31,8 +31,8 @@ const CookieConsentComponent = () => {
           Techstacks uses cookies!
         </p>
         <p style={{ fontSize: '16px', lineHeight: '16px', color: '#fff' }}>
-          This website uses cookies to enhance the user experience. By using
-          this website, you agree to our{' '}
+          We use cookies to enhance the user experience. By using our website,
+          you agree to our{' '}
           <span style={{ color: '#21cd9c' }}>
             <Link href="/privacy-policy">Privacy Policy.</Link>
           </span>
