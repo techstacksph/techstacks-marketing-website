@@ -1,5 +1,5 @@
 import { useId } from 'react'
-import { Header, Wrapper } from '../../layout'
+import { HeaderSix, Wrapper } from '../../layout'
 import { Form, Formik, Field as FormikField } from 'formik'
 import { object, string } from 'yup'
 import SEO from '../../components/seo'
@@ -33,6 +33,7 @@ export default function JoinPage() {
   return (
     <Wrapper>
       <SEO pageTitle="Inquire" />
+      <HeaderSix />
       <div className="ojt-join-page-root">
         <div className="ojt-join-page-wrapper">
           <div className="ojt-join-page-title">
