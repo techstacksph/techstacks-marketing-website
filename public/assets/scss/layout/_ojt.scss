@@ -363,3 +363,98 @@
     color: var(--tp-common-black);
   }
 }
+
+.ojt-join-page-root {
+  background-color: var(--tp-common-paste);
+  background-image: url('/assets/img/ojt/passion/ojt-join-bg.png');
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+
+  & > .ojt-join-page-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 84px;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    padding: 36px 16px;
+
+    & > .ojt-join-page-title {
+      max-width: 532px;
+      width: 100%;
+
+      & > h1 {
+        font-weight: 700;
+        font-size: 30px;
+        filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.4));
+        color: var(--tp-common-white);
+      }
+
+      & > p {
+        font-size: 20px;
+        font-weight: 400;
+        filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.4));
+        color: var(--tp-common-white);
+      }
+    }
+
+    & > .ojt-join-page-form {
+      padding: 36px;
+      background-color: var(--tp-common-white);
+      border-radius: 16px;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
+      width: 646px;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+      align-items: center;
+
+      & > p {
+        font-weight: 400;
+        color: var(--tp-common-black);
+        padding: 0 16px;
+      }
+
+      & > .field-container {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+        width: 100%;
+
+        & > .field {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          font-size: 14px;
+          line-height: 1.2;
+
+          & > .label-text {
+            color: var(--tp-common-black);
+            font-weight: 700;
+          }
+
+          & > .text-field-container {
+            display: flex;
+            gap: 8px;
+            flex-direction: column;
+
+            & > .text-field-error {
+              color: red;
+            }
+          }
+        }
+      }
+
+      & > .tp-btn {
+        height: 42px;
+        line-height: 1.2;
+        max-width: 136px;
+        width: 100%;
+        padding: 0;
+      }
+    }
+  }
+}
