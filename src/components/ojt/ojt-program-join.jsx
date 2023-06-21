@@ -16,7 +16,7 @@ const OJTProgramJoin = () => {
           </p>
 
           <Link href="/ojt/join">
-            <a className="tp-btn-white">
+            <a className="tp-btn">
               Join Us Now
               <i className="far fa-arrow-right" />
             </a>
