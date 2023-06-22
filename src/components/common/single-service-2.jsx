@@ -8,7 +8,7 @@ const SingleServiceTwo = ({ service, border }) => {
         data-wow-duration={service.duration}
         data-wow-delay={service.delay}
       >
-        <div className={`tp-service-item ${border ? border : ''} d-flex mb-30`}>
+        <div className={`tp-service-item ${border ? border : ''} d-flex mb-30`} >
           <div className="tp-sv-img">
             <img src={service.img} alt="" />
           </div>

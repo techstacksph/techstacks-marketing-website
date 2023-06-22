@@ -78,7 +78,7 @@ const services_items = services_data.filter(ser => ser.home)
 
 
 const ServiceAreaOjt = () => (
-  <div className="tp-service-area pt-120 pb-120 grey-bg p-relative fix" >
+  <div className="tp-service-area pt-120 pb-120 p-relative fix bg-img-benefits" >
     <div className="tp-sv-shape-img z-index-1">
       <img src={shape_img} alt="" />
     </div>

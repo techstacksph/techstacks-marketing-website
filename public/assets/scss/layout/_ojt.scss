@@ -88,6 +88,7 @@
 
 .tp-ojt-hero-space {
   padding-top: 220px;
+  padding-bottom: 50px;
 
   @media (min-width: 320px) {
     padding-top: 24px;
@@ -98,6 +99,7 @@
 
   @media (min-width: 992px) {
     padding-top: 220px;
+    padding-bottom: 50px;
   }
 }
 
@@ -216,6 +218,14 @@
     max-width: 90%;
   }
 }
+
+.bg-img-benefits {
+  background-image: url('../../img/ojt/bg_vector.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 .chat-bubble {
   position: relative;
   display: inline-block;
