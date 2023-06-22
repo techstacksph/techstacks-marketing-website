@@ -2,10 +2,15 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, FreeMode } from 'swiper'
 import 'swiper/css/bundle'
 import Link from 'next/link'
+import Marquee from 'react-fast-marquee'
 
 const Sliders = [
-  ['img-1.png', 'img-2.png', 'img-3.png'],
-  ['img-11.png', 'img-12.png', 'img-13.png'],
+  'slider-1/img-1.png',
+  'slider-1/img-2.png',
+  'slider-1/img-3.png',
+  'slider-2/img-11.png',
+  'slider-2/img-12.png',
+  'slider-2/img-13.png',
 ]
 
 const OjtJourney = () => {
@@ -23,32 +28,42 @@ const OjtJourney = () => {
       </div>
 
       <div className="ojt-journey-slider-container">
-        {Sliders.map((slider, sliderI) => (
-          <div key={sliderI}>
-            <Swiper
-              spaceBetween={16}
-              centeredSlides
-              speed={6000}
-              autoplay={{
-                delay: 1,
-                disableOnInteraction: true,
-                reverseDirection: sliderI % 2,
-              }}
-              modules={[Autoplay, FreeMode]}
-              loop
-              slidesPerView="auto"
-              loopedSlides={6}
-              freeMode
-            >
-              {slider.map((img, imgI) => (
-                <SwiperSlide key={imgI}>
-                  <img src={`/assets/img/ojt/slider-1/${img}`} />
-                  <img src={`/assets/img/ojt/slider-2/${img}`} />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-        ))}
+        <Swiper
+          initialSlide={12} // Go to start
+          spaceBetween={16}
+          centeredSlides
+          speed={6000}
+          autoplay={{
+            delay: 1,
+            disableOnInteraction: false,
+          }}
+          modules={[Autoplay, FreeMode]}
+          loop
+          slidesPerView="auto"
+          loopedSlides={6}
+          freeMode
+        >
+          {Sliders.map((img, i) => (
+            <SwiperSlide key={i}>
+              <img src={`/assets/img/ojt/${img}`} />
+            </SwiperSlide>
+          ))}
+          {Sliders.map((img, i) => (
+            <SwiperSlide key={i}>
+              <img src={`/assets/img/ojt/${img}`} />
+            </SwiperSlide>
+          ))}
+          {Sliders.map((img, i) => (
+            <SwiperSlide key={i}>
+              <img src={`/assets/img/ojt/${img}`} />
+            </SwiperSlide>
+          ))}
+          {Sliders.map((img, i) => (
+            <SwiperSlide key={i}>
+              <img src={`/assets/img/ojt/${img}`} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
 
       <img
