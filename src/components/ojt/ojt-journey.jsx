@@ -2,7 +2,6 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, FreeMode } from 'swiper'
 import 'swiper/css/bundle'
 import Link from 'next/link'
-import Marquee from 'react-fast-marquee'
 
 const Sliders = [
   'slider-1/img-1.png',
