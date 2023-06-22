@@ -2,7 +2,7 @@ import React from 'react'
 
 const SingleServiceTwo = ({ service, border }) => {
   return (
-    <div className="col-lg-6 col-md-12 col-12">
+    <div className="col-lg-6 col-md-12 col-12" >
       <div
         className="tp-sv-box wow tpfadeUp"
         data-wow-duration={service.duration}
@@ -16,8 +16,6 @@ const SingleServiceTwo = ({ service, border }) => {
             <h3 className=" tp-sv-title mb-24">{service.title}</h3>
             <p className="mb-30">
               {service?.text_1} 
-              {/* {service?.text_2} 
-              {service?.text_3} */}
             </p>
 
             <div className="tp-sv-link mt-35 d-none">

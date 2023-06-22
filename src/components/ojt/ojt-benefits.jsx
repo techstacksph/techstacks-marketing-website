@@ -75,24 +75,29 @@ const services_contents = {
 const { shape_img, title, subtitle, btn_text } = services_contents
 const services_items = services_data.filter(ser => ser.home)
 
+
+
 const ServiceAreaOjt = () => (
-  <div className="tp-service-area pt-120 pb-120 grey-bg p-relative fix">
+  <div className="tp-service-area pt-120 pb-120 grey-bg p-relative fix" >
     <div className="tp-sv-shape-img z-index-1">
       <img src={shape_img} alt="" />
     </div>
 
     <div className="container">
-      <div className="container-wrapper">
+      <div className="container-wrapper" >
         <div  className="container-content ">
           <h2 className="heading-ojt-service-area" >
             Trainees can enjoy numerous benefits and perks that help support their
             learning and development.
           </h2>
-          <p className="paragraph-ojt-service-area">
-            From customized learning plans and project-based learning to access to
-            industry experts and career growth opportunities, we give our trainees
-            the tools and resources they need to succeed.
-          </p>
+          <div className="paragraph-ojt-service-wrapper">
+            <p className="paragraph-ojt-service-area">
+              From customized learning plans and project-based learning to access to
+              industry experts and career growth opportunities, we give our trainees
+              the tools and resources they need to succeed.
+            </p>
+          </div>
+     
         </div>
         <div className="row">
           {services_items.map((s, i) => (
