@@ -54,7 +54,8 @@ const services_data = [
     delay: '1.3s',
     img: '/assets/img/service/service-icon-9.1.png',
     title: 'Support',
-    text_1: 'Extensive technical support free for a year.',
+    text_1:
+      'Experience unparalleled assistance with our extended technical / dev support.',
     text_2: '',
     home: true,
     service_p_2: true,
