@@ -214,9 +214,11 @@
 .bg-img-hero-ojt-testimonials {
   background-image: url('../../img/hero/bg-testimonial.png');
   background-repeat: no-repeat;
-  img {
-    max-width: 90%;
-  }
+  background-position: center;
+  background-size: cover;
+  // img {
+  //   max-width: 90%;
+  // }
 }
 
 .bg-img-benefits {
