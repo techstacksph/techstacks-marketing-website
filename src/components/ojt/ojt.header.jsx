@@ -28,32 +28,32 @@ const HeaderWithSlider = () => {
   }, [])
 
   return (
-    <div className="header-container">
-      <div className="item item1">
-        <h1>Their Awesome Projects</h1>
-      </div>
-      <div className="item item2">
-        <div className="rectangle">
-          <p id="rectangle-text">Website Portfolio</p>
-        </div>
-        <div className="slider" ref={sliderRef}>
-          <div className="swiper-wrapper">
-            <div className="swiper-slide">
-              <img
-                className="slider-image"
-                src="/assets/img/ojt/works-slider/Rectangle 751.png"
-                alt="Slide 1"
-              />
-            </div>
-            <div className="swiper-slide">
-              <img
-                className="slider-image"
-                src="/assets/img/ojt/works/Rectangle 771.png"
-                alt="Slide 1"
-              />
+    <div className="root-header-wrapper">
+      <div className="header-container">
+        <div className="header-content-wrapper">
+          <h1 id="item1-text">Their Awesome Projects</h1>
+          <div className="item item2">
+            <p id="item2-text">Website Portfolio</p>
+            <div className="slider" ref={sliderRef}>
+              <div className="swiper-wrapper">
+                <div className="swiper-slide">
+                  <img
+                    className="slider-image"
+                    src="/assets/img/ojt/works-slider/Rectangle 751.png"
+                    alt="Slide 1"
+                  />
+                </div>
+                {/* <div className="swiper-slide">
+                  <img
+                    className="slider-image"
+                    src="/assets/img/ojt/works/Rectangle 771.png"
+                    alt="Slide 1"
+                  />
+                </div> */}
+              </div>
+              <div className="swiper-pagination"></div>
             </div>
           </div>
-          <div className="swiper-pagination"></div>
         </div>
       </div>
     </div>
