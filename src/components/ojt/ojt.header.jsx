@@ -39,17 +39,38 @@ const HeaderWithSlider = () => {
                 <div className="swiper-slide">
                   <img
                     className="slider-image"
-                    src="/assets/img/ojt/works-slider/Rectangle 751.png"
+                    src="/assets/img/ojt/works-slider/6.png"
                     alt="Slide 1"
                   />
                 </div>
-                {/* <div className="swiper-slide">
+                <div className="swiper-slide">
                   <img
                     className="slider-image"
-                    src="/assets/img/ojt/works/Rectangle 771.png"
-                    alt="Slide 1"
+                    src="/assets/img/ojt/works-slider/5.png"
+                    alt="Slide 2"
                   />
-                </div> */}
+                </div>
+                <div className="swiper-slide">
+                  <img
+                    className="slider-image"
+                    src="/assets/img/ojt/works-slider/7.png"
+                    alt="Slide 3"
+                  />
+                </div>
+                <div className="swiper-slide">
+                  <img
+                    className="slider-image"
+                    src="/assets/img/ojt/works-slider/8.png"
+                    alt="Slide 4"
+                  />
+                </div>
+                <div className="swiper-slide">
+                  <img
+                    className="slider-image"
+                    src="/assets/img/ojt/works-slider/9.png"
+                    alt="Slide 5"
+                  />
+                </div>
               </div>
               <div className="swiper-pagination"></div>
             </div>
