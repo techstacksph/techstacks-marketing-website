@@ -7,7 +7,7 @@
 
 .tp-service-item {
     background-color: var(--tp-common-white);
-    padding: 70px 60px;
+    padding: 70px 30px;
     border-radius: 20px;
     position: relative;
     z-index: 2;
@@ -77,12 +77,14 @@
 }
 
 .tp-sv-content {
+    width: 100%;
+
     @media #{$xl} {
         padding-left: 30px;
     }
 
     @media #{$lg} {
-        padding-left: 15px;
+        padding-left: 10px;
     }
 
     @media #{$xs} {
@@ -91,7 +93,7 @@
 
     & .tp-sv-title {
         color: var(--tp-common-black);
-        font-size: 32px;
+        font-size: 1.5rem;
         font-weight: 500;
 
         &:hover {

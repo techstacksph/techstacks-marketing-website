@@ -13,11 +13,11 @@ const SingleServiceTwo = ({ service, border }) => {
             <img src={service.img} alt="" />
           </div>
           <div className="tp-sv-content pl-60">
-            <h3 className=" tp-sv-title mb-35">{service.title}</h3>
+            <h3 className=" tp-sv-title mb-24">{service.title}</h3>
             <p className="mb-30">
-              {service?.text_1} <br />
-              {service?.text_2} <br />
-              {service?.text_3}
+              {service?.text_1} 
+              {/* {service?.text_2} 
+              {service?.text_3} */}
             </p>
 
             <div className="tp-sv-link mt-35 d-none">
