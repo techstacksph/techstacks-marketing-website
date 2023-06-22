@@ -1,6 +1,6 @@
 import React from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper'
+import { Swiper, SwiperSlide } from 'swiper/react'
 
 const testimonial_data = [
   {
@@ -25,6 +25,15 @@ const testimonial_data = [
   },
   {
     id: 3,
+    ratings: [1, 2, 3, 4, 5],
+    desc: 'Great service and knowledge with GatsbyJs',
+    img: '/assets/img/testimonial/testi-4.jpg',
+    name: 'Adolfo Jimenez',
+    title: 'DeDiabetes.com',
+    brand_img: '/assets/img/testimonial/testi-brands-2.png',
+  },
+  {
+    id: 4,
     ratings: [1, 2, 3, 4, 5],
     desc: 'Techstacks completed the task in great detail. They were very proactive and took the initiative in many different areas, including informing us of a potential security vulnerability in our existing software.',
     img: '/assets/img/testimonial/testi-7.png',
