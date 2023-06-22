@@ -1,5 +1,5 @@
 import { useId, useState } from 'react'
-import { HeaderSix, Wrapper } from '../../layout'
+import { FooterTwo, HeaderSix, Wrapper } from '../../layout'
 import { Form, Formik, Field as FormikField } from 'formik'
 import { object, string } from 'yup'
 import SEO from '../../components/seo'
@@ -123,6 +123,7 @@ export default function JoinPage() {
           )}
         </div>
       </div>
+      <FooterTwo />
     </Wrapper>
   )
 }
