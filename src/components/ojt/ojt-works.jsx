@@ -2,10 +2,10 @@ import { useState } from 'react'
 import OJTPortfolio from './ojt-portfolio'
 
 const TABS = [
-  { name: 'All Works' },
+  // { name: 'All Works' },
   { name: 'Portfolio Website', Component: OJTPortfolio },
   { name: 'Dream Website' },
-  { name: 'Other Works' },
+  // { name: 'Other Works' },
 ]
 
 const DEFAULT_TAB_INDEX = 1
