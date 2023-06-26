@@ -4,23 +4,16 @@ import { createPortal } from 'react-dom'
 
 export const WORKS_CONTENT = [
   [
-    'Rectangle 760',
-    '#242734',
-    "John Rinand | Portfolio",
-    '',
-    'https://techstacks-ph-ojt.github.io/Rinands-Portfolio/',
-  ],
-  ['Rectangle 771', '#65C9FF', 'Jhonas | Portfolio', '', 'https://lalojhonaskatsu21.web.app/'],
-  ['Rectangle 772', '#96C3E5', 'Jedediah | Portfolio', '', 'https://jedediahchrisdev.netlify.app/'],
-  ['Rectangle 773', '#F9C22E', 'Daniel Arvi | Portfolio', '', 'https://dap-dev.netlify.app/'],
-  ['Rectangle 774', '#DDB03E', 'Ezeriel Pineda | Portfolio', '', 'https://jespdev-portfolio.netlify.app/'],
-  ['Rectangle 775', '#CF040B', 'Ivan Mauricio | Portfolio', '', 'https://akira14.netlify.app/'],
-  ['Rectangle 776', '#0E5656', 'Aaron Soniedos | Portfolio', '', 'https://ae-soniedos.netlify.app/'],
-  ['Rectangle 777', '#75CABF', 'Cecile Joy | Portfolio', '', 'https://techstacks-ph-ojt.github.io/Portfolio-/'],
-  ['Rectangle 778', '#10AB56', 'Hannah | Portfolio', '', 'https://techstacks-ph-ojt.github.io/My-Portfolio/'],
+    'redserve-logo', '#840000', 'Redserve', '', 'https://redserve.netlify.app/'],
+  ['agora-logo', '#6D31C9', 'Agora NFT Marketplace', '', 'https://agoramp.netlify.app/'],
+  ['odyssey-logo', '#83A75E', 'Odyssey Travels', '', 'https://odysseytravels.netlify.app/'],
+  ['creators-logo', '#6E849C', 'New Generation Marketplace', '', 'https://creatorsmarketplace.netlify.app/'],
+  ['itravels-logo', '#219EBC', 'Itravels', '', 'https://itravels14.netlify.app/home/'],
+  ['ae-logo', '#F34C4C', 'AE Footgear', '', 'https://aefootgearwordpress.netlify.app/home/'],
+  ['eze-logo', '#F0F6F6', 'Ezeriel Pineda', '', 'https://jespdev-wpportfolio.netlify.app/'],
 ]
 
-const PortfolioButton = ({ img, color, title, summary, website }) => {
+const DreamWebsiteButton = ({ img, color, title, summary, website }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -86,11 +79,11 @@ const PortfolioButton = ({ img, color, title, summary, website }) => {
   )
 }
 
-const OJTPortfolio = () => {
+const OJTDreamWebsite = () => {
   return (
     <div className="ojt-portfolio-items">
       {WORKS_CONTENT.map(([img, color, title, summary, website], i) => (
-        <PortfolioButton
+        <DreamWebsiteButton
           key={i}
           img={img}
           color={color}
@@ -103,4 +96,4 @@ const OJTPortfolio = () => {
   )
 }
 
-export default OJTPortfolio
+export default OJTDreamWebsite

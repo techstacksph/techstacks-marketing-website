@@ -1,14 +1,15 @@
 import { useState } from 'react'
 import OJTPortfolio from './ojt-portfolio'
+import OJTDreamWebsite from './ojt-proj-website'
 
 const TABS = [
   // { name: 'All Works' },
   { name: 'Portfolio Website', Component: OJTPortfolio },
-  { name: 'Dream Website' },
+  { name: 'Dream Website', Component: OJTDreamWebsite },
   // { name: 'Other Works' },
 ]
 
-const DEFAULT_TAB_INDEX = 1
+const DEFAULT_TAB_INDEX = 0
 
 const OJTWorks = () => {
   const [activeTab, setActiveTab] = useState(DEFAULT_TAB_INDEX)
