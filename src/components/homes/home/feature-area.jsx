@@ -2,7 +2,7 @@ import React from 'react'
 import { FeatureOne, FeatureThree, FeatureTwo } from '../../../svg'
 
 const feature_contents = {
-  feature_img: '/assets/img/feature/featured-techstacks.png',
+  feature_img: '/assets/img/feature/why-choose-us.png',
   subtitle: 'Why Choose us',
   title: 'We make beautiful, high converting, engaging, secure',
   highlight_text: ' websites.',
