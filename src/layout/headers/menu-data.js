@@ -35,5 +35,12 @@ const menu_data = [
     title: 'Careers',
     link: '/careers',
   },
+  {
+    id: 5,
+    mega_menu: false,
+    has_dropdown: false,
+    title: 'Trainings',
+    link: '/trainings',
+  },
 ]
 export default menu_data
