@@ -31,7 +31,7 @@ const HeaderSix = () => {
           }`}
         >
           <div className="container-fluid">
-            <div className="row align-items-center">
+            <div className="row d-flex justify-content-end  align-items-center">
               <div className="col-xxl-3 col-xl-3 col-lg-3">
                 <div className="tp-logo text-start">
                   <Link href="/">
@@ -41,8 +41,8 @@ const HeaderSix = () => {
                   </Link>
                 </div>
               </div>
-              <div className="col-xxl-5 col-xl-6 col-lg-6">
-                <div className="tp-main-menu tp-menu-black tp-bs-menu tp-bp-menu text-center">
+              <div className="col-xxl-6 col-xl-6 col-lg-6"style={{padding:0}}>
+                <div className="tp-main-menu tp-menu-black tp-bs-menu tp-bp-menu text-center  d-flex justify-content-start">
                   <nav id="mobile-menu">
                     {/* nav menus start */}
                     <NavMenus />
@@ -50,8 +50,9 @@ const HeaderSix = () => {
                   </nav>
                 </div>
               </div>
-              <div className="col-xxl-4 col-xl-3 col-lg-3">
-                <div className="tp-header-left d-flex align-items-center justify-content-end ">
+ 
+              <div className="col-xxl-3 col-xl-3 col-lg-3">
+                <div className="tp-header-left d-flex justify-content-end ">
                   <div className="tp-header-yellow-button">
                     <Link href="mailto:techstacks.2022@gmail.com">
                       <a className="tp-btn-white">Talk to Sales</a>

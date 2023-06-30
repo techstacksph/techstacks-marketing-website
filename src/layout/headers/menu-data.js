@@ -40,7 +40,7 @@ const menu_data = [
     mega_menu: false,
     has_dropdown: false,
     title: 'Trainings',
-    link: '/trainings',
+    link: '/ojt',
   },
 ]
 export default menu_data
