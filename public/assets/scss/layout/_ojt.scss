@@ -704,3 +704,10 @@
     }
   }
 }
+
+.h-center {
+  display: flex;
+  li > a {
+    white-space: nowrap;
+  }
+}

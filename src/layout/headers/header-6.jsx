@@ -43,14 +43,14 @@ const HeaderSix = () => {
               </div>
               <div className="col-xxl-6 col-xl-6 col-lg-6"style={{padding:0}}>
                 <div className="tp-main-menu tp-menu-black tp-bs-menu tp-bp-menu text-center  d-flex justify-content-start">
-                  <nav id="mobile-menu">
+                  <nav id="mobile-menu h-center">
                     {/* nav menus start */}
                     <NavMenus />
                     {/* nav menus end */}
                   </nav>
                 </div>
               </div>
- 
+
               <div className="col-xxl-3 col-xl-3 col-lg-3">
                 <div className="tp-header-left d-flex justify-content-end ">
                   <div className="tp-header-yellow-button">

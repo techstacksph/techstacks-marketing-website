@@ -3,7 +3,7 @@ import React from 'react'
 import menu_data from './menu-data'
 
 const NavMenus = () => (
-  <ul>
+  <ul className="h-center">
     {menu_data.map((menu, i) => (
       <li
         key={i}
