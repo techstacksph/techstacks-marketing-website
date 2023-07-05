@@ -146,7 +146,7 @@ const PortfolioItems = () => {
               <div className="col-12">
                 <div className="tp-project-button text-center mt-25">
                   <button onClick={handleLoadData} className="tp-btn-yellow">
-                    Lode more
+                    Load more
                   </button>
                 </div>
               </div>
