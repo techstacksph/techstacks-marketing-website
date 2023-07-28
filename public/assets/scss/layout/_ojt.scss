@@ -158,12 +158,14 @@
     flex-direction: column;
     gap: 44px;
     overflow-x: hidden;
-    .swiper-free-mode {
-      & > .swiper-wrapper {
-        transition-timing-function: linear;
 
-        .swiper-slide {
-          width: auto;
+    & > .marquee-container {
+      .child {
+        height: 100%;
+        margin-right: 8px;
+
+        & img {
+          height: 100%;
         }
       }
     }

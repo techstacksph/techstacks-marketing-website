@@ -1,7 +1,5 @@
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay, FreeMode } from 'swiper'
-import 'swiper/css/bundle'
 import Link from 'next/link'
+import Marquee from 'react-fast-marquee'
 
 const Sliders = [
   'slider-1/img-1.png',
@@ -27,42 +25,11 @@ const OjtJourney = () => {
       </div>
 
       <div className="ojt-journey-slider-container">
-        <Swiper
-          initialSlide={12} // Go to start
-          spaceBetween={16}
-          centeredSlides
-          speed={6000}
-          autoplay={{
-            delay: 1,
-            disableOnInteraction: false,
-          }}
-          modules={[Autoplay, FreeMode]}
-          loop
-          slidesPerView="auto"
-          loopedSlides={6}
-          freeMode
-        >
+        <Marquee>
           {Sliders.map((img, i) => (
-            <SwiperSlide key={i}>
-              <img src={`/assets/img/ojt/${img}`} />
-            </SwiperSlide>
+            <img src={`/assets/img/ojt/${img}`} key={i} />
           ))}
-          {Sliders.map((img, i) => (
-            <SwiperSlide key={i}>
-              <img src={`/assets/img/ojt/${img}`} />
-            </SwiperSlide>
-          ))}
-          {Sliders.map((img, i) => (
-            <SwiperSlide key={i}>
-              <img src={`/assets/img/ojt/${img}`} />
-            </SwiperSlide>
-          ))}
-          {Sliders.map((img, i) => (
-            <SwiperSlide key={i}>
-              <img src={`/assets/img/ojt/${img}`} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        </Marquee>
       </div>
 
       <img
