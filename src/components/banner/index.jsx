@@ -3,7 +3,7 @@ const Banner = () => (
     <div className="container-xl">
       <div className="d-flex flex-column gap-2 flex-md-row align-items-center justify-content-between">
         <p className="banner-text m-0 text-white">
-          We have launched our online shop 🎉
+          Use this code TECHSTK831 to get a 7% discount. 🎉
         </p>
         <a
           href="https://shop.techstacksph.com/"
