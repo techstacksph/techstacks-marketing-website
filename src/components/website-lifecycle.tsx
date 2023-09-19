@@ -31,10 +31,12 @@ export const METHOD_CONTENT = [
     'Experience unparalleled assistance with our extensive technical / dev support.',
     '/lottie/support.json',
   ],
-] satisfies [string, string, string][];
+] as const;
+
+type MethodTabValue = (typeof METHOD_CONTENT)[number][number];
 
 export default function WebsiteLifecycle() {
-  const [tab, setTab] = useState(METHOD_CONTENT[0][0]);
+  const [tab, setTab] = useState<MethodTabValue>(METHOD_CONTENT[0][0]);
   const [container] = useAutoAnimate();
 
   return (

@@ -18,7 +18,7 @@ export const MAKE_WEB_CONTENT = [
     'We commit to help your business stand out and gain the digital-competitive advantage through user-friendly, fast, secure, high converting, engaging websites.',
     '/lottie/support-2.json',
   ],
-];
+] as const;
 
 export default function MakeWebsites() {
   return (
