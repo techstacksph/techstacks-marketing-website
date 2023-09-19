@@ -1,6 +1,6 @@
 import type { Config } from 'tailwindcss';
 import twAnimate from 'tailwindcss-animate';
-import { borderAnimate } from './plugins/border-animate';
+import { borderAnimate } from './plugins/border-animate-plugin';
 
 const config: Config = {
   content: [
