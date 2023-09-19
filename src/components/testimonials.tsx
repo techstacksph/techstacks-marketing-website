@@ -73,7 +73,7 @@ export default function Testimonials() {
         infinite
         innerWidth={0}
         items={TESTIMONIALS.map(({ from, name, star, testimonial, img }, i) => (
-          <div className="flex flex-col gap-8 px-1" key={name}>
+          <div className="flex flex-col gap-8 px-4" key={name}>
             <div className="flex items-center justify-center gap-2">
               <Image
                 alt={name}

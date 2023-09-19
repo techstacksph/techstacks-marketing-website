@@ -1,0 +1,34 @@
+import { Slot } from '@radix-ui/react-slot';
+import type { HTMLAttributes } from 'react';
+import { forwardRef } from 'react';
+import { cn } from '@/utils/cn';
+
+interface MainProps extends HTMLAttributes<HTMLElement> {
+  asChild?: boolean;
+}
+
+export const Main = forwardRef<HTMLElement, MainProps>(
+  ({ asChild, className, ...props }, ref) => {
+    const Comp = asChild ? Slot : 'main';
+    return <Comp className={cn('space-y-8', className)} {...props} ref={ref} />;
+  },
+);
+Main.displayName = 'main';
+
+interface SectionProps extends HTMLAttributes<HTMLElement> {
+  asChild?: boolean;
+}
+
+export const Section = forwardRef<HTMLElement, SectionProps>(
+  ({ asChild, className, ...props }, ref) => {
+    const Comp = asChild ? Slot : 'section';
+    return (
+      <Comp
+        className={cn('max-w-7xl px-4 mx-auto', className)}
+        {...props}
+        ref={ref}
+      />
+    );
+  },
+);
+Section.displayName = 'section';
