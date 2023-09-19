@@ -36,49 +36,79 @@ export const borderAnimate = plugin(
           '--border-animate-via': 'currentColor',
           '--border-animate-to': 'currentColor',
           '--border-animate-radius': 'unset',
+          '--border-animate-state': 'running',
+          '--border-animate-opacity': '1',
+          '--border-animate-size': '2px',
           zIndex: '-1',
           content: "''",
           position: 'absolute',
-          top: '-1px',
-          left: '-1px',
-          width: 'calc(100% + 2px)',
-          height: 'calc(100% + 2px)',
-          background:
-            'linear-gradient(var(--border-animate-angle, 0deg), var(--border-animate-from), var(--border-animate-via), var(--border-animate-to))',
+          top: 'calc(-1 * var(--border-animate-size) / 2)',
+          left: 'calc(-1 * var(--border-animate-size) / 2)',
+          width: 'calc(100% + var(--border-animate-size))',
+          height: 'calc(100% + var(--border-animate-size))',
+          background: [
+            'conic-gradient(from var(--border-animate-angle, 0deg)',
+            'var(--border-animate-from) 0%',
+            'var(--border-animate-to) 25%',
+            'var(--border-animate-from) 50%',
+            'var(--border-animate-to) 75%',
+            'var(--border-animate-from) 100%)',
+          ].join(','),
           animationName: 'borderAnimate',
-          animationDuration: '8s',
+          animationDuration: '2s',
           animationTimingFunction: 'linear',
           animationIterationCount: 'infinite',
-          animationPlayState: 'paused',
-          opacity: '0',
-          transition: '300ms ease-in-out',
+          animationPlayState: 'var(--border-animate-state)',
+          opacity: 'var(--border-animate-opacity)',
+          transition: 'all 150ms ease-in-out',
           borderRadius: 'var(--border-animate-radius)',
-        },
-
-        '&:hover': {
-          '&::before': {
-            animationPlayState: 'running',
-            opacity: '1',
-          },
         },
       },
     });
 
     matchUtilities(
       {
-        'border-animate-from': (value) => ({
+        'border-animate-size': (value) => ({
           '&::before': {
-            '--border-animate-from': value as string,
+            '--border-animate-size': String(value),
           },
         }),
-        'border-animate-via': (value) => ({
+      },
+      { values: theme('borderWidth') },
+    );
+
+    matchUtilities(
+      {
+        'border-animate-state': (value) => ({
           '&::before': {
-            '--border-animate-via': value as string,
+            '--border-animate-state': value,
+          },
+        }),
+      },
+      { values: { running: 'running', paused: 'paused' } },
+    );
+
+    matchUtilities(
+      {
+        'border-animate-opacity': (value) => ({
+          '&::before': {
+            '--border-animate-opacity': String(value),
+          },
+        }),
+      },
+      { values: theme('opacity') },
+    );
+
+    matchUtilities(
+      {
+        'border-animate-from': (value) => ({
+          '&::before': {
+            '--border-animate-from': String(value),
           },
         }),
         'border-animate-to': (value) => ({
           '&::before': {
-            '--border-animate-to': value as string,
+            '--border-animate-to': String(value),
           },
         }),
       },
@@ -89,7 +119,7 @@ export const borderAnimate = plugin(
       {
         'border-animate-rounded': (value) => ({
           '&::before': {
-            '--border-animate-radius': value as string,
+            '--border-animate-radius': String(value),
           },
         }),
       },
