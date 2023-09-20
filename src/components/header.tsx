@@ -8,6 +8,7 @@ import { NavRoutes } from '@/constants/nav-routes';
 import { cn } from '@/utils/cn';
 import { Button } from './ui/button';
 import { ModeToggle } from './mode-toggle';
+import NavDrawer from './nav-drawer';
 
 export default function Header() {
   const [{ y }] = useWindowScroll();
@@ -21,9 +22,11 @@ export default function Header() {
     >
       <div className="h-full px-4 mx-auto max-w-7xl">
         <div className="flex items-center justify-between h-full">
-          <Button size="icon" variant="ghost">
-            <Menu />
-          </Button>
+          <NavDrawer>
+            <Button size="icon" variant="ghost">
+              <Menu />
+            </Button>
+          </NavDrawer>
 
           <Link href={NavRoutes.Home}>
             <Image
