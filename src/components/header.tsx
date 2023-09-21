@@ -6,7 +6,6 @@ import { Menu } from 'lucide-react';
 import { useWindowScroll } from '@uidotdev/usehooks';
 import { NavRoutes } from '@/constants/nav-routes';
 import { cn } from '@/utils/cn';
-import { borderAnimateVariants } from '@/utils/border-animate';
 import { Button } from './ui/button';
 import { ModeToggle } from './mode-toggle';
 import NavDrawer from './nav-drawer';
@@ -67,13 +66,12 @@ export default function Header() {
                 ),
               )}
               <li className="hidden lg:block">
-                <Button className={borderAnimateVariants()}>
-                  Get in touch &rarr;
-                </Button>
-              </li>
-              <li className="hidden lg:block">
                 <Separator orientation="vertical" />
               </li>
+              <li className="hidden lg:block">
+                <Button variant="outline">Get in touch &rarr;</Button>
+              </li>
+
               <li>
                 <ModeToggle />
               </li>
