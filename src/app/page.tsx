@@ -18,17 +18,17 @@ export default function Home() {
   return (
     <Main>
       <Section className="space-y-8">
-        <div className="grid grid-cols-1 gap-8 py-8">
+        <div className="grid grid-cols-1 gap-8 py-8 lg:grid-cols-2 lg:justify-center lg:items-center">
           <div className="flex flex-col gap-8">
-            <h1 className="text-3xl font-semibold leading-tight text-center">
+            <h1 className="text-3xl font-semibold leading-tight text-center lg:text-left lg:text-5xl xl:text-7xl">
               Building websites with a purpose
             </h1>
-            <p className="text-sm leading-loose text-center text-muted">
+            <p className="text-sm leading-loose text-center text-muted lg:text-left lg:text-xl">
               We specialize in designing and building beautiful, fast, secure,
               and high converting, engaging websites with excellent performance
               and SEO score.
             </p>
-            <div className="flex gap-4 place-content-center">
+            <div className="flex gap-4 place-content-center lg:place-content-start">
               <Button asChild className={borderAnimateVariants()}>
                 <Link href="#">Let&apos;s Start</Link>
               </Button>
