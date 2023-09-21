@@ -14,6 +14,7 @@ import {
 
 interface NavDrawerProps {
   children: ReactNode;
+  className?: string;
 }
 
 export default function NavDrawer(props: NavDrawerProps) {

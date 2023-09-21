@@ -16,7 +16,7 @@ export default function Footer() {
     <footer className="w-full flex justify-center pt-[72px] pb-10 px-4">
       <div className="w-full max-w-7xl">
         <div className="flex flex-col gap-8">
-          <div className="flex flex-col gap-14 md:flex-row gap-12 lg:flex-row justify-between">
+          <div className="flex flex-col gap-12 md:flex-row lg:flex-row justify-between">
             <div className="flex flex-col items-center gap-6 md:items-start">
               <Image
                 alt="Techstacks Logo"

@@ -6,9 +6,11 @@ import { Menu } from 'lucide-react';
 import { useWindowScroll } from '@uidotdev/usehooks';
 import { NavRoutes } from '@/constants/nav-routes';
 import { cn } from '@/utils/cn';
+import { borderAnimateVariants } from '@/utils/border-animate';
 import { Button } from './ui/button';
 import { ModeToggle } from './mode-toggle';
 import NavDrawer from './nav-drawer';
+import { Separator } from './ui/separator';
 
 export default function Header() {
   const [{ y }] = useWindowScroll();
@@ -22,12 +24,11 @@ export default function Header() {
     >
       <div className="h-full px-4 mx-auto max-w-7xl">
         <div className="flex items-center justify-between h-full">
-          <NavDrawer>
+          <NavDrawer className="block lg:hidden">
             <Button size="icon" variant="ghost">
               <Menu />
             </Button>
           </NavDrawer>
-
           <Link href={NavRoutes.Home}>
             <Image
               alt="Techstacks Logo"
@@ -40,19 +41,26 @@ export default function Header() {
 
           <nav className="h-10">
             <ul className="flex h-full gap-4">
-              {/* {['About us', 'Products', 'Services', 'Careers', 'Trainings'].map(
+              {['About us', 'Products', 'Services', 'Careers', 'Trainings'].map(
                 (route) => (
-                  <li key={route}>
+                  <li className="hidden lg:block" key={route}>
                     <Link
+                      className="flex h-full px-4 rounded place-items-center"
                       href="#"
-                      className="flex h-full px-4 rounded place-items-center bg-primary-foreground"
                     >
                       {route}
                     </Link>
                   </li>
-                )
-              )} */}
-
+                ),
+              )}
+              <li className="hidden lg:block">
+                <Button className={borderAnimateVariants()}>
+                  Get in touch &rarr;
+                </Button>
+              </li>
+              <li className="hidden lg:block">
+                <Separator orientation="vertical" />
+              </li>
               <li>
                 <ModeToggle />
               </li>
