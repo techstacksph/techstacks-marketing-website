@@ -11,6 +11,7 @@ import { Button } from './ui/button';
 import { ModeToggle } from './mode-toggle';
 import NavDrawer from './nav-drawer';
 import { Separator } from './ui/separator';
+import { HoverableChild, HoverableParent } from './hoverable';
 
 export default function Header() {
   const [{ y }] = useWindowScroll();
@@ -43,14 +44,26 @@ export default function Header() {
             <ul className="flex h-full gap-4">
               {['About us', 'Products', 'Services', 'Careers', 'Trainings'].map(
                 (route) => (
-                  <li className="hidden lg:block" key={route}>
-                    <Link
-                      className="flex h-full px-4 rounded place-items-center"
-                      href="#"
-                    >
-                      {route}
-                    </Link>
-                  </li>
+                  <HoverableParent
+                    asChild
+                    className="before:border-primary after:border-primary"
+                    key={route}
+                    variant="x"
+                  >
+                    <li className="hidden lg:block">
+                      <HoverableChild
+                        asChild
+                        className="before:bg-primary hover:text-primary-foreground hover:font-medium"
+                      >
+                        <Link
+                          className="flex h-full px-4 rounded place-items-center"
+                          href="#"
+                        >
+                          {route}
+                        </Link>
+                      </HoverableChild>
+                    </li>
+                  </HoverableParent>
                 ),
               )}
               <li className="hidden lg:block">

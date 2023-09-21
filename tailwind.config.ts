@@ -77,11 +77,11 @@ const config: Config = {
       },
       screens: {
         xs: '320px',
-        sm: '375px',
+        sm: '376px',
         md: '768px',
         lg: '992px',
         xl: '1280px',
-        xxl: '1536px',
+        '2xl': '1536px',
       },
     },
   },
