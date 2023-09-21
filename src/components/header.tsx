@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Menu } from 'lucide-react';
 import { useWindowScroll } from '@uidotdev/usehooks';
+import { useTheme } from 'next-themes';
 import { NavRoutes } from '@/constants/nav-routes';
 import { cn } from '@/utils/cn';
 import { Button } from './ui/button';
@@ -14,6 +15,7 @@ import { HoverableChild, HoverableParent } from './hoverable';
 
 export default function Header() {
   const [{ y }] = useWindowScroll();
+  const { resolvedTheme } = useTheme();
 
   return (
     <header
@@ -30,13 +32,24 @@ export default function Header() {
             </Button>
           </NavDrawer>
           <Link href={NavRoutes.Home}>
-            <Image
-              alt="Techstacks Logo"
-              className="w-auto h-7"
-              height={27}
-              src="/images/techstacks-logo.svg"
-              width={117}
-            />
+            {resolvedTheme === 'dark' && (
+              <Image
+                alt="Techstacks Logo"
+                className="w-auto h-7"
+                height={27}
+                src="/images/techstacks-logo-dark.svg"
+                width={117}
+              />
+            )}
+            {resolvedTheme === 'light' && (
+              <Image
+                alt="Techstacks Logo"
+                className="w-auto h-7"
+                height={27}
+                src="/images/techstacks-logo-light.svg"
+                width={117}
+              />
+            )}
           </Link>
 
           <nav className="h-10">

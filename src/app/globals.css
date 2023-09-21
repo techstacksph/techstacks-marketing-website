@@ -39,7 +39,7 @@
     --neutral-600: 226 13% 49%;
   }
 
-  :root[data-mode='dark'] {
+  :root[data-theme='dark'] {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
 
@@ -68,38 +68,6 @@
     --input: 228 10% 61%;
     --ring: 212.7 26.8% 83.9%;
   }
-
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --background: 222.2 84% 4.9%;
-      --foreground: 210 40% 98%;
-
-      --card: 222.2 84% 4.9%;
-      --card-foreground: 210 40% 98%;
-
-      --popover: 222.2 84% 4.9%;
-      --popover-foreground: 210 40% 98%;
-
-      --primary: 163 72% 47%;
-      --primary-foreground: 222.2 47.4% 11.2%;
-
-      --secondary: 228 10% 61%;
-      --secondary-foreground: 210 40% 98%;
-
-      --muted: 228 10% 61%;
-      --muted-foreground: 215 20.2% 65.1%;
-
-      --accent: 228 10% 61%;
-      --accent-foreground: 210 40% 98%;
-
-      --destructive: 0 62.8% 30.6%;
-      --destructive-foreground: 210 40% 98%;
-
-      --border: 228 10% 61%;
-      --input: 228 10% 61%;
-      --ring: 212.7 26.8% 83.9%;
-    }
-  }
 }
 
 @layer base {
@@ -109,7 +77,14 @@
   body {
     @apply text-foreground min-h-screen bg-no-repeat;
   }
-  body::before {
+  :not([data-theme='dark']) > body {
+    background: linear-gradient(
+      178deg,
+      rgba(33, 205, 156, 0.61) 20.27%,
+      rgba(255, 255, 255, 0.89) 55.3%
+    );
+  }
+  [data-theme='dark'] > body::before {
     @apply top-0 left-0 content-[''] bg-center w-screen h-screen -z-10 fixed;
     background: linear-gradient(
       198deg,
