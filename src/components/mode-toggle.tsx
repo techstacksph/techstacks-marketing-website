@@ -16,7 +16,7 @@ export function ModeToggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button size="icon" variant="ghost">
+        <Button size="icon" suppressHydrationWarning variant="ghost">
           {theme === 'light' && (
             <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
           )}

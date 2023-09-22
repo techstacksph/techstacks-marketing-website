@@ -1,21 +1,31 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { Menu } from 'lucide-react';
 import { useWindowScroll } from '@uidotdev/usehooks';
-import { useTheme } from 'next-themes';
+import dynamic from 'next/dynamic';
 import { NavRoutes } from '@/constants/nav-routes';
 import { cn } from '@/utils/cn';
 import { Button } from './ui/button';
-import { ModeToggle } from './mode-toggle';
 import NavDrawer from './nav-drawer';
 import { Separator } from './ui/separator';
 import { HoverableChild, HoverableParent } from './hoverable';
+import { BrandLogo } from './brand-logo';
+import { Skeleton } from './ui/skeleton';
+
+const ModeToggle = dynamic(
+  () => import('./mode-toggle').then((mod) => mod.ModeToggle),
+  {
+    loading: () => (
+      <Button asChild size="icon">
+        <Skeleton />
+      </Button>
+    ),
+  },
+);
 
 export default function Header() {
   const [{ y }] = useWindowScroll();
-  const { resolvedTheme } = useTheme();
 
   return (
     <header
@@ -32,24 +42,7 @@ export default function Header() {
             </Button>
           </NavDrawer>
           <Link href={NavRoutes.Home}>
-            {resolvedTheme === 'dark' && (
-              <Image
-                alt="Techstacks Logo"
-                className="w-auto h-7"
-                height={27}
-                src="/images/techstacks-logo-dark.svg"
-                width={117}
-              />
-            )}
-            {resolvedTheme === 'light' && (
-              <Image
-                alt="Techstacks Logo"
-                className="w-auto h-7"
-                height={27}
-                src="/images/techstacks-logo-light.svg"
-                width={117}
-              />
-            )}
+            <BrandLogo className="w-auto h-7" suppressHydrationWarning />
           </Link>
 
           <nav className="h-10">
