@@ -63,11 +63,7 @@ export default function Home() {
       </Section>
 
       <Section>
-        <div className="space-y-3">
-          <div className="text-lg text-center text-muted">Why Choose us</div>
-          <h2 className="pb-8 text-3xl font-semibold tracking-wide text-center">
-            We make beautiful, high converting, engaging, secure websites.
-          </h2>
+        <div className="space-y-3 py-8">
           <MakeWebsites />
         </div>
       </Section>
