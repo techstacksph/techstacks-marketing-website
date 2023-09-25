@@ -1,6 +1,7 @@
 'use client';
 
-import { Sun } from 'lucide-react';
+import { Moon, Sun, Computer } from 'lucide-react';
+import { useTheme } from 'next-themes';
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
@@ -10,19 +11,49 @@ import {
 } from '@/components/ui/dropdown-menu';
 
 export function ModeToggle() {
+  const { theme, setTheme } = useTheme();
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button size="icon" variant="ghost">
-          <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
-          {/* <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all " /> */}
+        <Button size="icon" suppressHydrationWarning variant="ghost">
+          {theme === 'light' && (
+            <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
+          )}
+          {theme === 'dark' && (
+            <Moon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
+          )}
+          {theme === 'system' && (
+            <Computer className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
+          )}
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem>Light</DropdownMenuItem>
-        <DropdownMenuItem>Dark</DropdownMenuItem>
-        <DropdownMenuItem>System</DropdownMenuItem>
+        <DropdownMenuItem
+          onClick={() => {
+            setTheme('light');
+          }}
+        >
+          <Sun className="mr-2 h-4 w-4" />
+          Light
+        </DropdownMenuItem>
+        <DropdownMenuItem
+          onClick={() => {
+            setTheme('dark');
+          }}
+        >
+          <Moon className="mr-2 h-4 w-4" />
+          Dark
+        </DropdownMenuItem>
+        <DropdownMenuItem
+          onClick={() => {
+            setTheme('system');
+          }}
+        >
+          <Computer className="mr-2 h-4 w-4" />
+          System
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );

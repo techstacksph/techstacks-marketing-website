@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { MdEmail } from 'react-icons/md';
 import { BsFillTelephoneFill } from 'react-icons/bs';
@@ -10,6 +9,7 @@ import {
 } from '@/constants/footer-link';
 import { Button } from './ui/button';
 import { Separator } from './ui/separator';
+import BrandLogo from './brand-logo';
 
 export default function Footer() {
   return (
@@ -17,14 +17,11 @@ export default function Footer() {
       <div className="w-full max-w-7xl">
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-12 md:flex-row lg:flex-row justify-between">
-            <div className="flex flex-col items-center gap-6 md:items-start">
-              <Image
-                alt="Techstacks Logo"
-                className="w-auto h-9"
-                height={27}
-                src="/images/techstacks-logo.svg"
-                width={117}
-              />
+            <div
+              className="flex flex-col items-center gap-6 md:items-start"
+              suppressHydrationWarning
+            >
+              <BrandLogo />
               <p className="text-center text-muted md:text-left">
                 Ready to upgrade your website? <br className="md:text-left" />
                 give us a try.🤝
