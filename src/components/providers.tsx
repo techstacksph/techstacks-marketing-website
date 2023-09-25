@@ -7,6 +7,7 @@ export function Providers({ children }: PropsWithChildren) {
   return (
     <ThemeProvider
       defaultTheme="system"
+      enableColorScheme
       enableSystem
       storageKey="theme"
       themes={['light', 'dark', 'system']}

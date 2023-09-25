@@ -10,7 +10,7 @@ import { Button } from './ui/button';
 import NavDrawer from './nav-drawer';
 import { Separator } from './ui/separator';
 import { HoverableChild, HoverableParent } from './hoverable';
-import { BrandLogo } from './brand-logo';
+import BrandLogo from './brand-logo';
 import { Skeleton } from './ui/skeleton';
 
 const ModeToggle = dynamic(
@@ -42,7 +42,7 @@ export default function Header() {
             </Button>
           </NavDrawer>
           <Link href={NavRoutes.Home}>
-            <BrandLogo className="w-auto h-7" suppressHydrationWarning />
+            <BrandLogo />
           </Link>
 
           <nav className="h-10">

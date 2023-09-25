@@ -2,6 +2,7 @@
 
 import { Player } from '@lottiefiles/react-lottie-player';
 import Image from 'next/image';
+import { Fragment } from 'react';
 
 export const MAKE_WEB_CONTENT = [
   [
@@ -45,18 +46,15 @@ export default function MakeWebsites() {
             </div>
             <div className="grid grid-cols-1  gap-2 items-center md:grid-cols-[8rem_1fr]">
               {MAKE_WEB_CONTENT.map(([title, description, lottie]) => (
-                <>
-                  <div
-                    className="flex items-center content-center h-24 w-24"
-                    key={`${title}-lottie`}
-                  >
+                <Fragment key={title}>
+                  <div className="flex items-center content-center h-24 w-24">
                     <Player autoplay loop src={lottie} />
                   </div>
                   <div className="pb-4" key={`${title}-content`}>
                     <h3 className="text-2xl font-semibold">{title}</h3>
                     <p className="text-muted text-lg">{description}</p>
                   </div>
-                </>
+                </Fragment>
               ))}
             </div>
           </div>
