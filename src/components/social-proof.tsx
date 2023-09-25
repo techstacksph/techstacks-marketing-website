@@ -5,11 +5,8 @@ import AliceCarousel from 'react-alice-carousel';
 
 const BRANDS = [
   '/images/social-proof/dediabetes.png',
-  '/images/social-proof/ssw.png',
   '/images/social-proof/pi.png',
   '/images/social-proof/unpuzzle.png',
-  '/images/social-proof/costaku.png',
-  '/images/social-proof/ww.png',
   '/images/social-proof/prime-light.png',
   '/images/social-proof/win.png',
   '/images/social-proof/release.png',
@@ -28,7 +25,6 @@ export default function SocialProof() {
       disableButtonsControls
       disableDotsControls
       infinite
-      innerWidth={0}
       items={BRANDS.map((brand, i) => (
         <div className="flex place-content-center" key={brand}>
           <Image
@@ -44,8 +40,7 @@ export default function SocialProof() {
       mouseTracking
       responsive={{
         0: { items: 2 },
-        568: { items: 4 },
-        1024: { items: 6 },
+        768: { items: 4 },
       }}
     />
   );
