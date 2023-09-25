@@ -36,21 +36,18 @@ export default function Home() {
                 <Link href="#">About Us</Link>
               </Button>
             </div>
+            <div className="flex flex-col py-0 lg:py-8">
+              <h2 className="pb-8 text-lg text-center text-muted lg:text-left">
+                Working with the best
+              </h2>
+              <SocialProof />
+            </div>
           </div>
           <div className="aspect-square">
             <Hero />
           </div>
         </div>
       </Section>
-
-      <div className="space-y-3">
-        <Section className="space-y-3">
-          <h2 className="pb-8 text-lg text-center text-muted">
-            Working with the best
-          </h2>
-        </Section>
-        <SocialProof />
-      </div>
 
       <Section>
         <div className="space-y-3">
@@ -63,7 +60,7 @@ export default function Home() {
       </Section>
 
       <Section>
-        <div className="space-y-3 py-8">
+        <div className="space-y-3 py-14">
           <MakeWebsites />
         </div>
       </Section>

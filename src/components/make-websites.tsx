@@ -50,7 +50,7 @@ export default function MakeWebsites() {
                   <div className="flex items-center content-center h-24 w-24">
                     <Player autoplay loop src={lottie} />
                   </div>
-                  <div className="pb-4" key={`${title}-content`}>
+                  <div className="pb-4">
                     <h3 className="text-2xl font-semibold">{title}</h3>
                     <p className="text-muted text-lg">{description}</p>
                   </div>
