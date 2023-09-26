@@ -4,14 +4,23 @@ import Link from 'next/link';
 import { Menu } from 'lucide-react';
 import { useWindowScroll } from '@uidotdev/usehooks';
 import dynamic from 'next/dynamic';
+import { Fragment } from 'react';
 import { NavRoutes } from '@/constants/nav-routes';
 import { cn } from '@/utils/cn';
+import { companyLink, pagesLink } from '@/constants/nav-links';
+import { ListItem } from './list-item';
 import { Button } from './ui/button';
 import NavDrawer from './nav-drawer';
-import { Separator } from './ui/separator';
 import { HoverableChild, HoverableParent } from './hoverable';
 import BrandLogo from './brand-logo';
 import { Skeleton } from './ui/skeleton';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from './ui/navigation-menu';
 
 const ModeToggle = dynamic(
   () => import('./mode-toggle').then((mod) => mod.ModeToggle),
@@ -44,45 +53,78 @@ export default function Header() {
           <Link href={NavRoutes.Home}>
             <BrandLogo />
           </Link>
-
-          <nav className="h-10">
-            <ul className="flex h-full gap-4">
-              {['About us', 'Products', 'Services', 'Careers', 'Trainings'].map(
-                (route) => (
+          <NavigationMenu>
+            <NavigationMenuList className="flex flex-row gap-4">
+              <NavigationMenuItem className="hidden lg:block">
+                {companyLink.map((company) => (
+                  <Fragment key={company.title}>
+                    <HoverableParent
+                      asChild
+                      className="before:border-primary after:border-primary"
+                      variant="x"
+                    >
+                      <div>
+                        <HoverableChild
+                          asChild
+                          className="before:bg-primary hover:text-primary-foreground hover:font-medium"
+                        >
+                          <NavigationMenuTrigger className="flex h-full px-4 rounded place-items-center bg-transparent ">
+                            {company.title}
+                          </NavigationMenuTrigger>
+                        </HoverableChild>
+                      </div>
+                    </HoverableParent>
+                    <NavigationMenuContent>
+                      <ul className="w-full px-2 py-2">
+                        {company.link.map((link) => (
+                          <ListItem
+                            className="w-80 cursor-pointer"
+                            href={link.href}
+                            key={link.label}
+                            title={link.label}
+                          >
+                            {link.description}
+                          </ListItem>
+                        ))}
+                      </ul>
+                    </NavigationMenuContent>
+                  </Fragment>
+                ))}
+              </NavigationMenuItem>
+              {pagesLink.map((page) => (
+                <NavigationMenuItem
+                  className="hidden lg:block"
+                  key={page.title}
+                >
                   <HoverableParent
                     asChild
                     className="before:border-primary after:border-primary"
-                    key={route}
                     variant="x"
                   >
-                    <li className="hidden lg:block">
+                    <div>
                       <HoverableChild
                         asChild
                         className="before:bg-primary hover:text-primary-foreground hover:font-medium"
                       >
                         <Link
-                          className="flex h-full px-4 rounded place-items-center"
-                          href="#"
+                          className="flex h-full py-2 px-4  rounded place-items-center"
+                          href={page.href}
                         >
-                          {route}
+                          {page.title}
                         </Link>
                       </HoverableChild>
-                    </li>
+                    </div>
                   </HoverableParent>
-                ),
-              )}
-              <li className="hidden lg:block">
-                <Separator orientation="vertical" />
-              </li>
-              <li className="hidden lg:block">
+                </NavigationMenuItem>
+              ))}
+              <NavigationMenuItem className="hidden lg:block">
                 <Button variant="outline">Get in touch &rarr;</Button>
-              </li>
-
-              <li>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
                 <ModeToggle />
-              </li>
-            </ul>
-          </nav>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
         </div>
       </div>
     </header>
