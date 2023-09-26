@@ -54,3 +54,31 @@ export const pagesLink = [
     href: '#',
   },
 ];
+
+export const portfolioLink = [
+  {
+    title: 'Portfolio',
+    link: [
+      {
+        label: 'Web app development',
+        href: '#',
+      },
+      {
+        label: 'Wordpress development',
+        href: '#',
+      },
+      {
+        label: 'Website development',
+        href: '#',
+      },
+      {
+        label: 'Landing pages',
+        href: '#',
+      },
+      {
+        label: 'UI/UX projects',
+        href: '#',
+      },
+    ],
+  },
+];

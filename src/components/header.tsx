@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { Menu } from 'lucide-react';
 import { useWindowScroll } from '@uidotdev/usehooks';
 import dynamic from 'next/dynamic';
-import { Fragment } from 'react';
 import { NavigationMenuTrigger } from '@radix-ui/react-navigation-menu';
 import { NavRoutes } from '@/constants/nav-routes';
 import { cn } from '@/utils/cn';
@@ -57,47 +56,48 @@ export default function Header() {
           </Link>
           <NavigationMenu>
             <NavigationMenuList className="flex flex-row gap-4">
-              <NavigationMenuItem className="hidden lg:block">
-                {companyLink.map((company) => (
-                  <Fragment key={company.title}>
-                    <HoverableParent
-                      asChild
-                      className="before:border-primary-foreground after:border-primary-foreground"
-                      variant="x"
-                    >
-                      <div>
-                        <HoverableChild
-                          asChild
-                          className="text-sm font-medium before:bg-primary-foreground hover:text-primary"
+              {companyLink.map((company) => (
+                <NavigationMenuItem
+                  className="hidden lg:block"
+                  key={company.title}
+                >
+                  <HoverableParent
+                    asChild
+                    className="before:border-primary-foreground after:border-primary-foreground"
+                    variant="x"
+                  >
+                    <div>
+                      <HoverableChild
+                        asChild
+                        className="text-sm font-medium before:bg-primary-foreground hover:text-primary"
+                      >
+                        <NavigationMenuTrigger
+                          className={cn(
+                            'flex h-full py-2 px-4 rounded place-items-center',
+                            poppins.className,
+                          )}
                         >
-                          <NavigationMenuTrigger
-                            className={cn(
-                              'flex h-full py-2 px-4 rounded place-items-center',
-                              poppins.className,
-                            )}
-                          >
-                            {company.title}
-                          </NavigationMenuTrigger>
-                        </HoverableChild>
-                      </div>
-                    </HoverableParent>
-                    <NavigationMenuContent>
-                      <ul className="w-full px-2 py-2">
-                        {company.link.map((link) => (
-                          <ListItem
-                            className="cursor-pointer w-80"
-                            href={link.href}
-                            key={link.label}
-                            title={link.label}
-                          >
-                            {link.description}
-                          </ListItem>
-                        ))}
-                      </ul>
-                    </NavigationMenuContent>
-                  </Fragment>
-                ))}
-              </NavigationMenuItem>
+                          {company.title}
+                        </NavigationMenuTrigger>
+                      </HoverableChild>
+                    </div>
+                  </HoverableParent>
+                  <NavigationMenuContent>
+                    <ul className="w-full px-2 py-2">
+                      {company.link.map((link) => (
+                        <ListItem
+                          className="cursor-pointer w-80"
+                          href={link.href}
+                          key={link.label}
+                          title={link.label}
+                        >
+                          {link.description}
+                        </ListItem>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              ))}
               {pagesLink.map((page) => (
                 <NavigationMenuItem
                   className="hidden lg:block"
