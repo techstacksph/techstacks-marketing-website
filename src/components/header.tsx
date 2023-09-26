@@ -5,22 +5,24 @@ import { Menu } from 'lucide-react';
 import { useWindowScroll } from '@uidotdev/usehooks';
 import dynamic from 'next/dynamic';
 import { Fragment } from 'react';
+import { NavigationMenuTrigger } from '@radix-ui/react-navigation-menu';
 import { NavRoutes } from '@/constants/nav-routes';
 import { cn } from '@/utils/cn';
 import { companyLink, pagesLink } from '@/constants/nav-links';
+import { poppins } from '@/lib/font-poppins';
 import { ListItem } from './list-item';
 import { Button } from './ui/button';
 import NavDrawer from './nav-drawer';
 import { HoverableChild, HoverableParent } from './hoverable';
-import BrandLogo from './brand-logo';
 import { Skeleton } from './ui/skeleton';
 import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuList,
-  NavigationMenuTrigger,
 } from './ui/navigation-menu';
+
+const BrandLogo = dynamic(() => import('./brand-logo'));
 
 const ModeToggle = dynamic(
   () => import('./mode-toggle').then((mod) => mod.ModeToggle),
@@ -39,8 +41,8 @@ export default function Header() {
   return (
     <header
       className={cn(
-        'sticky top-0 z-50 h-16 transition backdrop-blur-sm border-b border-transparent',
-        Boolean(y) && 'bg-primary/15 border-primary',
+        'sticky top-0 z-50 h-16 transition backdrop-blur-sm border-b border-transparent bg-gradient-to-r from-primary/0 to-transparent',
+        Boolean(y) && 'from-primary/100 border-secondary',
       )}
     >
       <div className="h-full px-4 mx-auto max-w-7xl">
@@ -60,15 +62,20 @@ export default function Header() {
                   <Fragment key={company.title}>
                     <HoverableParent
                       asChild
-                      className="before:border-primary after:border-primary"
+                      className="before:border-primary-foreground after:border-primary-foreground"
                       variant="x"
                     >
                       <div>
                         <HoverableChild
                           asChild
-                          className="before:bg-primary hover:text-primary-foreground hover:font-medium"
+                          className="text-sm font-medium before:bg-primary-foreground hover:text-primary"
                         >
-                          <NavigationMenuTrigger className="flex h-full px-4 rounded place-items-center bg-transparent ">
+                          <NavigationMenuTrigger
+                            className={cn(
+                              'flex h-full py-2 px-4 rounded place-items-center',
+                              poppins.className,
+                            )}
+                          >
                             {company.title}
                           </NavigationMenuTrigger>
                         </HoverableChild>
@@ -78,7 +85,7 @@ export default function Header() {
                       <ul className="w-full px-2 py-2">
                         {company.link.map((link) => (
                           <ListItem
-                            className="w-80 cursor-pointer"
+                            className="cursor-pointer w-80"
                             href={link.href}
                             key={link.label}
                             title={link.label}
@@ -98,16 +105,19 @@ export default function Header() {
                 >
                   <HoverableParent
                     asChild
-                    className="before:border-primary after:border-primary"
+                    className="before:border-primary-foreground after:border-primary-foreground"
                     variant="x"
                   >
                     <div>
                       <HoverableChild
                         asChild
-                        className="before:bg-primary hover:text-primary-foreground hover:font-medium"
+                        className="text-sm font-medium before:bg-primary-foreground hover:text-primary"
                       >
                         <Link
-                          className="flex h-full py-2 px-4  rounded place-items-center"
+                          className={cn(
+                            'flex h-full py-2 px-4 rounded place-items-center',
+                            poppins.className,
+                          )}
                           href={page.href}
                         >
                           {page.title}

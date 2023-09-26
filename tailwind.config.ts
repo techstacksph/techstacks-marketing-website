@@ -26,23 +26,43 @@ const config: Config = {
         foreground: 'hsl(var(--foreground))',
         primary: {
           DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))',
+          static: 'hsl(var(--primary-static))',
+          foreground: {
+            DEFAULT: 'hsl(var(--primary-foreground))',
+            static: 'hsl(var(--primary-foreground-static))',
+          },
         },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))',
+          static: 'hsl(var(--secondary-static))',
+          foreground: {
+            DEFAULT: 'hsl(var(--secondary-foreground))',
+            static: 'hsl(var(--secondary-foreground-static))',
+          },
         },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))',
+          static: 'hsl(var(--destructive-static))',
+          foreground: {
+            DEFAULT: 'hsl(var(--destructive-foreground))',
+            static: 'hsl(var(--destructive-foreground-static))',
+          },
         },
         muted: {
           DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))',
+          static: 'hsl(var(--muted-static))',
+          foreground: {
+            DEFAULT: 'hsl(var(--muted-foreground))',
+            static: 'hsl(var(--muted-foreground-static))',
+          },
         },
         accent: {
           DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))',
+          static: 'hsl(var(--accent-static))',
+          foreground: {
+            DEFAULT: 'hsl(var(--accent-foreground))',
+            static: 'hsl(var(--accent-foreground-static))',
+          },
         },
         popover: {
           DEFAULT: 'hsl(var(--popover))',
