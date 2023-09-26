@@ -1,13 +1,10 @@
 import Link from 'next/link';
+import { IoPaperPlaneSharp } from 'react-icons/io5';
 import { MdEmail } from 'react-icons/md';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import dynamic from 'next/dynamic';
 import { socialMedia } from '@/constants/social-media';
-import {
-  aboutLink,
-  servicesLink,
-  portfolioLink,
-} from '@/constants/footer-link';
+import { portfolioLink, companyLink, pagesLink } from '@/constants/nav-links';
 import { Button } from './ui/button';
 import { Separator } from './ui/separator';
 
@@ -18,13 +15,13 @@ export default function Footer() {
     <footer className="w-full flex justify-center pt-[72px] pb-10 px-4">
       <div className="w-full max-w-7xl">
         <div className="flex flex-col gap-8">
-          <div className="flex flex-col justify-between gap-12 md:flex-row lg:flex-row">
+          <div className="flex flex-col justify-between gap-12 lg:flex-row lg:gap-3">
             <div
-              className="flex flex-col items-center gap-6 md:items-start"
+              className="flex flex-col items-center gap-6 lg:items-start"
               suppressHydrationWarning
             >
               <BrandLogo className="text-primary-static" />
-              <p className="text-center text-muted md:text-left">
+              <p className="text-center text-muted lg:text-left">
                 Ready to upgrade your website? <br className="md:text-left" />
                 give us a try.🤝
               </p>
@@ -43,68 +40,95 @@ export default function Footer() {
                 ))}
               </ul>
             </div>
-            <ul className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:gap-24">
-              <li className="flex flex-col justify-center font-semibold text-primary-static">
-                <Link href="#">About</Link>
-                {aboutLink.map((about) => (
-                  <div key={about.title}>
-                    <Link
-                      className="text-sm text-muted-foreground-static"
-                      href={about.url}
-                    >
-                      {about.title}
-                    </Link>
-                  </div>
+            <ul className="grid grid-cols-[6rem_1fr] gap-5 md:grid-cols-[6rem_1fr_1fr_1fr] lg:gap-2">
+              {companyLink.map((company) => (
+                <li
+                  className="flex  flex-col text-primary-static font-semibold"
+                  key={company.title}
+                >
+                  <h3>{company.title}</h3>
+                  <ul>
+                    {company.link.map((link) => (
+                      <li key={link.label}>
+                        <Link
+                          className="text-sm text-muted-foreground-static"
+                          href={link.href}
+                        >
+                          {link.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ))}
+              {portfolioLink.map((portfolio) => (
+                <li
+                  className="flex flex-col text-primary-static font-semibold"
+                  key={portfolio.title}
+                >
+                  <h3>{portfolio.title}</h3>
+                  <ul>
+                    {portfolio.link.map((port) => (
+                      <li key={port.label}>
+                        <Link
+                          className="text-sm text-muted-foreground-static"
+                          href={port.href}
+                        >
+                          {port.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ))}
+              <ul className="col-span-2 md:col-span-1 grid grid-cols-[6rem_1fr] gap-5 md:block md:gap-0">
+                {pagesLink.map((page) => (
+                  <li
+                    className="flex justify-center flex-col text-primary-static font-semibold"
+                    key={page.title}
+                  >
+                    <Link href={page.href}>{page.title}</Link>
+                  </li>
                 ))}
-              </li>
-              <li className="flex flex-col justify-center font-semibold text-primary-static">
-                <Link href="#">Services</Link>
-                {servicesLink.map((services) => (
-                  <div key={services.title}>
-                    <Link
-                      className="text-sm text-muted-foreground-static"
-                      href={services.url}
-                    >
-                      {services.title}
-                    </Link>
+              </ul>
+
+              <ul className="col-span-2 md:col-span-1">
+                <li className="flex flex-col gap-4">
+                  <h3 className="font-medium text-lg text-primary-static">
+                    Get in touch with us
+                  </h3>
+                  <div className="flex gap-4 items-center">
+                    <div className="text-2xl text-primary-static">
+                      <IoPaperPlaneSharp />
+                    </div>
+                    <div>
+                      <h4 className="text-sm">Address:</h4>
+                      <p className="text-sm">
+                        Cabanatuan city, Nueva ecija, PH 3100
+                      </p>
+                    </div>
                   </div>
-                ))}
-              </li>
-              <li className="flex flex-col justify-center font-semibold text-primary-static">
-                <Link href="#">Portfolio</Link>
-                {portfolioLink.map((portfolio) => (
-                  <div key={portfolio.title}>
-                    <Link
-                      className="text-sm text-muted-foreground-static"
-                      href={portfolio.url}
-                    >
-                      {portfolio.title}
-                    </Link>
+                  <div className="flex gap-4 items-center">
+                    <div className="text-2xl text-primary-static">
+                      <MdEmail />
+                    </div>
+                    <div>
+                      <h4 className="text-sm">Email:</h4>
+                      <p className="text-sm">techstacks.2022@gmail.com</p>
+                    </div>
                   </div>
-                ))}
-              </li>
+                  <div className="flex gap-4 items-center">
+                    <div className="text-2xl text-primary-static">
+                      <BsFillTelephoneFill />
+                    </div>
+                    <div>
+                      <h4 className="text-sm">Phone:</h4>
+                      <p className="text-sm">(44) 331-4514</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </ul>
-            <div className="flex flex-col gap-8 md:hidden">
-              <h3 className="text-lg font-medium">Contact us</h3>
-              <div className="flex items-center gap-6">
-                <div className="text-3xl">
-                  <MdEmail />
-                </div>
-                <div>
-                  <div>Email:</div>
-                  <div>contact@techstacks.com</div>
-                </div>
-              </div>
-              <div className="flex items-center gap-6">
-                <div className="text-3xl">
-                  <BsFillTelephoneFill />
-                </div>
-                <div>
-                  <div>Phone:</div>
-                  <div>(XXX) XXX - XXXX</div>
-                </div>
-              </div>
-            </div>
           </div>
           <Separator />
           <div className="flex flex-col items-center justify-center gap-2 md:flex-row">
