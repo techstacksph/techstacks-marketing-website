@@ -29,7 +29,13 @@ export default function Home() {
               and SEO score.
             </p>
             <div className="flex gap-4 place-content-center lg:place-content-start">
-              <Button asChild className={borderAnimateVariants()}>
+              <Button
+                asChild
+                className={borderAnimateVariants({
+                  className:
+                    'bg-primary-static hover:bg-primary-static text-primary-foreground-static',
+                })}
+              >
                 <Link href="#">Let&apos;s Start</Link>
               </Button>
               <Button asChild variant="secondary">
@@ -37,7 +43,7 @@ export default function Home() {
               </Button>
             </div>
             <div className="flex flex-col py-0 lg:py-8">
-              <h2 className="pb-8 text-lg text-center text-muted lg:text-left">
+              <h2 className="pb-8 text-lg text-center text-muted-foreground-static lg:text-left">
                 Working with the best
               </h2>
               <SocialProof />
@@ -51,7 +57,9 @@ export default function Home() {
 
       <Section>
         <div className="space-y-3">
-          <div className="text-lg text-center text-muted">Our Methodology</div>
+          <div className="text-lg text-center text-muted-foreground-static">
+            Our Methodology
+          </div>
           <h2 className="pb-8 text-3xl font-semibold tracking-wide text-center">
             Systematic flow in the website lifecycle
           </h2>

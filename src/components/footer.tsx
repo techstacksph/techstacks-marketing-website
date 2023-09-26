@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { MdEmail } from 'react-icons/md';
 import { BsFillTelephoneFill } from 'react-icons/bs';
+import dynamic from 'next/dynamic';
 import { socialMedia } from '@/constants/social-media';
 import {
   aboutLink,
@@ -9,19 +10,20 @@ import {
 } from '@/constants/footer-link';
 import { Button } from './ui/button';
 import { Separator } from './ui/separator';
-import BrandLogo from './brand-logo';
+
+const BrandLogo = dynamic(() => import('./brand-logo'));
 
 export default function Footer() {
   return (
     <footer className="w-full flex justify-center pt-[72px] pb-10 px-4">
       <div className="w-full max-w-7xl">
         <div className="flex flex-col gap-8">
-          <div className="flex flex-col gap-12 md:flex-row lg:flex-row justify-between">
+          <div className="flex flex-col justify-between gap-12 md:flex-row lg:flex-row">
             <div
               className="flex flex-col items-center gap-6 md:items-start"
               suppressHydrationWarning
             >
-              <BrandLogo />
+              <BrandLogo className="text-primary-static" />
               <p className="text-center text-muted md:text-left">
                 Ready to upgrade your website? <br className="md:text-left" />
                 give us a try.🤝
@@ -31,7 +33,7 @@ export default function Footer() {
                   <li key={title}>
                     <Button
                       asChild
-                      className="flex justify-center w-6 h-6 p-0 align-center"
+                      className="flex justify-center w-6 h-6 p-0 align-center bg-primary-static text-primary-foreground-static hover:bg-primary-static/60"
                     >
                       <a href={url} rel="noreferrer" target="_blank">
                         <Icon />
@@ -42,22 +44,25 @@ export default function Footer() {
               </ul>
             </div>
             <ul className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:gap-24">
-              <li className="flex justify-center flex-col text-primary font-semibold">
+              <li className="flex flex-col justify-center font-semibold text-primary-static">
                 <Link href="#">About</Link>
                 {aboutLink.map((about) => (
                   <div key={about.title}>
-                    <Link className="text-sm text-secondary" href={about.url}>
+                    <Link
+                      className="text-sm text-muted-foreground-static"
+                      href={about.url}
+                    >
                       {about.title}
                     </Link>
                   </div>
                 ))}
               </li>
-              <li className="flex justify-center flex-col text-primary font-semibold">
+              <li className="flex flex-col justify-center font-semibold text-primary-static">
                 <Link href="#">Services</Link>
                 {servicesLink.map((services) => (
                   <div key={services.title}>
                     <Link
-                      className="text-sm text-secondary"
+                      className="text-sm text-muted-foreground-static"
                       href={services.url}
                     >
                       {services.title}
@@ -65,12 +70,12 @@ export default function Footer() {
                   </div>
                 ))}
               </li>
-              <li className="flex justify-center flex-col text-primary font-semibold">
-                <Link href="#">Porfolio</Link>
+              <li className="flex flex-col justify-center font-semibold text-primary-static">
+                <Link href="#">Portfolio</Link>
                 {portfolioLink.map((portfolio) => (
                   <div key={portfolio.title}>
                     <Link
-                      className="text-sm text-secondary"
+                      className="text-sm text-muted-foreground-static"
                       href={portfolio.url}
                     >
                       {portfolio.title}
@@ -80,8 +85,8 @@ export default function Footer() {
               </li>
             </ul>
             <div className="flex flex-col gap-8 md:hidden">
-              <h3 className="font-medium text-lg">Contact us</h3>
-              <div className="flex gap-6 items-center">
+              <h3 className="text-lg font-medium">Contact us</h3>
+              <div className="flex items-center gap-6">
                 <div className="text-3xl">
                   <MdEmail />
                 </div>
@@ -90,7 +95,7 @@ export default function Footer() {
                   <div>contact@techstacks.com</div>
                 </div>
               </div>
-              <div className="flex gap-6 items-center">
+              <div className="flex items-center gap-6">
                 <div className="text-3xl">
                   <BsFillTelephoneFill />
                 </div>
@@ -102,17 +107,17 @@ export default function Footer() {
             </div>
           </div>
           <Separator />
-          <div className="flex flex-col items-center gap-2 md:flex-row justify-center">
+          <div className="flex flex-col items-center justify-center gap-2 md:flex-row">
             <div className="flex flex-col items-center gap-2 md:flex-row">
               <p>Copyright &copy; {new Date().getFullYear()} Techstacks | </p>
               <p>All Rights Reserved.</p>
             </div>
             <div>
-              <Link className="text-neutral-600 underline" href="#">
+              <Link className="underline text-neutral-600" href="#">
                 Terms and Conditions
               </Link>{' '}
               |{' '}
-              <Link className="text-neutral-600 underline" href="#">
+              <Link className="underline text-neutral-600" href="#">
                 Privacy Policy
               </Link>
             </div>

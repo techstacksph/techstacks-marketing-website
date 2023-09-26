@@ -45,8 +45,8 @@ export default function WebsiteLifecycle() {
         {METHOD_CONTENT.map(([title], i) => (
           <div
             className={cn(
-              'border rounded border-muted p-2 transition',
-              title === tab && 'bg-primary',
+              'border rounded border-muted-foreground-static p-2 transition',
+              title === tab && 'bg-primary-static',
             )}
             key={title}
             onMouseEnter={() => {
@@ -57,34 +57,44 @@ export default function WebsiteLifecycle() {
               <div
                 className={cn(
                   'grow text-sm text-muted truncate',
-                  title === tab && 'text-white',
+                  title === tab && 'text-primary-foreground-static',
                 )}
               >
                 {title}
               </div>
-              <div className="self-end text-accent -mb-2 -mr-1">0{i + 1}</div>
+              <div
+                className={cn(
+                  'self-end -mb-2 -mr-1 font-medium text-muted',
+                  title === tab && 'text-primary-foreground-static',
+                )}
+              >
+                0{i + 1}
+              </div>
             </div>
           </div>
         ))}
       </div>
-      <div className="border rounded border-muted" ref={container}>
+      <div
+        className="border rounded border-muted-foreground-static"
+        ref={container}
+      >
         {METHOD_CONTENT.map(
           ([title, description, lottieFile]) =>
             title === tab && (
               <div className="px-4 py-8" key={title}>
-                {/* <div className="flex gap-12 items-center justify-between">
+                {/* <div className="flex items-center justify-between gap-12">
                   <div className="space-y-7">
                     <h3 className="text-xl">{title}</h3>
                     <p className="text-sm">{description}</p>
                   </div>
-                  <div className="w-28 aspect-square shrink-0 flex items-center content-center">
+                  <div className="flex items-center content-center w-28 aspect-square shrink-0">
                     <Player autoplay loop src={lottieFile} />
                   </div>
                 </div> */}
                 <div className="flex flex-col gap-8">
-                  <div className="flex flex-row justify-between items-center">
+                  <div className="flex flex-row items-center justify-between">
                     <h3 className="text-xl">{title}</h3>
-                    <div className="w-28 aspect-square shrink-0 flex items-center content-center">
+                    <div className="flex items-center content-center w-28 aspect-square shrink-0">
                       <Player autoplay loop src={lottieFile} />
                     </div>
                   </div>

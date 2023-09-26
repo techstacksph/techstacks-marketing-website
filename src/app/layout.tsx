@@ -1,5 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
+import { Suspense } from 'react';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { Providers } from '@/components/providers';
@@ -18,11 +19,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <Providers>
-          <Header />
-          {children}
-          <Footer />
-        </Providers>
+        <Suspense fallback={<div>Loading...!</div>}>
+          <Providers>
+            <Header />
+            {children}
+            <Footer />
+          </Providers>
+        </Suspense>
       </body>
     </html>
   );
