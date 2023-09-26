@@ -56,7 +56,7 @@ export default function Testimonials() {
           <BsArrowLeft />
         </Button>
         <Button
-          className="p-3 text-xl text-white bg-primary"
+          className="p-3 text-xl text-white bg-primary-static hover:bg-primary-static/60"
           onClick={() => carousel.current?.slideNext()}
         >
           <BsArrowRight />
