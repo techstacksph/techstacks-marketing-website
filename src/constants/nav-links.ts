@@ -1,10 +1,12 @@
+import { NavRoutes } from './nav-routes';
+
 export const companyLink = [
   {
     title: 'Company',
     link: [
       {
         label: 'About us',
-        href: '#',
+        href: NavRoutes.AboutUs,
         description:
           'Minim ad adipisicing officia occaecat ea anim sint laborum. Eiusmod nisi in velit id dolor sit do nulla velit non laborum cupidatat ipsum enim. In ut laborum Lorem adipisicing et elit incididunt nisi. Aliquip sint sint exercitation cillum amet. Officia Lorem enim ullamco in consectetur adipisicing proident ea cillum consequat. Duis velit excepteur veniam nostrud pariatur ex nulla nulla amet cupidatat.',
       },

@@ -82,15 +82,6 @@ export default function WebsiteLifecycle() {
           ([title, description, lottieFile]) =>
             title === tab && (
               <div className="px-4 py-8" key={title}>
-                {/* <div className="flex items-center justify-between gap-12">
-                  <div className="space-y-7">
-                    <h3 className="text-xl">{title}</h3>
-                    <p className="text-sm">{description}</p>
-                  </div>
-                  <div className="flex items-center content-center w-28 aspect-square shrink-0">
-                    <Player autoplay loop src={lottieFile} />
-                  </div>
-                </div> */}
                 <div className="flex flex-col gap-8">
                   <div className="flex flex-row items-center justify-between">
                     <h3 className="text-xl">{title}</h3>
