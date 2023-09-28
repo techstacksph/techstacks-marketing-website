@@ -5,22 +5,27 @@ import { BsFillTelephoneFill } from 'react-icons/bs';
 import dynamic from 'next/dynamic';
 import { socialMedia } from '@/constants/social-media';
 import { portfolioLink, companyLink, pagesLink } from '@/constants/nav-links';
+import { NavRoutes } from '@/constants/nav-routes';
 import { Button } from './ui/button';
 import { Separator } from './ui/separator';
+import { Section } from './default-elements';
 
 const BrandLogo = dynamic(() => import('./brand-logo'));
 
 export default function Footer() {
   return (
-    <footer className="w-full flex justify-center pt-[72px] pb-10 px-4">
-      <div className="w-full max-w-7xl">
+    <footer className="w-full flex justify-center pt-[72px] pb-10">
+      <Section>
         <div className="flex flex-col gap-8">
           <div className="flex flex-col justify-between gap-12 lg:flex-row lg:gap-3">
             <div
               className="flex flex-col items-center gap-6 lg:items-start"
               suppressHydrationWarning
             >
-              <BrandLogo className="text-primary-static" />
+              <Link className="cursor-pointer" href={NavRoutes.Home}>
+                <BrandLogo className="text-primary-static" />
+              </Link>
+
               <p className="text-center text-muted lg:text-left">
                 Ready to upgrade your website? <br className="md:text-left" />
                 give us a try.🤝
@@ -147,7 +152,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-      </div>
+      </Section>
     </footer>
   );
 }
