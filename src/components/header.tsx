@@ -47,7 +47,7 @@ export default function Header() {
       <div className="h-full px-4 mx-auto max-w-7xl">
         <div className="flex items-center justify-between h-full">
           <NavDrawer className="block lg:hidden">
-            <Button size="icon" variant="ghost">
+            <Button className="flex self-center" size="icon" variant="ghost">
               <Menu />
             </Button>
           </NavDrawer>
