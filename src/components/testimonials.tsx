@@ -105,9 +105,9 @@ export default function Testimonials() {
               preservePosition
               ref={carousel}
               responsive={{
-                0: { items: 1, itemsFit: 'cover' },
-                768: { items: 2, itemsFit: 'cover' },
-                1280: { items: 3, itemsFit: 'cover' },
+                0: { items: 1 },
+                768: { items: 2 },
+                1280: { items: 3 },
               }}
             />
             <div className="flex justify-center gap-4">
