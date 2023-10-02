@@ -69,17 +69,15 @@ export default function Testimonials() {
           </div>
           <div className="flex flex-col gap-4">
             <AliceCarousel
-              autoHeight
               autoPlay
               autoPlayInterval={3000}
               controlsStrategy="alternate"
               disableButtonsControls
               disableDotsControls
               infinite
-              // innerWidth={0}
               items={TESTIMONIALS.map(({ from, name, testimonial, img }) => (
-                <div className="flex flex-col gap-8 px-4 h-full" key={name}>
-                  <div className="flex flex-col gap-4 bg-white h-full border border-primary-static rounded-md p-6  ">
+                <div className="flex flex-col gap-8 px-4" key={name}>
+                  <div className="flex flex-col gap-4 bg-white h-full border border-primary-static rounded-md p-6 aspect-square">
                     <div className="flex flex-row items-center gap-2">
                       <Avatar>
                         <AvatarImage alt={name} src={img} />
@@ -94,21 +92,22 @@ export default function Testimonials() {
                         </p>
                       </div>
                     </div>
-                    <div className="flex flex-col gap-1">
+                    <div className="flex flex-col gap-1 h-full justify-center">
                       <div className="text-primary-static text-3xl">
                         <BiSolidQuoteAltLeft />
                       </div>
-                      <p className="text-muted text-justify ">{testimonial}</p>
+                      <p className="text-muted text-justify">{testimonial}</p>
                     </div>
                   </div>
                 </div>
               ))}
               mouseTracking
+              preservePosition
               ref={carousel}
               responsive={{
-                0: { items: 1 },
-                768: { items: 2 },
-                1280: { items: 3 },
+                0: { items: 1, itemsFit: 'cover' },
+                768: { items: 2, itemsFit: 'cover' },
+                1280: { items: 3, itemsFit: 'cover' },
               }}
             />
             <div className="flex justify-center gap-4">

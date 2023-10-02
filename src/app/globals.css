@@ -4,9 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.alice-carousel__wrapper,
+.alice-carousel__stage,
 .alice-carousel__stage-item {
-  height: fit-content;
-  height: 100%;
+  height: max-content;
 }
 
 @layer base {
