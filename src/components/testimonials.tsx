@@ -2,6 +2,7 @@
 
 import { BsArrowRight, BsArrowLeft } from 'react-icons/bs';
 import { useRef } from 'react';
+import dynamic from 'next/dynamic';
 import AliceCarousel from 'react-alice-carousel';
 import { BiSolidQuoteAltLeft, BiSolidCircle } from 'react-icons/bi';
 import { Button } from './ui/button';
@@ -41,7 +42,7 @@ const TESTIMONIALS = [
   },
 ];
 
-export default function Testimonials() {
+function Testimonials() {
   const carousel = useRef<AliceCarousel>(null);
 
   return (
@@ -131,3 +132,5 @@ export default function Testimonials() {
     </div>
   );
 }
+
+export default dynamic(() => Promise.resolve(Testimonials), { ssr: false });
