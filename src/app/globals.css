@@ -4,6 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.alice-carousel__stage-item {
+  height: fit-content;
+  height: 100%;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

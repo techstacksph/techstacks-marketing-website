@@ -3,6 +3,7 @@
 import { Player } from '@lottiefiles/react-lottie-player';
 import Image from 'next/image';
 import { Fragment } from 'react';
+import { BiSolidCircle } from 'react-icons/bi';
 
 export const MAKE_WEB_CONTENT = [
   [
@@ -37,9 +38,15 @@ export default function MakeWebsites() {
           </div>
           <div className="flex flex-col gap-10">
             <div className="flex flex-col">
-              <p className="text-lg text-muted text-center lg:text-left ">
-                Why Choose us
-              </p>
+              <div className="flex flex-row gap-2 items-center justify-center lg:justify-start">
+                <div className="text-lg text-yellow-500">
+                  <BiSolidCircle />
+                </div>
+                <p className="text-lg text-muted text-center lg:text-left ">
+                  Why Choose us
+                </p>
+              </div>
+
               <h2 className="text-3xl font-semibold text-center lg:text-left lg:text-4xl xl:text-5xl ">
                 We make beautiful, high converting, engaging, secure websites.
               </h2>
