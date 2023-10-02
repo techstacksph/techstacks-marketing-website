@@ -73,15 +73,11 @@ export default function Home() {
         </div>
       </Section>
 
-      <div className="space-y-3">
-        <Section className="space-y-3">
-          <div className="text-lg text-center text-muted">Testimonials</div>
-          <h2 className="pb-8 text-3xl font-semibold tracking-wide text-center">
-            Success stories from our Partners
-          </h2>
-        </Section>
-        <Testimonials />
-      </div>
+      <Section className="space-y-3">
+        <div className="space-y-3 py-14">
+          <Testimonials />
+        </div>
+      </Section>
     </Main>
   );
 }
