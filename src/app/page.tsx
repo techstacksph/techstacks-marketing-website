@@ -1,18 +1,12 @@
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
 import { Button } from '@/components/ui/button';
 import Hero from '@/components/hero';
 import WebsiteLifecycle from '@/components/website-lifecycle';
 import MakeWebsites from '@/components/make-websites';
 import { borderAnimateVariants } from '@/utils/border-animate';
 import { Main, Section } from '@/components/default-elements';
-
-const SocialProof = dynamic(() => import('@/components/social-proof'), {
-  ssr: false,
-});
-const Testimonials = dynamic(() => import('@/components/testimonials'), {
-  ssr: false,
-});
+import Testimonials from '@/components/testimonials';
+import SocialProof from '@/components/social-proof';
 
 export default function Home() {
   return (

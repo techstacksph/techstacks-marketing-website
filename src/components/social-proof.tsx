@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import AliceCarousel from 'react-alice-carousel';
 
 const BRANDS = [
@@ -16,7 +17,7 @@ const BRANDS = [
   '/images/social-proof/thunder.png',
 ] as const;
 
-export default function SocialProof() {
+function SocialProof() {
   return (
     <AliceCarousel
       autoPlay
@@ -45,3 +46,5 @@ export default function SocialProof() {
     />
   );
 }
+
+export default dynamic(() => Promise.resolve(SocialProof), { ssr: false });
