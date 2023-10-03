@@ -40,8 +40,8 @@ export default function WebsiteLifecycle() {
   const [container] = useAutoAnimate();
 
   return (
-    <div className="space-y-10">
-      <div className="grid grid-cols-3 gap-2">
+    <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
+      <div className="grid grid-cols-3 gap-2 md:grid-cols-1">
         {METHOD_CONTENT.map(([title], i) => (
           <div
             className={cn(
@@ -56,7 +56,7 @@ export default function WebsiteLifecycle() {
             <div className="flex h-full gap-2">
               <div
                 className={cn(
-                  'grow text-sm text-muted truncate',
+                  'grow text-sm text-muted truncate md:flex md:items-center md:text-lg md:font-medium',
                   title === tab && 'text-primary-foreground-static',
                 )}
               >
@@ -75,21 +75,23 @@ export default function WebsiteLifecycle() {
         ))}
       </div>
       <div
-        className="border rounded border-muted-foreground-static"
+        className="border rounded border-muted-foreground-static md:col-span-2"
         ref={container}
       >
         {METHOD_CONTENT.map(
           ([title, description, lottieFile]) =>
             title === tab && (
               <div className="px-4 py-8" key={title}>
-                <div className="flex flex-col gap-8">
-                  <div className="flex flex-row items-center justify-between">
+                <div className="grid grid-cols-2 gap-2">
+                  <div className="flex items-center justify-center">
                     <h3 className="text-xl">{title}</h3>
-                    <div className="flex items-center content-center w-28 aspect-square shrink-0">
-                      <Player autoplay loop src={lottieFile} />
-                    </div>
                   </div>
-                  <p className="text-lg text-muted">{description}</p>
+                  <div className="flex items-center content-center w-full aspect-square shrink-0 md:row-span-2 [&>*]:w-full">
+                    <Player autoplay loop src={lottieFile} />
+                  </div>
+                  <div className="col-span-2 md:col-span-1">
+                    <p className="text-lg text-muted">{description}</p>
+                  </div>
                 </div>
               </div>
             ),
