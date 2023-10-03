@@ -14,10 +14,9 @@ import '../styles/index.scss'
 
 const MyApp = ({ Component, pageProps }) => (
   <>
-    <GoogleAnalytics trackPageViews />
     <Provider store={store}>
       <Messenger />
-      <Script id="gtm-tech">
+      <Script id="gtm-tech" strategy="afterInteractive">
         {`
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -26,6 +25,7 @@ const MyApp = ({ Component, pageProps }) => (
           })(window,document,'script','dataLayer','GTM-PTNRQ3KQ');
         `}
       </Script>
+      <GoogleAnalytics trackPageViews />
       <Component {...pageProps} />
       <ToastContainer />
       <CookieConsentComponent />
