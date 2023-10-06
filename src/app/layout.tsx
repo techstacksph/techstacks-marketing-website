@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { Providers } from '@/components/providers';
+import { dmSans } from '@/lib/font-poppins';
 
 export const metadata: Metadata = {
   title: 'Techstacks IT Web Development Services',
@@ -17,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      <body className={dmSans.className}>
         <Providers>
           <Header />
           {children}

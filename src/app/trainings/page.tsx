@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { borderAnimateVariants } from '@/utils/border-animate';
 import TraineesPlan from '@/components/trainees-plan';
 import TraineesCycle from '@/components/trainees-cycle';
+import { cn } from '@/utils/cn';
+import { dmSans } from '@/lib/font-poppins';
 import ojtHeroImg from '../../../public/images/trainings/ojt-hero.png';
 
 export default function Trainings() {
@@ -14,7 +16,12 @@ export default function Trainings() {
         <div className="w-full">
           <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-2 lg:items-center">
             <div className="flex flex-col items-start gap-6">
-              <h3 className="text-2xl font-semibold md:text-5xl">
+              <h3
+                className={cn(
+                  'text-2xl font-semibold md:text-5xl md:leading-tight md:tracking-wide ',
+                  dmSans.className,
+                )}
+              >
                 Elevate your web development prospects and unlock a world of
                 opportunities
               </h3>
