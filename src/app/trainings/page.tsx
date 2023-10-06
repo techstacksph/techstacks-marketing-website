@@ -7,7 +7,7 @@ import TraineesPlan from '@/components/trainees-plan';
 import TraineesCycle from '@/components/trainees-cycle';
 import { cn } from '@/utils/cn';
 import { dmSans } from '@/lib/font-poppins';
-import ojtHeroImg from '../../../public/images/trainings/ojt-hero.png';
+import { ojtHero } from '@/assets/images/trainings';
 
 export default function Trainings() {
   return (
@@ -33,12 +33,7 @@ export default function Trainings() {
               <Button className={borderAnimateVariants()}>Inquire now</Button>
             </div>
             <div className="w-fulll flex justify-center ">
-              <Image
-                alt="Ojt hero image"
-                height={636}
-                src={ojtHeroImg}
-                width={636}
-              />
+              <Image alt="Ojt hero image" src={ojtHero} />
             </div>
           </div>
         </div>

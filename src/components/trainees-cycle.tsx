@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import traineesCycleImg from '../../public/images/trainings/cycle-hero.png';
+import { cycleHero } from '@/assets/images/trainings';
 
 export default function TraineesCycle() {
   return (
@@ -18,12 +18,7 @@ export default function TraineesCycle() {
             </p>
           </div>
           <div className="w-fulll flex justify-center ">
-            <Image
-              alt="Trainees cycle image"
-              height={636}
-              src={traineesCycleImg}
-              width={636}
-            />
+            <Image alt="Trainees cycle image" src={cycleHero} />
           </div>
         </div>
       </div>
