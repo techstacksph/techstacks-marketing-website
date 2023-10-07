@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import React, { useState } from 'react'
 import { PopupArrowTwo } from '../../../svg'
 import ImageLightBox from '../../common/modals/image-lightbox'
@@ -63,20 +62,6 @@ const portfolio_contents = {
       title: 'DeDiabetes Website',
       subtitle: 'Web development',
       category: 'Website',
-    },
-    {
-      id: 40,
-      img: '/assets/img/portfolio/t-5.png',
-      title: 'Smart Superwomen',
-      subtitle: 'Landing Page',
-      category: 'Landing Page',
-    },
-    {
-      id: 41,
-      img: '/assets/img/portfolio/t-8.png',
-      title: 'Ahead Learning',
-      subtitle: 'Web development',
-      category: 'Landing Page',
     },
   ],
 }

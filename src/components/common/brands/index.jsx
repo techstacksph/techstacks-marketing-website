@@ -1,14 +1,11 @@
 import React from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper'
+import { Swiper, SwiperSlide } from 'swiper/react'
 
 const brand_images = [
   '/assets/img/brand/dediabetes.png',
-  '/assets/img/brand/ssw.png',
   '/assets/img/brand/pi.png',
   '/assets/img/brand/unpuzzle.png',
-  '/assets/img/brand/costaku.png',
-  '/assets/img/brand/ww.png',
   '/assets/img/brand/prime-light.png',
   '/assets/img/brand/win.png',
   '/assets/img/brand/release.png',
