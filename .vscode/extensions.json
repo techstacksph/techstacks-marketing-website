@@ -1,3 +1,7 @@
 {
-  "recommendations": ["heybourn.headwind", "bradlc.vscode-tailwindcss"]
+  "recommendations": [
+    "heybourn.headwind",
+    "bradlc.vscode-tailwindcss",
+    "csstools.postcss"
+  ]
 }
