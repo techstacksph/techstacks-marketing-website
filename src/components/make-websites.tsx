@@ -42,22 +42,37 @@ export default function MakeWebsites() {
                 <div className="text-lg text-yellow-500">
                   <BiSolidCircle />
                 </div>
-                <p className="text-lg text-muted text-center lg:text-left ">
+                <p
+                  className="text-lg text-muted text-center lg:text-left"
+                  data-aos="fade-up"
+                >
                   Why Choose us
                 </p>
               </div>
 
-              <h2 className="text-3xl font-semibold text-center lg:text-left lg:text-4xl xl:text-5xl ">
+              <h2
+                className="text-3xl font-semibold text-center lg:text-left lg:text-4xl xl:text-5xl"
+                data-aos="fade-up"
+                data-aos-delay={100}
+              >
                 We make beautiful, high converting, engaging, secure websites.
               </h2>
             </div>
             <div className="grid grid-cols-1  gap-2 items-center md:grid-cols-[8rem_1fr]">
-              {MAKE_WEB_CONTENT.map(([title, description, lottie]) => (
+              {MAKE_WEB_CONTENT.map(([title, description, lottie], i) => (
                 <Fragment key={title}>
-                  <div className="flex items-center content-center h-24 w-24">
+                  <div
+                    className="flex items-center content-center h-24 w-24"
+                    data-aos="fade-up"
+                    data-aos-delay={(i + 2) * 100}
+                  >
                     <Player autoplay loop src={lottie} />
                   </div>
-                  <div className="pb-4">
+                  <div
+                    className="pb-4"
+                    data-aos="fade-up"
+                    data-aos-delay={(i + 2) * 100}
+                  >
                     <h3 className="text-2xl font-semibold">{title}</h3>
                     <p className="text-muted text-lg">{description}</p>
                   </div>

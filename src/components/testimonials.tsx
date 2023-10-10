@@ -55,14 +55,24 @@ function Testimonials() {
                 <div className="text-lg text-yellow-500">
                   <BiSolidCircle />
                 </div>
-                <p className="text-lg text-muted">Testimonials</p>
+                <p className="text-lg text-muted" data-aos="fade-up">
+                  Testimonials
+                </p>
               </div>
 
-              <h3 className="text-3xl text-center font-semibold lg:text-left">
+              <h3
+                className="text-3xl text-center font-semibold lg:text-left"
+                data-aos="fade-up"
+                data-aos-delay={100}
+              >
                 Hear What Our Clients Have to Say
               </h3>
             </div>
-            <p className="text-lg text-center text-muted lg:text-left">
+            <p
+              className="text-lg text-center text-muted lg:text-left"
+              data-aos="fade-up"
+              data-aos-delay={200}
+            >
               Gain insight into the experiences of our valued clients as they
               share their success stories and how our web development solutions
               have made a difference for their businesses
