@@ -14,10 +14,17 @@ export default function Home() {
       <Section className="space-y-8">
         <div className="grid grid-cols-1 gap-8 py-8 lg:grid-cols-2 lg:justify-center lg:items-center">
           <div className="flex flex-col gap-8">
-            <h1 className="text-3xl font-semibold leading-tight text-center lg:text-left lg:text-5xl xl:text-7xl">
+            <h1
+              className="text-3xl font-semibold leading-tight text-center lg:text-left lg:text-5xl xl:text-7xl"
+              data-aos="fade-up"
+            >
               Building websites with a purpose
             </h1>
-            <p className="text-sm leading-loose text-center text-muted lg:text-left lg:text-xl">
+            <p
+              className="text-sm leading-loose text-center text-muted lg:text-left lg:text-xl"
+              data-aos="fade-up"
+              data-aos-delay={100}
+            >
               We specialize in designing and building beautiful, fast, secure,
               and high converting, engaging websites with excellent performance
               and SEO score.
@@ -51,10 +58,17 @@ export default function Home() {
 
       <Section>
         <div className="space-y-3">
-          <div className="text-lg text-center text-muted-foreground-static">
+          <div
+            className="text-lg text-center text-muted-foreground-static"
+            data-aos="fade-up"
+          >
             Our Methodology
           </div>
-          <h2 className="pb-8 text-3xl font-semibold tracking-wide text-center">
+          <h2
+            className="pb-8 text-3xl font-semibold tracking-wide text-center"
+            data-aos="fade-up"
+            data-aos-delay={100}
+          >
             Systematic flow in the website lifecycle
           </h2>
           <WebsiteLifecycle />
