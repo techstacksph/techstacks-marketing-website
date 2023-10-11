@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { cycleHero } from '@/assets/images/trainings';
+import { cycleHero } from '@/assets/images';
 
 export default function TraineesCycle() {
   return (

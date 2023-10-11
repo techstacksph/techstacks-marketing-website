@@ -7,7 +7,7 @@ import TraineesPlan from '@/components/trainees-plan';
 import TraineesCycle from '@/components/trainees-cycle';
 import { cn } from '@/utils/cn';
 import { dmSans } from '@/lib/font-poppins';
-import { ojtHero } from '@/assets/images/trainings';
+import { ojtHero } from '@/assets/images';
 
 export default function Trainings() {
   return (

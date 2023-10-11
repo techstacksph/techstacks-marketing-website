@@ -5,7 +5,7 @@ import {
   positiveImg,
   projectImg,
   trainingImg,
-} from '@/assets/images/trainings';
+} from '@/assets/images';
 
 export const TRAINING_PLANS = [
   [
