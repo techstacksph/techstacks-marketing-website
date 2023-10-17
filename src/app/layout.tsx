@@ -1,5 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
+import NextTopLoader from 'nextjs-toploader';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { Providers } from '@/components/providers';
@@ -19,6 +20,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <Providers>
+          <NextTopLoader showSpinner={false} />
           <Header />
           {children}
           <Footer />

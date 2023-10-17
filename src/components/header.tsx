@@ -7,7 +7,7 @@ import { NavigationMenuTrigger } from '@radix-ui/react-navigation-menu';
 import { NavRoutes } from '@/constants/nav-routes';
 import { cn } from '@/utils/cn';
 import { companyLink, pagesLink } from '@/constants/nav-links';
-import { poppins } from '@/lib/font-poppins';
+import { poppins } from '@/lib/fonts';
 import { ListItem } from './list-item';
 import { Button } from './ui/button';
 import NavDrawer from './nav-drawer';

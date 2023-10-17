@@ -4,7 +4,7 @@ import { useTheme } from 'next-themes';
 import type { HTMLAttributes } from 'react';
 import dynamic from 'next/dynamic';
 import { cn } from '@/utils/cn';
-import { poppins } from '@/lib/font-poppins';
+import { poppins } from '@/lib/fonts';
 import { TechstacksLogo } from './icons/techstacks-logo';
 
 type BrandLogoProps = HTMLAttributes<HTMLDivElement>;
