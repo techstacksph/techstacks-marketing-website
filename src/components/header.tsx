@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { Menu } from 'lucide-react';
 import { useWindowScroll } from '@uidotdev/usehooks';
-import dynamic from 'next/dynamic';
 import { NavigationMenuTrigger } from '@radix-ui/react-navigation-menu';
 import { NavRoutes } from '@/constants/nav-routes';
 import { cn } from '@/utils/cn';
@@ -20,8 +19,7 @@ import {
   NavigationMenuList,
 } from './ui/navigation-menu';
 import { ModeToggle } from './mode-toggle';
-
-const BrandLogo = dynamic(() => import('./brand-logo'));
+import BrandLogo from './brand-logo';
 
 export default function Header() {
   const [{ y }] = useWindowScroll();

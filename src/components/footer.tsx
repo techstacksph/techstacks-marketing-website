@@ -2,15 +2,13 @@ import Link from 'next/link';
 import { IoPaperPlaneSharp } from 'react-icons/io5';
 import { MdEmail } from 'react-icons/md';
 import { BsFillTelephoneFill } from 'react-icons/bs';
-import dynamic from 'next/dynamic';
 import { socialMedia } from '@/constants/social-media';
 import { portfolioLink, companyLink, pagesLink } from '@/constants/nav-links';
 import { NavRoutes } from '@/constants/nav-routes';
 import { Button } from './ui/button';
 import { Separator } from './ui/separator';
 import { Section } from './default-elements';
-
-const BrandLogo = dynamic(() => import('./brand-logo'));
+import BrandLogo from './brand-logo';
 
 export default function Footer() {
   return (

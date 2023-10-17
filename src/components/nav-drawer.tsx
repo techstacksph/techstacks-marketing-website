@@ -1,6 +1,5 @@
 import type { ReactNode } from 'react';
 import { Slot } from '@radix-ui/react-slot';
-import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { IoPaperPlaneSharp } from 'react-icons/io5';
 import { BsFillTelephoneFill } from 'react-icons/bs';
@@ -24,13 +23,12 @@ import {
   AccordionTrigger,
 } from './ui/accordion';
 import { Separator } from './ui/separator';
+import BrandLogo from './brand-logo';
 
 interface NavDrawerProps {
   children: ReactNode;
   className?: string;
 }
-
-const BrandLogo = dynamic(() => import('./brand-logo'));
 
 export default function NavDrawer(props: NavDrawerProps) {
   return (
