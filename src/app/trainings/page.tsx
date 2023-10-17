@@ -6,7 +6,7 @@ import { borderAnimateVariants } from '@/utils/border-animate';
 import TraineesPlan from '@/components/trainees-plan';
 import TraineesCycle from '@/components/trainees-cycle';
 import { cn } from '@/utils/cn';
-import { dmSans } from '@/lib/font-poppins';
+import { dmSans } from '@/lib/fonts';
 import { ojtHero } from '@/assets/images';
 
 export default function Trainings() {
