@@ -2,6 +2,7 @@
 
 import { useTheme } from 'next-themes';
 import type { HTMLAttributes } from 'react';
+import dynamic from 'next/dynamic';
 import { cn } from '@/utils/cn';
 import { poppins } from '@/lib/font-poppins';
 import { TechstacksLogo } from './icons/techstacks-logo';
@@ -32,4 +33,4 @@ function BrandLogo({ className, ...props }: BrandLogoProps) {
   );
 }
 
-export default BrandLogo;
+export default dynamic(() => Promise.resolve(BrandLogo));

@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { Menu } from 'lucide-react';
 import { useWindowScroll } from '@uidotdev/usehooks';
-import dynamic from 'next/dynamic';
 import { NavigationMenuTrigger } from '@radix-ui/react-navigation-menu';
 import { NavRoutes } from '@/constants/nav-routes';
 import { cn } from '@/utils/cn';
@@ -13,26 +12,14 @@ import { ListItem } from './list-item';
 import { Button } from './ui/button';
 import NavDrawer from './nav-drawer';
 import { HoverableChild, HoverableParent } from './hoverable';
-import { Skeleton } from './ui/skeleton';
 import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuList,
 } from './ui/navigation-menu';
-
-const BrandLogo = dynamic(() => import('./brand-logo'));
-
-const ModeToggle = dynamic(
-  () => import('./mode-toggle').then((mod) => mod.ModeToggle),
-  {
-    loading: () => (
-      <Button asChild size="icon">
-        <Skeleton />
-      </Button>
-    ),
-  },
-);
+import { ModeToggle } from './mode-toggle';
+import BrandLogo from './brand-logo';
 
 export default function Header() {
   const [{ y }] = useWindowScroll();
