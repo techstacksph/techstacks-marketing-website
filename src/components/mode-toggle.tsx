@@ -2,6 +2,7 @@
 
 import { Moon, Sun, Computer } from 'lucide-react';
 import { useTheme } from 'next-themes';
+import dynamic from 'next/dynamic';
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
@@ -9,8 +10,9 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { Skeleton } from './ui/skeleton';
 
-export function ModeToggle() {
+function Toggler() {
   const { theme, setTheme } = useTheme();
 
   return (
@@ -58,3 +60,11 @@ export function ModeToggle() {
     </DropdownMenu>
   );
 }
+
+export const ModeToggle = dynamic(() => Promise.resolve(Toggler), {
+  loading: () => (
+    <Button asChild size="icon">
+      <Skeleton />
+    </Button>
+  ),
+});

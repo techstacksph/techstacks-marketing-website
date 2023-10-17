@@ -13,26 +13,15 @@ import { ListItem } from './list-item';
 import { Button } from './ui/button';
 import NavDrawer from './nav-drawer';
 import { HoverableChild, HoverableParent } from './hoverable';
-import { Skeleton } from './ui/skeleton';
 import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuList,
 } from './ui/navigation-menu';
+import { ModeToggle } from './mode-toggle';
 
 const BrandLogo = dynamic(() => import('./brand-logo'));
-
-const ModeToggle = dynamic(
-  () => import('./mode-toggle').then((mod) => mod.ModeToggle),
-  {
-    loading: () => (
-      <Button asChild size="icon">
-        <Skeleton />
-      </Button>
-    ),
-  },
-);
 
 export default function Header() {
   const [{ y }] = useWindowScroll();
