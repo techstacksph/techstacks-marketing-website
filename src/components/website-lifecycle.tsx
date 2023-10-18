@@ -4,6 +4,7 @@ import { Player } from '@lottiefiles/react-lottie-player';
 import { Fragment } from 'react';
 import { cn } from '@/utils/cn';
 import { Separator } from './ui/separator';
+import { Section } from './default-elements';
 
 export const METHOD_CONTENT = [
   [
@@ -35,47 +36,73 @@ export const METHOD_CONTENT = [
 
 export default function WebsiteLifecycle() {
   return (
-    <div className="flex flex-col items-center md:block">
-      {METHOD_CONTENT.map(([title, content, lottieFile], i) => {
-        const isOdd = Boolean(i % 2);
+    <div className="w-full flex justify-center py-16 border-t border-green-900">
+      <Section>
+        <div className="flex flex-col items-center gap-10">
+          <div className="flex flex-col gap-8 items-center">
+            <p
+              className="text-lg text-center text-muted-foreground-static"
+              data-aos="fade-up"
+            >
+              Our Methodology
+            </p>
+            <h3
+              className="text-3xl lg:text-4xl xl:text-5xl font-semibold text-center"
+              data-aos="fade-up"
+              data-aos-delay={100}
+            >
+              Systematic flow in the website lifecycle
+            </h3>
+          </div>
+          <div className="flex flex-col items-center md:block">
+            {METHOD_CONTENT.map(([title, content, lottieFile], i) => {
+              const isOdd = Boolean(i % 2);
 
-        return (
-          <Fragment key={title}>
-            <div className="transition-all border rounded-md border-border/25 md:border-0 md:px-8">
-              <div
-                className="grid md:grid-cols-[1fr_1px_1fr] gap-x-8 items-center"
-                data-aos="fade-up"
-              >
-                <div className={cn('md:py-4', isOdd && 'md:order-last')}>
-                  <div className="p-4 rounded-lg md:border md:bg-primary/50">
-                    <div className="flex items-center justify-between gap-4">
-                      <div className="space-y-2">
-                        <h3 className="text-3xl font-medium">{title}</h3>
-                        <p className="text-muted">{content}</p>
+              return (
+                <Fragment key={title}>
+                  <div className="transition-all border rounded-md border-border/25 md:border-0 md:px-8">
+                    <div
+                      className="grid md:grid-cols-[1fr_1px_1fr] gap-x-8 items-center"
+                      data-aos="fade-up"
+                    >
+                      <div className={cn('md:py-4', isOdd && 'md:order-last')}>
+                        <div className="p-4 rounded-lg md:border md:bg-primary/50">
+                          <div className="flex items-center justify-between gap-4">
+                            <div className="space-y-2">
+                              <h3 className="text-3xl font-medium">{title}</h3>
+                              <p className="text-muted">{content}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <Separator orientation="vertical" />
+
+                      <div className={cn('py-4', isOdd && 'md:order-first')}>
+                        <div className="md:h-96 h-36 [&>*]:h-full flex justify-center">
+                          <Player
+                            autoplay
+                            className="h-full"
+                            loop
+                            src={lottieFile}
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <Separator orientation="vertical" />
-
-                <div className={cn('py-4', isOdd && 'md:order-first')}>
-                  <div className="md:h-96 h-36 [&>*]:h-full flex justify-center">
-                    <Player autoplay className="h-full" loop src={lottieFile} />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {i < METHOD_CONTENT.length - 1 ? (
-              <Separator
-                className="h-24 md:hidden bg-border/25"
-                orientation="vertical"
-              />
-            ) : null}
-          </Fragment>
-        );
-      })}
+                  {i < METHOD_CONTENT.length - 1 ? (
+                    <Separator
+                      className="h-24 md:hidden bg-border/25"
+                      orientation="vertical"
+                    />
+                  ) : null}
+                </Fragment>
+              );
+            })}
+          </div>
+        </div>
+      </Section>
     </div>
   );
 }

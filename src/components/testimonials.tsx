@@ -7,6 +7,7 @@ import AliceCarousel from 'react-alice-carousel';
 import { BiSolidQuoteAltLeft, BiSolidCircle } from 'react-icons/bi';
 import { Button } from './ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
+import { Section } from './default-elements';
 
 const TESTIMONIALS = [
   {
@@ -46,8 +47,8 @@ function Testimonials() {
   const carousel = useRef<AliceCarousel>(null);
 
   return (
-    <div className="w-full flex justify-center">
-      <div className="w-full">
+    <div className="w-full flex justify-center py-16 border-t border-green-900">
+      <Section>
         <div className="flex flex-col gap-10">
           <div className="grid grid-cols-1 gap-6 items-center lg:grid-cols-2">
             <div className="flex flex-col items-center gap-6 lg:items-start">
@@ -78,7 +79,7 @@ function Testimonials() {
               have made a difference for their businesses
             </p>
           </div>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col-reverse md:flex-col gap-4 ">
             <AliceCarousel
               autoPlay
               autoPlayInterval={3000}
@@ -138,7 +139,7 @@ function Testimonials() {
             </div>
           </div>
         </div>
-      </div>
+      </Section>
     </div>
   );
 }
