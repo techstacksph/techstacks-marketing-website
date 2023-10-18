@@ -4,6 +4,7 @@ import { Player } from '@lottiefiles/react-lottie-player';
 import Image from 'next/image';
 import { Fragment } from 'react';
 import { BiSolidCircle } from 'react-icons/bi';
+import { Section } from './default-elements';
 
 export const MAKE_WEB_CONTENT = [
   [
@@ -25,8 +26,8 @@ export const MAKE_WEB_CONTENT = [
 
 export default function MakeWebsites() {
   return (
-    <div className="w-full flex justify-center">
-      <div className="w-full max-w-7xl">
+    <div className="w-full flex justify-center py-16 border-t border-green-900">
+      <Section>
         <div className="flex flex-row justify-center gap-4 h-auto">
           <div className="hidden w-full lg:block ">
             <Image
@@ -81,7 +82,7 @@ export default function MakeWebsites() {
             </div>
           </div>
         </div>
-      </div>
+      </Section>
     </div>
   );
 }
