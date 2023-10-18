@@ -20,12 +20,21 @@ import wooCommerceLogo from './about-us/service-tools-logo/woo-commerce-logo.png
 import wordPressLogo from './about-us/service-tools-logo/wordpress-logo.png';
 import puzzleDynamic from './about-us/puzzle-dynamic.png';
 import designIcon from './services/design.png';
+import ourTeam from './team/our-team-img.jpg';
 import responsiveIcon from './services/responsive.png';
 import systemImg from './services/system.png';
 import breakIcon from './services/breakIcon.png';
 import graphIcon from './services/graphIcon.png';
 import maintenanceIcon from './services/maintenanceIcon.png';
 import servicesIcon from './services/servicesIcon.png';
+import teamImg1 from './team/1-third.png';
+import teamImg2 from './team/2-marcus.png';
+import teamImg3 from './team/3-franz.png';
+import teamImg4 from './team/4-sam.png';
+import teamImg5 from './team/5-kai.png';
+import teamImg6 from './team/6-jayvee.png';
+import teamImg7 from './team/7-aira.png';
+import teamImg8 from './team/8-ara.png';
 
 export {
   //trainings
@@ -53,6 +62,17 @@ export {
   goDaddyImg,
   philgepsImg,
   puzzleDynamic,
+
+  // Team
+  ourTeam,
+  teamImg1,
+  teamImg2,
+  teamImg3,
+  teamImg4,
+  teamImg5,
+  teamImg6,
+  teamImg7,
+  teamImg8,
 
   //about-us/service-tools-logo
   bootstrapLogo,
