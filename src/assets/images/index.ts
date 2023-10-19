@@ -19,10 +19,7 @@ import vercelLogo from './about-us/service-tools-logo/vercel-logo.png';
 import wooCommerceLogo from './about-us/service-tools-logo/woo-commerce-logo.png';
 import wordPressLogo from './about-us/service-tools-logo/wordpress-logo.png';
 import puzzleDynamic from './about-us/puzzle-dynamic.png';
-import designIcon from './services/design.png';
 import ourTeam from './team/our-team-img.jpg';
-import responsiveIcon from './services/responsive.png';
-import systemImg from './services/system.png';
 import breakIcon from './services/breakIcon.png';
 import graphIcon from './services/graphIcon.png';
 import maintenanceIcon from './services/maintenanceIcon.png';
@@ -50,9 +47,6 @@ export {
   trainingImg,
 
   //services
-  designIcon,
-  responsiveIcon,
-  systemImg,
   breakIcon,
   graphIcon,
   maintenanceIcon,
