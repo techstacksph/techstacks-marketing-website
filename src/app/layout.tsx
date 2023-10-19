@@ -1,9 +1,9 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import NextTopLoader from 'nextjs-toploader';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { Providers } from '@/components/providers';
+import { Loader } from '@/components/route-progress-bar';
 
 export const metadata: Metadata = {
   title: 'Techstacks IT Web Development Services',
@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <Providers>
-          <NextTopLoader showSpinner={false} />
+          <Loader />
           <Header />
           {children}
           <Footer />
