@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { Providers } from '@/components/providers';
-import { Loader } from '@/components/route-progress-bar';
+import Loader from '@/components/route-progress-bar';
 
 export const metadata: Metadata = {
   title: 'Techstacks IT Web Development Services',

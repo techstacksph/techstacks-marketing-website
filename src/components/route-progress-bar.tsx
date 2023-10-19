@@ -1,6 +1,7 @@
 'use client';
 
 import { useTheme } from 'next-themes';
+import dynamic from 'next/dynamic';
 import NextTopLoader from 'nextjs-toploader';
 
 function Loader() {
@@ -17,4 +18,4 @@ function Loader() {
   );
 }
 
-export { Loader };
+export default dynamic(() => Promise.resolve(Loader), { ssr: false });
