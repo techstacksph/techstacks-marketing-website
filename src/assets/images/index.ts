@@ -20,6 +20,7 @@ import wooCommerceLogo from './about-us/service-tools-logo/woo-commerce-logo.png
 import wordPressLogo from './about-us/service-tools-logo/wordpress-logo.png';
 import puzzleDynamic from './about-us/puzzle-dynamic.png';
 import ourTeam from './team/our-team-img.jpg';
+import careerTeam from './careers/career-team.png';
 import breakIcon from './services/breakIcon.png';
 import graphIcon from './services/graphIcon.png';
 import maintenanceIcon from './services/maintenanceIcon.png';
@@ -79,4 +80,7 @@ export {
   vercelLogo,
   wooCommerceLogo,
   wordPressLogo,
+
+  // Careers
+  careerTeam,
 };
