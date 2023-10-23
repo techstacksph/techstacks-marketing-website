@@ -10,7 +10,7 @@ module.exports = {
     '@vercel/style-guide/eslint/browser',
     '@vercel/style-guide/eslint/react',
     '@vercel/style-guide/eslint/next',
-  ].map(require.resolve),
+  ].map((ext) => require.resolve(ext)),
   parserOptions: {
     project,
   },
