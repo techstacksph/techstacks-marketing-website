@@ -48,7 +48,7 @@ function BenefitCard({ index, title, description }: BenefitCardProps) {
         <div className="flex flex-col justify-between h-full gap-4">
           <div className="space-y-4">
             <h3 className="space-y-4 text-2xl font-bold">
-              <span className="block text-primary-foreground">
+              <span className="block text-primary-static">
                 {(index + 1).toString().padStart(2, '0')}
               </span>
               <span className="block">{title}</span>

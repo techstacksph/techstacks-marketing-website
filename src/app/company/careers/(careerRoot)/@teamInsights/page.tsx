@@ -39,7 +39,7 @@ export default function TeamInsights() {
       </h2>
 
       <div className="mt-10">
-        <div className="grid overflow-hidden lg:border lg:rounded-lg lg:grid-cols-3 md:shadow-xl [&&]:shadow-primary-static">
+        <div className="grid overflow-hidden lg:border lg:rounded-lg lg:grid-cols-3 md:shadow-xl [&&]:shadow-primary-static/10">
           <div className="row-span-2">
             <Image
               alt={mem1.member}
