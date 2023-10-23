@@ -1,6 +1,7 @@
 'use client';
 
 import { useAutoAnimate } from '@formkit/auto-animate/react';
+import { AiOutlineExclamation } from 'react-icons/ai';
 import { nanoid } from 'nanoid';
 import { useMemo, useState } from 'react';
 import { Section } from '@/components/default-elements';
@@ -11,6 +12,8 @@ import { POSITIONS } from '@/constants/jobs';
 import { JobCard } from '@/components/job-card';
 import { dmSans } from '@/lib/fonts';
 
+const TABS = ['All', ...POSITIONS] as const;
+
 const AVAILABLE_JOBS: Job[] = [
   /**
    * Add open jobs here!
@@ -18,14 +21,15 @@ const AVAILABLE_JOBS: Job[] = [
 ];
 
 export default function AvailablePositionsSection() {
-  const [tab, setTab] = useState('All');
+  const [tab, setTab] = useState<(typeof TABS)[number]>('All');
   const [ref] = useAutoAnimate();
 
-  const jobs = useMemo(() => {
-    const $jobs =
-      process.env.NODE_ENV === 'development' ? SAMPLE_JOBS : AVAILABLE_JOBS;
-    return $jobs.filter((job) => job.type === tab || tab === 'All');
-  }, [tab]);
+  const jobs =
+    process.env.NODE_ENV === 'development' ? SAMPLE_JOBS : AVAILABLE_JOBS;
+
+  const filteredJobs = useMemo(() => {
+    return jobs.filter((job) => job.type === tab || tab === 'All');
+  }, [jobs, tab]);
 
   return (
     <Section>
@@ -41,30 +45,34 @@ export default function AvailablePositionsSection() {
 
       <div className="mt-2 md:mt-5">
         <ul className="flex gap-4 md:gap-12">
-          {['All', ...POSITIONS].map((position, i) => (
-            <li className="py-4" key={position}>
-              <button
-                className={cn(
-                  'text-lg md:text-xl font-medium tracking-wide text-foreground/50',
-                  tab === position && 'text-foreground',
-                )}
-                data-aos="fade-left"
-                data-aos-delay={i * 100}
-                onClick={() => {
-                  setTab(position);
-                }}
-                type="button"
-              >
-                {position}
-              </button>
-            </li>
-          ))}
+          {TABS.map((jobTab, i) => {
+            return (
+              <li className="py-4" key={jobTab}>
+                <button
+                  className={cn(
+                    'text-lg md:text-xl font-medium tracking-wide text-foreground/50',
+                    tab === jobTab && 'text-foreground',
+                    !jobs.length && 'text-foreground/50',
+                  )}
+                  data-aos="fade-left"
+                  data-aos-delay={i * 100}
+                  disabled={!jobs.length}
+                  onClick={() => {
+                    setTab(jobTab);
+                  }}
+                  type="button"
+                >
+                  {jobTab}
+                </button>
+              </li>
+            );
+          })}
         </ul>
       </div>
 
       <div className="mt-4 md:mt-9">
         <div className="grid gap-10 md:grid-cols-2" ref={ref}>
-          {jobs.map((job, i) => (
+          {filteredJobs.map((job, i) => (
             <JobCard
               {...job}
               data-aos="fade-up"
@@ -72,6 +80,26 @@ export default function AvailablePositionsSection() {
               key={nanoid()}
             />
           ))}
+
+          {!filteredJobs.length && (
+            <div className="md:col-span-2">
+              <div className="flex flex-col items-center gap-10">
+                <div
+                  className="grid border rounded-full place-items-center text-9xl border-border"
+                  data-aos="fade-up"
+                >
+                  <AiOutlineExclamation className="-rotate-12" />
+                </div>
+                <p
+                  className="italic text-center text-muted"
+                  data-aos="fade-up"
+                  data-aos-delay={100}
+                >
+                  Unfortunately, there are currently no job postings.
+                </p>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </Section>
