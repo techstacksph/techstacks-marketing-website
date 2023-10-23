@@ -6,6 +6,6 @@ export const poppins = Poppins({
 });
 
 export const dmSans = DMSans({
-  weight: '600',
+  weight: ['600', '700'],
   subsets: ['latin'],
 });
