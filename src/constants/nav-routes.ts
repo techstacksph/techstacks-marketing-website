@@ -9,7 +9,7 @@ export const NavRoutes = {
     Portfolios: '/company/portfolios',
   },
   Products: '/products',
-  Pricings: '/pricings',
+  Pricing: '/pricing',
   Services: '/services',
   Trainings: '/trainings',
 };
