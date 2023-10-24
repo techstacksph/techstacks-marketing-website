@@ -49,7 +49,7 @@ export const pagesLink = [
   },
   {
     title: 'Pricing',
-    href: NavRoutes.Pricings,
+    href: NavRoutes.Pricing,
   },
   {
     title: 'Trainings',
