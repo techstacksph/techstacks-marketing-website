@@ -1,10 +1,14 @@
 import type { ReactNode } from 'react';
 import { Main } from '@/components/default-elements';
 
-export default function PricingLayout(props: Record<string, ReactNode>) {
+interface PricingLayoutProps {
+  hero: ReactNode;
+}
+
+export default function PricingLayout({ hero }: PricingLayoutProps) {
   return (
     <Main>
-      <div className="py-16">{props.hero}</div>
+      <div className="py-16">{hero}</div>
     </Main>
   );
 }
