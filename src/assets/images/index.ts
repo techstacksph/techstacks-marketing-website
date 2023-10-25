@@ -33,6 +33,17 @@ import teamImg5 from './team/5-kai.png';
 import teamImg6 from './team/6-jayvee.png';
 import teamImg7 from './team/7-aira.png';
 import teamImg8 from './team/8-ara.png';
+import oldOffice from './about-us/old-office.jpg';
+import tailwindLogo from './about-us/service-tools-logo/tailwind-logo.png';
+import franzProfile from './team/franz-profile.png';
+import samProfile from './team/sam-profile.jpg';
+import marcusProfile from './team/marcus-profile.png';
+import jayveeProfile from './team/jayvee-profile.jpg';
+import thirdProfile from './team/third-profile.png';
+import airaProfile from './team/aira-profile.png';
+import araProfile from './team/ara-profile.png';
+import kaiProfile from './team/kai-profile.png';
+import teamImage from './about-us/team-img.jpg';
 
 export {
   //trainings
@@ -57,6 +68,8 @@ export {
   goDaddyImg,
   philgepsImg,
   puzzleDynamic,
+  oldOffice,
+  teamImage,
 
   // Team
   ourTeam,
@@ -68,6 +81,14 @@ export {
   teamImg6,
   teamImg7,
   teamImg8,
+  franzProfile,
+  samProfile,
+  marcusProfile,
+  jayveeProfile,
+  thirdProfile,
+  airaProfile,
+  araProfile,
+  kaiProfile,
 
   //about-us/service-tools-logo
   bootstrapLogo,
@@ -80,6 +101,7 @@ export {
   vercelLogo,
   wooCommerceLogo,
   wordPressLogo,
+  tailwindLogo,
 
   // Careers
   careerTeam,

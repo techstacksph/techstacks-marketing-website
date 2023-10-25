@@ -31,7 +31,7 @@ function ToolsCarousel() {
       mouseTracking
       responsive={{
         0: { items: 2 },
-        378: { items: 3 },
+        375: { items: 3 },
       }}
     />
   );
