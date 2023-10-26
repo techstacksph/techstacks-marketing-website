@@ -13,6 +13,7 @@ export default function CoreValues() {
       <div className="w-full">
         <div className="flex flex-col-reverse lg:flex-row items-center gap-8 ">
           <div
+            // TODO: change hard coded tw colors
             className="w-full lg:w-1/2 flex   flex-col items-center lg:items-end bg-gradient-to-r from-emerald-400 to-emerald-900"
             data-aos="fade-right"
             data-aos-delay={100}
