@@ -9,6 +9,7 @@ import {
   vercelLogo,
   wooCommerceLogo,
   wordPressLogo,
+  tailwindLogo,
 } from '@/assets/images';
 
 export const serviceToolsLogo = [
@@ -22,4 +23,5 @@ export const serviceToolsLogo = [
   { logo: reduxLogo, title: 'Redux' },
   { logo: vercelLogo, title: 'Vercel' },
   { logo: wooCommerceLogo, title: 'WooCommerce' },
+  { logo: tailwindLogo, title: 'Tailwind' },
 ];
