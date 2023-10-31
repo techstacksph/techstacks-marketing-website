@@ -44,6 +44,9 @@ import airaProfile from './team/aira-profile.png';
 import araProfile from './team/ara-profile.png';
 import kaiProfile from './team/kai-profile.png';
 import teamImage from './about-us/team-img.jpg';
+import creative from './services/creative.png';
+import creativeDesign from './services/creative-design.png';
+import system from './services/system.png';
 
 export {
   //trainings
@@ -63,6 +66,9 @@ export {
   graphIcon,
   maintenanceIcon,
   servicesIcon,
+  creative,
+  creativeDesign,
+  system,
 
   //about-us
   goDaddyImg,
