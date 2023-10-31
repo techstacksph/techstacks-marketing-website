@@ -12,56 +12,59 @@ const RANDOM_IMAGE_DIMENSIONS = {
 interface GetPosts {
   after?: string;
   first?: number;
+  search?: string;
 }
-export const getPosts = React.cache(async ({ after, first }: GetPosts = {}) => {
-  const response = await api<Posts>({
-    data: {
-      query: `
-        query postsQuery($after: String, $first: Int) {
-          posts(
-            where: {orderby: {field: DATE, order: DESC}}
-            after: $after
-            first: $first
-          ) {
-            edges {
-              node {
-                author {
-                  node {
-                    name
-                    avatar {
-                      size
-                      url
+export const getPosts = React.cache(
+  async ({ after, first, search }: GetPosts = {}) => {
+    const response = await api<Posts>({
+      data: {
+        query: `
+          query postsQuery($after: String, $first: Int, $search: String) {
+            posts(
+              where: {search: $search, orderby: {field: DATE, order: DESC}}
+              after: $after
+              first: $first
+            ) {
+              edges {
+                node {
+                  author {
+                    node {
+                      name
+                      avatar {
+                        size
+                        url
+                      }
                     }
                   }
-                }
-                slug
-                title
-                excerpt
-                featuredImage {
-                  node {
-                    sourceUrl
-                    mediaDetails {
-                      height
-                      width
+                  slug
+                  title
+                  excerpt
+                  featuredImage {
+                    node {
+                      sourceUrl
+                      mediaDetails {
+                        height
+                        width
+                      }
                     }
                   }
+                  date
                 }
-                date
+                cursor
               }
-              cursor
             }
-          }
-        }
-      `,
-      variables: {
-        after,
-        first,
+          }`,
+        variables: {
+          after,
+          first,
+          search,
+        },
       },
-    },
-  });
+    });
 
-  return response.data.data.posts.edges;
-});
+    return response.data.data.posts.edges;
+  },
+);
 
 export async function processPostNode(node: EdgeNode) {
   const randomImage = generateRandomPicsum({
