@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 
-type SvgComponentProps = React.SVGProps<SVGSVGElement>;
+export type SvgComponentProps = React.SVGProps<SVGSVGElement>;
 export const TechstacksLogo = forwardRef<SVGSVGElement, SvgComponentProps>(
   (props, ref) => (
     <svg

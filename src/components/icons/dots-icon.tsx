@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import type { SvgComponentProps } from './computer-icon';
+import type { SvgComponentProps } from './techstacks-logo';
 
 export const DotsIcon = forwardRef<SVGSVGElement, SvgComponentProps>(
   (props, ref) => (
