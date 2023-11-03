@@ -12,7 +12,7 @@ export function generateRandomPicsum({
   seed,
   dimensions,
 }: GenerateRandomPicsum) {
-  return `https://picsum.photos/seed/${seed || 'picsum'}/${dimensions.height}/${
-    dimensions.width
+  return `https://picsum.photos/seed/${seed || 'picsum'}/${dimensions.width}/${
+    dimensions.height
   }`;
 }

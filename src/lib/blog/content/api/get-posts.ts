@@ -5,8 +5,8 @@ import type { EdgeNode, Posts } from '../types';
 import { api } from './client';
 
 const RANDOM_IMAGE_DIMENSIONS = {
-  width: 300,
-  height: 200,
+  width: 1000,
+  height: 667,
 } as const;
 
 interface GetPosts {
