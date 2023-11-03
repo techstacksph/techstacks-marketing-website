@@ -1,18 +1,16 @@
-import { ComputerIcon } from '@/components/icons/computer-icon';
-import { WebsiteIcon } from '@/components/icons/website-icon';
-import { SystemIcon } from '@/components/icons/system-icon';
+import { creativeDesign, creative, system } from '@/assets/images';
 
 export const workWithUs = [
   {
     title: 'Creative Design',
-    Icon: ComputerIcon,
+    icon: creativeDesign,
   },
   {
     title: 'Modern Web',
-    Icon: WebsiteIcon,
+    icon: creative,
   },
   {
     title: 'Design System',
-    Icon: SystemIcon,
+    icon: system,
   },
 ];

@@ -1,67 +1,85 @@
-import React from 'react';
-import Image from 'next/image';
-import { coreServices } from '@/constants/core-services';
-import { Section } from './default-elements';
+'use client';
 
-export default function CoreServices() {
+import { useCallback, useEffect, useRef } from 'react';
+import type { StaticImageData } from 'next/image';
+import Image from 'next/image';
+import { Separator } from './ui/separator';
+
+interface CoreServicesCardProps {
+  index: number;
+  title?: string;
+  description?: string;
+  src?: StaticImageData;
+}
+
+function CoreServicesCard({
+  index,
+  src,
+  title,
+  description,
+}: CoreServicesCardProps) {
+  const glowRef = useRef<HTMLDivElement>(null);
+  const hiddenRef = useRef<HTMLDivElement>(null);
+
+  const handleMouseMove = useCallback((evt: MouseEvent) => {
+    const rec = hiddenRef.current?.getBoundingClientRect();
+
+    glowRef.current?.animate(
+      [
+        {
+          transform: `translate(${
+            evt.clientX - (rec?.left || 0) - (rec?.width || 0) / 2
+          }px,${evt.clientY - (rec?.top || 0) - (rec?.height || 0) / 2}px)`,
+        },
+      ],
+      {
+        duration: 300,
+        fill: 'forwards',
+      },
+    );
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, [handleMouseMove]);
+
   return (
-    <div className="w-full py-16 flex justify-center items-center bg-primary/50">
-      <Section>
-        <div className="flex flex-col items-center gap-20">
-          <h3 className="text-2xl font-semibold text-center lg:text-4xl">
-            Core Services
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center gap-5">
-            {coreServices.map((core) => (
-              <div
-                className="group relative h-full overflow-hidden cursor-pointe bg-white p-10  shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl rounded-xl"
-                key={core.title}
-              >
-                <span className="absolute top-10 z-0 h-20 w-20 rounded-full bg-green-200 transition-all duration-300 group-hover:scale-[10]" />
-                <div className="relative z-10 mx-auto max-w-md">
-                  <span className="grid h-20 w-20 place-items-center rounded-full bg-green-200 transition-all duration-300 group-hover:bg-primary/50">
-                    <Image alt={`${core.title} icon`} src={core.icon} />
-                  </span>
-                  <div className="space-y-6 pt-5 text-base leading-7 text-muted transition-all duration-300 group-hover:text-black">
-                    <p className="text-lg md:text-2xl leading-tight tracking-wide">
-                      {core.title}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
+    <div
+      className="relative p-1 overflow-hidden rounded-lg h-full"
+      data-aos="fade-up"
+      data-aos-delay={index * 100}
+    >
+      <div className="w-full h-full p-8 lg:p-10 transition rounded-lg  bg-background/50 backdrop-blur-3xl">
+        <div className="flex flex-col justify-between h-full gap-4">
+          <div className="space-y-4">
+            <div className="h-10 w-20">
+              {src ? <Image alt={`${title} icon`} src={src} /> : null}
+            </div>
+            <h3 className="space-y-4 text-lg md:text-2xl font-bold">
+              <span className="block">{title}</span>
+            </h3>
+            <p className="text-lg text-muted">{description}</p>
           </div>
+
+          <Separator className="h-1 bg-primary-static" />
         </div>
-      </Section>
+      </div>
+
+      <div
+        className="absolute -z-[1] top-0 left-0 w-64 h-64 rounded-full bg-primary-static/80 blur-2xl"
+        ref={glowRef}
+        role="none"
+      />
+      <div
+        className="absolute -z-[1] top-0 left-0 w-52 h-52 rounded-full invisible"
+        ref={hiddenRef}
+        role="none"
+      />
     </div>
-    // <div className="w-full h h-full md:h-screen flex justify-center items-center py-16 bg-slate-900">
-    //   <Section>
-    //     <div className="flex flex-col items-center gap-20">
-    //       <h3 className="text-2xl text-white font-semibold text-center lg:text-4xl">
-    //         Core Services
-    //       </h3>
-    //       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center gap-5 md:gap-4">
-    //         {coreServices.map((core) => (
-    //           <div
-    //             className="group relative h-full overflow-hidden cursor-pointer bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl rounded-xl"
-    //             key={core.title}
-    //           >
-    //             <span className="absolute top-10 z-0 h-20 w-20 rounded-full bg-green-200 transition-all duration-300 group-hover:scale-[10]" />
-    //             <div className="relative z-10 mx-auto max-w-md">
-    //               <span className="grid h-20 w-20 place-items-center rounded-full bg-green-200 transition-all duration-300 group-hover:bg-green-900">
-    //                 <Image alt={`${core.title} icon`} src={core.icon} />
-    //               </span>
-    //               <div className="space-y-6 pt-5 text-base leading-7 text-muted transition-all duration-300 group-hover:text-black">
-    //                 <p className="text-lg md:text-2xl font-semibold">
-    //                   {core.title}
-    //                 </p>
-    //               </div>
-    //             </div>
-    //           </div>
-    //         ))}
-    //       </div>
-    //     </div>
-    //   </Section>
-    // </div>
   );
 }
+
+export { CoreServicesCard };
