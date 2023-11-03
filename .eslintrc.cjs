@@ -27,6 +27,10 @@ module.exports = {
   },
   ignorePatterns: ['node_modules/', 'dist/'],
   rules: {
+    '@typescript-eslint/consistent-type-imports': [
+      'error',
+      { prefer: 'type-imports', fixStyle: 'inline-type-imports' },
+    ],
     '@typescript-eslint/explicit-function-return-type': 'off',
     // For server actions
     '@typescript-eslint/no-misused-promises': 'off',

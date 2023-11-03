@@ -1,13 +1,9 @@
 import React from 'react';
 import { generateRandomPicsum } from '@/utils/picsum';
 import { htmlStrToReact } from '@/lib/parser';
-import type { EdgeNode, Posts } from '../types';
+import { RANDOM_IMAGE_DIMENSIONS } from '@/constants/dimensions';
+import type { EdgeNode, Posts } from '../types/get-posts';
 import { api } from './client';
-
-const RANDOM_IMAGE_DIMENSIONS = {
-  width: 1000,
-  height: 667,
-} as const;
 
 interface GetPosts {
   after?: string;
@@ -19,7 +15,7 @@ export const getPosts = React.cache(
     const response = await api<Posts>({
       data: {
         query: `
-          query postsQuery($after: String, $first: Int, $search: String) {
+          query GetPosts($after: String, $first: Int, $search: String) {
             posts(
               where: {search: $search, orderby: {field: DATE, order: DESC}}
               after: $after
