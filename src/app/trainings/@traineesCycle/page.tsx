@@ -1,11 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 import { cycleHero } from '@/assets/images';
+import { Section } from '@/components/default-elements';
 
 export default function TraineesCycle() {
   return (
-    <div className="w-full flex justify-center py-10">
-      <div className="w-full">
+    <div className="w-full flex justify-center py-16">
+      <Section>
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2">
           <div className="flex flex-col gap-6">
             <h2 className="text-2xl font-semibold text-center [&>span]:text-primary-static  lg:text-3xl lg:text-left xl:text-5xl">
@@ -21,7 +22,7 @@ export default function TraineesCycle() {
             <Image alt="Trainees cycle image" src={cycleHero} />
           </div>
         </div>
-      </div>
+      </Section>
     </div>
   );
 }

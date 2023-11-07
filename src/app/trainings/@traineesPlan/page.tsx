@@ -1,15 +1,16 @@
 import React from 'react';
 import Image from 'next/image';
 import { TRAINING_PLANS } from '@/constants/training-plans';
+import { Section } from '@/components/default-elements';
 
 export default function TraineesPlan() {
   return (
-    <div className="w-full flex justify-center py-10">
-      <div className="w-full">
+    <div className="w-full flex justify-center py-16">
+      <Section>
         <div className="flex flex-col items-center gap-8 xl:gap-14">
           <div className="flex flex-col items-center gap-6">
             <h2 className="text-2xl font-semibold text-center lg:text-3xl">
-              Trainess can enjoy numerous benefits and perks that help support
+              Trainees can enjoy numerous benefits and perks that help support
               their learning and development
             </h2>
             <p className="text-base text-muted text-center lg:text-xl">
@@ -37,7 +38,7 @@ export default function TraineesPlan() {
             ))}
           </div>
         </div>
-      </div>
+      </Section>
     </div>
   );
 }
