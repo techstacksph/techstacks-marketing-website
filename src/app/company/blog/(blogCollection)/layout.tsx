@@ -1,6 +1,8 @@
 import type { ReactNode } from 'react';
 import { H1, Main, Section, Subheading } from '@/components/default-elements';
 
+export const dynamic = 'force-dynamic';
+
 export default function BlogLayout({
   blogs,
   blogCarousel,

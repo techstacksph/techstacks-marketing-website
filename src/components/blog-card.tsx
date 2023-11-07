@@ -38,7 +38,7 @@ export function BlogCard({
       href={`${NavRoutes.Company.Blog}/${slug}`}
     >
       <div className="flex gap-2">
-        <div className="p-3 pb-4 space-y-2">
+        <div className="w-full p-3 pb-4 space-y-2">
           <h2 className="text-xl font-medium">{title}</h2>
           <div className="line-clamp-2">{Description}</div>
         </div>
@@ -72,7 +72,7 @@ export function BlogCarouselItem({
             <div className="flex flex-col justify-between">
               <div className="flex flex-col gap-6">
                 <h2 className="text-2xl font-medium">{title}</h2>
-                <div className="line-clamp-5">{Description}</div>
+                <div className="line-clamp-4">{Description}</div>
                 <div className="flex justify-end">
                   <Button asChild variant="outline">
                     <Link href={`${NavRoutes.Company.Blog}/${slug}`}>

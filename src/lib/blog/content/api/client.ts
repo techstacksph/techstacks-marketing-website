@@ -1,7 +1,7 @@
-import axios from 'axios';
+import { ApolloClient, InMemoryCache } from '@apollo/client';
 import { env } from '@/env.mjs';
 
-export const api = axios.create({
-  baseURL: env.WORDPRESS_API_URL,
-  method: 'post',
+export const client = new ApolloClient({
+  uri: env.WORDPRESS_API_URL,
+  cache: new InMemoryCache(),
 });

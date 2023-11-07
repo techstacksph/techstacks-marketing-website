@@ -1,9 +1,10 @@
 import React from 'react';
+import { gql } from '@apollo/client';
 import { generateRandomPicsum } from '@/utils/picsum';
 import { htmlStrToReact } from '@/lib/parser';
 import { RANDOM_IMAGE_DIMENSIONS } from '@/constants/dimensions';
-import type { EdgeNode, Posts } from '../types/get-posts';
-import { api } from './client';
+import type { EdgeNode, PostData } from '../types/get-posts';
+import { client } from './client';
 
 interface GetPosts {
   after?: string;
@@ -12,53 +13,52 @@ interface GetPosts {
 }
 export const getPosts = React.cache(
   async ({ after, first, search }: GetPosts = {}) => {
-    const response = await api<Posts>({
-      data: {
-        query: `
-          query GetPosts($after: String, $first: Int, $search: String) {
-            posts(
-              where: {search: $search, orderby: {field: DATE, order: DESC}}
-              after: $after
-              first: $first
-            ) {
-              edges {
-                node {
-                  author {
-                    node {
-                      name
-                      avatar {
-                        size
-                        url
-                      }
+    const response = await client.query<PostData>({
+      query: gql`
+        query GetPosts($after: String, $first: Int, $search: String) {
+          posts(
+            where: { search: $search, orderby: { field: DATE, order: DESC } }
+            after: $after
+            first: $first
+          ) {
+            edges {
+              node {
+                author {
+                  node {
+                    name
+                    avatar {
+                      size
+                      url
                     }
                   }
-                  slug
-                  title
-                  excerpt
-                  featuredImage {
-                    node {
-                      sourceUrl
-                      mediaDetails {
-                        height
-                        width
-                      }
-                    }
-                  }
-                  date
                 }
-                cursor
+                slug
+                title
+                excerpt
+                featuredImage {
+                  node {
+                    sourceUrl
+                    mediaDetails {
+                      height
+                      width
+                    }
+                  }
+                }
+                date
               }
+              cursor
             }
-          }`,
-        variables: {
-          after,
-          first,
-          search,
-        },
+          }
+        }
+      `,
+      variables: {
+        after,
+        first,
+        search,
       },
     });
 
-    return response.data.data.posts.edges;
+    return response.data.posts.edges;
   },
 );
 
