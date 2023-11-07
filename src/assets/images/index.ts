@@ -47,6 +47,14 @@ import teamImage from './about-us/team-img.jpg';
 import creative from './services/creative.png';
 import creativeDesign from './services/creative-design.png';
 import system from './services/system.png';
+import winmartImg from './services/portfolio/winmart.png';
+import unpuzzleImg from './services/portfolio/unpuzzle.png';
+import thunderImg from './services/portfolio/thunder.png';
+import rtcImg from './services/portfolio/rtc.png';
+import portfolioImg from './services/portfolio/portfolio.png';
+import mnmImg from './services/portfolio/mnm.png';
+import deDiabetesImg from './services/portfolio/dediabetes.png';
+import agassizImg from './services/portfolio/agassiz.png';
 
 export {
   //trainings
@@ -69,6 +77,14 @@ export {
   creative,
   creativeDesign,
   system,
+  winmartImg,
+  unpuzzleImg,
+  thunderImg,
+  rtcImg,
+  portfolioImg,
+  mnmImg,
+  deDiabetesImg,
+  agassizImg,
 
   //about-us
   goDaddyImg,

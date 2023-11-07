@@ -5,7 +5,7 @@ import { CoreServicesCard } from '@/components/core-services';
 
 export default function CoreServices() {
   return (
-    <div className="w-full py-16 flex justify-center bg-primary/50">
+    <div className="w-full py-16 flex justify-center ">
       <Section>
         <div className="flex flex-col items-center gap-8">
           <div className="flex flex-col items-center gap-4">
