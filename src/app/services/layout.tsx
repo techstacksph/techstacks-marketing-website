@@ -6,6 +6,8 @@ export default function ServicesLayout(props: Record<string, ReactNode>) {
     <Main>
       <div>{props.servicesHero}</div>
       <div>{props.coreServices}</div>
+      <div>{props.creativeWorks}</div>
+      <div>{props.testimonialServices}</div>
     </Main>
   );
 }
