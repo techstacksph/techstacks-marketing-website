@@ -1,4 +1,23 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {}
+await import('./src/env.mjs');
 
-export default nextConfig
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        // protocol: 'http',
+        hostname: '0.gravatar.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'picsum.photos',
+      },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+      },
+    ],
+  },
+};
+
+export default nextConfig;

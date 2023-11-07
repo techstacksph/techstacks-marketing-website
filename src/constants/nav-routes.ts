@@ -2,7 +2,7 @@ export const NavRoutes = {
   Home: '/',
   Company: {
     AboutUs: '/company/about',
-    Blogs: '/company/blogs',
+    Blog: '/company/blog',
     Careers: '/company/careers',
     Apply: '/company/careers/apply',
     OurTeam: '/company/our-team',
@@ -12,4 +12,4 @@ export const NavRoutes = {
   Pricing: '/pricing',
   Services: '/services',
   Trainings: '/trainings',
-};
+} as const;

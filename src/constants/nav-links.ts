@@ -18,7 +18,7 @@ export const companyLink = [
       },
       {
         label: 'Blogs',
-        href: NavRoutes.Company.Blogs,
+        href: NavRoutes.Company.Blog,
         description:
           'Explore, learn, and embark on a journey towards digital excellence.',
       },
