@@ -6,19 +6,30 @@ import { Main, Section } from '@/components/default-elements';
 import Testimonials from '@/components/testimonials';
 import SocialProof from '@/components/social-proof';
 import { NavRoutes } from '@/constants/nav-routes';
+import { Typewriter } from '@/components/typewriter';
 
 export default function Home() {
   return (
     <Main>
-      <div className="w-full flex justify-center py-16 ">
+      <div className="flex justify-center w-full py-16 ">
         <Section>
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:justify-center lg:items-center">
             <div className="flex flex-col gap-8">
               <h1
-                className="text-3xl font-semibold leading-tight text-center lg:text-left lg:text-5xl xl:text-7xl"
+                className="text-3xl font-semibold leading-tight text-center whitespace-pre-wrap lg:text-left lg:text-5xl xl:text-7xl"
                 data-aos="fade-up"
               >
-                Building websites with a purpose
+                Building websites{'\n'}
+                <Typewriter
+                  component="span"
+                  options={{
+                    strings: ['with a purpose', 'beyond limits', 'with style'],
+                    autoStart: true,
+                    loop: true,
+                    delay: 50,
+                    deleteSpeed: 50,
+                  }}
+                />
               </h1>
               <p
                 className="text-base leading-loose text-center text-muted lg:text-left lg:text-xl"
@@ -31,7 +42,7 @@ export default function Home() {
               </p>
               <div className="flex gap-4 place-content-center lg:place-content-start">
                 <Link
-                  className="w-28 lg:w-44 h-14 p-3 border border-muted-static relative inline-flex items-center justify-start overflow-hidden font-medium transition-all bg-white rounded hover:bg-white group"
+                  className="relative inline-flex items-center justify-start p-3 overflow-hidden font-medium transition-all bg-white border rounded w-28 lg:w-44 h-14 border-muted-static hover:bg-white group"
                   href={NavRoutes.Services}
                 >
                   <span className="w-48 h-48 rounded rotate-[-40deg] bg-primary-static/60 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0" />
@@ -40,7 +51,7 @@ export default function Home() {
                   </span>
                 </Link>
                 <Link
-                  className="w-28 lg:w-44 h-14 p-3 border border-muted-static relative inline-flex items-center justify-start overflow-hidden font-medium transition-all bg-gray-400 rounded hover:bg-white group"
+                  className="relative inline-flex items-center justify-start p-3 overflow-hidden font-medium transition-all bg-gray-400 border rounded w-28 lg:w-44 h-14 border-muted-static hover:bg-white group"
                   href={NavRoutes.Company.AboutUs}
                 >
                   <span className="w-48 h-48 rounded rotate-[-40deg] bg-primary-static/60 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0" />
