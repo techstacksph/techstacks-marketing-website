@@ -10,7 +10,6 @@ import { SAMPLE_JOBS } from '@/lib/faker';
 import type { Job } from '@/constants/jobs';
 import { POSITIONS } from '@/constants/jobs';
 import { JobCard } from '@/components/job-card';
-import { dmSans } from '@/lib/fonts';
 
 const TABS = ['All', ...POSITIONS] as const;
 
@@ -34,10 +33,7 @@ export default function AvailablePositionsSection() {
   return (
     <Section>
       <h2
-        className={cn(
-          'text-2xl font-bold [&&]:leading-tight whitespace-pre-wrap md:text-5xl',
-          dmSans.className,
-        )}
+        className="text-2xl font-bold [&&]:leading-tight whitespace-pre-wrap md:text-5xl font-dm-sans"
         data-aos="fade-up"
       >
         Browse Current Open Positions

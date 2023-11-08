@@ -113,6 +113,11 @@ const config: Config = {
         xl: '1280px',
         '2xl': '1536px',
       },
+      fontFamily: {
+        'dm-sans': 'var(--font-dm-sans)',
+        poppins: 'var(--font-poppins)',
+        inter: 'var(--font-inter)',
+      },
     },
   },
   plugins: [twAnimate, twTypography, borderAnimate],

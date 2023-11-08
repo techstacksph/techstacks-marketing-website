@@ -6,8 +6,6 @@ import { getPosts, processPostNode } from '@/lib/blog/content/api/get-posts';
 import { Label } from '@/components/ui/label';
 import { BlogSearchFormNames as FormNames } from '@/lib/blog/forms';
 import BlogLoader from '@/components/blog-loader';
-import { cn } from '@/utils/cn';
-import { poppins } from '@/lib/fonts';
 import type { BlogPageProps } from '../page-props';
 import { searchBlogs } from './actions';
 
@@ -68,12 +66,7 @@ export default async function BlogHeroSection({ searchParams }: BlogPageProps) {
               </div>
             ) : (
               <div className="py-8">
-                <p
-                  className={cn(
-                    'text-2xl italic text-center text-muted-foreground',
-                    poppins.className,
-                  )}
-                >
+                <p className="text-2xl italic text-center text-muted-foreground font-poppins">
                   Cannot find posts related to{' '}
                   <strong className="not-italic text-foreground">
                     &quot;{searchQuery}&quot;

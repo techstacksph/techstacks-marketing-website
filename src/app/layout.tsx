@@ -4,6 +4,8 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { Providers } from '@/components/providers';
 import Loader from '@/components/route-progress-bar';
+import { dmSans, inter, poppins } from '@/lib/fonts';
+import { cn } from '@/utils/cn';
 
 export const metadata: Metadata = {
   title: 'Techstacks IT Web Development Services',
@@ -17,8 +19,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body>
+    <html
+      className={cn(dmSans.variable, poppins.variable, inter.variable)}
+      lang="en"
+      suppressHydrationWarning
+    >
+      <body className="font-inter">
         <Providers>
           <Loader />
           <Header />

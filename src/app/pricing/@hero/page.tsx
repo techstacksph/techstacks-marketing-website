@@ -1,6 +1,4 @@
 import { Section } from '@/components/default-elements';
-import { cn } from '@/utils/cn';
-import { dmSans } from '@/lib/fonts';
 import { PRICING } from '@/constants/pricing';
 import {
   PricingCard,
@@ -13,12 +11,7 @@ export default function PricingHero() {
     <PricingProvider>
       <Section className="flex flex-col items-center gap-20">
         <div className="flex flex-col items-center gap-4">
-          <h1
-            className={cn(
-              'text-2xl font-medium [&&]:leading-normal text-center whitespace-pre-wrap md:text-5xl',
-              dmSans.className,
-            )}
-          >
+          <h1 className="text-2xl font-medium [&&]:leading-normal text-center whitespace-pre-wrap md:text-5xl font-dm-sans">
             Your{' '}
             <span className="font-black text-primary-foreground">
               Perfect Plan
