@@ -8,6 +8,7 @@ import { BiSolidQuoteAltLeft, BiSolidCircle } from 'react-icons/bi';
 import { Button } from './ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 import { Section } from './default-elements';
+import { H2, Subheading } from './ui/typography';
 
 const TESTIMONIALS = [
   {
@@ -47,39 +48,37 @@ function Testimonials() {
   const carousel = useRef<AliceCarousel>(null);
 
   return (
-    <div className="w-full flex justify-center py-16 border-t border-green-900">
+    <div className="flex justify-center w-full py-16 border-t border-green-900">
       <Section>
         <div className="flex flex-col gap-10">
-          <div className="grid grid-cols-1 gap-6 items-center lg:grid-cols-2">
+          <div className="grid items-center grid-cols-1 gap-6 lg:grid-cols-2">
             <div className="flex flex-col items-center gap-6 lg:items-start">
-              <div className="flex flex-row gap-2 items-center">
+              <div className="flex flex-row items-center gap-2">
                 <div className="text-lg text-yellow-500">
                   <BiSolidCircle />
                 </div>
-                <p className="text-lg text-muted" data-aos="fade-up">
-                  Testimonials
-                </p>
+                <Subheading data-aos="fade-up">Testimonials</Subheading>
               </div>
 
-              <h3
-                className="text-3xl text-center font-semibold lg:text-left"
+              <H2
+                className="text-center lg:text-left"
                 data-aos="fade-up"
                 data-aos-delay={100}
               >
                 Hear What Our Clients Have to Say
-              </h3>
+              </H2>
             </div>
-            <p
-              className="text-lg text-center text-muted lg:text-left"
+            <Subheading
+              className="text-center lg:text-left"
               data-aos="fade-up"
               data-aos-delay={200}
             >
               Gain insight into the experiences of our valued clients as they
               share their success stories and how our web development solutions
               have made a difference for their businesses
-            </p>
+            </Subheading>
           </div>
-          <div className="flex flex-col-reverse md:flex-col gap-4 ">
+          <div className="flex flex-col-reverse gap-4 md:flex-col ">
             <AliceCarousel
               autoPlay
               autoPlayInterval={3000}
@@ -89,26 +88,26 @@ function Testimonials() {
               infinite
               items={TESTIMONIALS.map(({ from, name, testimonial, img }) => (
                 <div className="flex flex-col gap-8 px-4" key={name}>
-                  <div className="flex flex-col gap-4 bg-white h-full border border-primary-static rounded-md p-6 aspect-square">
+                  <div className="flex flex-col h-full gap-4 p-6 bg-white border rounded-md border-primary-static aspect-square">
                     <div className="flex flex-row items-center gap-2">
                       <Avatar>
                         <AvatarImage alt={name} src={img} />
                         <AvatarFallback>TS</AvatarFallback>
                       </Avatar>
                       <div className="flex flex-col gap-1">
-                        <p className="text-base text-black font-normal">
+                        <p className="text-base font-normal text-black">
                           {name}
                         </p>
-                        <p className="text-base text-black font-normal">
+                        <p className="text-base font-normal text-black">
                           {from}
                         </p>
                       </div>
                     </div>
-                    <div className="flex flex-col gap-1 h-full justify-center">
-                      <div className="text-primary-static text-3xl">
+                    <div className="flex flex-col justify-center h-full gap-1">
+                      <div className="text-3xl text-primary-static">
                         <BiSolidQuoteAltLeft />
                       </div>
-                      <p className="text-muted text-justify">{testimonial}</p>
+                      <p className="text-justify text-muted">{testimonial}</p>
                     </div>
                   </div>
                 </div>

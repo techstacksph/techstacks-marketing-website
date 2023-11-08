@@ -1,7 +1,7 @@
 import { DM_Sans as DMSans, Inter, Poppins } from 'next/font/google';
 
 export const poppins = Poppins({
-  weight: ['400', '600'],
+  weight: ['400', '500', '600'],
   subsets: ['latin'],
   style: ['normal', 'italic'],
   variable: '--font-poppins',

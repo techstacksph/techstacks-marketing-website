@@ -7,6 +7,7 @@ import Testimonials from '@/components/testimonials';
 import SocialProof from '@/components/social-proof';
 import { NavRoutes } from '@/constants/nav-routes';
 import { Typewriter } from '@/components/typewriter';
+import { H1, Subheading } from '@/components/ui/typography';
 
 export default function Home() {
   return (
@@ -15,8 +16,8 @@ export default function Home() {
         <Section>
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:justify-center lg:items-center">
             <div className="flex flex-col gap-8">
-              <h1
-                className="text-3xl font-semibold leading-tight text-center whitespace-pre-wrap lg:text-left lg:text-5xl xl:text-7xl"
+              <H1
+                className="text-center whitespace-pre-wrap lg:text-left"
                 data-aos="fade-up"
               >
                 Building websites{'\n'}
@@ -30,16 +31,16 @@ export default function Home() {
                     deleteSpeed: 50,
                   }}
                 />
-              </h1>
-              <p
-                className="text-base leading-loose text-center text-muted lg:text-left lg:text-xl"
+              </H1>
+              <Subheading
+                className="text-center lg:text-left"
                 data-aos="fade-up"
                 data-aos-delay={100}
               >
                 We specialize in designing and building beautiful, fast, secure,
                 and high converting, engaging websites with excellent
                 performance and SEO score.
-              </p>
+              </Subheading>
               <div className="flex gap-4 place-content-center lg:place-content-start">
                 <Link
                   className="relative inline-flex items-center justify-start p-3 overflow-hidden font-medium transition-all bg-white border rounded w-28 lg:w-44 h-14 border-muted-static hover:bg-white group"
@@ -61,9 +62,9 @@ export default function Home() {
                 </Link>
               </div>
               <div className="flex flex-col py-0 lg:py-8">
-                <h2 className="pb-8 text-lg text-center text-muted-foreground-static lg:text-left">
+                <Subheading className="pb-8 text-center lg:text-left">
                   Working with the best
-                </h2>
+                </Subheading>
                 <SocialProof />
               </div>
             </div>

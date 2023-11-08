@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Fragment } from 'react';
 import { BiSolidCircle } from 'react-icons/bi';
 import { Section } from './default-elements';
+import { H2, H3, Subheading } from './ui/typography';
 
 export const MAKE_WEB_CONTENT = [
   [
@@ -26,9 +27,9 @@ export const MAKE_WEB_CONTENT = [
 
 export default function MakeWebsites() {
   return (
-    <div className="w-full flex justify-center py-16 border-t border-green-900">
+    <div className="flex justify-center w-full py-16 border-t border-green-900">
       <Section>
-        <div className="flex flex-row justify-center gap-4 h-auto">
+        <div className="flex flex-row justify-center h-auto gap-4">
           <div className="hidden w-full lg:block ">
             <Image
               alt="Why choose image"
@@ -38,32 +39,32 @@ export default function MakeWebsites() {
             />
           </div>
           <div className="flex flex-col gap-10">
-            <div className="flex flex-col">
-              <div className="flex flex-row gap-2 items-center justify-center lg:justify-start">
+            <div className="flex flex-col gap-2">
+              <div className="flex flex-row items-center justify-center gap-2 lg:justify-start">
                 <div className="text-lg text-yellow-500">
                   <BiSolidCircle />
                 </div>
-                <p
-                  className="text-lg text-muted text-center lg:text-left"
+                <Subheading
+                  className="text-center lg:text-left"
                   data-aos="fade-up"
                 >
                   Why Choose us
-                </p>
+                </Subheading>
               </div>
 
-              <h2
-                className="text-3xl font-semibold text-center lg:text-left lg:text-4xl xl:text-5xl"
+              <H2
+                className="text-center lg:text-left"
                 data-aos="fade-up"
                 data-aos-delay={100}
               >
                 We make beautiful, high converting, engaging, secure websites.
-              </h2>
+              </H2>
             </div>
             <div className="grid grid-cols-1  gap-2 items-center md:grid-cols-[8rem_1fr]">
               {MAKE_WEB_CONTENT.map(([title, description, lottie], i) => (
                 <Fragment key={title}>
                   <div
-                    className="flex items-center content-center h-24 w-24"
+                    className="flex items-center content-center w-full h-full"
                     data-aos="fade-up"
                     data-aos-delay={(i + 2) * 100}
                   >
@@ -74,8 +75,8 @@ export default function MakeWebsites() {
                     data-aos="fade-up"
                     data-aos-delay={(i + 2) * 100}
                   >
-                    <h3 className="text-2xl font-semibold">{title}</h3>
-                    <p className="text-muted text-lg">{description}</p>
+                    <H3>{title}</H3>
+                    <Subheading className="mt-2">{description}</Subheading>
                   </div>
                 </Fragment>
               ))}

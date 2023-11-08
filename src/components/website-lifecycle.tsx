@@ -5,6 +5,7 @@ import { Fragment } from 'react';
 import { cn } from '@/utils/cn';
 import { Separator } from './ui/separator';
 import { Section } from './default-elements';
+import { H2, H3, Subheading } from './ui/typography';
 
 export const METHOD_CONTENT = [
   [
@@ -36,23 +37,16 @@ export const METHOD_CONTENT = [
 
 export default function WebsiteLifecycle() {
   return (
-    <div className="w-full flex justify-center py-16 border-t border-green-900">
+    <div className="flex justify-center w-full py-16 border-t border-green-900">
       <Section>
         <div className="flex flex-col items-center gap-10">
-          <div className="flex flex-col gap-8 items-center">
-            <p
-              className="text-lg text-center text-muted-foreground-static"
-              data-aos="fade-up"
-            >
+          <div className="flex flex-col items-center gap-8">
+            <Subheading className="text-center" data-aos="fade-up">
               Our Methodology
-            </p>
-            <h3
-              className="text-3xl lg:text-4xl xl:text-5xl font-semibold text-center"
-              data-aos="fade-up"
-              data-aos-delay={100}
-            >
+            </Subheading>
+            <H2 className="text-center" data-aos="fade-up" data-aos-delay={100}>
               Systematic flow in the website lifecycle
-            </h3>
+            </H2>
           </div>
           <div className="flex flex-col items-center md:block">
             {METHOD_CONTENT.map(([title, content, lottieFile], i) => {
@@ -69,8 +63,10 @@ export default function WebsiteLifecycle() {
                         <div className="p-4 rounded-lg md:border md:bg-primary/50">
                           <div className="flex items-center justify-between gap-4">
                             <div className="space-y-2">
-                              <h3 className="text-3xl font-medium">{title}</h3>
-                              <p className="text-muted">{content}</p>
+                              <H3>{title}</H3>
+                              <Subheading className="text-muted">
+                                {content}
+                              </Subheading>
                             </div>
                           </div>
                         </div>
