@@ -1,9 +1,6 @@
-'use client';
-
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useTheme } from 'next-themes';
 import { Section } from '@/components/default-elements';
 import { cn } from '@/utils/cn';
 import { dmSans } from '@/lib/fonts';
@@ -12,20 +9,12 @@ import { NavRoutes } from '@/constants/nav-routes';
 import { Slice } from '@/components/icons/slice';
 
 export default function Trainings() {
-  const { resolvedTheme } = useTheme();
-
   return (
     <div className="relative flex flex-col-reverse pb-16 lg:pt-0 lg:flex-col lg:pb-0">
       <div className="inset-y-0 top-0 right-0 z-0 w-full flex items-center justify-center px-4 lg:pr-0 mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
-        <Slice
-          className={cn(
-            'absolute left-0 hidden h-full transform -translate-x-1/2 lg:block',
-            resolvedTheme === 'dark' && 'text-gray-900',
-            resolvedTheme === 'light' && 'text-white',
-          )}
-        />
+        <Slice className="absolute text-white dark:text-gray-900 left-0 hidden h-full transform -translate-x-1/2 lg:block" />
         <Image
-          alt="asd"
+          alt="Training background"
           className="object-cover  w-full  rounded shadow-lg lg:rounded-none lg:shadow-none sm:h-72 md:h-96 lg:h-full"
           src={trainingBg}
         />

@@ -55,7 +55,7 @@ import portfolioImg from './services/portfolio/portfolio.png';
 import mnmImg from './services/portfolio/mnm.png';
 import deDiabetesImg from './services/portfolio/dediabetes.png';
 import agassizImg from './services/portfolio/agassiz.png';
-import trainingBg from './trainings/training-bg.jpg';
+import trainingBg from './trainings/training-bg.png';
 
 export {
   //trainings
