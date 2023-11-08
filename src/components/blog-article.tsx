@@ -1,11 +1,15 @@
-import 'highlight.js/styles/github-dark-dimmed.min.css';
+'use client';
+
 import { type HTMLAttributes, forwardRef } from 'react';
 import { cn } from '@/utils/cn';
+import { useHLJS } from '@/lib/hooks/use-hljs';
 
 type BlogArticleProps = HTMLAttributes<HTMLElement>;
 
 export const BlogArticle = forwardRef<HTMLElement, BlogArticleProps>(
   ({ className, ...props }, ref) => {
+    useHLJS();
+
     return (
       <article
         className={cn(
