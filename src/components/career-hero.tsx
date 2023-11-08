@@ -1,6 +1,4 @@
 import Link from 'next/link';
-import { cn } from '@/utils/cn';
-import { dmSans, poppins } from '@/lib/fonts';
 import { NavRoutes } from '@/constants/nav-routes';
 import { ourTeam } from '@/assets/images';
 import { Section } from './default-elements';
@@ -13,14 +11,11 @@ function CareerHero() {
       <div className="grid items-center h-full gap-8 md:gap-4 md:grid-cols-2">
         <div className="flex flex-col items-center gap-4 md:gap-8 md:items-start">
           <h1
-            className={cn(
-              'font-medium tracking-wide whitespace-pre-wrap text-3xl md:text-7xl leading-tight text-center md:text-left',
-              dmSans.className,
-            )}
+            className="text-3xl font-medium leading-tight tracking-wide text-center whitespace-pre-wrap md:text-7xl md:text-left font-dm-sans"
             data-aos="fade-up"
           >
             Elevate your career with{'\n'}
-            <span className={cn('text-primary-static', poppins.className)}>
+            <span className="text-primary-static font-poppins">
               <TechstacksLogo
                 className="inline"
                 data-aos="fade-left"

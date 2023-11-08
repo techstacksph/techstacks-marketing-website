@@ -3,8 +3,6 @@ import { careerTeam } from '@/assets/images';
 import { BenefitCard } from '@/components/benefit-card';
 import { Section } from '@/components/default-elements';
 import { TechstacksLogo } from '@/components/icons/techstacks-logo';
-import { poppins } from '@/lib/fonts';
-import { cn } from '@/utils/cn';
 
 const BENEFITS = [
   {
@@ -51,7 +49,7 @@ export default function BenefitsSection() {
             >
               <span className="text-primary-static">Perks & benefits</span> of
               working at{'\n'}
-              <span className={cn('text-primary-static', poppins.className)}>
+              <span className="text-primary-static font-poppins">
                 <TechstacksLogo className="inline" />{' '}
                 <span className="tracking-normal">Techstacks</span>
               </span>

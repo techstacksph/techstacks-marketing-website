@@ -7,7 +7,6 @@ import { NavigationMenuTrigger } from '@radix-ui/react-navigation-menu';
 import { NavRoutes } from '@/constants/nav-routes';
 import { cn } from '@/utils/cn';
 import { companyLink, pagesLink } from '@/constants/nav-links';
-import { poppins } from '@/lib/fonts';
 import { ListItem } from './list-item';
 import { Button } from './ui/button';
 import NavDrawer from './nav-drawer';
@@ -58,12 +57,7 @@ export default function Header() {
                         asChild
                         className="text-sm font-medium before:bg-primary-foreground hover:text-primary"
                       >
-                        <NavigationMenuTrigger
-                          className={cn(
-                            'flex h-full py-2 px-4 rounded place-items-center',
-                            poppins.className,
-                          )}
-                        >
+                        <NavigationMenuTrigger className="flex h-full px-4 py-2 rounded place-items-center font-poppins">
                           {company.title}
                         </NavigationMenuTrigger>
                       </HoverableChild>
@@ -101,10 +95,7 @@ export default function Header() {
                         className="text-sm font-medium before:bg-primary-foreground hover:text-primary"
                       >
                         <Link
-                          className={cn(
-                            'flex h-full py-2 px-4 rounded place-items-center',
-                            poppins.className,
-                          )}
+                          className="flex h-full px-4 py-2 rounded place-items-center font-poppins"
                           href={page.href}
                         >
                           {page.title}
