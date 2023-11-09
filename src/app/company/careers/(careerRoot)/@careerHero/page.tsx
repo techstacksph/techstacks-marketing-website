@@ -4,14 +4,15 @@ import { ourTeam } from '@/assets/images';
 import { Section } from '@/components/default-elements';
 import { TechstacksLogo } from '@/components/icons/techstacks-logo';
 import { Hexagon } from '@/components/hexagon';
+import { H1, Subheading } from '@/components/ui/typography';
 
 export default function CareerHero() {
   return (
     <Section className="h-fit">
       <div className="grid items-center h-full gap-8 md:gap-4 md:grid-cols-2">
         <div className="flex flex-col items-center gap-4 md:gap-8 md:items-start">
-          <h1
-            className="text-3xl font-medium leading-tight tracking-wide text-center whitespace-pre-wrap md:text-7xl md:text-left font-dm-sans"
+          <H1
+            className="tracking-wide text-center whitespace-pre-wrap md:text-left font-dm-sans"
             data-aos="fade-up"
           >
             Elevate your career with{'\n'}
@@ -29,14 +30,14 @@ export default function CareerHero() {
                 Techstacks
               </span>
             </span>
-          </h1>
-          <p
-            className="text-sm font-medium tracking-wider text-center md:text-xl text-muted md:text-left"
+          </H1>
+          <Subheading
+            className="font-medium tracking-wider text-center md:text-left"
             data-aos="fade-up"
             data-aos-delay={300}
           >
             Where Exceptional Individuals Thrive on Complex Web Ventures.
-          </p>
+          </Subheading>
 
           <Link
             className="relative inline-flex items-center justify-start p-3 overflow-hidden font-medium transition-all border rounded w-28 lg:w-44 h-14 border-muted-static group bg-primary-static"

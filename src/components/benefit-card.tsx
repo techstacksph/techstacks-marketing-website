@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef } from 'react';
 import { Separator } from './ui/separator';
+import { H3 } from './ui/typography';
 
 interface BenefitCardProps {
   index: number;
@@ -47,12 +48,12 @@ function BenefitCard({ index, title, description }: BenefitCardProps) {
       <div className="w-full h-full pt-3 pb-4 transition rounded-lg px-7 bg-background/50 backdrop-blur-3xl">
         <div className="flex flex-col justify-between h-full gap-4">
           <div className="space-y-4">
-            <h3 className="space-y-4 text-2xl font-bold">
+            <H3 className="space-y-4">
               <span className="block text-primary-static">
                 {(index + 1).toString().padStart(2, '0')}
               </span>
               <span className="block">{title}</span>
-            </h3>
+            </H3>
             <p className="text-lg text-muted">{description}</p>
           </div>
 

@@ -4,6 +4,7 @@ import { values } from '@/constants/values';
 import { cn } from '@/utils/cn';
 import { Separator } from './ui/separator';
 import { Section } from './default-elements';
+import { H2, Subheading } from './ui/typography';
 
 export default function ScrollbarValues() {
   return (
@@ -23,18 +24,16 @@ export default function ScrollbarValues() {
                       <div className="p-4 rounded-lg md:border">
                         <div className="flex items-center justify-between gap-4">
                           <div className="space-y-2 flex flex-col gap-4">
-                            <p className="text-base text-muted md:text-lg lg:text-xl">
-                              {value.title}
-                            </p>
-                            <h3 className="text-2xl font-semibold xl:font-bold xl:text-4xl">
+                            <Subheading>{value.title}</Subheading>
+                            <H2 className="text-2xl font-semibold xl:font-bold xl:text-4xl">
                               {value.heading}{' '}
                               <span className="text-primary-static">
                                 {value.highlight}
                               </span>
-                            </h3>
-                            <p className="text-base text-muted lg:text-xl">
+                            </H2>
+                            <Subheading className="text-base text-muted lg:text-xl">
                               {value.description}
-                            </p>
+                            </Subheading>
                           </div>
                         </div>
                       </div>

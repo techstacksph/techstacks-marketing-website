@@ -5,13 +5,14 @@ import {
   PricingProvider,
   PricingSwitch,
 } from '@/components/pricing-card';
+import { H2 } from '@/components/ui/typography';
 
 export default function PricingHero() {
   return (
     <PricingProvider>
       <Section className="flex flex-col items-center gap-20">
         <div className="flex flex-col items-center gap-4">
-          <h1 className="text-2xl font-medium [&&]:leading-normal text-center whitespace-pre-wrap md:text-5xl font-dm-sans">
+          <H2 className="[&&]:leading-normal text-center whitespace-pre-wrap  font-dm-sans">
             Your{' '}
             <span className="font-black text-primary-foreground">
               Perfect Plan
@@ -21,7 +22,7 @@ export default function PricingHero() {
             <span className="font-black text-primary-foreground">
               Perfect Business
             </span>
-          </h1>
+          </H2>
           <p className="text-lg font-medium text-center text-foreground/75">
             Tailored Solutions to Fuel Your Success
           </p>

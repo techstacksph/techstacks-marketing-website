@@ -6,6 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from './ui/accordion';
+import { H2, Subheading } from './ui/typography';
 
 export default function CoreValues() {
   return (
@@ -50,16 +51,16 @@ export default function CoreValues() {
             data-aos-delay={100}
           >
             <div className="flex flex-col w-full max-w-screen-md p-4 md:p-16 gap-8">
-              <h3
-                className="text-2xl text-center font-semibold lg:font-bold lg:text-4xl lg:text-left xl:text-5xl"
+              <H2
+                className="text-center lg:font-bold lg:text-left "
                 data-aos="fade-left"
                 data-aos-delay={200}
               >
                 Our Guiding{' '}
                 <span className="text-primary-static">Principles</span>
-              </h3>
-              <p
-                className="text-base text-center lg:text-left font-normal text-muted lg:text-lg xl:text-xl"
+              </H2>
+              <Subheading
+                className="text-center lg:text-left font-normal"
                 data-aos="fade-left"
                 data-aos-delay={300}
               >
@@ -67,7 +68,7 @@ export default function CoreValues() {
                 and shape our every decision. Explore the bedrock principles
                 that define our commitment to excellence, integrity, and
                 innovation.
-              </p>
+              </Subheading>
             </div>
           </div>
         </div>

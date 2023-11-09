@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { goDaddyImg, philgepsImg } from '@/assets/images';
 import { Section } from './default-elements';
+import { H2, Subheading } from './ui/typography';
 
 export default function OurPartners() {
   return (
@@ -9,22 +10,22 @@ export default function OurPartners() {
       <Section>
         <div className="flex flex-col gap-14">
           <div className="flex flex-col gap-8 items-center justify-center lg:flex-row">
-            <h3
-              className="text-2xl  font-semibold text-center lg:w-1/2 lg:font-bold lg:text-4xl lg:text-left xl:text-5xl"
+            <H2
+              className="text-center lg:w-1/2 lg:font-bold lg:text-left"
               data-aos="fade-up"
               data-aos-delay={100}
             >
               A Trusted Connection to <span>Our Partners</span>
-            </h3>
-            <p
-              className="text-base font-normal text-muted text-center lg:w-1/2 lg:text-left lg:text-lg xl:text-xl"
+            </H2>
+            <Subheading
+              className="font-normal text-center lg:w-1/2 lg:text-left"
               data-aos="fade-up"
               data-aos-delay={100}
             >
               We value trust and teamwork, working closely to achieve shared
               goals. Together, we grow and support each other, creating a solid
               foundation for success.
-            </p>
+            </Subheading>
           </div>
           <div
             className="flex flex-row gap-6 justify-center"
