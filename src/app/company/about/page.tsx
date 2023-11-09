@@ -13,6 +13,7 @@ import OurTeam from '@/components/our-team';
 import Hero from '@/components/hero';
 import { NavRoutes } from '@/constants/nav-routes';
 import CoreValues from '@/components/core-values';
+import { H1, Subheading } from '@/components/ui/typography';
 
 export default function AboutUs() {
   const aboutUsLink = companyLink[0]?.link.find(
@@ -36,20 +37,20 @@ export default function AboutUs() {
                 <IoIosArrowForward />
                 <p className="text-muted">{aboutUsLink?.label}</p>
               </div>
-              <h2
-                className="text-3xl font-semibold leading-tight text-center lg:text-left lg:text-5xl xl:text-7xl"
+              <H1
+                className="text-center lg:text-left"
                 data-aos="fade-up"
                 data-aos-delay={200}
               >
                 Who we are
-              </h2>
-              <p
-                className="text-base leading-loose text-left text-muted lg:text-xl"
+              </H1>
+              <Subheading
+                className="text-left"
                 data-aos="fade-up"
                 data-aos-delay={300}
               >
                 {aboutUsLink?.description}
-              </p>
+              </Subheading>
               <Link
                 className="relative inline-flex items-center justify-start p-3 overflow-hidden font-medium transition-all border rounded w-44 h-14 border-muted-static group bg-primary-static"
                 data-aos="fade-up"

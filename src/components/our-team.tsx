@@ -7,6 +7,7 @@ import { TEAM } from '@/constants/team';
 import { HoverCard, HoverCardContent, HoverCardTrigger } from './ui/hover-card';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 import { Section } from './default-elements';
+import { H2, Subheading } from './ui/typography';
 
 export default function OurTeam() {
   return (
@@ -15,21 +16,21 @@ export default function OurTeam() {
         <Section>
           <div className="p-6">
             <div className="flex flex-col items-center gap-4 md:gap-8">
-              <h3
-                className="text-2xl font-semibold text-center lg:font-bold lg:text-4xl xl:text-5xl"
+              <H2
+                className="text-center lg:font-bold "
                 data-aos="fade-up"
                 data-aos-delay={100}
               >
                 Our Exceptional Team
-              </h3>
-              <p
-                className="text-base font-normal text-center text-foreground lg:text-xl"
+              </H2>
+              <Subheading
+                className="font-normal text-center "
                 data-aos="fade-up"
                 data-aos-delay={200}
               >
                 Our exceptional team is the heartbeat of Techstacks, embodying
                 expertise, dedication, and a passion for innovation.
-              </p>
+              </Subheading>
               <Link
                 className="relative inline-flex items-center justify-start p-3 overflow-hidden font-medium transition-all border rounded w-44 h-14 border-muted-static group bg-primary-static"
                 data-aos="fade-up"

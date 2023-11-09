@@ -5,6 +5,7 @@ import { Section } from '@/components/default-elements';
 import { DotsIcon } from '@/components/icons/dots-icon';
 import { NavRoutes } from '@/constants/nav-routes';
 import { workWithUs } from '@/constants/work-with-us';
+import { H2, Subheading } from '@/components/ui/typography';
 
 export default function ServicesHero() {
   return (
@@ -13,7 +14,7 @@ export default function ServicesHero() {
         <Section>
           <div className="flex flex-col items-center gap-20 py-8 lg:py-16 ">
             <div className="flex flex-col items-center gap-8">
-              <h3 className="text-2xl font-semibold text-center md:text-3xl lg:text-4xl xl:text-5xl">
+              <H2 className="text-center">
                 <span className="relative inline-block">
                   <DotsIcon
                     className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-muted/80 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
@@ -28,15 +29,15 @@ export default function ServicesHero() {
                     Your trusted I.T web development services partner!
                   </span>
                 </span>
-              </h3>
-              <p
-                className="text-base text-muted text-center lg:text-xl"
+              </H2>
+              <Subheading
+                className="text-center "
                 data-aos="fade-up"
                 data-aos-delay={200}
               >
                 We specialize in delivering top-notch IT services tailored to
                 meet your unique business needs.
-              </p>
+              </Subheading>
               <Link
                 className="w-full sm:w-44 h-14 p-3 border border-muted-static relative inline-flex items-center justify-start overflow-hidden font-medium transition-all bg-primary/50 rounded hover:bg-white group"
                 data-aos="fade-up"
@@ -49,13 +50,13 @@ export default function ServicesHero() {
                 </span>
               </Link>
             </div>
-            <h3
-              className="text-2xl font-semibold text-center lg:text-4xl [&>span]:text-primary-static"
+            <H2
+              className="text-center [&>span]:text-primary-static"
               data-aos="fade-up"
               data-aos-delay={400}
             >
               Start growing with <span>Techstacks</span>
-            </h3>
+            </H2>
           </div>
         </Section>
       </div>

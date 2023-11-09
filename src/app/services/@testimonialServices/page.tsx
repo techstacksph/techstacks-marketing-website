@@ -11,6 +11,7 @@ import Image from 'next/image';
 import { Section } from '@/components/default-elements';
 import { TESTIMONIAL_SERVICES } from '@/constants/testimonial-services';
 import { cn } from '@/utils/cn';
+import { H2, Subheading } from '@/components/ui/typography';
 
 type MethodTabValue = (typeof TESTIMONIAL_SERVICES)[number][number];
 
@@ -28,14 +29,12 @@ export default function TestimonialServices() {
             </div>
             <p className="text-lg text-muted text-center">Testimonials</p>
           </div>
-          <h3 className="text-3xl font-semibold text-center lg:text-4xl xl:text-6xl">
-            Words to validate our works
-          </h3>
-          <p className="text-base text-center text-muted lg:text-xl">
+          <H2 className="text-center ">Words to validate our works</H2>
+          <Subheading className="text-center ">
             These testimonials are a testament to our commitment to excellence
             and customer satisfaction. Join us in celebrating the stories of our
             delighted clients and find out why they trust us for their needs.
-          </p>
+          </Subheading>
           <div className="flex flex-col items-center w-full gap-8">
             <div className="grid grid-cols-2 sm:grid-cols-4 justify-evenly gap-0 lg:gap-20">
               {TESTIMONIAL_SERVICES.map(([img, title]) => (

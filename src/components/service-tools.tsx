@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { serviceToolsLogo } from '@/constants/service-tools';
 import { Section } from './default-elements';
+import { H2, Subheading } from './ui/typography';
 
 export default function ServiceTools() {
   return (
@@ -11,22 +12,22 @@ export default function ServiceTools() {
       <Section>
         <div className="flex flex-col gap-14 items-center md:flex-row">
           <div className="flex flex-col gap-8 items-center justify-center md:w-1/2 ">
-            <h3
-              className="text-2xl  font-semibold text-center  lg:font-bold lg:text-4xl  xl:text-5xl"
+            <H2
+              className="text-center  lg:font-bold "
               data-aos="fade-up"
               data-aos-delay={100}
             >
               Our Tailored Service Tools
-            </h3>
-            <p
-              className="text-base font-normal text-muted text-center  lg:text-lg"
+            </H2>
+            <Subheading
+              className="font-normal  text-center  "
               data-aos="fade-up"
               data-aos-delay={100}
             >
               We believe in crafting experiences that align seamlessly with your
               goals, and our tailored service tools play a vital role in
               achieving this.
-            </p>
+            </Subheading>
           </div>
           <div
             className="grid grid-cols-4 gap-4 items-center justify-evenly h-auto w-full md:w-1/2"

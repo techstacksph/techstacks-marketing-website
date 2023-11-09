@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { BiSolidCircle } from 'react-icons/bi';
 import { projectItems } from '@/constants/project-items';
+import { H2 } from '@/components/ui/typography';
 
 export default function CreativeWorks() {
   return (
@@ -18,9 +19,7 @@ export default function CreativeWorks() {
               </p>
             </div>
 
-            <h3 className="text-3xl font-semibold text-center lg:text-left lg:text-4xl xl:text-6xl">
-              Our Creative Works
-            </h3>
+            <H2 className="text-center lg:text-left ">Our Creative Works</H2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-4 w-full max-w-screen-2xl">
             {projectItems.map(({ img, title, subtitle }) => (

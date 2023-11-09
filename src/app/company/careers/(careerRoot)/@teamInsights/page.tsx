@@ -3,6 +3,7 @@ import { ourTeam } from '@/assets/images';
 import { Section } from '@/components/default-elements';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { cn } from '@/utils/cn';
+import { H2 } from '@/components/ui/typography';
 
 const [mem1, ...otherMembers] = [
   {
@@ -33,10 +34,10 @@ const [mem1, ...otherMembers] = [
 export default function TeamInsights() {
   return (
     <Section className="px-0 lg:px-4">
-      <h2 className="text-2xl font-bold [&&]:leading-tight lg:whitespace-pre-wrap lg:text-5xl text-center">
+      <H2 className="[&&]:leading-tight lg:whitespace-pre-wrap  text-center">
         Discover Our Team Members&apos;{'\n'}
         <span className="text-primary-static">Insights</span>
-      </h2>
+      </H2>
 
       <div className="mt-10">
         <div className="grid overflow-hidden lg:border lg:rounded-lg lg:grid-cols-3 md:shadow-xl [&&]:shadow-primary-static/10">
