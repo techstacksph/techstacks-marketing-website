@@ -15,6 +15,13 @@ import {
   kaiProfile,
   airaProfile,
   araProfile,
+  kaiteam,
+  jayveeteam,
+  arateam,
+  airateam,
+  samteam,
+  marcusteam,
+  franzteam,
 } from '@/assets/images';
 
 export const TEAM = [
@@ -73,5 +80,97 @@ export const TEAM = [
     position: 'Marketing and SEO Specialist',
     src: teamImg8,
     profile: araProfile,
+  },
+] as const;
+
+export const TEAM1 = [
+  {
+    id: 1,
+    name: 'Frances Kaye Albis',
+    position: 'Admin Officer',
+    src: kaiteam,
+    profile: kaiProfile,
+    socialMedia: {
+      github: 'https://github.com',
+      linkedin: 'https://github.com',
+    },
+  },
+  {
+    id: 2,
+    name: 'Jayvee Ramos',
+    position: 'IT Engineering Manager',
+    src: jayveeteam,
+    profile: jayveeProfile,
+    socialMedia: {
+      github: 'https://github.com',
+      linkedin: 'https://github.com',
+      facebook: 'https://facebook.com',
+    },
+  },
+  {
+    id: 3,
+    name: 'Ara Belle Agarem',
+    position: 'Marketing and SEO Specialist',
+    src: arateam,
+    profile: araProfile,
+    socialMedia: {
+      github: 'https://github.com',
+      linkedin: 'https://github.com',
+    },
+  },
+  {
+    id: 4,
+    name: 'John Aira Feleo',
+    position: 'Back-end Developer',
+    src: airateam,
+    profile: airaProfile,
+    socialMedia: {
+      github: 'https://github.com',
+      linkedin: 'https://github.com',
+    },
+  },
+  {
+    id: 5,
+    name: 'Sammuel Espiritu',
+    position: 'Front-end Developer',
+    src: samteam,
+    profile: samProfile,
+    socialMedia: {
+      github: 'https://github.com',
+      linkedin: 'https://github.com',
+    },
+  },
+  {
+    id: 6,
+    name: 'Marcus Leviticus Dela Cruz',
+    position: 'Front-end Developer',
+    src: marcusteam,
+    profile: marcusProfile,
+    socialMedia: {
+      github: 'https://github.com',
+      linkedin: 'https://github.com',
+    },
+  },
+  {
+    id: 7,
+    name: 'Francis Bernardino',
+    position: 'Front-end Developer',
+    src: franzteam,
+    profile: franzProfile,
+    socialMedia: {
+      github: 'https://github.com',
+      linkedin: 'https://github.com',
+    },
+  },
+  {
+    id: 8,
+    name: 'Florante Sugian III',
+    position: 'Owner/CTO',
+    src: thirdProfile,
+    profile: thirdProfile,
+    socialMedia: {
+      github: 'https://github.com',
+      linkedin: 'https://github.com',
+    },
   },
 ] as const;
