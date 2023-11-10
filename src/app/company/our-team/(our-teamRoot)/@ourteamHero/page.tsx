@@ -1,12 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-import Image, { type StaticImageData } from 'next/image';
+import Image from 'next/image';
 import { Section } from '@/components/default-elements';
 import { NavRoutes } from '@/constants/nav-routes';
-import { airateam, franzteam, marcusteam } from '@/assets/images';
+import { TEAM1 } from '@/constants/team';
 
 export default function OurTeamHero() {
-  const profileimages: StaticImageData[] = [airateam, franzteam, marcusteam];
+  
 
   return (
     <Section>
@@ -15,48 +15,48 @@ export default function OurTeamHero() {
           <div className="hidden md:flex flex-row items-center justify-between w-full -z-10 absolute top-5">
             <div className="flex items-start gap-5">
               <div className="flex flex-col items-center gap-5 pt-5">
-                {profileimages.map((profilename, keys) => (
+                {TEAM1.map((team) => (
                   <div
-                    key={keys}
+                    key={team.id}
                     className="flex flex-col items-center justify-center  bg-gradient-to-r from-teal-500 to-teal-300 w-full "
                     style={{ minWidth: '200px', minHeight: '200px' }}
                   >
-                    <Image alt="test" src={profilename} width="100" />
+                    <Image alt="test" src={team.src} width="100" />
                   </div>
                 ))}
               </div>
               <div className="flex flex-col items-center gap-5 pt-5">
-                {profileimages.map((profilename, keys) => (
+                {TEAM1.map((team) => (
                   <div
-                    key={keys}
+                    key={team.id}
                     className="flex flex-col items-center justify-center  bg-gradient-to-r from-teal-500 to-teal-300 w-full "
                     style={{ minWidth: '200px', minHeight: '200px' }}
                   >
-                    <Image alt="test" src={profilename} width="100" />
+                    <Image alt="test" src={team.src} width="100" />
                   </div>
                 ))}
               </div>
             </div>
             <div className="flex items-start gap-5">
               <div className="flex flex-col items-center gap-5 pt-5">
-                {profileimages.map((profilename, keys) => (
+                {TEAM1.map((team) => (
                   <div
-                    key={keys}
+                    key={team.id}
                     className="flex flex-col items-center justify-center  bg-gradient-to-r from-teal-500 to-teal-300 w-full "
                     style={{ minWidth: '200px', minHeight: '200px' }}
                   >
-                    <Image alt="test" src={profilename} width="100" />
+                    <Image alt="test" src={team.src} width="100" />
                   </div>
                 ))}
               </div>
               <div className="flex flex-col items-center gap-5 pt-5">
-                {profileimages.map((profilename, keys) => (
+                {TEAM1.map((team) => (
                   <div
-                    key={keys}
+                    key={team.id}
                     className="flex flex-col items-center justify-center  bg-gradient-to-r from-teal-500 to-teal-300 w-full "
                     style={{ minWidth: '200px', minHeight: '200px' }}
                   >
-                    <Image alt="test" src={profilename} width="100" />
+                    <Image alt="test" src={team.src} width="100" />
                   </div>
                 ))}
               </div>
