@@ -1,12 +1,10 @@
 import React from 'react';
 import { Section } from '@/components/default-elements';
 
-export default function OurTeam() {
+export default function OurTeamGallery() {
   return (
     <Section>
-      <div>
-        <div>Our Team</div>
-      </div>
+      <div>Team Gallery</div>
     </Section>
   );
 }

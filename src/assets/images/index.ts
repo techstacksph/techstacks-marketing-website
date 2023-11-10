@@ -43,6 +43,13 @@ import thirdProfile from './team/third-profile.png';
 import airaProfile from './team/aira-profile.png';
 import araProfile from './team/ara-profile.png';
 import kaiProfile from './team/kai-profile.png';
+import kaiteam from './team/kai-team.png';
+import jayveeteam from './team/jayvee-team.png';
+import arateam from './team/ara-team.png';
+import airateam from './team/aira-team.png';
+import samteam from './team/sam-team.png';
+import marcusteam from './team/marcus-team.png';
+import franzteam from './team/franz-team.png';
 import teamImage from './about-us/team-img.jpg';
 import creative from './services/creative.png';
 import creativeDesign from './services/creative-design.png';
@@ -113,6 +120,13 @@ export {
   airaProfile,
   araProfile,
   kaiProfile,
+  kaiteam,
+  jayveeteam,
+  arateam,
+  airateam,
+  samteam,
+  marcusteam,
+  franzteam,
 
   //about-us/service-tools-logo
   bootstrapLogo,
