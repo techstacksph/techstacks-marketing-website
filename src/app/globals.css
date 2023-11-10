@@ -51,7 +51,7 @@
   }
 
   :root[data-theme='dark'] {
-    --background: 222.2 84% 4.9%;
+    --background: 0 0% 0%;
     --foreground: 210 40% 98%;
 
     --card: 222.2 84% 4.9%;
@@ -86,23 +86,7 @@
     @apply border-border;
   }
   body {
-    @apply text-foreground min-h-screen bg-no-repeat;
-  }
-  :not([data-theme='dark']) > body {
-    background: linear-gradient(
-      178deg,
-      rgba(33, 205, 156, 0.61) 20.27%,
-      rgba(255, 255, 255, 0.89) 55.3%
-    );
-  }
-  [data-theme='dark'] > body::before {
-    @apply top-0 left-0 content-[''] bg-center w-screen h-screen -z-10 fixed;
-    background: linear-gradient(
-      198deg,
-      #12182b -0.69%,
-      #1b4c3f 90%,
-      #21cd9c 121.97%
-    );
+    @apply text-foreground min-h-screen bg-no-repeat bg-background;
   }
 
   @property --border-animate-angle {
