@@ -26,7 +26,7 @@ export default function Header() {
   return (
     <header
       className={cn(
-        'sticky top-0 z-50 h-16 transition backdrop-blur-sm border-b border-transparent bg-gradient-to-r from-primary/0 to-transparent',
+        'sticky top-0 z-50 h-16 transition-all backdrop-blur-sm border-b border-transparent bg-gradient-to-r from-primary/0 to-transparent',
         Boolean(y) && 'from-primary/100 border-secondary',
       )}
     >
@@ -38,7 +38,12 @@ export default function Header() {
             </Button>
           </NavDrawer>
           <Link href={NavRoutes.Home}>
-            <BrandLogo />
+            <BrandLogo
+              className={cn(
+                'text-primary-static dark:text-primary-foreground',
+                Boolean(y) && 'text-white',
+              )}
+            />
           </Link>
           <NavigationMenu>
             <NavigationMenuList className="flex flex-row gap-4">
