@@ -24,7 +24,7 @@ export default function OurTeamTeamSection() {
               </p>
             </div>
           </div>
-          <div className="rounded-bl-md rounded-br-md rounded md:rounded-tr-md md:rounded-br-md md:rounded-none bg-white p-10 md:py-10 md:px-20 md:py-16 md:border-2 md:border-solid md:border-green-500">
+          <div className="rounded-bl-md rounded-br-md rounded md:rounded-tr-md md:rounded-br-md rounded-none md:rounded-none bg-white p-10 md:py-10 md:px-20 md:py-16 border-x-2 border-b-2 border-solid md:border-y-2 border-teal-400">
             <p className="text-black  text-shadow-md font-inter font-bold text-2xl leading-10 max-w-xl">
               Our team is a blend of creative designers, brilliant developers,
               and strategic thinkers who work in harmony to bring your visions
