@@ -1,11 +1,9 @@
-import React from 'react';
-import Image from 'next/image';
-import { TRAINING_PLANS } from '@/constants/training-plans';
 import { Section } from '@/components/default-elements';
+import { TrainingsCarousel } from '@/components/trainings-carousel';
 
 export default function TraineesPlan() {
   return (
-    <div className="w-full flex justify-center py-16">
+    <div className="flex justify-center w-full py-16">
       <Section>
         <div className="flex flex-col items-center gap-8 xl:gap-14">
           <div className="flex flex-col items-center gap-6">
@@ -13,29 +11,14 @@ export default function TraineesPlan() {
               Trainees can enjoy numerous benefits and perks that help support
               their learning and development
             </h2>
-            <p className="text-base text-muted text-center lg:text-xl">
+            <p className="text-base text-center text-muted lg:text-xl">
               From customized learning plans and project-based learning to
               access to industry experts and career growth opportunities, we
               give our trainees the tools and resources they need to succeed.
             </p>
           </div>
-          <div className="grid grid-cols-1 items-start gap-6 md:grid-cols-2">
-            {TRAINING_PLANS.map(([title, description, img]) => (
-              <div
-                className="grid grid-cols-1 items-start gap-4 p-6 border h-full rounded-2xl bg-white xl:grid-cols-[8rem_1fr] xl:p-8"
-                key={title}
-              >
-                <div className="w-full">
-                  <Image alt={`${title}`} height={100} src={img} width={100} />
-                </div>
-                <div className="flex flex-col gap-4">
-                  <h3 className="text-2xl text-black lg:text-3xl">{title}</h3>
-                  <p className="text-base text-muted lg:text-xl">
-                    {description}
-                  </p>
-                </div>
-              </div>
-            ))}
+          <div className="h-[80vh]">
+            <TrainingsCarousel />
           </div>
         </div>
       </Section>
