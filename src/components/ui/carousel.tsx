@@ -7,6 +7,9 @@ import {
   useContext,
   useState,
   type HTMLAttributes,
+  useImperativeHandle,
+  forwardRef,
+  type Ref,
 } from 'react';
 import { cn } from '@/utils/cn';
 
@@ -20,14 +23,18 @@ const sliderCtx = createContext<SliderCtx | null>(null);
 type CarouselProps<TOpts, TPlugs> = HTMLAttributes<HTMLDivElement> & {
   opts: KeenSliderOptions<TOpts, TPlugs>;
 };
-function Carousel<TOpts, TPlugs>({
-  className,
-  opts,
-  ...props
-}: CarouselProps<TOpts, TPlugs>) {
+
+export interface CarouselRef {
+  next: () => void;
+  prev: () => void;
+}
+function CarouselRoot<TOpts, TPlugs>(
+  { className, opts, ...props }: CarouselProps<TOpts, TPlugs>,
+  ref: Ref<CarouselRef>,
+) {
   const [activeIdx, setActiveIdx] = useState(0);
   const [isReady, setIsReady] = useState(false);
-  const [sliderRef] = useKeenSlider({
+  const [sliderRef, instanceRef] = useKeenSlider({
     ...opts,
     slideChanged: (slider, ...params) => {
       setActiveIdx(slider.track.details.rel);
@@ -39,6 +46,15 @@ function Carousel<TOpts, TPlugs>({
     },
   });
 
+  useImperativeHandle(
+    ref,
+    () => ({
+      next: () => instanceRef.current?.next(),
+      prev: () => instanceRef.current?.prev(),
+    }),
+    [instanceRef],
+  );
+
   return (
     <sliderCtx.Provider value={{ activeIdx, isReady }}>
       <div
@@ -49,6 +65,8 @@ function Carousel<TOpts, TPlugs>({
     </sliderCtx.Provider>
   );
 }
+const Carousel = forwardRef(CarouselRoot);
+Carousel.displayName = 'carousel';
 
 interface CarouselItemProps extends HTMLAttributes<HTMLDivElement> {
   sliderIdx: number;

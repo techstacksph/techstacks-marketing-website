@@ -3,7 +3,7 @@ import twTypography from '@tailwindcss/typography';
 import twAnimate from 'tailwindcss-animate';
 import { borderAnimate } from './plugins/border-animate-plugin';
 
-const config: Config = {
+const config = {
   darkMode: ['class', '[data-theme="dark"]'],
   content: [
     './pages/**/*.{ts,tsx}',
@@ -121,6 +121,6 @@ const config: Config = {
     },
   },
   plugins: [twAnimate, twTypography, borderAnimate],
-};
+} satisfies Config;
 
 export default config;
