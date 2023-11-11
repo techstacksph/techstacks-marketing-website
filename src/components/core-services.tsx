@@ -2,20 +2,15 @@ import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
 import { Separator } from './ui/separator';
 import { GlowCard, GlowCardContent } from './glow-card';
+import { H3 } from './ui/typography';
 
 interface CoreServicesCardProps {
   index: number;
   title: string;
-  description: string;
   src: StaticImageData;
 }
 
-function CoreServicesCard({
-  index,
-  src,
-  title,
-  description,
-}: CoreServicesCardProps) {
+function CoreServicesCard({ index, src, title }: CoreServicesCardProps) {
   return (
     <GlowCard
       className="h-full"
@@ -28,10 +23,7 @@ function CoreServicesCard({
             <div className="w-20 h-10">
               <Image alt={`${title} icon`} src={src} />
             </div>
-            <h3 className="space-y-4 text-lg font-bold md:text-2xl">
-              <span className="block">{title}</span>
-            </h3>
-            <p className="text-lg text-muted">{description}</p>
+            <H3>{title}</H3>
           </div>
 
           <Separator className="h-1 bg-primary-static" />
