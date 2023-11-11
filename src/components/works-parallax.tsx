@@ -31,8 +31,8 @@ export function WorksParallax() {
           >
             <div
               className={cn(
-                'flex items-center justify-center gap-8 opacity-50 hover:opacity-100 transition-opacity',
-                Boolean(idx % 2) && 'flex-row-reverse',
+                'flex items-center justify-center gap-8 opacity-50 hover:opacity-100 transition-opacity flex-col md:flex-row',
+                Boolean(idx % 2) && 'md:flex-row-reverse',
               )}
             >
               <Image alt={`${title} screenshot`} src={img} />
@@ -50,11 +50,11 @@ export function WorksParallax() {
             <div className="border pointer-events-auto bg-primary/80 backdrop-blur border-border rounded-2xl">
               <div className="px-6 py-4">
                 <h3 className="font-semibold leading-loose text-center whitespace-pre-wrap">
-                  <span className="text-3xl text-foreground">
+                  <span className="text-lg md:text-3xl text-foreground">
                     Made with 💖 from
                   </span>
                   {'\n'}
-                  <span className="text-5xl font-poppins dark:text-primary-static text-foreground">
+                  <span className="text-3xl md:text-5xl font-poppins dark:text-primary-static text-foreground">
                     <TechstacksLogo className="inline" /> Techstacks
                   </span>
                 </h3>
