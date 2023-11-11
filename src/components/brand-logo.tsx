@@ -1,19 +1,13 @@
-'use client';
-
 import type { HTMLAttributes } from 'react';
-import dynamic from 'next/dynamic';
 import { cn } from '@/utils/cn';
 import { TechstacksLogo } from './icons/techstacks-logo';
 
 type BrandLogoProps = HTMLAttributes<HTMLDivElement>;
 
-function BrandLogo({ className, ...props }: BrandLogoProps) {
+export default function BrandLogo({ className, ...props }: BrandLogoProps) {
   return (
     <div
-      className={cn(
-        'flex gap-2 items-center text-white dark:text-primary-foreground',
-        className,
-      )}
+      className={cn('flex gap-2 items-center transition-all', className)}
       {...props}
     >
       <TechstacksLogo className="text-4xl" />
@@ -23,5 +17,3 @@ function BrandLogo({ className, ...props }: BrandLogoProps) {
     </div>
   );
 }
-
-export default dynamic(() => Promise.resolve(BrandLogo));
