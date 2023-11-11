@@ -20,7 +20,7 @@ function createTwConfig() {
 
   if (!parsed.success)
     throw new Error(
-      'Please check you tailwind config for inconsistencies the the schema',
+      'Please compare your `tailwind.config.ts` and the schema above for inconsistencies.',
     );
 
   return parsed.data;
