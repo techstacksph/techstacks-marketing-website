@@ -30,7 +30,7 @@ function Carousel<TOpts, TPlugs>({
   const [sliderRef] = useKeenSlider({
     ...opts,
     slideChanged: (slider, ...params) => {
-      setActiveIdx(slider.track.details.abs);
+      setActiveIdx(slider.track.details.rel);
       if (opts.slideChanged) opts.slideChanged(slider, ...params);
     },
     created: (...params) => {
