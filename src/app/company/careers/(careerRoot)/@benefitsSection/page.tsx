@@ -41,11 +41,11 @@ const BENEFITS = [
 export default function BenefitsSection() {
   return (
     <Section>
-      <div className="flex flex-col gap-20 md:flex-row">
-        <div className="w-full max-w-md">
+      <div className="relative flex flex-col items-start gap-20 md:flex-row">
+        <div className="w-full max-w-md md:sticky top-24">
           <div className="space-y-2">
             <H2
-              className=" [&&]:leading-tight whitespace-pre-wrap md:text-left text-center"
+              className="[&&]:leading-tight whitespace-pre-wrap md:text-left text-center"
               data-aos="fade-up"
             >
               <span className="text-primary-static">Perks & benefits</span> of
