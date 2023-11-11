@@ -3,7 +3,7 @@ import { Main } from '@/components/default-elements';
 
 export default function CareersLayout(props: Record<string, ReactNode>) {
   return (
-    <Main className="overflow-hidden">
+    <Main className="overflow-clip">
       <div className="flex justify-center w-full py-8 md:py-16">
         {props.careerHero}
       </div>
