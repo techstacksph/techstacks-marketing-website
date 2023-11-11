@@ -3,7 +3,7 @@ import Hero from '@/components/hero';
 import WebsiteLifecycle from '@/components/website-lifecycle';
 import MakeWebsites from '@/components/make-websites';
 import { Main, Section } from '@/components/default-elements';
-import Testimonials from '@/components/testimonials';
+import { Testimonials } from '@/components/testimonials';
 import SocialProof from '@/components/social-proof';
 import { NavRoutes } from '@/constants/nav-routes';
 import { Typewriter } from '@/components/typewriter';
@@ -11,7 +11,7 @@ import { H1, Subheading } from '@/components/ui/typography';
 
 export default function Home() {
   return (
-    <Main>
+    <Main className="overflow-clip">
       <div className="flex justify-center w-full py-16 ">
         <Section>
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:justify-center lg:items-center">

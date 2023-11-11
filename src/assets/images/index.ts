@@ -63,8 +63,16 @@ import mnmImg from './services/portfolio/mnm.png';
 import deDiabetesImg from './services/portfolio/dediabetes.png';
 import agassizImg from './services/portfolio/agassiz.png';
 import trainingBg from './trainings/training-bg.png';
+import testi1 from './testimonials/testi-7.png';
+import testi2 from './testimonials/testi-4.7.png';
+import testi3 from './testimonials/testi-4.jpg';
 
 export {
+  // Testimonials
+  testi1,
+  testi2,
+  testi3,
+
   //trainings
   ojtHero,
   cycleHero,
