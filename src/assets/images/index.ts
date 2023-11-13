@@ -66,6 +66,13 @@ import trainingBg from './trainings/training-bg.png';
 import testi1 from './testimonials/testi-7.png';
 import testi2 from './testimonials/testi-4.7.png';
 import testi3 from './testimonials/testi-4.jpg';
+import kaiImg from './team/our-team/kai.png';
+import airaImg from './team/our-team/aira.png';
+import araImg from './team/our-team/ara.png';
+import franzImg from './team/our-team/franz.png';
+import jayveeImg from './team/our-team/jayvee.png';
+import marcusImg from './team/our-team/marcus.png';
+import samImg from './team/our-team/sam.png';
 
 export {
   // Testimonials
@@ -135,6 +142,13 @@ export {
   samteam,
   marcusteam,
   franzteam,
+  kaiImg,
+  araImg,
+  jayveeImg,
+  airaImg,
+  marcusImg,
+  franzImg,
+  samImg,
 
   //about-us/service-tools-logo
   bootstrapLogo,

@@ -1,5 +1,6 @@
 import { Section } from '@/components/default-elements';
 import { TrainingsCarousel } from '@/components/trainings-carousel';
+import { LearningIcon } from '@/components/icons/learning';
 
 export default function TraineesPlan() {
   return (
@@ -16,6 +17,7 @@ export default function TraineesPlan() {
               access to industry experts and career growth opportunities, we
               give our trainees the tools and resources they need to succeed.
             </p>
+            <LearningIcon className="grayscale hover:grayscale-0 w-40 h-40" />
           </div>
           <div className="h-[80vh]">
             <TrainingsCarousel />
