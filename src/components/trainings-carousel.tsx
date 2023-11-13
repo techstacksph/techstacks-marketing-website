@@ -42,9 +42,9 @@ function CarouselComponent() {
                   <Image
                     alt={title}
                     className="object-contain w-full h-full"
-                    height={100}
+                    height={50}
                     src={img}
-                    width={100}
+                    width={50}
                   />
                 </div>
                 <div className="flex flex-col gap-4">
