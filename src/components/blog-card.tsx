@@ -5,6 +5,7 @@ import type { JSX } from 'react';
 import { NavRoutes } from '@/constants/nav-routes';
 import { Button } from './ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
+import { H2, H3 } from './ui/typography';
 
 interface BaseImageProps {
   src: string;
@@ -71,7 +72,9 @@ export function BlogCarouselItem({
           <div className="flex flex-col justify-between h-full gap-4">
             <div className="flex flex-col justify-between">
               <div className="flex flex-col gap-6">
-                <h2 className="text-2xl font-medium">{title}</h2>
+                <H3 asChild className="line-clamp-1">
+                  <h2>{title}</h2>
+                </H3>
                 <div className="line-clamp-4">{Description}</div>
                 <div className="flex justify-end">
                   <Button asChild variant="outline">
@@ -87,7 +90,7 @@ export function BlogCarouselItem({
                 <Image
                   {...author.avatar}
                   alt={`${author.name} Profile image`}
-                  className="w-10 h-10 rounded-full pointer-events-none"
+                  className="w-10 h-10 rounded-full"
                   priority
                 />
                 <span className="text-lg font-medium">{author.name}</span>
@@ -102,7 +105,7 @@ export function BlogCarouselItem({
         <div className="h-96 aspect-square">
           <Image
             alt={`${title} banner image`}
-            className="object-cover w-full h-full pointer-events-none"
+            className="object-cover w-full h-full"
             priority
             {...bannerImage}
           />
@@ -125,13 +128,13 @@ export function HighlightedCard({
       <div className="w-full aspect-video">
         <Image
           alt={`${title} banner image`}
-          className="object-cover w-full h-full pointer-events-none"
+          className="object-cover w-full h-full"
           priority
           {...bannerImage}
         />
       </div>
       <div className="p-8 space-y-4">
-        <h2 className="text-2xl font-medium">{title}</h2>
+        <H2>{title}</H2>
         <div className="line-clamp-3">{Description}</div>
         <div className="flex justify-end">
           <Button asChild variant="outline">
