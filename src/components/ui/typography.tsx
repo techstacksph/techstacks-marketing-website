@@ -7,7 +7,7 @@ const headingVariants = cva('font-poppins', {
   variants: {
     level: {
       1: 'text-3xl font-semibold leading-tight lg:text-5xl xl:text-7xl',
-      2: 'text-3xl font-semibold lg:text-4xl xl:text-5xl',
+      2: 'text-3xl font-semibold [&]:leading-normal lg:text-4xl xl:text-5xl',
       3: 'text-2xl font-medium',
     },
   },

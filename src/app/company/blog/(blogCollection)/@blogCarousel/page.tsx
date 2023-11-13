@@ -1,4 +1,5 @@
-import BlogCarousel from '@/components/blog-carousel';
+import { BlogCarouselItem } from '@/components/blog-card';
+import { Carousel, CarouselItem } from '@/components/ui/carousel';
 import { getPosts, processPostNode } from '@/lib/blog/content/api/get-posts';
 
 export default async function BlogCarouselSection() {
@@ -11,17 +12,28 @@ export default async function BlogCarouselSection() {
   );
 
   return (
-    <div className="[&_.alice-carousel\_\_wrapper]:overflow-visible [&_.alice-carousel\_\_stage-item:not(:last-of-type)>div]:mr-8">
-      <BlogCarousel
-        items={posts.map(({ processed, raw }) => ({
-          bannerImage: processed.bannerImage,
-          Description: processed.partialContent.result,
-          slug: raw.slug,
-          title: raw.title,
-          author: processed.author,
-          postDate: new Date(raw.date),
-        }))}
-      />
-    </div>
+    <Carousel
+      className="[&&&]:overflow-visible"
+      opts={{ mode: 'free-snap', slides: { perView: 1.5 } }}
+    >
+      {posts.map(({ processed, raw }, idx) => (
+        <CarouselItem
+          className="group data-[ready=false]:opacity-0 transition-opacity"
+          key={raw.slug}
+          sliderIdx={idx}
+        >
+          <div className="group-data-[active=false]:scale-90 transition-transform">
+            <BlogCarouselItem
+              Description={processed.partialContent.result}
+              author={processed.author}
+              bannerImage={processed.bannerImage}
+              postDate={new Date(raw.date)}
+              slug={raw.slug}
+              title={raw.title}
+            />
+          </div>
+        </CarouselItem>
+      ))}
+    </Carousel>
   );
 }
