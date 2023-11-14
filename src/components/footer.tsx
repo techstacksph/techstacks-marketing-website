@@ -9,10 +9,28 @@ import { Button } from './ui/button';
 import { Separator } from './ui/separator';
 import { Section } from './default-elements';
 import BrandLogo from './brand-logo';
+import { H2, Subheading } from './ui/typography';
+import { BgLogo } from './icons/bg-logo';
 
 export default function Footer() {
   return (
-    <footer className="w-full flex justify-center pt-[72px] pb-10">
+    <footer className="w-full flex flex-col gap-8 md:gap-10 justify-center pt-[72px] pb-10  bg-primary-static/10">
+      <div className="w-full flex justify-center px-4 ">
+        <div className="w-full flex items-center flex-col md:flex-row  gap-8 max-w-screen-2xl">
+          <div className="w-full md:w-1/2 flex flex-col gap-8">
+            <H2 className="text-center md:text-left">
+              Ready to upgrade your website? <br />
+              <span className="text-primary-static">give us a try. 🤝</span>
+            </H2>
+            <Subheading className="text-center md:text-left">
+              Cultivate Your Online Presence with Our Website Upgrade Solutions
+            </Subheading>
+          </div>
+          <div className="w-1/2 flex justify-center items-center">
+            <BgLogo className="object-cover  w-full  rounded   sm:h-72 md:h-72 lg:h-96" />
+          </div>
+        </div>
+      </div>
       <Section>
         <div className="flex flex-col gap-8">
           <div className="flex flex-col justify-between gap-12 lg:flex-row lg:gap-3">
@@ -25,8 +43,8 @@ export default function Footer() {
               </Link>
 
               <p className="text-center text-muted lg:text-left">
-                Ready to upgrade your website? <br className="md:text-left" />
-                give us a try.🤝
+                High level experience in web design and development knowledge,
+                producing quality work.
               </p>
               <ul className="flex justify-center gap-4">
                 {socialMedia.map(({ Icon, title, url }) => (
