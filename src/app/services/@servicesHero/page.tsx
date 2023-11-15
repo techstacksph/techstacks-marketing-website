@@ -10,14 +10,14 @@ import { H2, Subheading } from '@/components/ui/typography';
 export default function ServicesHero() {
   return (
     <div className="mb-16">
-      <div className="w-full pt-16 flex justify-center bg-background/50">
+      <div className="w-full pt-16 flex justify-center bg-primary-static/10">
         <Section>
           <div className="flex flex-col items-center gap-20 py-8 lg:py-16 ">
             <div className="flex flex-col items-center gap-8">
               <H2 className="text-center">
                 <span className="relative inline-block">
                   <DotsIcon
-                    className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-muted/80 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
+                    className="absolute animate-pulse text-primary-static top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
                     data-aos="fade-right"
                     data-aos-delay={100}
                   />
@@ -39,13 +39,11 @@ export default function ServicesHero() {
                 meet your unique business needs.
               </Subheading>
               <Link
-                className="w-full sm:w-44 h-14 p-3 border border-muted-static relative inline-flex items-center justify-start overflow-hidden font-medium transition-all bg-primary/50 rounded hover:bg-white group"
-                data-aos="fade-up"
-                data-aos-delay={300}
-                href={NavRoutes.Services}
+                className="relative inline-flex items-center justify-start p-3 overflow-hidden font-medium transition-all bg-white dark:bg-transparent border rounded w-full md:w-52 h-14 border-primary-static group"
+                href={NavRoutes.Company.AboutUs}
               >
-                <span className="w-48 h-48 rounded rotate-[-40deg] bg-primary-static/60 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0" />
-                <span className="relative w-full text-center transition-colors duration-300 ease-in-out group-hover:text-black">
+                <span className="w-48 h-48 rounded rotate-[-40deg] bg-primary-static absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0" />
+                <span className="relative w-full text-center text-black dark:text-white transition-colors duration-300 ease-in-out group-hover:text-white dark:group-hover:text-black">
                   Let&apos;s work together
                 </span>
               </Link>
@@ -61,7 +59,7 @@ export default function ServicesHero() {
         </Section>
       </div>
       <div className="relative px-4 ">
-        <div className="absolute inset-0 bg-background/50 h-1/2" />
+        <div className="absolute inset-0 bg-primary-static/10 h-1/2" />
         <div
           className="relative grid mx-auto w-full overflow-hidden shadow-lg bg-white [&&]:shadow-primary-static/40 border border-primary-static divide-y rounded divide-x  grid-cols-1  md:grid-cols-3 md:max-w-7xl h-1/2 "
           data-aos="fade-up"

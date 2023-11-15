@@ -7,7 +7,6 @@ import {
   BiSolidQuoteAltRight,
 } from 'react-icons/bi';
 import { useAutoAnimate } from '@formkit/auto-animate/react';
-import Image from 'next/image';
 import { Section } from '@/components/default-elements';
 import { TESTIMONIAL_SERVICES } from '@/constants/testimonial-services';
 import { cn } from '@/utils/cn';
@@ -36,26 +35,27 @@ export default function TestimonialServices() {
             delighted clients and find out why they trust us for their needs.
           </Subheading>
           <div className="flex flex-col items-center w-full gap-8">
-            <div className="grid grid-cols-2 sm:grid-cols-4 justify-evenly gap-0 lg:gap-20">
-              {TESTIMONIAL_SERVICES.map(([img, title]) => (
+            <div className="grid grid-cols-2 items-center sm:grid-cols-4 justify-evenly gap-0 lg:gap-20">
+              {TESTIMONIAL_SERVICES.map(([Logo, title]) => (
                 <div
                   className={cn(
-                    'p-2 transition',
-                    img === tab && 'cursor-pointer',
+                    'p-2 transition h-full flex flex-col items-center',
+                    Logo === tab &&
+                      'cursor-pointer border-b border-primary-static',
                   )}
                   key={title}
                   onMouseEnter={() => {
-                    setTab(img);
+                    setTab(Logo);
                   }}
                 >
-                  <div className="flex h-full gap-2">
+                  <div className="flex justify-center items-center h-full gap-2">
                     <div
                       className={cn(
-                        'transition duration-300 ease-in-out hover:scale-110 grayscale hover:grayscale-0',
-                        img === tab && 'grayscale-0',
+                        ' transition duration-300 ease-in-out hover:scale-110 grayscale hover:grayscale-0',
+                        Logo === tab && 'grayscale-0',
                       )}
                     >
-                      <Image alt="asd" height={40} src={img} width={156} />
+                      <Logo />
                     </div>
                   </div>
                 </div>
@@ -66,8 +66,8 @@ export default function TestimonialServices() {
               ref={container}
             >
               {TESTIMONIAL_SERVICES.map(
-                ([img, title, name, desc]) =>
-                  img === tab && (
+                ([Logo, title, name, desc]) =>
+                  Logo === tab && (
                     <div className="flex flex-col md:flex-row " key={title}>
                       <div className="flex flex-col gap-4 justify-center items-center md:items-start bg-primary-static/20 w-full md:w-96 p-8">
                         <h3 className="text-xl md:text-2xl font-semibold">
