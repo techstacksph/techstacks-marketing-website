@@ -74,7 +74,7 @@ export const GlowCardContent = forwardRef<HTMLDivElement, GlowCardProps>(
     return (
       <Comp
         className={cn(
-          'transition bg-background/50 backdrop-blur-3xl rounded-lg',
+          'transition bg-primary-static/10 backdrop-blur-3xl rounded-lg',
           className,
         )}
         {...props}
