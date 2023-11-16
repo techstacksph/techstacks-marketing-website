@@ -3,7 +3,7 @@ import { Main } from '@/components/default-elements';
 
 export default function OurTeamLayout(props: Record<string, ReactNode>) {
   return (
-    <Main className="overflow-hidden">
+    <Main className="overflow-clip">
       <div>{props.teamHero}</div>
       <div>{props.ceoQuote}</div>
       <div>{props.coreTeam}</div>
