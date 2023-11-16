@@ -15,9 +15,9 @@ import { BgLogo } from './icons/bg-logo';
 export default function Footer() {
   return (
     <footer className="w-full flex flex-col gap-8 md:gap-10 justify-center pt-[72px] pb-10  bg-primary-static/10">
-      <div className="w-full flex justify-center px-4 ">
-        <div className="w-full flex items-center flex-col md:flex-row  gap-8 max-w-screen-2xl">
-          <div className="w-full md:w-1/2 flex flex-col gap-8">
+      <div className="flex justify-center w-full px-4 ">
+        <div className="flex flex-col items-center w-full gap-8 md:flex-row max-w-screen-2xl">
+          <div className="flex flex-col w-full gap-8 md:w-1/2">
             <H2 className="text-center md:text-left">
               Ready to upgrade your website? <br />
               <span className="text-primary-static">give us a try. 🤝</span>
@@ -26,8 +26,8 @@ export default function Footer() {
               Cultivate Your Online Presence with Our Website Upgrade Solutions
             </Subheading>
           </div>
-          <div className="w-1/2 flex justify-center items-center">
-            <BgLogo className="object-cover  w-full  rounded   sm:h-72 md:h-72 lg:h-96" />
+          <div className="flex items-center justify-center w-1/2">
+            <BgLogo className="object-cover w-full rounded stroke-primary-static sm:h-72 md:h-72 lg:h-96" />
           </div>
         </div>
       </div>
@@ -64,7 +64,7 @@ export default function Footer() {
             <ul className="grid grid-cols-[6rem_1fr] gap-5 md:grid-cols-[6rem_1fr_1fr_1fr] lg:gap-2">
               {companyLink.map((company) => (
                 <li
-                  className="flex  flex-col text-primary-static font-semibold"
+                  className="flex flex-col font-semibold text-primary-static"
                   key={company.title}
                 >
                   <h3>{company.title}</h3>
@@ -84,7 +84,7 @@ export default function Footer() {
               ))}
               {portfolioLink.map((portfolio) => (
                 <li
-                  className="flex flex-col text-primary-static font-semibold"
+                  className="flex flex-col font-semibold text-primary-static"
                   key={portfolio.title}
                 >
                   <h3>{portfolio.title}</h3>
@@ -105,7 +105,7 @@ export default function Footer() {
               <ul className="col-span-2 md:col-span-1 grid grid-cols-[6rem_1fr] gap-5 md:block md:gap-0">
                 {pagesLink.map((page) => (
                   <li
-                    className="flex justify-center flex-col text-primary-static font-semibold"
+                    className="flex flex-col justify-center font-semibold text-primary-static"
                     key={page.title}
                   >
                     <Link href={page.href}>{page.title}</Link>
@@ -115,10 +115,10 @@ export default function Footer() {
 
               <ul className="col-span-2 md:col-span-1">
                 <li className="flex flex-col gap-4">
-                  <h3 className="font-medium text-lg text-primary-static">
+                  <h3 className="text-lg font-medium text-primary-static">
                     Get in touch with us
                   </h3>
-                  <div className="flex gap-4 items-center">
+                  <div className="flex items-center gap-4">
                     <div className="text-2xl text-primary-static">
                       <IoPaperPlaneSharp />
                     </div>
@@ -129,7 +129,7 @@ export default function Footer() {
                       </p>
                     </div>
                   </div>
-                  <div className="flex gap-4 items-center">
+                  <div className="flex items-center gap-4">
                     <div className="text-2xl text-primary-static">
                       <MdEmail />
                     </div>
@@ -138,7 +138,7 @@ export default function Footer() {
                       <p className="text-sm">techstacks.2022@gmail.com</p>
                     </div>
                   </div>
-                  <div className="flex gap-4 items-center">
+                  <div className="flex items-center gap-4">
                     <div className="text-2xl text-primary-static">
                       <BsFillTelephoneFill />
                     </div>
