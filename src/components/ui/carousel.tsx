@@ -1,7 +1,11 @@
 'use client';
 
 import 'keen-slider/keen-slider.min.css';
-import { type KeenSliderOptions, useKeenSlider } from 'keen-slider/react';
+import {
+  type KeenSliderOptions,
+  useKeenSlider,
+  type KeenSliderPlugin,
+} from 'keen-slider/react';
 import {
   createContext,
   useContext,
@@ -22,6 +26,7 @@ const sliderCtx = createContext<SliderCtx | null>(null);
 
 type CarouselProps<TOpts, TPlugs> = HTMLAttributes<HTMLDivElement> & {
   opts: KeenSliderOptions<TOpts, TPlugs>;
+  plugIns?: KeenSliderPlugin<TOpts, TPlugs>[];
 };
 
 export interface CarouselRef {
@@ -29,22 +34,25 @@ export interface CarouselRef {
   prev: () => void;
 }
 function CarouselRoot<TOpts, TPlugs>(
-  { className, opts, ...props }: CarouselProps<TOpts, TPlugs>,
+  { className, opts, plugIns, ...props }: CarouselProps<TOpts, TPlugs>,
   ref: Ref<CarouselRef>,
 ) {
   const [activeIdx, setActiveIdx] = useState(0);
   const [isReady, setIsReady] = useState(false);
-  const [sliderRef, instanceRef] = useKeenSlider({
-    ...opts,
-    slideChanged: (slider, ...params) => {
-      setActiveIdx(slider.track.details.rel);
-      if (opts.slideChanged) opts.slideChanged(slider, ...params);
+  const [sliderRef, instanceRef] = useKeenSlider(
+    {
+      ...opts,
+      slideChanged: (slider, ...params) => {
+        setActiveIdx(slider.track.details.rel);
+        if (opts.slideChanged) opts.slideChanged(slider, ...params);
+      },
+      created: (...params) => {
+        setIsReady(true);
+        if (opts.created) opts.created(...params);
+      },
     },
-    created: (...params) => {
-      setIsReady(true);
-      if (opts.created) opts.created(...params);
-    },
-  });
+    plugIns,
+  );
 
   useImperativeHandle(
     ref,
