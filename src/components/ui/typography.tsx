@@ -6,9 +6,10 @@ import { cn } from '@/utils/cn';
 const headingVariants = cva('font-poppins', {
   variants: {
     level: {
-      1: 'text-3xl font-semibold leading-tight lg:text-5xl xl:text-7xl',
+      1: 'text-3xl font-semibold leading-tight lg:text-5xl xl:text-7xl xl:leading-normal',
       2: 'text-3xl font-semibold [&]:leading-normal lg:text-4xl xl:text-5xl',
       3: 'text-2xl font-medium',
+      4: 'text-xl font-semibold uppercase',
     },
   },
 });
@@ -58,6 +59,20 @@ export const H3 = forwardRef<HTMLHeadingElement, HeadingProps>(
   },
 );
 H3.displayName = 'h3';
+
+export const H4 = forwardRef<HTMLHeadingElement, HeadingProps>(
+  ({ asChild, className, ...props }, ref) => {
+    const Comp = asChild ? Slot : 'h4';
+    return (
+      <Comp
+        className={cn(headingVariants({ level: 4, className }))}
+        {...props}
+        ref={ref}
+      />
+    );
+  },
+);
+H4.displayName = 'h4';
 
 type SubheadingProps = HTMLAttributes<HTMLParagraphElement> & {
   asChild?: boolean;
