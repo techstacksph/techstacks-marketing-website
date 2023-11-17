@@ -10,7 +10,13 @@ interface MainProps extends HTMLAttributes<HTMLElement> {
 export const Main = forwardRef<HTMLElement, MainProps>(
   ({ asChild, className, ...props }, ref) => {
     const Comp = asChild ? Slot : 'main';
-    return <Comp className={cn('space-y-8', className)} {...props} ref={ref} />;
+    return (
+      <Comp
+        className={cn('space-y-8 overflow-x-clip', className)}
+        {...props}
+        ref={ref}
+      />
+    );
   },
 );
 Main.displayName = 'main';
