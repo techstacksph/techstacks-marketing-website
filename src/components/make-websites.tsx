@@ -27,7 +27,7 @@ export const MAKE_WEB_CONTENT = [
 
 export default function MakeWebsites() {
   return (
-    <div className="flex justify-center w-full py-16 border-t border-green-900">
+    <div className="flex justify-center w-full py-16">
       <Section>
         <div className="flex flex-row justify-center h-auto gap-4">
           <div className="hidden w-full lg:block ">

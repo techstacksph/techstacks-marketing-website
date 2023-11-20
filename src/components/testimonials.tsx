@@ -5,7 +5,7 @@ import { TestimonialCarousel } from './testimonial-carousel';
 
 export function Testimonials() {
   return (
-    <div className="flex justify-center w-full py-16 border-t border-green-900">
+    <div className="flex justify-center w-full py-16">
       <Section>
         <div className="flex flex-col gap-10">
           <div className="grid items-center grid-cols-1 gap-6 lg:grid-cols-2">
