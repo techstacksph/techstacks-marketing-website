@@ -8,6 +8,7 @@ import { cn } from '@/utils/cn';
 import { toUSD } from '@/utils/currency-converter';
 import { Button } from './ui/button';
 import { Switch } from './ui/switch';
+import { H3, H4, Subheading } from './ui/typography';
 
 const ONE_YEAR = 12;
 
@@ -83,13 +84,11 @@ export function PricingCard(pricing: Pricing) {
       <div className="h-full px-5 py-5 md:py-14">
         <div className="flex flex-col justify-between h-full gap-10">
           <div className="flex flex-col gap-4">
-            <h2 className="text-2xl font-bold text-primary-static">
-              {pricing.name}
-            </h2>
-            <div className="text-3xl font-medium">
+            <H3 className="text-primary-static">{pricing.name}</H3>
+            <H4>
               {toUSD(price)}/{isYearly ? 'yr.' : 'mo.'}
-            </div>
-            <p className="text-sm text-muted">{pricing.description}</p>
+            </H4>
+            <Subheading>{pricing.description}</Subheading>
           </div>
           <ul className="flex flex-col gap-2">
             {pricing.features.map((feat) => (

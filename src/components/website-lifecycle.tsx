@@ -3,6 +3,7 @@
 import { Player } from '@lottiefiles/react-lottie-player';
 import { Fragment } from 'react';
 import { cn } from '@/utils/cn';
+import { isOdd as utilIsOdd } from '@/utils/is-odd';
 import { Separator } from './ui/separator';
 import { Section } from './default-elements';
 import { H2, H3, Subheading } from './ui/typography';
@@ -37,7 +38,7 @@ export const METHOD_CONTENT = [
 
 export default function WebsiteLifecycle() {
   return (
-    <div className="flex justify-center w-full py-16 border-t border-green-900">
+    <div className="flex justify-center w-full py-16">
       <Section>
         <div className="flex flex-col items-center gap-10">
           <div className="flex flex-col items-center gap-8">
@@ -50,7 +51,7 @@ export default function WebsiteLifecycle() {
           </div>
           <div className="flex flex-col items-center md:block">
             {METHOD_CONTENT.map(([title, content, lottieFile], i) => {
-              const isOdd = Boolean(i % 2);
+              const isOdd = utilIsOdd(i);
 
               return (
                 <Fragment key={title}>
