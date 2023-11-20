@@ -1,68 +1,68 @@
-"use client";
-import * as React from "react";
-import { type SVGProps } from "react";
-import { motion } from "framer-motion";
+'use client';
+
+import * as React from 'react';
+import { type SVGProps } from 'react';
+import { motion } from 'framer-motion';
 
 export function SvgFaq(props: SVGProps<SVGSVGElement>) {
-    
   const rightLinesData = [
     {
-      id: "Line 1",
+      id: 'Line 1',
       transform:
-        "matrix(-0.705905 -0.708307 -0.705905 0.708307 407.752 370.003)",
+        'matrix(-0.705905 -0.708307 -0.705905 0.708307 407.752 370.003)',
     },
     {
-      id: "Line 2",
-      transform: "matrix(-0.705905 0.708307 0.705905 0.708307 408.042 369.628)",
+      id: 'Line 2',
+      transform: 'matrix(-0.705905 0.708307 0.705905 0.708307 408.042 369.628)',
     },
     {
-      id: "Line 3",
+      id: 'Line 3',
       transform:
-        "matrix(-0.705905 -0.708307 -0.705905 0.708307 451.559 370.372)",
+        'matrix(-0.705905 -0.708307 -0.705905 0.708307 451.559 370.372)',
     },
     {
-      id: "Line 4",
-      transform: "matrix(-0.705905 0.708307 0.705905 0.708307 451.849 369.997)",
+      id: 'Line 4',
+      transform: 'matrix(-0.705905 0.708307 0.705905 0.708307 451.849 369.997)',
     },
     {
-      id: "Line 5",
+      id: 'Line 5',
       transform:
-        "matrix(-0.705905 -0.708307 -0.705905 0.708307 489.107 370.372)",
+        'matrix(-0.705905 -0.708307 -0.705905 0.708307 489.107 370.372)',
     },
     {
-      id: "Line 6",
-      transform: "matrix(-0.705905 0.708307 0.705905 0.708307 489.398 369.997)",
+      id: 'Line 6',
+      transform: 'matrix(-0.705905 0.708307 0.705905 0.708307 489.398 369.997)',
     },
     {
-      id: "Line 7",
+      id: 'Line 7',
       transform:
-        "matrix(-0.705905 -0.708307 -0.705905 0.708307 526.656 370.372)",
+        'matrix(-0.705905 -0.708307 -0.705905 0.708307 526.656 370.372)',
     },
     {
-      id: "Line 8",
-      transform: "matrix(-0.705905 0.708307 0.705905 0.708307 526.946 369.997)",
+      id: 'Line 8',
+      transform: 'matrix(-0.705905 0.708307 0.705905 0.708307 526.946 369.997)',
     },
     {
-      id: "Line 9",
+      id: 'Line 9',
       transform:
-        "matrix(-0.705905 -0.708307 -0.705905 0.708307 564.204 370.372)",
+        'matrix(-0.705905 -0.708307 -0.705905 0.708307 564.204 370.372)',
     },
     {
-      id: "Line 10",
-      transform: "matrix(-0.705905 0.708307 0.705905 0.708307 564.495 369.997)",
+      id: 'Line 10',
+      transform: 'matrix(-0.705905 0.708307 0.705905 0.708307 564.495 369.997)',
     },
   ];
   const leftLinesData = [
-    { id: "Line 1_2", x1: 140.432, y1: 156.648, x2: 175.787, y2: 121.293 },
-    { id: "Line 2_2", x1: 141.707, y1: 156.469, x2: 177.062, y2: 191.824 },
-    { id: "Line 3_2", x1: 119.432, y1: 156.824, x2: 154.787, y2: 121.469 },
-    { id: "Line 4_2", x1: 120.707, y1: 156.645, x2: 156.062, y2: 192.001 },
-    { id: "Line 5_2", x1: 101.432, y1: 156.824, x2: 136.787, y2: 121.469 },
-    { id: "Line 6_2", x1: 102.707, y1: 156.645, x2: 138.062, y2: 192.001 },
-    { id: "Line 7_2", x1: 83.4321, y1: 156.824, x2: 118.787, y2: 121.469 },
-    { id: "Line 8_2", x1: 84.7071, y1: 156.645, x2: 120.062, y2: 192.001 },
-    { id: "Line 9_2", x1: 65.4321, y1: 156.824, x2: 100.787, y2: 121.469 },
-    { id: "Line 10_2", x1: 66.7071, y1: 156.645, x2: 102.062, y2: 192.001 },
+    { id: 'Line 1_2', x1: 140.432, y1: 156.648, x2: 175.787, y2: 121.293 },
+    { id: 'Line 2_2', x1: 141.707, y1: 156.469, x2: 177.062, y2: 191.824 },
+    { id: 'Line 3_2', x1: 119.432, y1: 156.824, x2: 154.787, y2: 121.469 },
+    { id: 'Line 4_2', x1: 120.707, y1: 156.645, x2: 156.062, y2: 192.001 },
+    { id: 'Line 5_2', x1: 101.432, y1: 156.824, x2: 136.787, y2: 121.469 },
+    { id: 'Line 6_2', x1: 102.707, y1: 156.645, x2: 138.062, y2: 192.001 },
+    { id: 'Line 7_2', x1: 83.4321, y1: 156.824, x2: 118.787, y2: 121.469 },
+    { id: 'Line 8_2', x1: 84.7071, y1: 156.645, x2: 120.062, y2: 192.001 },
+    { id: 'Line 9_2', x1: 65.4321, y1: 156.824, x2: 100.787, y2: 121.469 },
+    { id: 'Line 10_2', x1: 66.7071, y1: 156.645, x2: 102.062, y2: 192.001 },
   ];
   return (
     <svg
@@ -92,15 +92,15 @@ export function SvgFaq(props: SVGProps<SVGSVGElement>) {
             />
           </g>
           <g id="right line">
-            {rightLinesData.map((line, index) => (
+            {rightLinesData.map((line) => (
               <motion.line
                 animate={{
                   pathLength: 1,
-                  transition: { duration: 3, ease: "linear", repeat: Infinity },
+                  transition: { duration: 3, ease: 'linear', repeat: Infinity },
                 }}
                 id={line.id}
-                initial={{ pathLength: 0, stroke: "#21CD9C" }}
-                key={index}
+                initial={{ pathLength: 0, stroke: '#21CD9C' }}
+                key={line.id}
                 stroke="#21CD9C"
                 strokeWidth={2}
                 transform={line.transform}
@@ -111,15 +111,15 @@ export function SvgFaq(props: SVGProps<SVGSVGElement>) {
             ))}
           </g>
           <g id="left line">
-            {leftLinesData.map((line, index) => (
+            {leftLinesData.map((line) => (
               <motion.line
                 animate={{
                   pathLength: 1,
-                  transition: { duration: 3, ease: "linear", repeat: Infinity },
+                  transition: { duration: 3, ease: 'linear', repeat: Infinity },
                 }}
                 id={line.id}
-                initial={{ pathLength: 0, stroke: "#21CD9C" }}
-                key={index}
+                initial={{ pathLength: 0, stroke: '#21CD9C' }}
+                key={line.id}
                 stroke="#21CD9C"
                 strokeWidth={2}
                 x1={line.x1}
@@ -136,8 +136,8 @@ export function SvgFaq(props: SVGProps<SVGSVGElement>) {
               times: [0, 1],
               duration: 5,
               repeat: Infinity,
-              type: "keyframes",
-              ease: "easeInOut",
+              type: 'keyframes',
+              ease: 'easeInOut',
             }}
           >
             <path
