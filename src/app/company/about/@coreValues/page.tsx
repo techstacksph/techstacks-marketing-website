@@ -5,21 +5,21 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from './ui/accordion';
-import { H2, Subheading } from './ui/typography';
+} from '@/components/ui/accordion';
+import { H2, Subheading } from '@/components/ui/typography';
 
 export default function CoreValues() {
   return (
-    <div className="w-full flex justify-center py-16">
+    <div className="flex justify-center w-full py-16">
       <div className="w-full">
-        <div className="flex flex-col-reverse lg:flex-row items-center gap-8 ">
+        <div className="flex flex-col-reverse items-center gap-8 lg:flex-row ">
           <div
             // TODO: change hard coded tw colors
-            className="w-full lg:w-1/2 flex   flex-col items-center lg:items-end bg-gradient-to-r from-emerald-400 to-emerald-900"
+            className="flex flex-col items-center w-full lg:w-1/2 lg:items-end bg-gradient-to-r from-emerald-400 to-emerald-900"
             data-aos="fade-right"
             data-aos-delay={100}
           >
-            <div className="w-full px-8 max-w-screen-md  lg:py-8  ">
+            <div className="w-full max-w-screen-md px-8 lg:py-8 ">
               <Accordion collapsible type="single">
                 {coreValues.map((core, index) => (
                   <AccordionItem
@@ -29,9 +29,9 @@ export default function CoreValues() {
                     key={core.title}
                     value={core.title}
                   >
-                    <AccordionTrigger className="hover:text-background/90 hover:no-underline active:text-background/90  focus:text-background/90 ">
-                      <div className="flex text-lg xl:text-xl font-semibold flex-row items-center gap-4">
-                        <span className="text-xl xl:text-3xl w-14 py-2 px-3 border-r ">
+                    <AccordionTrigger className="hover:text-background/90 hover:no-underline active:text-background/90 focus:text-background/90 ">
+                      <div className="flex flex-row items-center gap-4 text-lg font-semibold xl:text-xl">
+                        <span className="px-3 py-2 text-xl border-r xl:text-3xl w-14 ">
                           {core.key}
                         </span>
                         {core.title}
@@ -50,7 +50,7 @@ export default function CoreValues() {
             data-aos="fade-left"
             data-aos-delay={100}
           >
-            <div className="flex flex-col w-full max-w-screen-md p-4 md:p-16 gap-8">
+            <div className="flex flex-col w-full max-w-screen-md gap-8 p-4 md:p-16">
               <H2
                 className="text-center lg:font-bold lg:text-left "
                 data-aos="fade-left"
@@ -60,7 +60,7 @@ export default function CoreValues() {
                 <span className="text-primary-static">Principles</span>
               </H2>
               <Subheading
-                className="text-center lg:text-left font-normal"
+                className="font-normal text-center lg:text-left"
                 data-aos="fade-left"
                 data-aos-delay={300}
               >

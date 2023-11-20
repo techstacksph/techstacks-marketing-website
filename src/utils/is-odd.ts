@@ -1,3 +1,3 @@
 export function isOdd(value: number) {
-  return value % 2;
+  return Boolean(value % 2);
 }

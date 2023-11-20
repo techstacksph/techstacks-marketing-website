@@ -1,26 +1,23 @@
-'use client';
-
-import React from 'react';
 import Image from 'next/image';
 import { serviceToolsLogo } from '@/constants/service-tools';
-import { Section } from './default-elements';
-import { H2, Subheading } from './ui/typography';
+import { Section } from '@/components/default-elements';
+import { H2, Subheading } from '@/components/ui/typography';
 
 export default function ServiceTools() {
   return (
-    <div className="w-full flex justify-center py-16 bg-primary/50">
+    <div className="flex justify-center w-full py-16 bg-primary/50">
       <Section>
-        <div className="flex flex-col gap-14 items-center md:flex-row">
-          <div className="flex flex-col gap-8 items-center justify-center md:w-1/2 ">
+        <div className="flex flex-col items-center gap-14 md:flex-row">
+          <div className="flex flex-col items-center justify-center gap-8 md:w-1/2 ">
             <H2
-              className="text-center  lg:font-bold "
+              className="text-center lg:font-bold"
               data-aos="fade-up"
               data-aos-delay={100}
             >
               Our Tailored Service Tools
             </H2>
             <Subheading
-              className="font-normal  text-center  "
+              className="font-normal text-center"
               data-aos="fade-up"
               data-aos-delay={100}
             >
@@ -30,7 +27,7 @@ export default function ServiceTools() {
             </Subheading>
           </div>
           <div
-            className="grid grid-cols-4 gap-4 items-center justify-evenly h-auto w-full md:w-1/2"
+            className="grid items-center w-full h-auto grid-cols-4 gap-4 justify-evenly md:w-1/2"
             data-aos="fade-up"
             data-aos-delay={100}
           >
