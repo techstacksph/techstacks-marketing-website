@@ -118,6 +118,9 @@ const config = {
         poppins: 'var(--font-poppins)',
         inter: 'var(--font-inter)',
       },
+      backgroundImage: {
+        'radial-gradient': 'radial-gradient(circle, var(--tw-gradient-stops))',
+      },
     },
   },
   plugins: [twAnimate, twTypography, borderAnimate],
