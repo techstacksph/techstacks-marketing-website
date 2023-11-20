@@ -1,13 +1,16 @@
-import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ourTeam } from '@/assets/images';
 import { NavRoutes } from '@/constants/nav-routes';
 import { TEAM } from '@/constants/team';
-import { HoverCard, HoverCardContent, HoverCardTrigger } from './ui/hover-card';
-import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
-import { Section } from './default-elements';
-import { H2, Subheading } from './ui/typography';
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from '@/components/ui/hover-card';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Section } from '@/components/default-elements';
+import { H2, Subheading } from '@/components/ui/typography';
 
 export default function OurTeam() {
   return (
@@ -57,14 +60,14 @@ export default function OurTeam() {
                   className="bg-popover/75 backdrop-blur"
                   side="top"
                 >
-                  <div className="flex flex-col item-center gap-2">
+                  <div className="flex flex-col gap-2 item-center">
                     <Avatar className="flex self-center">
                       <AvatarImage asChild src={profile.src}>
                         <Image alt={name} src={profile} />
                       </AvatarImage>
                       <AvatarFallback>{name}</AvatarFallback>
                     </Avatar>
-                    <h3 className="text-lg text-center font-medium">{name}</h3>
+                    <h3 className="text-lg font-medium text-center">{name}</h3>
                     <p className="text-sm font-medium text-center text-muted">
                       {position}
                     </p>
