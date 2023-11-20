@@ -9,8 +9,11 @@ const separatorVariants = cva('shrink-0', {
   variants: {
     variant: {
       default: 'bg-border',
-      horizon:
-        'bg-radial-gradient from-white via-primary-static to-transparent',
+      horizon: [
+        'bg-radial-gradient',
+        'from-primary-static via-primary-static to-transparent',
+        'dark:from-white dark:via-primary-static dark:to-transparent',
+      ],
     },
     orientation: {
       horizontal: 'h-px w-full',
