@@ -1,7 +1,5 @@
-'use client';
-
 import { BiSolidCircle } from 'react-icons/bi';
-import { Separator } from '@radix-ui/react-separator';
+import { Separator } from './ui/separator';
 import { Section } from './default-elements';
 import { H2, Subheading } from './ui/typography';
 import { GlowCard, GlowCardContent } from './glow-card';
