@@ -6,7 +6,7 @@ import { cn } from '@/utils/cn';
 const headingVariants = cva('font-poppins', {
   variants: {
     level: {
-      1: 'text-3xl font-semibold leading-tight lg:text-5xl xl:text-7xl xl:leading-normal',
+      1: 'text-3xl font-semibold leading-tight lg:text-5xl xl:text-7xl',
       2: 'text-3xl font-semibold [&]:leading-normal lg:text-4xl xl:text-5xl',
       3: 'text-2xl font-medium',
       4: 'text-xl font-semibold uppercase',

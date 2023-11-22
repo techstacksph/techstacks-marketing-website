@@ -1,26 +1,25 @@
 import { Section } from '@/components/default-elements';
 import { TrainingsCarousel } from '@/components/trainings-carousel';
-import { LearningIcon } from '@/components/icons/learning';
+import { H2, Subheading } from '@/components/ui/typography';
 
 export default function TraineesPlan() {
   return (
-    <div className="flex justify-center w-full py-16">
+    <div className="flex justify-center w-full py-16  bg-primary-static/10">
       <Section>
-        <div className="flex flex-col items-center gap-8 xl:gap-14">
-          <div className="flex flex-col items-center gap-6">
-            <h2 className="text-2xl font-semibold text-center lg:text-3xl">
+        <div className="flex flex-col-reverse lg:flex-row gap-8 items-center">
+          <div className="w-full lg:w-1/2 h-[50vh]">
+            <TrainingsCarousel />
+          </div>
+          <div className="flex flex-col w-full lg:w-1/2 gap-6">
+            <H2>
               Trainees can enjoy numerous benefits and perks that help support
               their learning and development
-            </h2>
-            <p className="text-base text-center text-muted lg:text-xl">
+            </H2>
+            <Subheading>
               From customized learning plans and project-based learning to
               access to industry experts and career growth opportunities, we
               give our trainees the tools and resources they need to succeed.
-            </p>
-            <LearningIcon className="grayscale hover:grayscale-0 w-40 h-40" />
-          </div>
-          <div className="h-[80vh]">
-            <TrainingsCarousel />
+            </Subheading>
           </div>
         </div>
       </Section>

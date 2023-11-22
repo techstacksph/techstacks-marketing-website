@@ -1,13 +1,6 @@
 import goDaddyImg from './about-us/goDaddy.png';
 import philgepsImg from './about-us/philgeps.png';
 import ojtHero from './trainings/ojt-hero.png';
-import cycleHero from './trainings/cycle-hero.png';
-import careerImg from './trainings/training-plans-icon/career.png';
-import exposureImg from './trainings/training-plans-icon/exposure.png';
-import mentoringImg from './trainings/training-plans-icon/mentoring.png';
-import positiveImg from './trainings/training-plans-icon/positive.png';
-import projectImg from './trainings/training-plans-icon/project.png';
-import trainingImg from './trainings/training-plans-icon/training.png';
 import bootstrapLogo from './about-us/service-tools-logo/bootstrap-logo-shadow.png';
 import gastbyLogo from './about-us/service-tools-logo/gatsby-logo.png';
 import jamStacksLogo from './about-us/service-tools-logo/jamstack-logo.png';
@@ -73,6 +66,37 @@ import franzImg from './team/our-team/franz.png';
 import jayveeImg from './team/our-team/jayvee.png';
 import marcusImg from './team/our-team/marcus.png';
 import samImg from './team/our-team/sam.png';
+import traineesImgOne from './trainings/trainees-img/trainees-1.jpg';
+import traineesImgTwo from './trainings/trainees-img/trainees-2.jpg';
+import traineesImgThree from './trainings/trainees-img/trainees-3.jpg';
+import traineesImgFour from './trainings/trainees-img/trainees-4.jpg';
+import traineesImgFive from './trainings/trainees-img/trainees-5.jpg';
+import traineesImgSix from './trainings/trainees-img/trainees-6.jpg';
+import traineesImgSeven from './trainings/trainees-img/trainees-7.jpg';
+import traineesImgEight from './trainings/trainees-img/trainees-8.jpg';
+import traineesImgNine from './trainings/trainees-img/trainees-9.jpg';
+import traineesImgTen from './trainings/trainees-img/trainees-10.jpg';
+import aaronPort from './trainings/ojt-portfolios/aaron-port.png';
+import aeFootGear from './trainings/ojt-portfolios/aefootgear.png';
+import agora from './trainings/ojt-portfolios/agora.png';
+import cjPort from './trainings/ojt-portfolios/cj-port.png';
+import danPort from './trainings/ojt-portfolios/dan-port.png';
+import ezeDream from './trainings/ojt-portfolios/eze-dream.png';
+import ezePort from './trainings/ojt-portfolios/eze-port.png';
+import iTravels from './trainings/ojt-portfolios/itravels.png';
+import jedediahPort from './trainings/ojt-portfolios/jedediah-port.png';
+import nft from './trainings/ojt-portfolios/nft.png';
+import odyssey from './trainings/ojt-portfolios/odyssey.png';
+import redServe from './trainings/ojt-portfolios/redserve.png';
+import rinandPort from './trainings/ojt-portfolios/rinand-port.png';
+import danProfile from './trainings/ojt-profile/dan.jpg';
+import hannahProfile from './trainings/ojt-profile/hannah.jpg';
+import jedediahProfile from './trainings/ojt-profile/jedediah.jpg';
+import jhonasProfile from './trainings/ojt-profile/jhonas.png';
+import joyProfile from './trainings/ojt-profile/joy.jpg';
+import rinandProfile from './trainings/ojt-profile/rinand.jpg';
+import ezeProfile from './trainings/ojt-profile/eze.jpg';
+import ojtBg from './trainings/ojt-bg.png';
 
 export {
   // Testimonials
@@ -82,16 +106,44 @@ export {
 
   //trainings
   ojtHero,
-  cycleHero,
   trainingBg,
+  ojtBg,
 
-  //training/training-plans-icon
-  careerImg,
-  exposureImg,
-  mentoringImg,
-  positiveImg,
-  projectImg,
-  trainingImg,
+  //training/trainees-img
+  traineesImgOne,
+  traineesImgTwo,
+  traineesImgThree,
+  traineesImgFour,
+  traineesImgFive,
+  traineesImgSix,
+  traineesImgSeven,
+  traineesImgEight,
+  traineesImgNine,
+  traineesImgTen,
+
+  //training/ojt-profile
+  danProfile,
+  hannahProfile,
+  jedediahProfile,
+  jhonasProfile,
+  joyProfile,
+  rinandProfile,
+  ezeProfile,
+
+  //training/ojt's-portfolio
+  aaronPort,
+  aeFootGear,
+  agora,
+  cjPort,
+  danPort,
+  ezePort,
+  ezeDream,
+  iTravels,
+  jedediahPort,
+  nft,
+  odyssey,
+  redServe,
+  rinandPort,
 
   //services
   breakIcon,
