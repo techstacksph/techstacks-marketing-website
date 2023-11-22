@@ -1,0 +1,69 @@
+import {
+  danProfile,
+  ezeProfile,
+  hannahProfile,
+  jedediahProfile,
+  jhonasProfile,
+  // joyProfile,
+  rinandProfile,
+  testi1,
+} from '@/assets/images';
+
+export const OJT_TESTIMONIALS = [
+  {
+    id: 1,
+    quote:
+      'My time at Techstacks has been a transformative experience, particularly in the area of web development. Throughout my 500 hours at the company, I have gained a wealth of knowledge and expertise that has allowed me to grow both personally and professionally. Techstacks provides a nurturing environment where employees are encouraged to take their time and delve deep into the intricacies of web development.',
+    author: 'John Rinand Sta. Ines',
+    position: 'Former Intern | N.E.U.S.T',
+    avatar: rinandProfile,
+  },
+  {
+    id: 2,
+    quote:
+      'At Techstacks, I had the opportunity to learn HTML, CSS, JavaScript, React, and many more. I can say that it was a great experience. From the moment I started at Techstacks, I felt welcomed and supported by my fellow OJT trainees and the company team. I was also given the opportunity to take on responsibilities and develop new skills, which helped me grow professionally and personally.',
+    author: 'Ivan Mauricio',
+    position: 'Former Intern | W.U.P',
+    avatar: testi1,
+  },
+  {
+    id: 3,
+    quote:
+      'I gained a wealth of information and practical expertise in web development during my internship at Techstacks. In fact, I can certainly declare that my internship taught me more than school. The teams assistance and mentorship were fantastic they were always accessible to answer any questions I had. I appreciated the unrestricted learning atmosphere, allowing me to experiment and explore new technologies.',
+    author: 'John Ezeriel Pineda',
+    position: 'Former Intern | N.E.U.S.T',
+    avatar: ezeProfile,
+  },
+  {
+    id: 4,
+    quote:
+      'People here at Techstacks were incredibly supportive, awesome, cool, and will surely treat you like a family. All in all, I had a fantastic experience as an intern at Techstacks Company. Definitely learned a lot, and worked on some awesome projects, and for me, one of the most memorable is that I had the opportunity to work with NEUST finest students, and truly talented individuals.',
+    author: 'Jedediah Romano',
+    position: 'Former Intern | N.E.U.S.T',
+    avatar: jedediahProfile,
+  },
+  {
+    id: 5,
+    quote:
+      'I am genuinely grateful for the opportunity to have completed my OJT at Techstacks. The experience has been life-changing and has opened doors to a whole new world of possibilities for me. The supportive and collaborative environment made me feel like a valued team member, and I could learn and grow in ways I never imagined. I highly recommend it to anyone considering an internship at Techstacks.',
+    author: 'Jhonas Lalo',
+    position: 'Former Intern | N.E.U.S.T',
+    avatar: jhonasProfile,
+  },
+  {
+    id: 6,
+    quote:
+      'Through my internship program with TECHSTACKS, I learned how to appreciate their effort to teach us. How to faced the real world and talk to different people. To realized the importance of time management in this practicum. Learned to follow instructions what the superiors has given to me. I am grateful for the experience and the skills I acquired, and I believe they will be valuable to my future career in IT/ Computer Science.',
+    author: 'Hannah Mangulabnan',
+    position: 'Former Intern | A.M.A',
+    avatar: hannahProfile,
+  },
+  {
+    id: 7,
+    quote:
+      'I really learned a lot and because of this internship, it gave me confidence to go out and explore more opportunities in the web dev industry. The management was really responsible, friendly and very professional in handling us interns. Even though this is the first time on handling interns, They have handled us with care and professionalism. The management was very patient with us. Very very patient.',
+    author: 'Daniel Arvi Paragas',
+    position: 'Former Intern | N.E.U.S.T',
+    avatar: danProfile,
+  },
+];
