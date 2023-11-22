@@ -8,37 +8,45 @@ export interface Pricing {
 
 export const PRICING: Pricing[] = [
   {
-    name: 'Pricing name 1',
-    description:
-      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero, optio?',
-    pricePerMonth: 1000,
+    name: 'Basic',
+    description: 'Ideal for companies with smaller websites.',
+    pricePerMonth: 2800,
     features: [
-      'Lorem ipsum dolor sit amet.',
-      'Lorem ipsum dolor sit amet consectetur.',
-      'Lorem ipsum dolor sit amet consectetur adipisicing.',
+      'Scrum team',
+      'Scrum events (bi-weekly)',
+      'Part-time UI/UX designer',
+      'Part-time Front-end developer',
+      'Technical Project manager',
     ],
   },
   {
-    name: 'Pricing name 2',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores pariatur eaque ab dolores.',
+    name: 'Essential',
+    description: 'Ideal for companies with smaller websites.',
     focus: true,
-    pricePerMonth: 1000,
+    pricePerMonth: 4500,
     features: [
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit.',
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, numquam.',
+      'Scrum team',
+      'Scrum events (bi-weekly)',
+      'Part-time UI/UX designer',
+      'Part-time Front-end developer',
+      'Part-time Back-end developer (integration)',
+      'Part-time SEO Analyst',
+      'Technical Project manager',
     ],
   },
   {
-    name: 'Pricing name 3',
+    name: 'Enterprise',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, quas! Optio, molestiae.',
-    pricePerMonth: 1000,
+      'Ideal for companies that want to build leads generation tools.',
+    pricePerMonth: 6250,
     features: [
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi, libero doloribus!',
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Error aut nulla reprehenderit.',
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis neque placeat assumenda eaque!',
+      'Scrum team',
+      'Scrum events (bi-weekly)',
+      'Part-time UI/UX designer',
+      'Full-time Front-end developer',
+      'Part-time Back-end developer (integration)',
+      'Part-time SEO Analyst',
+      'Technical Project manager',
     ],
   },
 ];
