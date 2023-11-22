@@ -96,7 +96,12 @@ export function SvgFaq(props: SVGProps<SVGSVGElement>) {
               <motion.line
                 animate={{
                   pathLength: 1,
-                  transition: { duration: 3, ease: 'linear', repeat: Infinity },
+                  transition: {
+                    duration: 3,
+                    ease: 'linear',
+                    repeat: Infinity,
+                    repeatType: 'reverse',
+                  },
                 }}
                 id={line.id}
                 initial={{ pathLength: 0, stroke: '#21CD9C' }}
@@ -115,7 +120,12 @@ export function SvgFaq(props: SVGProps<SVGSVGElement>) {
               <motion.line
                 animate={{
                   pathLength: 1,
-                  transition: { duration: 3, ease: 'linear', repeat: Infinity },
+                  transition: {
+                    duration: 3,
+                    ease: 'linear',
+                    repeat: Infinity,
+                    repeatType: 'reverse',
+                  },
                 }}
                 id={line.id}
                 initial={{ pathLength: 0, stroke: '#21CD9C' }}

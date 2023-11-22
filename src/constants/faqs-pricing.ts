@@ -24,7 +24,7 @@ export const CompanyFaqs: Faq[] = [
       {
         q: 'How can I get in touch with your team?',
         // TODO: contact number within the answer below.
-        a: 'You can reach us through our techstacksph.com on our website. Alternatively, you can email us at techstacks@gmail.com or call us at [your contact number].',
+        a: 'You can reach us through our techstacksph.com on our website. Alternatively, you can email us at techstacks@gmail.com or call us at (44) 331-4514.',
       },
     ],
   },
@@ -51,7 +51,7 @@ export const CompanyFaqs: Faq[] = [
     questions: [
       {
         q: 'What technologies do you use for web development?',
-        a: 'We leverage a range of technologies based on project requirements. This includes but is not limited to HTML, CSS, JavaScript, and popular frameworks such as React, Angular, and Vue.js for front-end development. For back-end development, we work with technologies like Node.js, Django, and Ruby on Rails.',
+        a: 'We leverage a range of technologies based on project requirements. This includes but is not limited to HTML, CSS, JavaScript, and popular frameworks such as React, Next.js, and Gatsby.js for front-end development. For back-end development, we work with technologies like Node.js, Django, and Ruby on Rails.',
       },
     ],
   },
