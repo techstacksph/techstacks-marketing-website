@@ -66,6 +66,12 @@ import franzImg from './team/our-team/franz.png';
 import jayveeImg from './team/our-team/jayvee.png';
 import marcusImg from './team/our-team/marcus.png';
 import samImg from './team/our-team/sam.png';
+import sirThirdImg from './team/our-team/sir-third.png';
+import neilImg from './team/our-team/neil.png';
+import jhonasImg from './team/our-team/jhonas.png';
+import toniImg from './team/our-team/toni.png';
+import jaysonImg from './team/our-team/jayson.png';
+import kennethImg from './team/our-team/kenneth.png';
 import traineesImgOne from './trainings/trainees-img/trainees-1.jpg';
 import traineesImgTwo from './trainings/trainees-img/trainees-2.jpg';
 import traineesImgThree from './trainings/trainees-img/trainees-3.jpg';
@@ -201,6 +207,12 @@ export {
   marcusImg,
   franzImg,
   samImg,
+  sirThirdImg,
+  jhonasImg,
+  toniImg,
+  jaysonImg,
+  kennethImg,
+  neilImg,
 
   //about-us/service-tools-logo
   bootstrapLogo,

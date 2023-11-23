@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from 'react-icons/bi';
 import { Section } from '@/components/default-elements';
-import { jayveeImg } from '@/assets/images';
+import { sirThirdImg } from '@/assets/images';
 import { Subheading } from '@/components/ui/typography';
 
 export default function CeoQuote() {
@@ -33,8 +33,8 @@ export default function CeoQuote() {
               data-aos="fade-up"
               data-aos-delay={200}
             >
-              <div className="flex justify-center bg-primary-static">
-                <Image alt="asd" src={jayveeImg} />
+              <div className="flex justify-center bg-primary-static ">
+                <Image alt="asd" className="h-[359px]" src={sirThirdImg} />
               </div>
             </div>
             <div

@@ -24,7 +24,7 @@ export default function OurTeamCard({
         {img ? (
           <Image
             alt={`${name} image`}
-            className="object-cover w-full h-56 md:h-64 xl:h-80"
+            className="object-cover w-full h-60 md:h-64 xl:h-[359px]"
             src={img}
           />
         ) : null}

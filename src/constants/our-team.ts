@@ -6,6 +6,12 @@ import {
   marcusImg,
   franzImg,
   samImg,
+  sirThirdImg,
+  kennethImg,
+  neilImg,
+  toniImg,
+  jaysonImg,
+  jhonasImg,
 } from '@/assets/images';
 
 export const OUR_TEAM = [
@@ -13,7 +19,7 @@ export const OUR_TEAM = [
     id: 1,
     name: 'Florante Sugian III',
     position: 'Owner/CTO',
-    img: jayveeImg,
+    img: sirThirdImg,
   },
   {
     id: 2,
@@ -56,5 +62,35 @@ export const OUR_TEAM = [
     name: 'Ara Belle Agarem',
     position: 'Marketing and SEO Specialist',
     img: araImg,
+  },
+  {
+    id: 8,
+    name: 'Toni Padua',
+    position: 'Head UI/UX',
+    img: toniImg,
+  },
+  {
+    id: 9,
+    name: 'Kenneth Gunabe',
+    position: 'Sr. Front-end Developer',
+    img: kennethImg,
+  },
+  {
+    id: 10,
+    name: 'Neil Monzales',
+    position: 'Sr. Fullstack Developer/DevOps',
+    img: neilImg,
+  },
+  {
+    id: 11,
+    name: 'Jayson Timkang',
+    position: 'Sales Executive',
+    img: jaysonImg,
+  },
+  {
+    id: 12,
+    name: 'Jhonas Lalo',
+    position: 'Back-end Developer',
+    img: jhonasImg,
   },
 ] as const;
