@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Hero from '@/components/hero';
 import WebsiteLifecycle from '@/components/website-lifecycle';
-import MakeWebsites from '@/components/make-websites';
 import { Main, Section } from '@/components/default-elements';
 import { Testimonials } from '@/components/testimonials';
 import SocialProof from '@/components/social-proof';
@@ -10,6 +9,7 @@ import { Typewriter } from '@/components/typewriter';
 import { H1, Subheading } from '@/components/ui/typography';
 import { BgHero } from '@/components/icons/bg-hero';
 import { Separator } from '@/components/ui/separator';
+import WhyChooseUs from '@/components/choose-us';
 
 export default function Home() {
   return (
@@ -85,7 +85,7 @@ export default function Home() {
       <Section role="none">
         <Separator variant="horizon" />
       </Section>
-      <MakeWebsites />
+      <WhyChooseUs />
       <Section role="none">
         <Separator variant="horizon" />
       </Section>
