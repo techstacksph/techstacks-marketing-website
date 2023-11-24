@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu';
-import { cva } from 'class-variance-authority';
+import { type VariantProps, cva } from 'class-variance-authority';
 import { ChevronDown } from 'lucide-react';
 import { cn } from '@/utils/cn';
 
@@ -40,15 +40,34 @@ NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName;
 const NavigationMenuItem = NavigationMenuPrimitive.Item;
 
 const navigationMenuTriggerStyle = cva(
-  'group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50',
+  'group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50',
+  {
+    variants: {
+      variant: {
+        default:
+          'focus:bg-accent focus:text-accent-foreground hover:bg-accent hover:text-accent-foreground data-[active]:bg-accent/50 data-[state=open]:bg-accent/50',
+        outline:
+          'border focus:border-accent focus:text-accent-foreground hover:border-accent hover:text-accent-foreground data-[active]:border-accent/50 data-[state=open]:border-accent/50',
+        link: [
+          'underline decoration-transparent underline-offset-8',
+          'focus:decoration-primary-foreground hover:decoration-primary-foreground data-[active]:decoration-primary-foreground data-[state=open]:decoration-primary-foreground',
+          'dark:focus:decoration-primary-static dark:hover:decoration-primary-static dark:data-[active]:decoration-primary-static dark:data-[state=open]:decoration-primary-static',
+        ],
+      },
+    },
+    defaultVariants: {
+      variant: 'default',
+    },
+  },
 );
 
 const NavigationMenuTrigger = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Trigger>,
-  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Trigger>
->(({ className, children, ...props }, ref) => (
+  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Trigger> &
+    VariantProps<typeof navigationMenuTriggerStyle>
+>(({ className, children, variant, ...props }, ref) => (
   <NavigationMenuPrimitive.Trigger
-    className={cn(navigationMenuTriggerStyle(), 'group', className)}
+    className={cn(navigationMenuTriggerStyle({ variant }), 'group', className)}
     ref={ref}
     {...props}
   >
