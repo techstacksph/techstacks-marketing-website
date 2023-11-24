@@ -18,7 +18,12 @@ function Toggler() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button size="icon" suppressHydrationWarning variant="ghost">
+        <Button
+          className="data-[state=open]:bg-accent data-[state=open]:text-accent-foreground"
+          size="icon"
+          suppressHydrationWarning
+          variant="ghost"
+        >
           {theme === 'light' && (
             <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
           )}
@@ -37,7 +42,7 @@ function Toggler() {
             setTheme('light');
           }}
         >
-          <Sun className="mr-2 h-4 w-4" />
+          <Sun className="w-4 h-4 mr-2" />
           Light
         </DropdownMenuItem>
         <DropdownMenuItem
@@ -45,7 +50,7 @@ function Toggler() {
             setTheme('dark');
           }}
         >
-          <Moon className="mr-2 h-4 w-4" />
+          <Moon className="w-4 h-4 mr-2" />
           Dark
         </DropdownMenuItem>
         <DropdownMenuItem
@@ -53,7 +58,7 @@ function Toggler() {
             setTheme('system');
           }}
         >
-          <Computer className="mr-2 h-4 w-4" />
+          <Computer className="w-4 h-4 mr-2" />
           System
         </DropdownMenuItem>
       </DropdownMenuContent>

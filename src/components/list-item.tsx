@@ -19,8 +19,10 @@ const ListItem = forwardRef<
           ref={ref}
           {...props}
         >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground group-hover:text-accent-foreground">
+          <p className="text-sm font-medium leading-none font-poppins">
+            {title}
+          </p>
+          <p className="text-sm leading-snug font-dm-sans line-clamp-2 text-muted-foreground group-hover:text-accent-foreground">
             {children}
           </p>
         </Link>
