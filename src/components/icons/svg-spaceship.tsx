@@ -123,7 +123,7 @@ export function SvgSpaceShip(props: SVGProps<SVGSVGElement>) {
               d={path}
               fill="black"
               id="Vector"
-              key={idx}
+              key={path}
               transition={{
                 duration: 1 + idx / STAR_PATHS.length,
                 repeat: Infinity,

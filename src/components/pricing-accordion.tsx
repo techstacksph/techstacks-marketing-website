@@ -1,9 +1,8 @@
 'use client';
 
 import { AccordionHeader, AccordionTrigger } from '@radix-ui/react-accordion';
-import { Subheading } from '@/components/default-elements';
 import { CompanyFaqs } from '@/constants/faqs-pricing';
-import { H3 } from '@/components/ui/typography';
+import { H3, Subheading } from '@/components/ui/typography';
 import {
   Accordion,
   AccordionContent,

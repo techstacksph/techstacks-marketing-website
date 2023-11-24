@@ -1,8 +1,7 @@
 import { FaCheck } from 'react-icons/fa';
-import { Subheading } from './default-elements';
 import { GlowCard, GlowCardContent } from './glow-card';
 import { Separator } from './ui/separator';
-import { H2 } from './ui/typography';
+import { H2, Subheading } from './ui/typography';
 import { Button } from './ui/button';
 
 const CUSTOM_PROJECT = [

@@ -1,6 +1,6 @@
-import { Section, Subheading } from '@/components/default-elements';
+import { Section } from '@/components/default-elements';
 import { SvgFaq } from '@/components/icons/faq-svg';
-import { H2 } from '@/components/ui/typography';
+import { H2, Subheading } from '@/components/ui/typography';
 import { PricingAccordion } from '@/components/pricing-accordion';
 import { Button } from '@/components/ui/button';
 

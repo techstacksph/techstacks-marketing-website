@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
-import { H1, Main, Section, Subheading } from '@/components/default-elements';
+import { Main, Section } from '@/components/default-elements';
+import { H1, Subheading } from '@/components/ui/typography';
 
 export const dynamic = 'force-dynamic';
 
