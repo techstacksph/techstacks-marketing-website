@@ -8,11 +8,12 @@ interface MainProps extends HTMLAttributes<HTMLElement> {
 }
 
 export const Main = forwardRef<HTMLElement, MainProps>(
-  ({ asChild, className, ...props }, ref) => {
+  ({ asChild, className, id = 'main-content', ...props }, ref) => {
     const Comp = asChild ? Slot : 'main';
     return (
       <Comp
         className={cn('space-y-8 overflow-x-clip', className)}
+        id={id}
         {...props}
         ref={ref}
       />

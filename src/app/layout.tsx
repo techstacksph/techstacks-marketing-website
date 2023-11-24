@@ -6,6 +6,7 @@ import { Providers } from '@/components/providers';
 import Loader from '@/components/route-progress-bar';
 import { dmSans, inter, poppins } from '@/lib/fonts';
 import { cn } from '@/utils/cn';
+import { SkipToMain } from '@/components/skip-main-btn';
 
 export const metadata: Metadata = {
   title: 'Techstacks IT Web Development Services',
@@ -25,6 +26,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="font-inter">
+        <SkipToMain />
         <Providers>
           <Loader />
           <Header />
