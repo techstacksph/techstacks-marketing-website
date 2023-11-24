@@ -85,6 +85,11 @@
   * {
     @apply border-border;
   }
+
+  html {
+    @apply h-full;
+  }
+
   body {
     @apply text-foreground min-h-screen bg-no-repeat bg-background;
   }
