@@ -1,7 +1,7 @@
 import { ComparePricing } from '@/components/compare-pricing';
 import { CustomPricing } from '@/components/custom-pricing';
-import { Section, Subheading } from '@/components/default-elements';
-import { H2 } from '@/components/ui/typography';
+import { Section } from '@/components/default-elements';
+import { H2, Subheading } from '@/components/ui/typography';
 
 export default function PriceComparison() {
   return (
