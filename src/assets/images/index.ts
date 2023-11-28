@@ -91,6 +91,7 @@ import ezeDream from './trainings/ojt-portfolios/eze-dream.png';
 import ezePort from './trainings/ojt-portfolios/eze-port.png';
 import iTravels from './trainings/ojt-portfolios/itravels.png';
 import jedediahPort from './trainings/ojt-portfolios/jedediah-port.png';
+import jhonasPort from './trainings/ojt-portfolios/jhonas-port.png';
 import nft from './trainings/ojt-portfolios/nft.png';
 import odyssey from './trainings/ojt-portfolios/odyssey.png';
 import redServe from './trainings/ojt-portfolios/redserve.png';
@@ -102,6 +103,7 @@ import jhonasProfile from './trainings/ojt-profile/jhonas.png';
 import joyProfile from './trainings/ojt-profile/joy.jpg';
 import rinandProfile from './trainings/ojt-profile/rinand.jpg';
 import ezeProfile from './trainings/ojt-profile/eze.jpg';
+import ivanPort from './trainings/ojt-portfolios/ivanPort.png';
 import ojtBg from './trainings/ojt-bg.png';
 
 export {
@@ -150,6 +152,8 @@ export {
   odyssey,
   redServe,
   rinandPort,
+  ivanPort,
+  jhonasPort,
 
   //services
   breakIcon,

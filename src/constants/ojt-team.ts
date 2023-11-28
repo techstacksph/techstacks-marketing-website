@@ -4,12 +4,21 @@ import {
   hannahProfile,
   jedediahProfile,
   jhonasProfile,
-  // joyProfile,
+  joyProfile,
   rinandProfile,
   testi1,
+  rinandPort,
+  // iTravels,
+  ezePort,
+  jedediahPort,
+  // redServe,
+  ivanPort,
+  danPort,
+  cjPort,
+  jhonasPort,
 } from '@/assets/images';
 
-export const OJT_TESTIMONIALS = [
+export const OJT_TEAM = [
   {
     id: 1,
     quote:
@@ -17,6 +26,10 @@ export const OJT_TESTIMONIALS = [
     author: 'John Rinand Sta. Ines',
     position: 'Former Intern | N.E.U.S.T',
     avatar: rinandProfile,
+    portfolioLink: 'https://techstacks-ph-ojt.github.io/Rinands-Portfolio/',
+    time: 'January - May 2023',
+    // web: { portfolioImg: rinandPort, dreamImg: redServe },
+    web: rinandPort,
   },
   {
     id: 2,
@@ -25,6 +38,10 @@ export const OJT_TESTIMONIALS = [
     author: 'Ivan Mauricio',
     position: 'Former Intern | W.U.P',
     avatar: testi1,
+    portfolioLink: 'https://akira14.netlify.app/',
+    time: 'February - May 2023',
+    // web: { portfolioImg: rinandPort, dreamImg: redServe },
+    web: ivanPort,
   },
   {
     id: 3,
@@ -33,6 +50,10 @@ export const OJT_TESTIMONIALS = [
     author: 'John Ezeriel Pineda',
     position: 'Former Intern | N.E.U.S.T',
     avatar: ezeProfile,
+    portfolioLink: 'https://jespdev-portfolio.netlify.app/',
+    time: 'January - May 2023',
+    // web: { portfolioImg: rinandPort, dreamImg: redServe },
+    web: ezePort,
   },
   {
     id: 4,
@@ -41,6 +62,10 @@ export const OJT_TESTIMONIALS = [
     author: 'Jedediah Romano',
     position: 'Former Intern | N.E.U.S.T',
     avatar: jedediahProfile,
+    portfolioLink: 'https://jedediahchrisdev.netlify.app/',
+    time: 'January - May 2023',
+    // web: { portfolioImg: rinandPort, dreamImg: redServe },
+    web: jedediahPort,
   },
   {
     id: 5,
@@ -49,6 +74,10 @@ export const OJT_TESTIMONIALS = [
     author: 'Jhonas Lalo',
     position: 'Former Intern | N.E.U.S.T',
     avatar: jhonasProfile,
+    portfolioLink: 'https://lalojhonaskatsu21.web.app/',
+    time: 'January - May 2023',
+    // web: { portfolioImg: rinandPort, dreamImg: redServe },
+    web: jhonasPort,
   },
   {
     id: 6,
@@ -57,6 +86,10 @@ export const OJT_TESTIMONIALS = [
     author: 'Hannah Mangulabnan',
     position: 'Former Intern | A.M.A',
     avatar: hannahProfile,
+    portfolioLink: 'https://techstacks-ph-ojt.github.io/My-Portfolio/',
+    time: 'February - March 2023',
+    // web: { portfolioImg: rinandPort, dreamImg: redServe },
+    web: rinandPort,
   },
   {
     id: 7,
@@ -65,5 +98,21 @@ export const OJT_TESTIMONIALS = [
     author: 'Daniel Arvi Paragas',
     position: 'Former Intern | N.E.U.S.T',
     avatar: danProfile,
+    portfolioLink: 'https://dap-dev.netlify.app/',
+    time: 'January - May 2023',
+    // web: { portfolioImg: rinandPort, dreamImg: redServe },
+    web: danPort,
+  },
+  {
+    id: 8,
+    quote:
+      'I am grateful for the incredible opportunity to have interned at Techstacks, and I am thrilled to share my reflections on this enriching experience. During my time at Techstacks, I had the privilege of working alongside a talented and supportive team. From day one, I was welcomed with open arms, and the inclusive culture fostered a positive and collaborative work environment.',
+    author: 'Cecile Joy Chua Tak',
+    position: 'Former Intern | A.M.A',
+    avatar: joyProfile,
+    portfolioLink: 'https://techstacks-ph-ojt.github.io/Portfolio-/',
+    time: 'February - March 2023',
+    // web: { portfolioImg: rinandPort, dreamImg: redServe },
+    web: cjPort,
   },
 ];

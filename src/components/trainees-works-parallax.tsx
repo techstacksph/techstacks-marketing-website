@@ -10,6 +10,7 @@ import Link from 'next/link';
 import { GoArrowUpRight } from 'react-icons/go';
 import { OJT_PORTFOLIOS } from '@/constants/ojt-portfolios';
 import { cn } from '@/utils/cn';
+import { NavRoutes } from '@/constants/nav-routes';
 
 export default function TraineesWorksParallax() {
   return (
@@ -47,7 +48,7 @@ export default function TraineesWorksParallax() {
             <div className="px-6 py-4">
               <Link
                 className=" flex flex-row gap-2 items-center font-poppins text-xl md:text-3xl lg:text-5xl hover:text-white hover:dark:text-primary-static [&>span]:hover:animate-bounce"
-                href="#"
+                href={NavRoutes.OjtWorks}
               >
                 Explore their works
                 <span>
