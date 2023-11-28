@@ -7,7 +7,7 @@ export function TrainingsCarousel() {
   return (
     <Carousel
       className={cn(
-        'relative h-full cursor-pointer',
+        'relative h-full cursor-grab active:cursor-grabbing',
         // Override overflow class of slider without using `!important`
         '[&&&]:overflow-x-visible [&&&]:overflow-y-clip',
         // Fade effects
@@ -16,7 +16,6 @@ export function TrainingsCarousel() {
       )}
       opts={{
         slides: {
-          origin: 'center',
           perView: 1.8,
         },
         vertical: true,
@@ -34,8 +33,8 @@ export function TrainingsCarousel() {
           sliderIdx={idx}
         >
           <div className="h-full group-data-[active=false]:scale-95 transition-transform rounded-2xl border-primary-static border shadow-lg shadow-primary-static">
-            <div className="h-full lg:p-4  xl:p-8">
-              <div className="flex flex-col items-center p-4 md:p-0 justify-center h-full gap-4 rounded-2xl md:justify-start md:flex-row bg-transparent">
+            <div className="h-full lg:p-4 xl:p-8">
+              <div className="flex flex-col items-center justify-center h-full gap-4 p-4 bg-transparent md:p-0 rounded-2xl md:justify-start md:flex-row">
                 <div className="hidden w-24 h-24 xl:w-36 xl:h-36 md:block shrink-0">
                   <Icon className="object-contain w-full h-full" />
                 </div>

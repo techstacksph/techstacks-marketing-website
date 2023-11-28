@@ -32,7 +32,7 @@ export default function TraineesCarousel() {
             },
           },
         }}
-        plugIns={[AutoPlay]}
+        plugIns={[AutoPlay(2000)]}
       >
         {TRAINEES_IMG.map(({ id, name, src }, index) => (
           <CarouselItem

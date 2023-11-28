@@ -6,6 +6,7 @@ import { useRef } from 'react';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import { testi1, testi2, testi3 } from '@/assets/images';
 import { twConfig } from '@/lib/tw-config';
+import { AutoPlay } from '@/lib/plugins/keen-slider/auto-play';
 import { Carousel, CarouselItem, type CarouselRef } from './ui/carousel';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 import { Button } from './ui/button';
@@ -64,6 +65,7 @@ export function TestimonialCarousel() {
             },
           },
         }}
+        plugIns={[AutoPlay(2000)]}
         ref={carouselRef}
       >
         {TESTIMONIALS.map(({ from, name, testimonial, src }, idx) => (
