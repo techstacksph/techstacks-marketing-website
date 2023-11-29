@@ -38,15 +38,15 @@ export function BlogCard({
       className="overflow-hidden transition-all border rounded-lg border-border bg-background/50 backdrop-blur-md hover:shadow-lg hover:shadow-primary-static/20"
       href={`${NavRoutes.Company.Blog}/${slug}`}
     >
-      <div className="flex gap-2">
+      <div className="relative flex gap-2">
         <div className="w-full p-3 pb-4 space-y-2">
           <h2 className="text-xl font-medium">{title}</h2>
-          <div className="line-clamp-2">{Description}</div>
+          <div className="break-all line-clamp-2">{Description}</div>
         </div>
-        <div className="w-36 aspect-square shrink-0">
+        <div className="absolute top-0 left-0 w-full h-full -z-10 lg:w-36 lg:aspect-square lg:shrink-0 lg:static">
           <Image
             alt={`${title} banner image`}
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-full opacity-25 lg:opacity-100"
             priority
             suppressHydrationWarning
             {...bannerImage}
@@ -67,7 +67,7 @@ export function BlogCarouselItem({
 }: BlogCardProps) {
   return (
     <div className="overflow-hidden border rounded-lg shadow-lg select-none border-border bg-background/50 backdrop-blur-md shadow-primary-static/20">
-      <div className="flex">
+      <div className="relative flex">
         <div className="w-full p-8">
           <div className="flex flex-col justify-between h-full gap-4">
             <div className="flex flex-col justify-between">
@@ -102,7 +102,7 @@ export function BlogCarouselItem({
           </div>
         </div>
 
-        <div className="h-96 aspect-square">
+        <div className="absolute top-0 left-0 w-full h-full opacity-25 lg:h-96 lg:aspect-square lg:static -z-10 lg:opacity-100">
           <Image
             alt={`${title} banner image`}
             className="object-cover w-full h-full"
