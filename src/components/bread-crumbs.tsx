@@ -49,6 +49,12 @@ export const BreadCrumbItem = forwardRef<
   BreadCrumbItemProps
 >(({ asChild, className, ...props }, ref) => {
   const Comp = asChild ? Slot : 'p';
-  return <Comp className={cn('text-muted', className)} {...props} ref={ref} />;
+  return (
+    <Comp
+      className={cn('text-muted max-w-xs truncate', className)}
+      {...props}
+      ref={ref}
+    />
+  );
 });
 BreadCrumbItem.displayName = 'bread-crumb-item';

@@ -13,7 +13,7 @@ export const BlogArticle = forwardRef<HTMLElement, BlogArticleProps>(
     return (
       <article
         className={cn(
-          'prose dark:prose-invert md:prose-xl w-full bg-background prose-img:w-full overflow-x-auto',
+          'prose dark:prose-invert md:prose-xl w-full bg-background prose-img:w-full overflow-x-auto max-w-full',
 
           // override wordpress styles
           '[&_.wp-block-code]:p-0',
