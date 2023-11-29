@@ -11,6 +11,17 @@ export interface PostData {
 
 export interface PostsClass {
   edges: Edge[];
+  pageInfo: PageInfo;
+}
+
+export interface PageInfo {
+  offsetPagination: OffsetPagination;
+}
+
+export interface OffsetPagination {
+  total: number;
+  hasPrevious: boolean;
+  hasMore: boolean;
 }
 
 export interface Edge {

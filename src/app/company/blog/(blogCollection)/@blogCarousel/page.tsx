@@ -4,7 +4,7 @@ import { getPosts, processPostNode } from '@/lib/blog/content/api/get-posts';
 import { twConfig } from '@/lib/tw-config';
 
 export default async function BlogCarouselSection() {
-  const rawPosts = await getPosts({ first: 3 });
+  const { posts: rawPosts } = await getPosts({ size: 3 });
   const posts = await Promise.all(
     rawPosts.map(async ({ node }) => ({
       raw: node,

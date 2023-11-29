@@ -7,19 +7,21 @@ import type { EdgeNode, PostData } from '../types/get-posts';
 import { client } from './client';
 
 interface GetPosts {
-  after?: string;
-  first?: number;
+  offset?: number;
+  size?: number;
   search?: string;
 }
 export const getPosts = React.cache(
-  async ({ after, first, search }: GetPosts = {}) => {
+  async ({ offset, size, search }: GetPosts = {}) => {
     const response = await client.query<PostData>({
       query: gql`
-        query GetPosts($after: String, $first: Int, $search: String) {
+        query GetPosts($search: String, $offset: Int, $size: Int) {
           posts(
-            where: { search: $search, orderby: { field: DATE, order: DESC } }
-            after: $after
-            first: $first
+            where: {
+              search: $search
+              orderby: { field: DATE, order: DESC }
+              offsetPagination: { offset: $offset, size: $size }
+            }
           ) {
             edges {
               node {
@@ -45,20 +47,31 @@ export const getPosts = React.cache(
                   }
                 }
                 date
+                id
               }
               cursor
+            }
+            pageInfo {
+              offsetPagination {
+                total
+                hasPrevious
+                hasMore
+              }
             }
           }
         }
       `,
       variables: {
-        after,
-        first,
+        offset,
+        size,
         search,
       },
     });
 
-    return response.data.posts.edges;
+    return {
+      posts: response.data.posts.edges,
+      info: response.data.posts.pageInfo,
+    };
   },
 );
 

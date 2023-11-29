@@ -1,5 +1,5 @@
-// TODO: uncomment when wordpress is ready!
-// await import('./src/env.mjs'); // Checks if environment variables is complete before building the app
+// Checks if required environment variables is complete before building the app
+await import('./src/env.mjs');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {

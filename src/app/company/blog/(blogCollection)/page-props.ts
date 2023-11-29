@@ -4,5 +4,6 @@ export type BlogPageProps = PageProps<
   unknown,
   {
     q?: string;
+    page?: string;
   }
 >;
