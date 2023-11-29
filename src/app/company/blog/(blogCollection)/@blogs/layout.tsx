@@ -4,6 +4,7 @@ import { Fragment, type ReactNode } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Section } from '@/components/default-elements';
 import { BlogSearchForm } from '@/components/blog-search-form';
+import { H2 } from '@/components/ui/typography';
 
 export default function BlogCollectionLayout({
   children,
@@ -17,7 +18,7 @@ export default function BlogCollectionLayout({
     <Section>
       <div className="space-y-6">
         <div className="flex flex-wrap justify-center gap-4 sm:justify-between">
-          <h2 className="text-4xl font-medium">Latest blog</h2>
+          <H2>Latest blog</H2>
           <BlogSearchForm />
         </div>
 

@@ -5,7 +5,7 @@ import type { JSX } from 'react';
 import { NavRoutes } from '@/constants/nav-routes';
 import { Button } from './ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
-import { H2, H3 } from './ui/typography';
+import { H3 } from './ui/typography';
 
 interface BaseImageProps {
   src: string;
@@ -40,7 +40,7 @@ export function BlogCard({
     >
       <div className="relative flex gap-2">
         <div className="w-full p-3 pb-4 space-y-2">
-          <h2 className="text-xl font-medium">{title}</h2>
+          <H3>{title}</H3>
           <div className="break-all line-clamp-2">{Description}</div>
         </div>
         <div className="absolute top-0 left-0 w-full h-full -z-10 lg:w-36 lg:aspect-square lg:shrink-0 lg:static">
@@ -134,7 +134,7 @@ export function HighlightedCard({
         />
       </div>
       <div className="p-8 space-y-4">
-        <H2>{title}</H2>
+        <H3>{title}</H3>
         <div className="line-clamp-3">{Description}</div>
         <div className="flex justify-end">
           <Button asChild variant="outline">
