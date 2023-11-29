@@ -5,12 +5,17 @@ import { Section } from '@/components/default-elements';
 import { TechstacksLogo } from '@/components/icons/techstacks-logo';
 import { Hexagon } from '@/components/hexagon';
 import { H1, Subheading } from '@/components/ui/typography';
+import { BreadCrumbItem, BreadCrumbs } from '@/components/bread-crumbs';
 
 export default function CareerHero() {
   return (
     <Section className="h-fit">
       <div className="grid items-center h-full gap-8 md:gap-4 md:grid-cols-2">
         <div className="flex flex-col items-center gap-4 md:gap-8 md:items-start">
+          <BreadCrumbs className="self-start">
+            <BreadCrumbItem>Careers</BreadCrumbItem>
+          </BreadCrumbs>
+
           <H1
             className="tracking-wide text-center whitespace-pre-wrap md:text-left font-dm-sans"
             data-aos="fade-up"

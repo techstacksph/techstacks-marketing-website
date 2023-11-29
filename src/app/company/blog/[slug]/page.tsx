@@ -10,6 +10,7 @@ import {
 } from '@/lib/blog/content/api/get-post-by-slug';
 import { BlogArticle } from '@/components/blog-article';
 import { AuthorCard } from '@/components/author-card';
+import { BreadCrumbItem, BreadCrumbs } from '@/components/bread-crumbs';
 import { type BlogItemPageProps } from './page-props';
 
 export default async function BlogItemPage({ params }: BlogItemPageProps) {
@@ -20,7 +21,11 @@ export default async function BlogItemPage({ params }: BlogItemPageProps) {
   return (
     <Main className="py-8">
       <Section className="relative">
-        <div className="flex flex-col items-center justify-center gap-8 lg:flex-row lg:items-start">
+        <BreadCrumbs className="self-start">
+          <BreadCrumbItem>Blogs</BreadCrumbItem>
+          <BreadCrumbItem>{post.title}</BreadCrumbItem>
+        </BreadCrumbs>
+        <div className="flex flex-col items-center justify-between gap-8 lg:flex-row lg:items-start">
           <AuthorCard
             author={post.author.node.name}
             publishDate={post.date}

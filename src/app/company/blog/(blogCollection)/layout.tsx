@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { Main, Section } from '@/components/default-elements';
 import { H1, Subheading } from '@/components/ui/typography';
+import { BreadCrumbItem, BreadCrumbs } from '@/components/bread-crumbs';
 
 export const dynamic = 'force-dynamic';
 
@@ -13,6 +14,9 @@ export default function BlogLayout({
       <div className="flex justify-center w-full py-8 md:py-16">
         <Section>
           <div className="space-y-8">
+            <BreadCrumbs>
+              <BreadCrumbItem>Blogs</BreadCrumbItem>
+            </BreadCrumbs>
             <div className="space-y-4">
               <H1 className="text-center">Gain Wisdom Through Our Insights</H1>
               <Subheading className="text-center">
