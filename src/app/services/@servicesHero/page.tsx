@@ -6,18 +6,22 @@ import { DotsIcon } from '@/components/icons/dots-icon';
 import { NavRoutes } from '@/constants/nav-routes';
 import { workWithUs } from '@/constants/work-with-us';
 import { H2, Subheading } from '@/components/ui/typography';
+import { BreadCrumbItem, BreadCrumbs } from '@/components/bread-crumbs';
 
 export default function ServicesHero() {
   return (
     <div className="mb-16">
-      <div className="w-full pt-16 flex justify-center bg-primary-static/10">
+      <div className="flex justify-center w-full py-16 bg-primary-static/10">
         <Section>
+          <BreadCrumbs className="self-start">
+            <BreadCrumbItem>Services</BreadCrumbItem>
+          </BreadCrumbs>
           <div className="flex flex-col items-center gap-20 py-8 lg:py-16 ">
             <div className="flex flex-col items-center gap-8">
               <H2 className="text-center">
                 <span className="relative inline-block">
                   <DotsIcon
-                    className="absolute animate-pulse text-primary-static top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
+                    className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 animate-pulse text-primary-static lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
                     data-aos="fade-right"
                     data-aos-delay={100}
                   />
@@ -39,11 +43,11 @@ export default function ServicesHero() {
                 meet your unique business needs.
               </Subheading>
               <Link
-                className="relative inline-flex items-center justify-start p-3 overflow-hidden font-medium transition-all bg-white dark:bg-transparent border rounded w-full md:w-52 h-14 border-primary-static group"
+                className="relative inline-flex items-center justify-start w-full p-3 overflow-hidden font-medium transition-all bg-white border rounded dark:bg-transparent md:w-52 h-14 border-primary-static group"
                 href={NavRoutes.Company.AboutUs}
               >
                 <span className="w-48 h-48 rounded rotate-[-40deg] bg-primary-static absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0" />
-                <span className="relative w-full text-center text-black dark:text-white transition-colors duration-300 ease-in-out group-hover:text-white dark:group-hover:text-black">
+                <span className="relative w-full text-center text-black transition-colors duration-300 ease-in-out dark:text-white group-hover:text-white dark:group-hover:text-black">
                   Let&apos;s work together
                 </span>
               </Link>
@@ -66,7 +70,7 @@ export default function ServicesHero() {
           data-aos-delay={500}
         >
           {workWithUs.map(({ title, icon }) => (
-            <div className="inline-block p-8 lg:p-16  text-center" key={title}>
+            <div className="inline-block p-8 text-center lg:p-16" key={title}>
               <div className="flex items-center justify-center w-40 h-auto mx-auto mb-4 text-black rounded-full">
                 <Image
                   alt={`${title} image`}
@@ -74,7 +78,7 @@ export default function ServicesHero() {
                   src={icon}
                 />
               </div>
-              <h4 className="text-lg lg:text-2xl font-semibold text-black text-center">
+              <h4 className="text-lg font-semibold text-center text-black lg:text-2xl">
                 {title}
               </h4>
             </div>

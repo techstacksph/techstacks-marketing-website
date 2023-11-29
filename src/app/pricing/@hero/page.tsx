@@ -6,11 +6,15 @@ import {
   PricingSwitch,
 } from '@/components/pricing-card';
 import { H1, Subheading } from '@/components/ui/typography';
+import { BreadCrumbItem, BreadCrumbs } from '@/components/bread-crumbs';
 
 export default function PricingHero() {
   return (
     <PricingProvider>
       <Section className="flex flex-col items-center gap-20">
+        <BreadCrumbs className="self-start">
+          <BreadCrumbItem>Pricing</BreadCrumbItem>
+        </BreadCrumbs>
         <div className="flex flex-col items-center gap-4">
           <H1 className="text-center whitespace-pre-wrap">
             Your{' '}
