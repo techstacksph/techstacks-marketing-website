@@ -8,6 +8,7 @@ import { Search } from 'lucide-react';
 import { Form, FormField, FormItem } from './ui/form';
 import { Input } from './ui/input';
 import { Label } from './ui/label';
+import { Button } from './ui/button';
 
 const blogSearchSchema = z.object({
   q: z.string(),
@@ -36,9 +37,9 @@ export function BlogSearchForm() {
           control={form.control}
           name="q"
           render={({ field }) => (
-            <FormItem>
-              <Label className="flex items-center w-full max-w-md gap-3 px-3 font-normal border rounded-md bg-background border-input">
-                <Search className="shrink-0" />
+            <FormItem className="flex space-y-0 overflow-hidden border rounded-md bg-background border-border">
+              <Label className="flex items-center w-full max-w-md gap-3 px-3 font-normal">
+                <Search className="hidden shrink-0 md:block" />
                 <Input
                   placeholder="Search for blogs, topics, or keywords..."
                   type="search"
@@ -46,6 +47,13 @@ export function BlogSearchForm() {
                   {...field}
                 />
               </Label>
+              <Button
+                className="h-full rounded-none md:hidden"
+                type="submit"
+                variant="secondary"
+              >
+                <Search />
+              </Button>
             </FormItem>
           )}
         />

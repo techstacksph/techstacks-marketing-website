@@ -16,7 +16,7 @@ export default function BlogCollectionLayout({
   return (
     <Section>
       <div className="space-y-6">
-        <div className="flex flex-wrap justify-between gap-2">
+        <div className="flex flex-wrap justify-center gap-4 sm:justify-between">
           <h2 className="text-4xl font-medium">Latest blog</h2>
           <BlogSearchForm />
         </div>
