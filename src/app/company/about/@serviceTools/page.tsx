@@ -5,7 +5,7 @@ import { H2, Subheading } from '@/components/ui/typography';
 
 export default function ServiceTools() {
   return (
-    <div className="flex justify-center w-full py-16 bg-primary/50">
+    <div className="flex justify-center w-full py-16 bg-gradient-to-b from-background from-10% via-primary-static/50 via-50% to-background to-90% ">
       <Section>
         <div className="flex flex-col items-center gap-14 md:flex-row">
           <div className="flex flex-col items-center justify-center gap-8 md:w-1/2 ">

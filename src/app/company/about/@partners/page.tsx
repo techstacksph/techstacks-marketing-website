@@ -6,19 +6,19 @@ import { H2, Subheading } from '@/components/ui/typography';
 
 export default function PartnersSection() {
   return (
-    <div className="flex justify-center w-full py-16 bg-primary/50">
+    <div className="flex justify-center w-full py-16 bg-primary-static/80">
       <Section>
         <div className="flex flex-col gap-14">
           <div className="flex flex-col items-center justify-center gap-8 lg:flex-row">
             <H2
-              className="text-center lg:w-1/2 lg:font-bold lg:text-left"
+              className="text-center text-background lg:w-1/2 lg:font-bold lg:text-left"
               data-aos="fade-up"
               data-aos-delay={100}
             >
               A Trusted Connection to <span>Our Partners</span>
             </H2>
             <Subheading
-              className="font-normal text-center lg:w-1/2 lg:text-left"
+              className="font-normal text-center text-black dark:text-white lg:w-1/2 lg:text-left"
               data-aos="fade-up"
               data-aos-delay={100}
             >
@@ -36,7 +36,11 @@ export default function PartnersSection() {
               <Image alt="GoDaddy image" src={goDaddyImg} />
             </div>
             <div>
-              <Image alt="Philgeps image" src={philgepsImg} />
+              <Image
+                alt="Philgeps image"
+                className="text-primary-static"
+                src={philgepsImg}
+              />
             </div>
           </div>
         </div>

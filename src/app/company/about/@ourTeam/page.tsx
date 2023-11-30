@@ -14,7 +14,7 @@ import { H2, Subheading } from '@/components/ui/typography';
 
 export default function OurTeam() {
   return (
-    <div className="py-16">
+    <div className="pt-16">
       <div className="relative">
         <Section>
           <div className="p-6">
@@ -35,20 +35,27 @@ export default function OurTeam() {
                 expertise, dedication, and a passion for innovation.
               </Subheading>
               <Link
-                className="relative inline-flex items-center justify-start p-3 overflow-hidden font-medium transition-all border rounded w-44 h-14 border-muted-static group bg-primary-static"
+                className="relative inline-flex items-center justify-start p-3 overflow-hidden font-medium transition-all border rounded w-44 h-14 border-primary-static group bg-transparent"
                 data-aos="fade-up"
                 data-aos-delay={300}
                 href={NavRoutes.Company.OurTeam}
               >
-                <span className="w-48 h-48 rounded rotate-[-40deg] bg-accent/75 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0" />
-                <span className="relative w-full text-center transition-colors duration-300 ease-in-out text-foreground group-hover:text-accent-foreground">
+                <span className="w-48 h-48 rounded rotate-[-40deg] bg-primary-static absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0" />
+                <span className="relative w-full text-center transition-colors duration-300 ease-in-out text-foreground group-hover:text-background">
                   Meet our team
                 </span>
               </Link>
             </div>
           </div>
         </Section>
-        <Image alt="Team image" className="pointer-events-none" src={ourTeam} />
+        <div className="z-0 w-full h-full relative after:top-0 after:left-0  after:absolute after:bg-gradient-to-b  after:from-background after:from-5% after:to-transparent after:to-30% after:w-full after:h-full">
+          <Image
+            alt="Team image"
+            className="pointer-events-none"
+            src={ourTeam}
+          />
+        </div>
+
         <div className="absolute top-0 bottom-0 flex items-end w-full h-full pointer-events-none">
           {TEAM.map(({ name, src, id, position, profile }) => (
             <div key={id}>

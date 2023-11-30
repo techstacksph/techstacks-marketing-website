@@ -1,15 +1,25 @@
 import { type ReactNode } from 'react';
-import { Main } from '@/components/default-elements';
+import { Main, Section } from '@/components/default-elements';
+import { Separator } from '@/components/ui/separator';
 
 export default function AboutLayout(props: Record<string, ReactNode>) {
   return (
     <Main>
-      {props.hero}
-      {props.partners}
-      {props.statements}
-      {props.coreValues}
-      {props.serviceTools}
-      {props.ourTeam}
+      <div> {props.hero}</div>
+      <div> {props.partners}</div>
+      <div> {props.statements}</div>
+      <Section role="none">
+        <Separator variant="horizon" />
+      </Section>
+      <div> {props.coreValues}</div>
+      <Section role="none">
+        <Separator variant="horizon" />
+      </Section>
+      <div> {props.serviceTools}</div>
+      <Section role="none">
+        <Separator variant="horizon" />
+      </Section>
+      <div> {props.ourTeam}</div>
     </Main>
   );
 }
