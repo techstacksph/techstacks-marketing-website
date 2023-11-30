@@ -15,7 +15,7 @@ export default function CoreValues() {
         <div className="flex flex-col-reverse items-center gap-8 lg:flex-row ">
           <div
             // TODO: change hard coded tw colors
-            className="flex flex-col items-center w-full lg:w-1/2 lg:items-end bg-gradient-to-r from-emerald-400 to-emerald-900"
+            className="flex flex-col items-center w-full lg:w-1/2 lg:items-end bg-transparent"
             data-aos="fade-right"
             data-aos-delay={100}
           >
@@ -23,13 +23,13 @@ export default function CoreValues() {
               <Accordion collapsible type="single">
                 {coreValues.map((core, index) => (
                   <AccordionItem
-                    className="hover:border-background/90 active:border-background/90 focus:border-background/90"
+                    className="hover:border-primary-static active:border-primary-static focus:border-primary-static"
                     data-aos="fade-right"
                     data-aos-delay={100 * index}
                     key={core.title}
                     value={core.title}
                   >
-                    <AccordionTrigger className="hover:text-background/90 hover:no-underline active:text-background/90 focus:text-background/90 ">
+                    <AccordionTrigger className="hover:text-primary-static hover:no-underline active:text-primary-static focus:text-primary-static ">
                       <div className="flex flex-row items-center gap-4 text-lg font-semibold xl:text-xl">
                         <span className="px-3 py-2 text-xl border-r xl:text-3xl w-14 ">
                           {core.key}
