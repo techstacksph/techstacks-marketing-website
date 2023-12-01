@@ -40,8 +40,9 @@ export const companyLink = [
 
 export const pagesLink = [
   {
-    title: 'Products',
-    href: NavRoutes.Products,
+    title: 'Shop',
+    href: 'https://shop.techstacksph.com/',
+    target: '_blank',
   },
   {
     title: 'Services',
