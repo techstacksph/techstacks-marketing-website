@@ -1,12 +1,16 @@
 'use client';
 
-import { FaCheckCircle, FaGlobeAsia } from 'react-icons/fa';
+import {
+  FaCheckCircle,
+  FaGlobeAsia,
+  FaHeart,
+  FaBookmark,
+} from 'react-icons/fa';
 import React from 'react';
 import Image from 'next/image';
-import { GoHeart, GoDotFill } from 'react-icons/go';
+import { GoDotFill } from 'react-icons/go';
 import { FaRegCommentDots } from 'react-icons/fa6';
 import { PiShareFat } from 'react-icons/pi';
-import { CiBookmark } from 'react-icons/ci';
 import { twConfig } from '@/lib/tw-config';
 import { TRAINEES_IMG } from '@/constants/trainees-img';
 import { AutoPlay } from '@/lib/plugins/keen-slider/auto-play';
@@ -41,14 +45,14 @@ export default function TraineesCarousel() {
             sliderIdx={index}
           >
             <div className="flex flex-col w-full max-w-3xl h-full gap-8 px-4 md:h-auto md:px-2 group-data-[active=false]:scale-90 transition-transform">
-              <div className="flex flex-col h-full gap-10 p-5 md:p-10 bg-white dark:bg-slate-200 border rounded-lg border-white">
+              <div className="flex flex-col h-full gap-10 p-5 md:p-10 border rounded-lg border-primary-static">
                 <div className="flex flex-row gap-2 md:gap-4">
                   <div className="flex flex-row gap-4 justify-center items-center relative bg-primary-static border-white w-10 h-10 md:w-14 md:h-14 xl:w-20 xl:h-20 p-4 border rounded-full">
                     <TechstacksLogo className="text-white absolute w-8 h-8 md:w-10 md:h-10" />
                   </div>
                   <div className="flex flex-col gap-1">
                     <div className="flex flex-row gap-4 items-center">
-                      <H3 className="text-black text-base lg:text-lg xl:text-2xl">
+                      <H3 className=" text-base lg:text-lg xl:text-2xl">
                         Techstacks ojt&apos;s intern
                       </H3>
                       <div className="text-blue-700">
@@ -73,18 +77,18 @@ export default function TraineesCarousel() {
                 </div>
                 <div className="flex flex-row justify-between items-center">
                   <div className="flex flex-row gap-4 items-center">
-                    <div className="text-2xl text-black">
-                      <GoHeart />
+                    <div className="text-2xl text-red-700">
+                      <FaHeart />
                     </div>
-                    <div className="text-2xl text-black">
+                    <div className="text-2xl text-muted ">
                       <FaRegCommentDots />
                     </div>
-                    <div className="text-2xl text-black">
+                    <div className="text-2xl text-muted ">
                       <PiShareFat />
                     </div>
                   </div>
-                  <div className="text-2xl text-black">
-                    <CiBookmark />
+                  <div className="text-2xl text-yellow-500">
+                    <FaBookmark />
                   </div>
                 </div>
               </div>

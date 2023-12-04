@@ -14,13 +14,13 @@ export default function TraineesTestimonial() {
       <Section>
         <div className="flex flex-col gap-8">
           <div className="flex flex-col w-full gap-4 lg:w-10/12 xl:w-1/2">
-            <H1 asChild>
+            <H1 asChild data-aos="fade-up" data-aos-delay={100}>
               <h2>
                 Inspiring Testimonials from our{' '}
                 <span className="text-primary-static">Interns</span>
               </h2>
             </H1>
-            <Subheading>
+            <Subheading data-aos="fade-up" data-aos-delay={200}>
               Hear directly from our former OJT trainees as they share their
               remarkable experiences and the invaluable impact of our program on
               their careers.
