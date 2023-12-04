@@ -6,7 +6,13 @@ export default function AboutLayout(props: Record<string, ReactNode>) {
   return (
     <Main>
       <div> {props.hero}</div>
+      <Section role="none">
+        <Separator variant="horizon" />
+      </Section>
       <div> {props.partners}</div>
+      <Section role="none">
+        <Separator variant="horizon" />
+      </Section>
       <div> {props.statements}</div>
       <Section role="none">
         <Separator variant="horizon" />
