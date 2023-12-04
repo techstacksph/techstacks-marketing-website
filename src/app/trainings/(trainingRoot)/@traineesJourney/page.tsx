@@ -6,19 +6,19 @@ import TraineesCarousel from '@/components/trainees-carousel';
 
 export default function TraineesJourney() {
   return (
-    <div className="w-full flex flex-col gap-10 justify-center py-16 bg-primary-static/10">
+    <div className="w-full flex flex-col gap-10 justify-center py-16 ">
       <Section>
-        <div className="flex flex-col gap-4 md:gap-8 p-4 md:p-8 border border-primary-static rounded-lg">
-          {/* <div className="flex flex-row justify-center md:justify-start items-center gap-4">
-            <TechstacksLogo className="animate-bounce w-10 h-10 text-primary-static " />
-            <H3 className="text-xl text-primary-static ">Techstacks PH</H3>
-          </div> */}
+        <div className="flex flex-col gap-4 md:gap-8 p-4 md:p-8">
           <div className="flex flex-col gap-8">
-            <H2 className="text-center">
+            <H2 className="text-center" data-aos="fade-up" data-aos-delay={100}>
               Explore the journey of our OJT trainees, including their
               achievements, project, and valueble learnings.
             </H2>
-            <Subheading className="text-center">
+            <Subheading
+              className="text-center"
+              data-aos="fade-up"
+              data-aos-delay={200}
+            >
               Learn from the real-world experiences of our OJT trainees and how
               they have leveraged their training to excel in the industry
             </Subheading>
