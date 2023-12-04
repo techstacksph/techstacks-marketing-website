@@ -6,19 +6,22 @@ import { H2, Subheading } from '@/components/ui/typography';
 
 export default function PartnersSection() {
   return (
-    <div className="flex justify-center w-full py-16 bg-primary-static/80">
+    <div className="flex justify-center w-full py-16 bg-gradient-to-b from-background from-50% via-primary-static/50 via-75% to-background to-90%">
       <Section>
         <div className="flex flex-col gap-14">
           <div className="flex flex-col items-center justify-center gap-8 lg:flex-row">
             <H2
-              className="text-center text-background lg:w-1/2 lg:font-bold lg:text-left"
+              className="text-center lg:w-1/2 lg:font-bold lg:text-left"
               data-aos="fade-up"
               data-aos-delay={100}
             >
-              A Trusted Connection to <span>Our Partners</span>
+              A Trusted Connection to{' '}
+              <span className="border-b-4 text-primary-static border-b-yellow-500">
+                Our Partners
+              </span>
             </H2>
             <Subheading
-              className="font-normal text-center text-black dark:text-white lg:w-1/2 lg:text-left"
+              className="font-normal text-center  lg:w-1/2 lg:text-left"
               data-aos="fade-up"
               data-aos-delay={100}
             >
