@@ -7,6 +7,7 @@ import Loader from '@/components/route-progress-bar';
 import { dmSans, inter, poppins } from '@/lib/fonts';
 import { cn } from '@/utils/cn';
 import { SkipToMain } from '@/components/skip-main-btn';
+import { CookieBanner } from '@/components/cookie-banner';
 
 export const metadata: Metadata = {
   title: 'Techstacks IT Web Development Services',
@@ -33,6 +34,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </Providers>
+        <CookieBanner />
       </body>
     </html>
   );

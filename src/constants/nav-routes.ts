@@ -13,4 +13,5 @@ export const NavRoutes = {
   Services: '/services',
   Trainings: '/trainings',
   OjtWorks: '/trainings/ojt-works',
+  PrivacyPolicy: '/privacy-policy',
 } as const;
