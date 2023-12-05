@@ -15,6 +15,7 @@ function Loader() {
           : 'hsl(var(--accent))'
       }
       options={{ showSpinner: false }}
+      shallowRouting
     />
   );
 }
