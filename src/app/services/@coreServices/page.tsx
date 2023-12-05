@@ -6,38 +6,40 @@ import { H2, Subheading } from '@/components/ui/typography';
 
 export default function CoreServices() {
   return (
-    <div className="w-full py-16 flex justify-center ">
-      <Section>
-        <div className="flex flex-col items-center gap-8">
-          <div className="flex flex-col items-center gap-4">
-            <H2
-              className="text-center "
-              data-aos="fade-up"
-              data-aos-delay={100}
-            >
-              Core Services
-            </H2>
-            <Subheading
-              className="text-center"
-              data-aos="fade-up"
-              data-aos-delay={200}
-            >
-              Discover the key services at the heart of successful web
-              development.
-            </Subheading>
+    <div className="w-full bg-primary-static/10">
+      <div className="w-full py-16 flex justify-center bg-background rounded-br-[150px] md:rounded-br-[250px] lg:rounded-br-[450px] 2xl:rounded-br-full">
+        <Section>
+          <div className="flex flex-col items-center gap-8">
+            <div className="flex flex-col items-center gap-4">
+              <H2
+                className="text-center "
+                data-aos="fade-up"
+                data-aos-delay={100}
+              >
+                Core Services
+              </H2>
+              <Subheading
+                className="text-center"
+                data-aos="fade-up"
+                data-aos-delay={200}
+              >
+                Discover the key services at the heart of successful web
+                development.
+              </Subheading>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center gap-4">
+              {coreServices.map((core, index) => (
+                <CoreServicesCard
+                  index={index}
+                  key={core.title}
+                  src={core.icon}
+                  title={core.title}
+                />
+              ))}
+            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center gap-4">
-            {coreServices.map((core, index) => (
-              <CoreServicesCard
-                index={index}
-                key={core.title}
-                src={core.icon}
-                title={core.title}
-              />
-            ))}
-          </div>
-        </div>
-      </Section>
+        </Section>
+      </div>
     </div>
   );
 }

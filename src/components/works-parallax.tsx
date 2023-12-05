@@ -46,7 +46,7 @@ export function WorksParallax() {
         ))}
 
         <div className="absolute w-full h-full pointer-events-none">
-          <div className="sticky top-0 flex items-center justify-center h-screen bg-gradient-to-b from-background via-transparent via-30% to-background to-95%">
+          <div className="sticky top-0 flex items-center justify-center h-screen bg-transparent">
             <div className="border pointer-events-auto bg-primary/80 backdrop-blur border-border rounded-2xl">
               <div className="px-6 py-4">
                 <h3 className="font-semibold leading-loose text-center whitespace-pre-wrap">

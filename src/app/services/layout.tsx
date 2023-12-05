@@ -1,13 +1,18 @@
 import type { ReactNode } from 'react';
-import { Main } from '@/components/default-elements';
+import { Main, Section } from '@/components/default-elements';
+import { Separator } from '@/components/ui/separator';
 
 export default function ServicesLayout(props: Record<string, ReactNode>) {
   return (
     <Main>
       <div>{props.servicesHero}</div>
+      <div className="[&&&]:mt-0">{props.starterGrowing}</div>
+      <Section role="none">
+        <Separator variant="horizon" />
+      </Section>
       <div>{props.coreServices}</div>
-      <div>{props.creativeWorks}</div>
-      <div>{props.testimonialServices}</div>
+      <div className="[&&&]:mt-0">{props.creativeWorks}</div>
+      <div className="[&&&]:mt-0">{props.testimonialServices}</div>
     </Main>
   );
 }
