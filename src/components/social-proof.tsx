@@ -5,16 +5,15 @@ import dynamic from 'next/dynamic';
 import AliceCarousel from 'react-alice-carousel';
 
 const BRANDS = [
-  '/images/social-proof/dediabetes.png',
-  '/images/social-proof/pi.png',
-  '/images/social-proof/unpuzzle.png',
-  '/images/social-proof/prime-light.png',
-  '/images/social-proof/win.png',
-  '/images/social-proof/release.png',
-  '/images/social-proof/nextpay.png',
-  '/images/social-proof/mnm.png',
-  '/images/social-proof/agassiz.png',
-  '/images/social-proof/thunder.png',
+  '/images/social-proof/jobbrew-black.png',
+  '/images/social-proof/dediabetes-black.png',
+  '/images/social-proof/pi-black.png',
+  '/images/social-proof/unpuzzle-black.png',
+  '/images/social-proof/release-black.png',
+  '/images/social-proof/np-black.png',
+  '/images/social-proof/mnm-black.png',
+  '/images/social-proof/agassiz-black.png',
+  '/images/social-proof/thunder-black.png',
 ] as const;
 
 function SocialProof() {
@@ -30,7 +29,7 @@ function SocialProof() {
         <div className="flex place-content-center" key={brand}>
           <Image
             alt={`Brand ${i}`}
-            className="grayscale"
+            className="dark:invert"
             data-value={i}
             height={36}
             src={brand}
