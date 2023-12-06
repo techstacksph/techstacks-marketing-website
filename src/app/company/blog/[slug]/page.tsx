@@ -4,6 +4,7 @@ import '@wordpress/block-library/build-style/style.css';
 import '@wordpress/block-library/build-style/theme.css';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import { type Metadata } from 'next';
 import { Main, Section } from '@/components/default-elements';
 import {
   getPostBySlug,
@@ -13,7 +14,21 @@ import { BlogArticle } from '@/components/blog-article';
 import { AuthorCard } from '@/components/author-card';
 import { BreadCrumbItem, BreadCrumbs } from '@/components/bread-crumbs';
 import { NavRoutes } from '@/constants/nav-routes';
+import { createMetadata } from '@/utils/create-metadata';
 import { type BlogItemPageProps } from './page-props';
+
+export async function generateMetadata({
+  params,
+}: BlogItemPageProps): Promise<Metadata> {
+  const post = await getPostBySlug({ slug: params.slug });
+
+  if (!post) return notFound();
+
+  return createMetadata({
+    title: post.title,
+    description: post.excerpt,
+  });
+}
 
 export default async function BlogItemPage({ params }: BlogItemPageProps) {
   const post = await getPostBySlug({ slug: params.slug });

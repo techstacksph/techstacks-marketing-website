@@ -1,6 +1,9 @@
 import type { ReactNode } from 'react';
 import { Main, Section } from '@/components/default-elements';
 import { Separator } from '@/components/ui/separator';
+import { createMetadata } from '@/utils/create-metadata';
+
+export const metadata = createMetadata();
 
 export default function OjtWorksLayout(props: Record<string, ReactNode>) {
   return (

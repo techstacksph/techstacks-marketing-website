@@ -1,6 +1,12 @@
 import type { ReactNode } from 'react';
 import { Main, Section } from '@/components/default-elements';
 import { Separator } from '@/components/ui/separator';
+import { createMetadata } from '@/utils/create-metadata';
+
+export const metadata = createMetadata({
+  title: 'What do we offer',
+  description: 'Unlock Your Digital Potential with Expert Web Development',
+});
 
 export default function ServicesLayout(props: Record<string, ReactNode>) {
   return (

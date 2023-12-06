@@ -2,6 +2,7 @@ const { resolve } = require('node:path');
 
 const project = resolve(process.cwd(), 'tsconfig.json');
 
+/** @type {import('eslint').Linter.Config} */
 module.exports = {
   root: true,
   extends: [
@@ -37,4 +38,13 @@ module.exports = {
     'import/no-default-export': 'off',
     'import/no-extraneous-dependencies': ['error', { packageDir: ['./'] }],
   },
+  overrides: [
+    {
+      files: ['**/opengraph-image.tsx', '**/icon.tsx'],
+      rules: {
+        '@next/next/no-img-element': 'off',
+        'jsx-a11y/alt-text': 'off',
+      },
+    },
+  ],
 };

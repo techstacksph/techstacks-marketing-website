@@ -13,6 +13,7 @@ export interface Post {
   author: Author;
   slug: string;
   title: string;
+  excerpt: string;
   featuredImage: FeaturedImage | null;
   date: string;
   content: string;

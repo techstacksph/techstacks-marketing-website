@@ -88,7 +88,9 @@ export default function Header() {
                       variant: 'link',
                     })}
                   >
-                    <Link href={page.href}>{page.title}</Link>
+                    <Link href={page.href} target={page.target}>
+                      {page.title}
+                    </Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
               ))}

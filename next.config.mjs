@@ -1,3 +1,7 @@
+import nextMDX from '@next/mdx';
+
+const withMDX = nextMDX();
+
 // Checks if required environment variables is complete before building the app
 await import('./src/env.mjs');
 
@@ -6,7 +10,6 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        // protocol: 'http',
         hostname: '0.gravatar.com',
       },
       {
@@ -21,4 +24,4 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+export default withMDX(nextConfig);

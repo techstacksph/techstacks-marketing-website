@@ -135,7 +135,12 @@ export default function Footer() {
                     </div>
                     <div>
                       <h4 className="text-sm">Email:</h4>
-                      <p className="text-sm">techstacks.2022@gmail.com</p>
+                      <Link
+                        className="text-sm underline"
+                        href="mailto:techstacks.2022@gmail.com"
+                      >
+                        techstacks.2022@gmail.com
+                      </Link>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
@@ -144,7 +149,9 @@ export default function Footer() {
                     </div>
                     <div>
                       <h4 className="text-sm">Phone:</h4>
-                      <p className="text-sm">(44) 331-4514</p>
+                      <Link className="text-sm underline" href="tel:+443314514">
+                        (44) 331-4514
+                      </Link>
                     </div>
                   </div>
                 </li>
@@ -162,7 +169,10 @@ export default function Footer() {
                 Terms and Conditions
               </Link>{' '}
               |{' '}
-              <Link className="underline text-neutral-600" href="#">
+              <Link
+                className="underline text-neutral-600"
+                href={NavRoutes.PrivacyPolicy}
+              >
                 Privacy Policy
               </Link>
             </div>
