@@ -12,7 +12,7 @@ export function CookieBanner() {
       ButtonComponent={Button}
       buttonText="I understand"
       buttonWrapperClasses="shrink-0"
-      containerClasses="bottom-0 sticky flex px-8 py-4 gap-8 justify-between items-center bg-background/75 border-t flex-col md:flex-row backdrop-blur-md"
+      containerClasses="bottom-0 sticky flex px-8 py-4 gap-8 justify-between items-center bg-background/75 border-t flex-col md:flex-row backdrop-blur-md z-50"
       cookieName="techstacks-cookie"
       disableStyles
     >
