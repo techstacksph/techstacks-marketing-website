@@ -27,6 +27,7 @@ export const getPostBySlug = React.cache(
             }
             slug
             title
+            excerpt
             featuredImage {
               node {
                 sourceUrl

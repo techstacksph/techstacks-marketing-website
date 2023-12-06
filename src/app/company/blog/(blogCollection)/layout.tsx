@@ -2,8 +2,14 @@ import type { ReactNode } from 'react';
 import { Main, Section } from '@/components/default-elements';
 import { H1, Subheading } from '@/components/ui/typography';
 import { BreadCrumbItem, BreadCrumbs } from '@/components/bread-crumbs';
+import { createMetadata } from '@/utils/create-metadata';
 
 export const dynamic = 'force-dynamic';
+
+export const metadata = createMetadata({
+  title: 'Blogs',
+  description: 'Learn, Reflect, and Grow with Us',
+});
 
 export default function BlogLayout({
   blogs,

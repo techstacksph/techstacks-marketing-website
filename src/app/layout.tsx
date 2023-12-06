@@ -1,5 +1,4 @@
 import './globals.css';
-import type { Metadata } from 'next';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { Providers } from '@/components/providers';
@@ -8,12 +7,9 @@ import { dmSans, inter, poppins } from '@/lib/fonts';
 import { cn } from '@/utils/cn';
 import { SkipToMain } from '@/components/skip-main-btn';
 import { CookieBanner } from '@/components/cookie-banner';
+import { createMetadata } from '@/utils/create-metadata';
 
-export const metadata: Metadata = {
-  title: 'Techstacks IT Web Development Services',
-  description:
-    'Techstacks - team of developers and designers committed to help our clients stand out and take advantage of the web by creating beautiful, user-friendly, fast, secure, high converting, engaging websites. Building websites with a purpose. Hire us today and accelerate your business growth.',
-};
+export const metadata = createMetadata();
 
 export default function RootLayout({
   children,

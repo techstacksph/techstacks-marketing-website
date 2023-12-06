@@ -1,6 +1,11 @@
 import { Main, Section } from '@/components/default-elements';
 import { H1, Subheading } from '@/components/ui/typography';
+import { createMetadata } from '@/utils/create-metadata';
 import Content from './content.mdx';
+
+export const metadata = createMetadata({
+  title: 'Privacy Policy',
+});
 
 export default function PrivacyPolicyPage() {
   return (

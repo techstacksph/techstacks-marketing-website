@@ -1,5 +1,11 @@
 import type { ReactNode } from 'react';
 import { Main } from '@/components/default-elements';
+import { createMetadata } from '@/utils/create-metadata';
+
+export const metadata = createMetadata({
+  title: 'Careers',
+  description: 'Elevate your career with Techstacks',
+});
 
 export default function CareersLayout(props: Record<string, ReactNode>) {
   return (

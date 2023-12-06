@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import { Main } from '@/components/default-elements';
+import { createMetadata } from '@/utils/create-metadata';
 
 interface PricingLayoutProps {
   hero: ReactNode;
@@ -7,6 +8,11 @@ interface PricingLayoutProps {
   comparison: ReactNode;
   social: ReactNode;
 }
+
+export const metadata = createMetadata({
+  title: 'Pricing',
+  description: 'Your perfect plan for your perfect business',
+});
 
 export default function PricingLayout({
   hero,
