@@ -60,17 +60,20 @@ export default function Header() {
                     {company.title}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="w-full px-2 py-2">
-                      {company.link.map((link) => (
-                        <ListItem
-                          className="cursor-pointer w-80"
-                          href={link.href}
-                          key={link.label}
-                          title={link.label}
-                        >
-                          {link.description}
-                        </ListItem>
-                      ))}
+                    <ul className="w-[450px] px-2 py-2">
+                      {company.link.map(
+                        ({ Icon, description, href, label }) => (
+                          <ListItem
+                            className="flex flex-row gap-2 cursor-pointer w-full"
+                            href={href}
+                            icon={<Icon className="w-8 h-8" />}
+                            key={label}
+                            title={label}
+                          >
+                            {description}
+                          </ListItem>
+                        ),
+                      )}
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>

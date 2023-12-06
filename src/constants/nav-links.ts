@@ -1,3 +1,8 @@
+import { AboutIcon } from '@/components/icons/about-icon';
+import { OurTeamIcon } from '@/components/icons/our-team-icon';
+import { BlogIcon } from '@/components/icons/blog-icon';
+import { PortfolioIcon } from '@/components/icons/portfolio-icon';
+import { CareerNavIcon } from '@/components/icons/career-nav-icon';
 import { NavRoutes } from './nav-routes';
 
 export const companyLink = [
@@ -9,30 +14,35 @@ export const companyLink = [
         href: NavRoutes.Company.AboutUs,
         description:
           'Our team is passionate about assisting clients in making a standout online presence. We specialize in creating visually stunning, user-centric, speedy, and safe websites that drive exceptional engagement and conversions.',
+        Icon: AboutIcon,
       },
       {
         label: 'Our team',
         href: NavRoutes.Company.OurTeam,
         description:
           'Get to know the people behind our success—the dynamic individuals that form our web development family.',
+        Icon: OurTeamIcon,
       },
       {
         label: 'Blogs',
         href: NavRoutes.Company.Blog,
         description:
           'Explore, learn, and embark on a journey towards digital excellence.',
+        Icon: BlogIcon,
       },
       {
         label: 'Portfolios',
         href: NavRoutes.Company.Portfolios,
         description:
           'Dive into a diverse collection of designs, showcasing our ability to blend creativity with impactful digital solutions.',
+        Icon: PortfolioIcon,
       },
       {
         label: 'Careers',
         href: NavRoutes.Company.Careers,
         description:
           'Discover exciting career prospects at our firm, where innovation meets expertise.',
+        Icon: CareerNavIcon,
       },
     ],
   },
