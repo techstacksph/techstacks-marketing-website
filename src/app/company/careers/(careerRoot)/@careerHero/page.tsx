@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import { NavRoutes } from '@/constants/nav-routes';
-import { ourTeam } from '@/assets/images';
+import { careerHeroOne, careerHeroTwo, careerHeroThree } from '@/assets/images';
 import { Section } from '@/components/default-elements';
 import { TechstacksLogo } from '@/components/icons/techstacks-logo';
 import { Hexagon } from '@/components/hexagon';
@@ -45,13 +44,13 @@ export default function CareerHero() {
           </Subheading>
 
           <Link
-            className="relative inline-flex items-center justify-start p-3 overflow-hidden font-medium transition-all border rounded w-28 lg:w-44 h-14 border-muted-static group bg-primary-static"
+            className="relative inline-flex items-center justify-start p-3 overflow-hidden font-medium transition-all border rounded w-28 lg:w-44 h-14 border-primary-static group bg-primary-static dark:bg-transparent"
             data-aos="fade-up"
             data-aos-delay={400}
-            href={NavRoutes.Company.Apply}
+            href="techstacks.2022@gmail.com"
           >
-            <span className="w-48 h-48 rounded rotate-[-40deg] bg-accent/75 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0" />
-            <span className="relative w-full text-center transition-colors duration-300 ease-in-out text-foreground group-hover:text-accent-foreground">
+            <span className="w-48 h-48 rounded rotate-[-40deg] bg-white dark:bg-primary-static absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0" />
+            <span className="relative w-full text-center transition-colors duration-300 ease-in-out text-white dark:text-foreground group-hover:text-primary-static dark:group-hover:text-background">
               Apply now!
             </span>
           </Link>
@@ -63,8 +62,8 @@ export default function CareerHero() {
                 {/* TODO images */}
                 <Hexagon
                   alt="alt"
-                  className="hover:animate-none hover:scale-125 transition-transform animate-unsteady duration-[2400] h-32 md:h-60 drop-shadow-2xl"
-                  src={ourTeam}
+                  className="hover:animate-none hover:scale-125 transition-transform animate-unsteady duration-[2400] h-60 drop-shadow-2xl"
+                  src={careerHeroOne}
                 />
               </div>
               <div data-aos="fade-left" data-aos-delay={100}>
@@ -72,7 +71,7 @@ export default function CareerHero() {
                 <Hexagon
                   alt="alt"
                   className="hover:animate-none hover:scale-125 transition-transform animate-unsteady direction-alternate duration-[5800] h-60 drop-shadow-2xl"
-                  src={ourTeam}
+                  src={careerHeroTwo}
                 />
               </div>
             </div>
@@ -85,7 +84,7 @@ export default function CareerHero() {
               <Hexagon
                 alt="alt"
                 className="hover:animate-none hover:scale-125 transition-transform animate-unsteady direction-alternate-reverse duration-[9300] h-60 drop-shadow-2xl"
-                src={ourTeam}
+                src={careerHeroThree}
               />
             </div>
           </div>

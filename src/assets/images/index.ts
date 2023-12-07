@@ -105,6 +105,14 @@ import rinandProfile from './trainings/ojt-profile/rinand.jpg';
 import ezeProfile from './trainings/ojt-profile/eze.jpg';
 import ivanPort from './trainings/ojt-portfolios/ivanPort.png';
 import ojtBg from './trainings/ojt-bg.png';
+import careerHeroOne from './careers/career-one.png';
+import careerHeroTwo from './careers/career-hero-two.png';
+import careerHeroThree from './careers/career-three.png';
+import ImageOne from './careers/career-image/image-01.png';
+import ImageTwo from './careers/career-image/image-02.png';
+import ImageThree from './careers/career-image/image-03.png';
+import ImageFour from './careers/career-image/image-04.png';
+import ImageFive from './careers/career-image/image-05.png';
 
 export {
   // Testimonials
@@ -233,4 +241,14 @@ export {
 
   // Careers
   careerTeam,
+  careerHeroOne,
+  careerHeroTwo,
+  careerHeroThree,
+
+  //Careers/Career-image
+  ImageOne,
+  ImageTwo,
+  ImageThree,
+  ImageFour,
+  ImageFive,
 };

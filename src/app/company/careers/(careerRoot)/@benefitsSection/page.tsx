@@ -41,9 +41,9 @@ const BENEFITS = [
 export default function BenefitsSection() {
   return (
     <Section>
-      <div className="relative flex flex-col items-start gap-20 md:flex-row">
+      <div className="relative flex flex-col items-center md:items-start gap-20 md:flex-row">
         <div className="w-full max-w-md md:sticky top-24">
-          <div className="space-y-2">
+          <div className="w-full  space-y-2">
             <H2
               className="[&&]:leading-tight whitespace-pre-wrap md:text-left text-center"
               data-aos="fade-up"
@@ -72,7 +72,7 @@ export default function BenefitsSection() {
             />
           </div>
         </div>
-        <div className="grid w-full lg:grid-rows-3 lg:grid-cols-2 gap-x-6 gap-y-10">
+        <div className="grid w-full lg:grid-rows-3 lg:grid-cols-2 gap-x-6 gap-y-8 md:gap-y-10">
           {BENEFITS.map((benefit, i) => (
             <BenefitCard index={i} key={benefit.title} {...benefit} />
           ))}
