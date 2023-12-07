@@ -26,7 +26,9 @@ export default function FaqsSection() {
       <div className="py-28 flex flex-col gap-6 justify-center items-center">
         <H2>Still have a questions?</H2>
         <Subheading>Get in Touch for Answers and Assistance</Subheading>
-        <Button className="w-36">Contact Us</Button>
+        <Button className="w-36 border dark:bg-black dark:text-white">
+          Contact Us
+        </Button>
       </div>
     </Section>
   );
