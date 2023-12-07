@@ -13,14 +13,11 @@ export default function TrainingsLayout(props: Record<string, ReactNode>) {
   return (
     <Main className="overflow-clip">
       <div>{props.trainingsHero}</div>
-      <Section role="none">
-        <Separator variant="horizon" />
-      </Section>
       <div className="[&&&]:mt-0">{props.traineesPlan}</div>
       <Section role="none">
         <Separator variant="horizon" />
       </Section>
-      <div>{props.traineesCycle}</div>
+      <div className="[&&&]:mt-0">{props.traineesCycle}</div>
       <Section role="none">
         <Separator variant="horizon" />
       </Section>

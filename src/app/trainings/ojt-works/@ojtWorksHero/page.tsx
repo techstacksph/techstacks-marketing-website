@@ -1,17 +1,39 @@
+'use client';
+
 import Link from 'next/link';
-import React from 'react';
+import React, { useMemo, useRef } from 'react';
+import { useWindowScroll } from '@uidotdev/usehooks';
 import { Section } from '@/components/default-elements';
 import { BottomShape } from '@/components/icons/bottom-shape';
 import { H1, Subheading } from '@/components/ui/typography';
 import { NavRoutes } from '@/constants/nav-routes';
 
 export default function OjtWorksPage() {
+  const [{ y }] = useWindowScroll();
+  const sectionRef = useRef<HTMLElement>(null);
+
+  const visibility = useMemo(() => {
+    const scrollProgress = y ?? 0;
+    const sectionHeight = sectionRef.current?.offsetHeight ?? 0;
+    const FULL_PERCENT = 100 as const;
+    const SECTION_HALF = sectionHeight / 2;
+
+    const value =
+      (FULL_PERCENT - (scrollProgress / SECTION_HALF) * FULL_PERCENT) /
+      FULL_PERCENT;
+
+    return value > 0 ? value : 0;
+  }, [y]);
+
   return (
     <div className="relative bg-primary-static/10 py-16">
       <div className="absolute inset-x-0 bottom-0">
         <BottomShape className="w-full -mb-1 text-white dark:text-black" />
       </div>
-      <Section>
+      <Section
+        ref={sectionRef}
+        style={{ opacity: visibility, scale: visibility }}
+      >
         <div className="w-full max-w-3xl flex flex-col justify-center items-center mx-auto pt-0 lg:py-16">
           <div className="relative w-full items-center flex flex-col gap-8">
             <H1

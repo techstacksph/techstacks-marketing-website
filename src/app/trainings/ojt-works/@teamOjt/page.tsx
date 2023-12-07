@@ -21,7 +21,7 @@ export default function TeamOjtPage() {
               <GlowCard
                 className="h-full"
                 data-aos="fade-up"
-                data-aos-delay={index + 100}
+                data-aos-delay={index * 100}
                 key={id}
               >
                 <GlowCardContent className="flex h-full justify-between flex-col items-center gap-4 p-4 xl:p-8">

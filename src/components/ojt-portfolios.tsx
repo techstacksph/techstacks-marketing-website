@@ -19,9 +19,9 @@ export default function OjtPortfolios() {
         {OJT_TEAM.slice(0, next).map(
           ({ id, author, web, position, portfolioLink }, index) => (
             <div
-              className="flex flex-col items-center justify-center gap-4 transition duration-300 ease-in-out hover:scale-110"
+              className="flex flex-col items-center justify-center gap-4 transition duration-300 ease-in-out hover:scale-110 "
               data-aos="fade-up"
-              data-aos-delay={index + 100}
+              data-aos-delay={index * 100}
               key={id}
             >
               <Image alt={`${author} image`} src={web} />
