@@ -33,6 +33,8 @@ export default function TraineesTestimonial() {
                   'flex flex-col justify-between gap-4 p-4 xl:p-8 h-full border border-primary-static shadow-lg [&&]:shadow-primary-static/40',
                   isOdd(index) && 'bg-primary-static/80',
                 )}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
                 key={id}
               >
                 <Subheading className="text-foreground">
