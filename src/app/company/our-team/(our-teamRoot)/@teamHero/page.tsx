@@ -19,11 +19,11 @@ export default function TeamHero() {
         <div className="flex flex-col items-center justify-center w-full max-w-3xl pt-0 mx-auto lg:py-16">
           <div className="relative flex flex-col w-full gap-8">
             <H1
-              className="tracking-wide text-center"
+              className="tracking-wide text-center whitespace-pre-wrap"
               data-aos="fade-up"
               data-aos-delay={100}
             >
-              Meet the Faces <br /> Behind the{' '}
+              Meet the Faces{'\n'}Behind the{' '}
               <span className="text-primary-static">Codes</span>
             </H1>
             <Subheading
@@ -37,21 +37,12 @@ export default function TeamHero() {
             </Subheading>
             <div className="flex gap-4 place-content-center">
               <Link
-                className="relative inline-flex items-center justify-start w-full p-3 overflow-hidden font-medium transition-all border rounded bg-primary-static dark:bg-white md:w-52 h-14 border-primary-static dark:border-white group"
-                href={NavRoutes.Services}
-              >
-                <span className="w-48 h-48 rounded rotate-[-40deg] bg-white dark:bg-primary-static absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0" />
-                <span className="relative w-full text-center text-white transition-colors duration-300 ease-in-out dark:text-black group-hover:text-black">
-                  Become a Techstaker
-                </span>
-              </Link>
-              <Link
                 className="relative inline-flex items-center justify-start w-full p-3 overflow-hidden font-medium transition-all bg-transparent border rounded md:w-52 h-14 border-primary-static group"
-                href={NavRoutes.Company.AboutUs}
+                href={NavRoutes.Company.Careers}
               >
                 <span className="w-48 h-48 rounded rotate-[-40deg] bg-primary-static absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0" />
                 <span className="relative w-full text-center text-black transition-colors duration-300 ease-in-out dark:text-white group-hover:text-black">
-                  Explore open Position
+                  Explore open positions
                 </span>
               </Link>
             </div>

@@ -2,7 +2,6 @@
 
 import { useWindowScroll } from '@uidotdev/usehooks';
 import { useMemo, useRef } from 'react';
-import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { Section } from '@/components/default-elements';
 import { H1, Subheading } from '@/components/ui/typography';
@@ -46,26 +45,15 @@ export default function PortfoliosHero() {
             and delivering results.
           </Subheading>
           <div className="flex flex-col gap-4 md:flex-row">
-            <Link
+            <a
               className="relative inline-flex items-center justify-start w-full p-3 overflow-hidden font-medium transition-all bg-transparent border rounded md:w-52 h-14 border-primary-static group"
-              // TODO: where to route
-              href="#"
+              href="#latest-works"
             >
               <span className="w-48 h-48 rounded rotate-[-40deg] bg-primary-static absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0" />
               <span className="relative w-full text-center text-black transition-colors duration-300 ease-in-out dark:text-white group-hover:text-black">
                 Get started <ArrowRight className="inline" />
               </span>
-            </Link>
-            <Link
-              className="relative inline-flex items-center justify-start w-full p-3 overflow-hidden font-medium transition-all bg-transparent border rounded md:w-52 h-14 border-primary-static group"
-              // TODO: where to route
-              href="#"
-            >
-              <span className="w-48 h-48 rounded rotate-[-40deg] bg-primary-static absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0" />
-              <span className="relative w-full text-center text-black transition-colors duration-300 ease-in-out dark:text-white group-hover:text-black">
-                Learn more
-              </span>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

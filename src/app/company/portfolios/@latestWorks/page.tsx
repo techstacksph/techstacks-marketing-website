@@ -4,7 +4,7 @@ import { LatestWorksCarousel } from '@/components/latest-works-carousel';
 
 export default function LatestWorksSection() {
   return (
-    <Section>
+    <Section id="latest-works">
       <div>
         <Subheading>Works</Subheading>
         <H2>

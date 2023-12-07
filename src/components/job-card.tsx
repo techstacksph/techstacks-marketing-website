@@ -1,6 +1,8 @@
 import { MapPin } from 'lucide-react';
 import type { HTMLAttributes } from 'react';
+import Link from 'next/link';
 import type { Job } from '@/constants/jobs';
+import { NavRoutes } from '@/constants/nav-routes';
 import { Button } from './ui/button';
 
 type JobCardProps = Job & HTMLAttributes<HTMLDivElement>;
@@ -36,8 +38,11 @@ function JobCard({
               </div>
               <div className="text-foreground/75">{employment}</div>
             </div>
-            <Button className="w-full bg-primary-static text-primary-foreground-static hover:bg-primary-static/80 md:w-fit">
-              Apply now
+            <Button
+              asChild
+              className="w-full bg-primary-static text-primary-foreground-static hover:bg-primary-static/80 md:w-fit"
+            >
+              <Link href={NavRoutes.Contact}>Apply now</Link>
             </Button>
           </div>
         </div>

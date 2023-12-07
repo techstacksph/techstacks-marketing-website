@@ -28,7 +28,7 @@ export default function OurTeamGallery() {
                 wrapperClassName:
                   'text-base leading-loose text-muted-foreground lg:text-xl',
                 strings: [
-                  'Employee Takes on Tech Stacks',
+                  'Employee Takes on Techstacks',
                   'What Our Team Thinks of Techstacks',
                   'Perspectives on Tech Choices',
                   'Our Workforce Weighs in on Stacks',

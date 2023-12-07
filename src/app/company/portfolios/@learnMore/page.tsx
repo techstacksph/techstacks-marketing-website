@@ -1,7 +1,9 @@
+import Link from 'next/link';
 import { Section } from '@/components/default-elements';
 import { TechstacksLogo } from '@/components/icons/techstacks-logo';
 import { Button } from '@/components/ui/button';
 import { H2, Subheading } from '@/components/ui/typography';
+import { NavRoutes } from '@/constants/nav-routes';
 
 export default function LearnMoreSection() {
   return (
@@ -21,7 +23,9 @@ export default function LearnMoreSection() {
                 The amazing team that makes all this possible
               </Subheading>
             </div>
-            <Button className="uppercase">Learn more</Button>
+            <Button asChild variant="secondary">
+              <Link href={NavRoutes.Contact}>Learn more</Link>
+            </Button>
           </div>
         </div>
         <div className="aspect-square">

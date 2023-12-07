@@ -9,3 +9,5 @@ export const socialMedia = [
   { Icon: BiLogoLinkedin as IconType, title: 'Linked In', url: '#' },
   { Icon: RiTwitterXFill as IconType, title: 'X', url: '#' },
 ];
+
+export const EMAIL = 'techstacks.2022@gmail.com' as const;

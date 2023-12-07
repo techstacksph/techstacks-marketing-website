@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Menu } from 'lucide-react';
+import { ArrowRight, Menu } from 'lucide-react';
 import { useWindowScroll } from '@uidotdev/usehooks';
 import { NavRoutes } from '@/constants/nav-routes';
 import { cn } from '@/utils/cn';
@@ -64,7 +64,7 @@ export default function Header() {
                       {company.link.map(
                         ({ Icon, description, href, label }) => (
                           <ListItem
-                            className="flex flex-row gap-2 cursor-pointer w-full"
+                            className="flex flex-row w-full gap-2 cursor-pointer"
                             href={href}
                             icon={<Icon className="w-8 h-8" />}
                             key={label}
@@ -98,7 +98,12 @@ export default function Header() {
                 </NavigationMenuItem>
               ))}
               <NavigationMenuItem className="hidden lg:block">
-                <Button variant="outline">Get in touch &rarr;</Button>
+                <Button asChild className="items-center" variant="outline">
+                  <Link href={NavRoutes.Contact}>
+                    Get in touch
+                    <ArrowRight className="inline w-4 h-4 ml-2" />
+                  </Link>
+                </Button>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <ModeToggle />

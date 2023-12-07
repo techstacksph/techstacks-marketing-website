@@ -15,7 +15,7 @@ export default function OjtPortfolios() {
 
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
+      <div className="grid items-center grid-cols-1 gap-8 md:grid-cols-2 md:gap-10">
         {OJT_TEAM.slice(0, next).map(
           ({ id, author, web, position, portfolioLink }, index) => (
             <div
@@ -28,24 +28,25 @@ export default function OjtPortfolios() {
               <H3>{author}</H3>
               <Subheading className="lg:text-base">{position}</Subheading>
 
-              <Link
-                className="text-muted text-center hover:text-primary-static"
-                href={portfolioLink}
-                target="_blank"
-              >
-                {portfolioLink}
-              </Link>
+                <Link
+                  className="text-center text-muted hover:text-primary-static"
+                  href={portfolioLink}
+                  target="_blank"
+                >
+                  {portfolioLink}
+                </Link>
+              </div>
             </div>
           ),
         )}
       </div>
       {next < OJT_TEAM.length && (
         <Button
-          className="relative inline-flex items-center justify-start p-3 overflow-hidden font-medium transition-all bg-transparent border rounded w-full md:w-52 h-14 border-primary-static group"
+          className="relative inline-flex items-center justify-start w-full p-3 overflow-hidden font-medium transition-all bg-transparent border rounded md:w-52 h-14 border-primary-static group"
           onClick={handleLoadData}
         >
           <span className="w-48 h-48 rounded rotate-[-40deg] bg-primary-static absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0" />
-          <span className="relative w-full text-center text-black dark:text-white transition-colors duration-300 ease-in-out group-hover:text-black">
+          <span className="relative w-full text-center text-black transition-colors duration-300 ease-in-out dark:text-white group-hover:text-black">
             Load more
           </span>
         </Button>

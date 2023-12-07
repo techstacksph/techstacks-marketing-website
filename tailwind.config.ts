@@ -1,7 +1,6 @@
 import type { Config } from 'tailwindcss';
 import twTypography from '@tailwindcss/typography';
 import twAnimate from 'tailwindcss-animate';
-import { borderAnimate } from './plugins/border-animate-plugin';
 
 const config = {
   darkMode: ['class', '[data-theme="dark"]'],
@@ -123,7 +122,7 @@ const config = {
       },
     },
   },
-  plugins: [twAnimate, twTypography, borderAnimate],
+  plugins: [twAnimate, twTypography],
 } satisfies Config;
 
 export default config;
