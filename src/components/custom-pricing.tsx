@@ -41,7 +41,9 @@ export function CustomPricing() {
                 </div>
               ))}
             </div>
-            <Button>Inquire now</Button>
+            <Button className="border dark:bg-black dark:text-white">
+              Inquire now
+            </Button>
           </GlowCardContent>
         </GlowCard>
       </div>
