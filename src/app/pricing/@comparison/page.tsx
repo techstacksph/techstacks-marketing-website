@@ -6,7 +6,7 @@ import { H2, Subheading } from '@/components/ui/typography';
 export default function PriceComparison() {
   return (
     <Section>
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-24">
         <div className="flex flex-col gap-5">
           <H2 className="font-extrabold">
             Choose the Perfect Plan for Your Needs

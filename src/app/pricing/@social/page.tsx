@@ -17,7 +17,7 @@ export default function PricingSocialProof() {
             options={{
               wrapperClassName: 'text-primary-static',
               strings: [
-                'Jobbrew',
+                'Jobbrew.com',
                 'Winmart',
                 'MNM',
                 'PRIMELIGHT',
