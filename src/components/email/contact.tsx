@@ -12,7 +12,7 @@ export function ContactEmailTemplate({
     <div>
       <p>
         <strong>From: </strong>
-        {name} &gt;{email}&lt;
+        {name} &lt;{email}&gt;
       </p>
       <p>
         <strong>Subject: </strong>
@@ -20,7 +20,7 @@ export function ContactEmailTemplate({
       </p>
       {subjectExtension ? (
         <p>
-          <strong>Subject: </strong>
+          <strong>About: </strong>
           {subjectExtension}
         </p>
       ) : null}
