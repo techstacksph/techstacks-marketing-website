@@ -12,10 +12,18 @@ export default function PricingHero() {
   return (
     <PricingProvider>
       <Section className="flex flex-col items-center gap-20">
-        <BreadCrumbs className="self-start">
+        <BreadCrumbs
+          className="self-start"
+          data-aos="fade-up"
+          data-aos-delay={100}
+        >
           <BreadCrumbItem>Pricing</BreadCrumbItem>
         </BreadCrumbs>
-        <div className="flex flex-col items-center gap-4">
+        <div
+          className="flex flex-col items-center gap-4"
+          data-aos="fade-up"
+          data-aos-delay={100}
+        >
           <H1 className="text-center whitespace-pre-wrap">
             Your{' '}
             <span className="font-black text-primary-foreground">
@@ -32,9 +40,15 @@ export default function PricingHero() {
           </Subheading>
         </div>
 
-        <PricingSwitch />
+        <div data-aos="fade-up" data-aos-delay={200}>
+          <PricingSwitch />
+        </div>
 
-        <div className="flex flex-col gap-4 overflow-visible lg:overflow-visible md:gap-0 md:flex-row lg:gap-11 md:shadow-lg lg:shadow-none [&&]:shadow-primary-static/30 md:rounded-lg lg:rounded-none">
+        <div
+          className="flex flex-col gap-4 overflow-visible lg:overflow-visible md:gap-0 md:flex-row lg:gap-11 md:shadow-lg lg:shadow-none [&&]:shadow-primary-static/30 md:rounded-lg lg:rounded-none"
+          data-aos="fade-up"
+          data-aos-delay={300}
+        >
           {PRICING.map((pricing) => (
             <PricingCard {...pricing} key={pricing.name} />
           ))}
