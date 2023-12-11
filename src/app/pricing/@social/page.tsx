@@ -10,6 +10,7 @@ export default function PricingSocialProof() {
         <H2
           className="text-center whitespace-pre-wrap font-extrabold lg:text-left"
           data-aos="fade-up"
+          data-aos-delay={100}
         >
           Trusted by:{' '}
           <Typewriter
