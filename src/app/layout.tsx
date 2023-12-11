@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html
       className={cn(
-        'scroll-smooth scroll-pt-20',
+        'scroll-smooth',
         dmSans.variable,
         poppins.variable,
         inter.variable,

@@ -31,7 +31,7 @@ export const Section = forwardRef<HTMLElement, SectionProps>(
     const Comp = asChild ? Slot : 'section';
     return (
       <Comp
-        className={cn('w-full max-w-7xl px-4 mx-auto', className)}
+        className={cn('w-full max-w-7xl px-4 mx-auto scroll-mt-20', className)}
         {...props}
         ref={ref}
       />
