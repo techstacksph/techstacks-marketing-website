@@ -1,6 +1,9 @@
-import React from 'react';
+'use client';
+
+import React, { useMemo, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useWindowScroll } from '@uidotdev/usehooks';
 import { Section } from '@/components/default-elements';
 import { trainingBg } from '@/assets/images';
 import { NavRoutes } from '@/constants/nav-routes';
@@ -10,10 +13,29 @@ import { TvIcon } from '@/components/icons/tv-icon';
 import { StarsIcon } from '@/components/icons/stars-icon';
 
 export default function Trainings() {
+  const [{ y }] = useWindowScroll();
+  const sectionRef = useRef<HTMLElement>(null);
+
+  const visibility = useMemo(() => {
+    const scrollProgress = y ?? 0;
+    const sectionHeight = sectionRef.current?.offsetHeight ?? 0;
+    const FULL_PERCENT = 100 as const;
+    const SECTION_HALF = sectionHeight / 2;
+
+    const value =
+      (FULL_PERCENT - (scrollProgress / SECTION_HALF) * FULL_PERCENT) /
+      FULL_PERCENT;
+
+    return value > 0 ? value : 0;
+  }, [y]);
+
   return (
     <div className="w-full bg-background ">
       <div className="w-full flex justify-center py-16 bg-primary-static/10 rounded-bl-[450px] rounded-tr-[450px]">
-        <Section>
+        <Section
+          ref={sectionRef}
+          style={{ opacity: visibility, scale: visibility }}
+        >
           <div className="flex flex-col gap-20 lg:gap-0 items-center justify-between lg:flex-row">
             <div className="flex flex-col gap-8">
               <div

@@ -18,15 +18,11 @@ export default function OjtPortfolios() {
       <div className="grid items-center grid-cols-1 gap-8 md:grid-cols-2 md:gap-10">
         {OJT_TEAM.slice(0, next).map(
           ({ id, author, web, position, portfolioLink }, index) => (
-            <div
-              className="flex flex-col items-center justify-center gap-4 transition duration-300 ease-in-out hover:scale-110 "
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
-              key={id}
-            >
-              <Image alt={`${author} image`} src={web} />
-              <H3>{author}</H3>
-              <Subheading className="lg:text-base">{position}</Subheading>
+            <div data-aos="fade-up" data-aos-delay={index * 100} key={id}>
+              <div className="flex flex-col items-center justify-center gap-4 transition duration-300 ease-in-out hover:scale-110 ">
+                <Image alt={`${author} image`} src={web} />
+                <H3>{author}</H3>
+                <Subheading className="lg:text-base">{position}</Subheading>
 
                 <Link
                   className="text-center text-muted hover:text-primary-static"

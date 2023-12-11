@@ -16,6 +16,7 @@ import {
   danPort,
   cjPort,
   jhonasPort,
+  techstacksLogo,
 } from '@/assets/images';
 
 export const OJT_TEAM = [
@@ -89,7 +90,7 @@ export const OJT_TEAM = [
     portfolioLink: 'https://techstacks-ph-ojt.github.io/My-Portfolio/',
     time: 'February - March 2023',
     // web: { portfolioImg: rinandPort, dreamImg: redServe },
-    web: rinandPort,
+    web: techstacksLogo,
   },
   {
     id: 7,
