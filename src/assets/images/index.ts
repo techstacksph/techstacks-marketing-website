@@ -113,6 +113,7 @@ import ImageTwo from './careers/career-image/image-02.png';
 import ImageThree from './careers/career-image/image-03.png';
 import ImageFour from './careers/career-image/image-04.png';
 import ImageFive from './careers/career-image/image-05.png';
+import techstacksLogo from './logo/logo-techstacks.png';
 
 export {
   // Testimonials
@@ -251,4 +252,7 @@ export {
   ImageThree,
   ImageFour,
   ImageFive,
+
+  //logo
+  techstacksLogo,
 };
