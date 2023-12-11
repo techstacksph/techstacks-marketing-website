@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { FaQuoteLeft } from 'react-icons/fa';
 import { BreadCrumbItem, BreadCrumbs } from '@/components/bread-crumbs';
 import { Section } from '@/components/default-elements';
@@ -59,17 +58,6 @@ export default function ApplyHeroSection() {
               >
                 {aboutUsLink?.description}
               </Subheading>
-              <Link
-                className="relative inline-flex items-center justify-start p-3 overflow-hidden font-medium transition-all border rounded w-44 h-14 border-primary-static group bg-primary-static"
-                data-aos="fade-up"
-                data-aos-delay={400}
-                href="mailto:techstacks.2022@gmail.com"
-              >
-                <span className="w-48 h-48 rounded rotate-[-40deg] bg-white absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0" />
-                <span className="relative w-full text-center transition-colors duration-300 ease-in-out text-background group-hover:text-primary-static">
-                  Let&apos;s work together
-                </span>
-              </Link>
             </div>
           </div>
         </Section>

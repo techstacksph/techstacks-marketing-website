@@ -18,7 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html
-      className={cn(dmSans.variable, poppins.variable, inter.variable)}
+      className={cn(
+        'scroll-smooth scroll-pt-20',
+        dmSans.variable,
+        poppins.variable,
+        inter.variable,
+      )}
       lang="en"
       suppressHydrationWarning
     >

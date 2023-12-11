@@ -3,9 +3,11 @@
 import { Check } from 'lucide-react';
 import type { Dispatch, PropsWithChildren, SetStateAction } from 'react';
 import { createContext, useContext, useId, useState } from 'react';
+import Link from 'next/link';
 import type { Pricing } from '@/constants/pricing';
 import { cn } from '@/utils/cn';
 import { toUSD } from '@/utils/currency-converter';
+import { NavRoutes } from '@/constants/nav-routes';
 import { Button } from './ui/button';
 import { Switch } from './ui/switch';
 import { H3, H4, Subheading } from './ui/typography';
@@ -101,8 +103,11 @@ export function PricingCard(pricing: Pricing) {
             ))}
           </ul>
 
-          <Button className="w-full h-16 text-xl bg-primary-static hover:bg-primary-static/75 text-foreground">
-            Get Started
+          <Button
+            asChild
+            className="w-full h-16 text-xl bg-primary-static hover:bg-primary-static/75 text-foreground"
+          >
+            <Link href={NavRoutes.Contact}>Get Started</Link>
           </Button>
         </div>
       </div>

@@ -1,4 +1,6 @@
 import { FaCheck } from 'react-icons/fa';
+import Link from 'next/link';
+import { NavRoutes } from '@/constants/nav-routes';
 import { GlowCard, GlowCardContent } from './glow-card';
 import { Separator } from './ui/separator';
 import { H2, Subheading } from './ui/typography';
@@ -24,9 +26,9 @@ export function CustomPricing() {
           custom-tailored solution designed exclusively for your requirements.
         </Subheading>
       </div>
-      <div className="w-full md:w-2/4 flex justify-center">
+      <div className="flex justify-center w-full md:w-2/4">
         <GlowCard className="w-96">
-          <GlowCardContent className="w-full h-full p-8 lg:p-10 flex flex-col gap-6">
+          <GlowCardContent className="flex flex-col w-full h-full gap-6 p-8 lg:p-10">
             <div>
               <Subheading>Custom Projects</Subheading>
               <Subheading>(Project based)</Subheading>
@@ -41,8 +43,8 @@ export function CustomPricing() {
                 </div>
               ))}
             </div>
-            <Button className="border dark:bg-black dark:text-white">
-              Inquire now
+            <Button asChild variant="outline">
+              <Link href={NavRoutes.Contact}>Inquire now</Link>
             </Button>
           </GlowCardContent>
         </GlowCard>
