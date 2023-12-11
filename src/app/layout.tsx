@@ -8,6 +8,7 @@ import { cn } from '@/utils/cn';
 import { SkipToMain } from '@/components/skip-main-btn';
 import { CookieBanner } from '@/components/cookie-banner';
 import { createMetadata } from '@/utils/create-metadata';
+import { Toaster } from '@/components/ui/toaster';
 
 export const metadata = createMetadata();
 
@@ -35,6 +36,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </Providers>
+        <Toaster />
         <CookieBanner />
       </body>
     </html>

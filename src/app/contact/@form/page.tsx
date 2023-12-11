@@ -28,6 +28,7 @@ import {
 import { actionHandler } from '@/utils/action-handler';
 import { SubmitButton } from '@/components/submit-button';
 import { Textarea } from '@/components/ui/textarea';
+import { useToast } from '@/components/ui/use-toast';
 import {
   type ContactFormData,
   REFERRALS,
@@ -37,6 +38,7 @@ import {
 import { contactAction } from './actions';
 
 export default function ContactForm() {
+  const { toast } = useToast();
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
     mode: 'onBlur',
@@ -53,10 +55,36 @@ export default function ContactForm() {
   const isOthers = form.watch('subject') === 'Others';
   const isIntern = form.watch('subject') === 'Internship application';
 
+  function handleDoAfter() {
+    toast({ title: 'Sent successfully' });
+    form.reset();
+  }
+
+  function handleOnError(err: unknown) {
+    if (err instanceof Error) {
+      return toast({
+        title: err.name,
+        description: err.message,
+        variant: 'destructive',
+      });
+    }
+
+    return toast({
+      title: 'Unknown error occurred!',
+      description: JSON.stringify(err),
+      variant: 'destructive',
+    });
+  }
+
   return (
     <Card>
       <Form {...form}>
-        <form action={actionHandler(form, contactAction)}>
+        <form
+          action={actionHandler(form, contactAction, {
+            doAfter: handleDoAfter,
+            onError: handleOnError,
+          })}
+        >
           <CardHeader>
             <CardDescription className="text-center">
               We&apos;re eager to hear from you! Fill out the form below, and
