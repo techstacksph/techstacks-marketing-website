@@ -12,7 +12,6 @@ export default function OurTeamLayout(props: Record<string, ReactNode>) {
       <div>{props.teamHero}</div>
       <div>{props.ceoQuote}</div>
       <div>{props.coreTeam}</div>
-      <div> {props.ourteamGallery}</div>
       <div> {props.ourteamTestimonial}</div>
     </Main>
   );

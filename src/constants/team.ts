@@ -26,7 +26,7 @@ import {
 } from '@/assets/images';
 
 export interface MemberData {
-  id: number;
+  id: string;
   name: string;
   position: string;
   src: StaticImageData;
@@ -52,8 +52,8 @@ export const TEAM = [
     src: teamImg2,
     profile: marcusProfile,
     teamGallery: {
-      title: 'Innovative Excellence Unleashed',
-      body: 'Our experience with Techstacks has been exceptional. Their web development team blends technical expertise and creative flair, consistently exceeding our expectations and elevating our online presence.',
+      title: 'Elevating Tech Skills and Team Harmony.',
+      body: "I'm truly thankful for my time with the Techstacks team. It's been an incredible journey that not only deepened my knowledge of the tech I work with but also showed me the ropes of effective teamwork. Being part of this team has been a key player in shaping my professional growth, and I couldn't be happier about it.",
     },
   },
   {
@@ -63,8 +63,8 @@ export const TEAM = [
     src: teamImg3,
     profile: franzProfile,
     teamGallery: {
-      title: 'Precision in Partnership',
-      body: 'Choosing Techstacks for web development paid off. Their commitment to understanding our needs and delivering tailored solutions sets them apart as our go-to partner for innovative and reliable services.',
+      title: 'Crafting Digital Excellence',
+      body: "As a front-end developer at Techstacks, I shape our digital presence with seamless interfaces, emphasizing quality and innovation. In our collaborative environment, we value continuous learning, stay current with industry trends, and offer a supportive culture for growth and well-being. Join us in creating outstanding digital experiences reflecting our brand's excellence.",
     },
   },
   {
@@ -74,8 +74,8 @@ export const TEAM = [
     src: teamImg4,
     profile: samProfile,
     teamGallery: {
-      title: 'Navigating Success Together',
-      body: 'Working with Techstacks in the digital landscape has been refreshing. Their professionalism, attention to detail, and commitment to timelines make them an integral part of our success and a valued growth partner.',
+      title: 'Continuous Learning in Digital Innovation',
+      body: "Being a Frontend Developer at TechStacks PH is truly exhilarating. It's more than just coding; it's about shaping the interface of our digital products.",
     },
   },
   {
@@ -85,8 +85,8 @@ export const TEAM = [
     src: teamImg5,
     profile: kaiProfile,
     teamGallery: {
-      title: 'Elevating Digital Presence',
-      body: "Techstacks's web development team's expertise and dedication shine through. They played a pivotal role in enhancing our online presence and user experience, contributing significantly to our success.",
+      title: 'Streamlining Operations',
+      body: 'As an Administrative Officer at TechStacks PH, I oversee and streamline administrative processes, ensuring the smooth and efficient operation of various tasks and contributing to the overall organizational effectiveness.',
     },
   },
   {
@@ -96,8 +96,8 @@ export const TEAM = [
     src: teamImg6,
     profile: jayveeProfile,
     teamGallery: {
-      title: 'Crafting Identity, Achieving Goals',
-      body: 'Choosing Techstacks for our web development was one of our best decisions. Their proficiency in the latest technologies and deep understanding of design principles consistently delivers results aligned with our brand identity and business goals.',
+      title: 'Staying Ahead',
+      body: 'In the dynamic tech landscape, we remain at the forefront through conference attendance, active participation in workshops, and continuous learning from online courses, underscoring the perpetual nature of our learning journey.',
     },
   },
   {
@@ -107,8 +107,8 @@ export const TEAM = [
     src: teamImg7,
     profile: airaProfile,
     teamGallery: {
-      title: 'Seamless Solutions, Exceptional Results',
-      body: "Entrusting our web development needs to Techstacks was a seamless choice. Their team's commitment to excellence and innovative solutions consistently delivers results that surpass expectations.",
+      title: 'Optimizing Performance',
+      body: 'In my role as a backend developer at TechStacks PH, I contribute to the design and implementation of resilient server-side solutions, focusing on effective data management and optimal performance for our digital platforms.',
     },
   },
   {
@@ -118,11 +118,11 @@ export const TEAM = [
     src: teamImg8,
     profile: araProfile,
     teamGallery: {
-      title: 'Beyond Coding: A Strategic Alliance',
-      body: 'Collaborating with Techstacks goes beyond conventional web development. Their strategic approach, combined with technical prowess, has positioned them as an invaluable ally in achieving our digital objectives.',
+      title: 'Amplifying Digital Impact',
+      body: 'As a marketing and SEO specialist at TechStacks PH, I leverage my expertise to enhance online visibility, optimize search engine rankings, and drive strategic initiatives that amplify our digital presence and outreach.',
     },
   },
-] as MemberData[];
+].map(({ id, ...rest }) => ({ id: `t1-${id}`, ...rest })) as MemberData[];
 
 export const TEAM1 = [
   {

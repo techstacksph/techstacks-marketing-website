@@ -3,7 +3,7 @@ import { IoPaperPlaneSharp } from 'react-icons/io5';
 import { MdEmail } from 'react-icons/md';
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import { socialMedia } from '@/constants/social-media';
-import { portfolioLink, companyLink, pagesLink } from '@/constants/nav-links';
+import { companyLink, pagesLink } from '@/constants/nav-links';
 import { NavRoutes } from '@/constants/nav-routes';
 import { Button } from './ui/button';
 import { Separator } from './ui/separator';
@@ -61,7 +61,7 @@ export default function Footer() {
                 ))}
               </ul>
             </div>
-            <ul className="grid grid-cols-[6rem_1fr] gap-5 md:grid-cols-[6rem_1fr_1fr_1fr] lg:gap-2">
+            <ul className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:gap-2">
               {companyLink.map((company) => (
                 <li
                   className="flex flex-col font-semibold text-primary-static"
@@ -82,27 +82,8 @@ export default function Footer() {
                   </ul>
                 </li>
               ))}
-              {portfolioLink.map((portfolio) => (
-                <li
-                  className="flex flex-col font-semibold text-primary-static"
-                  key={portfolio.title}
-                >
-                  <h3>{portfolio.title}</h3>
-                  <ul>
-                    {portfolio.link.map((port) => (
-                      <li key={port.label}>
-                        <Link
-                          className="text-sm text-muted-foreground-static"
-                          href={port.href}
-                        >
-                          {port.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-              ))}
-              <ul className="col-span-2 md:col-span-1 grid grid-cols-[6rem_1fr] gap-5 md:block md:gap-0">
+
+              <ul className="grid gap-2 md:block md:gap-0">
                 {pagesLink.map((page) => (
                   <li
                     className="flex flex-col justify-center font-semibold text-primary-static"

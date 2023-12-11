@@ -1,7 +1,6 @@
 import { AboutIcon } from '@/components/icons/about-icon';
 import { OurTeamIcon } from '@/components/icons/our-team-icon';
 import { BlogIcon } from '@/components/icons/blog-icon';
-import { PortfolioIcon } from '@/components/icons/portfolio-icon';
 import { CareerNavIcon } from '@/components/icons/career-nav-icon';
 import { NavRoutes } from './nav-routes';
 
@@ -29,13 +28,6 @@ export const companyLink = [
         description:
           'Explore, learn, and embark on a journey towards digital excellence.',
         Icon: BlogIcon,
-      },
-      {
-        label: 'Portfolios',
-        href: NavRoutes.Company.Portfolios,
-        description:
-          'Dive into a diverse collection of designs, showcasing our ability to blend creativity with impactful digital solutions.',
-        Icon: PortfolioIcon,
       },
       {
         label: 'Careers',
