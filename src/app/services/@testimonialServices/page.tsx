@@ -20,7 +20,7 @@ export default function TestimonialServices() {
 
   return (
     <div className="w-full bg-primary-static/10">
-      <div className="w-full py-16 flex justify-center bg-background rounded-tr-[150px] rounded-br-[150px] md:rounded-tr-[250px] md:rounded-br-[250px] lg:rounded-tr-[450px] lg:rounded-br-[450px]">
+      <div className="w-full py-16 flex justify-center bg-background rounded-tr-[150px] md:rounded-tr-[250px]  lg:rounded-tr-[450px] ">
         <Section>
           <div className="flex flex-col items-center gap-8">
             <div

@@ -4,10 +4,26 @@ import { BiLogoFacebook, BiLogoLinkedin } from 'react-icons/bi';
 import { RiTwitterXFill } from 'react-icons/ri';
 
 export const socialMedia = [
-  { Icon: BiLogoFacebook as IconType, title: 'Facebook', url: '#' },
-  { Icon: AiFillInstagram as IconType, title: 'Instagram', url: '#' },
-  { Icon: BiLogoLinkedin as IconType, title: 'Linked In', url: '#' },
-  { Icon: RiTwitterXFill as IconType, title: 'X', url: '#' },
+  {
+    Icon: BiLogoFacebook as IconType,
+    title: 'Facebook',
+    url: 'https://www.facebook.com/techstacksph',
+  },
+  {
+    Icon: AiFillInstagram as IconType,
+    title: 'Instagram',
+    url: 'https://instagram.com/techstacksph',
+  },
+  {
+    Icon: BiLogoLinkedin as IconType,
+    title: 'Linked In',
+    url: 'https://www.linkedin.com/company/techstacksph/',
+  },
+  {
+    Icon: RiTwitterXFill as IconType,
+    title: 'X',
+    url: 'https://twitter.com/techstacksph',
+  },
 ];
 
 export const EMAIL = 'techstacks.2022@gmail.com' as const;
