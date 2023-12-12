@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { formatRelative } from 'date-fns';
+import formatRelative from 'date-fns/esm/formatRelative';
 import Link from 'next/link';
 import type { JSX } from 'react';
 import { NavRoutes } from '@/constants/nav-routes';

@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { format } from 'date-fns';
+import format from 'date-fns/esm/format';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 import { Button } from './ui/button';
 

@@ -7,7 +7,11 @@ export const metadata = createMetadata({
   title: 'Inquire',
 });
 
-export default function ContactLayout({ form }: Record<string, ReactNode>) {
+interface ContactLayoutProps {
+  form: ReactNode;
+}
+
+export default function ContactLayout({ form }: ContactLayoutProps) {
   return (
     <Main>
       <Section className="min-h-[calc(theme(height.screen)-theme(height.16))] grid md:grid-cols-2 place-items-center gap-20 py-16">
