@@ -10,6 +10,7 @@ import { AutoPlay } from '@/lib/plugins/keen-slider/auto-play';
 import { Carousel, CarouselItem, type CarouselRef } from './ui/carousel';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 import { Button } from './ui/button';
+import { H3, Subheading } from './ui/typography';
 
 const TESTIMONIALS = [
   {
@@ -77,28 +78,22 @@ export function TestimonialCarousel() {
             <div className="flex flex-col w-full h-full gap-8 px-4 md:h-auto md:px-2 group-data-[active=false]:scale-90 transition-transform">
               <div className="flex flex-col h-full gap-4 p-6 border rounded-md bg-background border-primary-static">
                 <div className="flex flex-row items-center gap-2">
-                  <Avatar>
+                  <Avatar className="w-14 h-14">
                     <AvatarImage alt={name} asChild src={src.src}>
                       <Image alt={`${name} profile image`} src={src} />
                     </AvatarImage>
                     <AvatarFallback>{name}</AvatarFallback>
                   </Avatar>
                   <div className="flex flex-col gap-1">
-                    <p className="text-base font-normal text-foreground">
-                      {name}
-                    </p>
-                    <p className="text-base font-normal text-foreground">
-                      {from}
-                    </p>
+                    <H3>{name}</H3>
+                    <Subheading>{from}</Subheading>
                   </div>
                 </div>
                 <div className="flex flex-col justify-center h-full gap-1">
-                  <div className="text-3xl text-primary-static">
+                  <div className="text-5xl text-primary-static">
                     <BiSolidQuoteAltLeft />
                   </div>
-                  <p className="text-justify text-muted-foreground">
-                    {testimonial}
-                  </p>
+                  <Subheading>{testimonial}</Subheading>
                 </div>
               </div>
             </div>
@@ -108,7 +103,7 @@ export function TestimonialCarousel() {
 
       <div className="flex justify-center gap-4">
         <Button
-          className="p-3 text-xl bg-white text-muted"
+          className="p-3 text-xl bg-transparent border border-primary-static text-muted hover:bg-transparent"
           onClick={() => carouselRef.current?.prev()}
           variant="ghost"
         >
