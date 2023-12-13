@@ -33,23 +33,28 @@ export default function WhyChooseUs() {
     <div className="flex justify-center w-full py-16">
       <Section>
         <div>
-          <div className="flex gap-2 items-center justify-center">
+          <div
+            className="flex gap-2 items-center justify-center"
+            data-aos="fade-up"
+            data-aos-delay={100}
+          >
             <BiSolidCircle className="text-lg text-yellow-500" />
-            <Subheading className="text-center lg:text-left" data-aos="fade-up">
+            <Subheading className="text-center lg:text-left">
               Why Choose us
             </Subheading>
           </div>
           <div className="text-center">
-            <H2 className="text-center" data-aos="fade-up" data-aos-delay={100}>
+            <H2 className="text-center" data-aos="fade-up" data-aos-delay={200}>
               We make beautiful, high converting, engaging, secure websites.
             </H2>
           </div>
 
           <div className="flex flex-col items-center lg:gap-4 md:flex-row md:justify-evenly pt-8 md:pt-16">
-            {CARD_DATA.map(({ icon: Icon, ...data }) => (
+            {CARD_DATA.map(({ icon: Icon, ...data }, index) => (
               <GlowCard
                 className="w-full h-full md:h-[500px] xl:h-[550px]"
                 data-aos="fade-up"
+                data-aos-delay={index * 100}
                 key={data.title}
               >
                 <GlowCardContent className="w-full h-full p-8 md:p-4 lg:p-8 xl:p-10">

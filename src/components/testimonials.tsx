@@ -10,17 +10,21 @@ export function Testimonials() {
         <div className="flex flex-col gap-10">
           <div className="grid items-center grid-cols-1 gap-6 lg:grid-cols-2">
             <div className="flex flex-col items-center gap-6 lg:items-start">
-              <div className="flex flex-row items-center gap-2">
+              <div
+                className="flex flex-row items-center gap-2"
+                data-aos="fade-up"
+                data-aos-delay={100}
+              >
                 <div className="text-lg text-yellow-500">
                   <BiSolidCircle />
                 </div>
-                <Subheading data-aos="fade-up">Testimonials</Subheading>
+                <Subheading>Testimonials</Subheading>
               </div>
 
               <H2
                 className="text-center lg:text-left"
                 data-aos="fade-up"
-                data-aos-delay={100}
+                data-aos-delay={200}
               >
                 Hear What Our Clients Have to Say
               </H2>
@@ -28,7 +32,7 @@ export function Testimonials() {
             <Subheading
               className="text-center lg:text-left"
               data-aos="fade-up"
-              data-aos-delay={200}
+              data-aos-delay={300}
             >
               Gain insight into the experiences of our valued clients as they
               share their success stories and how our web development solutions

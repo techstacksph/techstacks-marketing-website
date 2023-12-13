@@ -14,7 +14,7 @@ import { TechstacksLogo } from './icons/techstacks-logo';
 
 export default function Footer() {
   return (
-    <footer className="w-full pt-[72px] pb-10">
+    <footer className="w-full pt-[72px] pb-10 overflow-clip">
       <div className="relative flex flex-col-reverse lg:flex-col ">
         <div className="inset-y-0 top-0 right-12 lg:right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full hidden md:inline md:absolute xl:px-0">
           <div className="flex items-center justify-center w-full h-[500px]">
