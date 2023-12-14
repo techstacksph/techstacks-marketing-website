@@ -5,6 +5,7 @@ import { H1 } from '@/components/ui/typography';
 import { type MemberData, TEAM } from '@/constants/team';
 import { isOdd } from '@/utils/is-odd';
 import { Typewriter } from '@/components/typewriter';
+import { SvgDeco } from '@/components/icons/svg-deco';
 
 export default function OurTeamGallery() {
   const withGallery = TEAM.filter(
@@ -15,10 +16,11 @@ export default function OurTeamGallery() {
   return (
     <div className="w-full flex justify-center py-16">
       <Section>
-        <div className="grid items-start gap-8 md:grid-cols-2">
-          <div className="sticky top-24">
+        <div className="grid items-center lg:items-start gap-8 grid-cols-1 lg:grid-cols-2">
+          <div className="static lg:sticky lg:top-24">
+            <SvgDeco className="hidden lg:inline absolute top-36 -left-[500px]  m-auto -z-30" />
             <div className="space-y-4">
-              <H1 asChild>
+              <H1 asChild className="text-center lg:text-left">
                 <h2>
                   Unveiling{' '}
                   <span className="text-primary-static">Employee Insights</span>
@@ -29,7 +31,7 @@ export default function OurTeamGallery() {
                 component="p"
                 options={{
                   wrapperClassName:
-                    'text-base leading-loose text-muted-foreground lg:text-2xl',
+                    'text-base leading-loose text-muted-foreground text-center lg:text-left lg:text-2xl',
                   strings: [
                     'Employee Takes on Techstacks',
                     'What Our Team Thinks of Techstacks',
