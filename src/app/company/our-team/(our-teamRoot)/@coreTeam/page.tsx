@@ -8,7 +8,7 @@ import OurTeamCard from '@/components/our-team-card';
 
 export default function OurTeam() {
   return (
-    <div className="w-full flex justify-center py-16 bg-primary-static/10">
+    <div className="w-full flex justify-center py-16">
       <Section>
         <div className="flex flex-col gap-8 justify-center items-center">
           <div className="flex flex-col gap-4 justify-center items-center">
