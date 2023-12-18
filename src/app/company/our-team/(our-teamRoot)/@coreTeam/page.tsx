@@ -3,14 +3,13 @@ import React from 'react';
 import { Section } from '@/components/default-elements';
 import { DotsIcon } from '@/components/icons/dots-icon';
 import { H2, Subheading } from '@/components/ui/typography';
-import { OUR_TEAM } from '@/constants/our-team';
-import OurTeamCard from '@/components/our-team-card';
+import OurTeamTooltip from '@/components/our-team-tooltip';
 
 export default function OurTeam() {
   return (
     <div className="w-full flex justify-center py-16">
       <Section>
-        <div className="flex flex-col gap-8 justify-center items-center">
+        <div className="flex flex-col gap-10 justify-center items-center">
           <div className="flex flex-col gap-4 justify-center items-center">
             <p
               className="inline-block text-base lg:text-xl font-semibold text-muted "
@@ -38,17 +37,7 @@ export default function OurTeam() {
               the future of technology.
             </Subheading>
           </div>
-          <div className="grid gap-4 md:gap-8 lg:gap-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            {OUR_TEAM.map(({ id, img, name, position }, index) => (
-              <OurTeamCard
-                img={img}
-                index={index}
-                key={id}
-                name={name}
-                position={position}
-              />
-            ))}
-          </div>
+          <OurTeamTooltip />
         </div>
       </Section>
     </div>

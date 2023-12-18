@@ -16,17 +16,11 @@ export default function AboutLayout(props: Record<string, ReactNode>) {
         <Separator variant="horizon" />
       </Section>
       <div> {props.partners}</div>
-      <Section role="none">
-        <Separator variant="horizon" />
-      </Section>
       <div> {props.statements}</div>
       <Section role="none">
         <Separator variant="horizon" />
       </Section>
       <div> {props.coreValues}</div>
-      <Section role="none">
-        <Separator variant="horizon" />
-      </Section>
       <div> {props.serviceTools}</div>
       <Section role="none">
         <Separator variant="horizon" />
