@@ -154,9 +154,9 @@ export default function Footer() {
                   <p>All Rights Reserved.</p>
                 </div>
                 <div>
-                  <Link className="underline text-neutral-600" href="#">
+                  {/* <Link className="underline text-neutral-600" href="#">
                     Terms and Conditions
-                  </Link>{' '}
+                  </Link>{' '} */}
                   |{' '}
                   <Link
                     className="underline text-neutral-600"
