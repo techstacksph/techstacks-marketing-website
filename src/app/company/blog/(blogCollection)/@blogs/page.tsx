@@ -1,11 +1,12 @@
 import { notFound } from 'next/navigation';
-import { getPosts, processPostNode } from '@/lib/blog/content/api/get-posts';
+import { getPosts } from '@/lib/blog/content/api/get-posts';
 import { BlogCard, HighlightedCard } from '@/components/blog-card';
 import { PaginationButtons } from '@/components/blog-pagination';
 import { H3 } from '@/components/ui/typography';
+import { createExcerpt } from '@/utils/create-excerpt';
 import { type BlogPageProps } from '../page-props';
 
-const LIMIT = 6 as const;
+const LIMIT = 5 as const;
 
 export default async function BlogCollectionPage({
   searchParams,
@@ -14,49 +15,50 @@ export default async function BlogCollectionPage({
   const routePage = searchParams.page;
   const currentPage = routePage ? parseInt(routePage) : 1;
 
-  const { info, posts: rawPosts } = await getPosts({
+  const { allBlogs, meta } = await getPosts({
     search: searchQuery,
     size: LIMIT,
     offset: LIMIT * (currentPage - 1),
   });
 
-  const [firstPost, ...posts] = await Promise.all(
-    rawPosts.map(async ({ node }) => ({
-      raw: node,
-      processed: await processPostNode(node),
-    })),
-  );
+  const [firstPost, ...posts] = allBlogs;
 
   if (!firstPost) notFound();
 
-  const pageInfo = info.offsetPagination;
-  const next = pageInfo.hasMore ? currentPage + 1 : pageInfo.hasMore;
-  const prev = pageInfo.hasPrevious ? currentPage - 1 : pageInfo.hasPrevious;
+  const total = Math.ceil(meta.totalBlogs / LIMIT);
+  const next = currentPage === total ? false : currentPage + 1;
+  const prev = currentPage < 1 ? false : currentPage - 1;
 
   return (
     <div className="grid grid-cols-1 gap-16 md:grid-cols-3">
       <div className="md:col-span-2">
         <HighlightedCard
-          Description={firstPost.processed.partialContent.result}
-          author={firstPost.processed.author}
-          bannerImage={firstPost.processed.bannerImage}
-          postDate={new Date(firstPost.raw.date)}
-          slug={firstPost.raw.slug}
-          title={firstPost.raw.title}
+          bannerImage={{
+            height: Number(firstPost.featuredImage.height),
+            width: Number(firstPost.featuredImage.width),
+            src: firstPost.featuredImage.url,
+          }}
+          description={createExcerpt(firstPost.content)}
+          postDate={new Date(firstPost.createdAt)}
+          slug={firstPost.slug}
+          title={firstPost.title}
         />
       </div>
       <div className="flex flex-col justify-between gap-8">
         <div className="flex flex-col gap-8">
           {posts.length ? (
-            posts.map(({ raw, processed }) => (
+            posts.map((post) => (
               <BlogCard
-                Description={processed.partialContent.result}
-                author={processed.author}
-                bannerImage={processed.bannerImage}
-                key={raw.slug}
-                postDate={new Date(raw.date)}
-                slug={raw.slug}
-                title={raw.title}
+                bannerImage={{
+                  height: Number(post.featuredImage.height),
+                  width: Number(post.featuredImage.width),
+                  src: post.featuredImage.url,
+                }}
+                description={createExcerpt(post.content)}
+                key={post.slug}
+                postDate={new Date(post.createdAt)}
+                slug={post.slug}
+                title={post.title}
               />
             ))
           ) : (
@@ -70,7 +72,7 @@ export default async function BlogCollectionPage({
           current={currentPage}
           next={next}
           prev={prev}
-          total={pageInfo.total}
+          total={total}
         />
       </div>
     </div>

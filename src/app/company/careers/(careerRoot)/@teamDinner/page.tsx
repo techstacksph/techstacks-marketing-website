@@ -38,9 +38,9 @@ const CAREERIMAGE = [
 
 export default function TeamDinnerSection() {
   return (
-    <div className="w-full flex justify-center">
+    <div className="flex justify-center w-full">
       <div className="w-full">
-        <div className="w-full flex flex-row justify-center items-center">
+        <div className="flex flex-row items-center justify-center w-full">
           {CAREERIMAGE.map(({ id, imgSrc, title }, index) => (
             <div
               className={cn(
@@ -50,7 +50,7 @@ export default function TeamDinnerSection() {
               key={id}
             >
               <Image
-                alt={`${title}`}
+                alt={title}
                 className="w-full h-auto opacity-80 hover:opacity-100 hover:transition hover:delay-100"
                 src={imgSrc}
               />

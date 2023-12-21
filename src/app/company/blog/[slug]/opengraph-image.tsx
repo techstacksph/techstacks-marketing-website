@@ -1,8 +1,4 @@
 import { ImageResponse } from 'next/og';
-// import {
-//   getPostBySlug,
-//   processSinglePost,
-// } from '@/lib/blog/content/api/get-post-by-slug';
 import { z } from 'zod';
 import { NavRoutes } from '@/constants/nav-routes';
 import { env } from '@/env.mjs';

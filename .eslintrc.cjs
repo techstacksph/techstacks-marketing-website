@@ -26,7 +26,7 @@ module.exports = {
       },
     },
   },
-  ignorePatterns: ['node_modules/', 'dist/'],
+  ignorePatterns: ['node_modules/', '__generated__/'],
   rules: {
     '@typescript-eslint/consistent-type-imports': [
       'error',
