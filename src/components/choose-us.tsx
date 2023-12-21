@@ -1,7 +1,7 @@
 import { BiSolidCircle } from 'react-icons/bi';
 import { Separator } from './ui/separator';
 import { Section } from './default-elements';
-import { H2, H4, Subheading } from './ui/typography';
+import { H2, H3, Subheading } from './ui/typography';
 import { GlowCard, GlowCardContent } from './glow-card';
 import { SvgGearContained } from './icons/svg-gear-contained';
 import { SvgSpaceShip } from './icons/svg-spaceship';
@@ -49,24 +49,22 @@ export default function WhyChooseUs() {
             </H2>
           </div>
 
-          <div className="flex flex-col items-center lg:gap-4 md:flex-row md:justify-evenly pt-8 md:pt-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:gap-4 xl:gap-8 items-center">
             {CARD_DATA.map(({ icon: Icon, ...data }, index) => (
               <GlowCard
-                className="w-full h-full md:h-[500px] xl:h-[550px]"
+                className="w-full h-full"
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
                 key={data.title}
               >
                 <GlowCardContent className="w-full h-full p-8 md:p-4 lg:p-8 xl:p-10">
-                  <div className="flex flex-col gap-4 lg:gap-6">
+                  <div className="flex flex-col h-full justify-between gap-4 lg:gap-6">
                     <div className="w-44 h-44 xl:w-52 xl:h-52 self-center">
                       <Icon />
                     </div>
-                    <H4 asChild>
-                      <h3>{data.title}</h3>
-                    </H4>
-                    <Separator className="h-1 bg-primary-static" />
+                    <H3 className="text-xl">{data.title}</H3>
                     <Subheading>{data.description}</Subheading>
+                    <Separator className="h-1 bg-primary-static" />
                   </div>
                 </GlowCardContent>
               </GlowCard>

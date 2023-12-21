@@ -50,10 +50,10 @@ export const pagesLink = [
     title: 'Services',
     href: NavRoutes.Services,
   },
-  {
-    title: 'Pricing',
-    href: NavRoutes.Pricing,
-  },
+  // {
+  //   title: 'Pricing',
+  //   href: NavRoutes.Pricing,
+  // },
   {
     title: 'Trainings',
     href: NavRoutes.Trainings,
