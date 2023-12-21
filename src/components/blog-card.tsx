@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { formatRelative, format } from 'date-fns/esm';
+import { formatRelative, format } from 'date-fns';
 import Link from 'next/link';
 import { NavRoutes } from '@/constants/nav-routes';
 import { toSentenceCase } from '@/utils/change-case';

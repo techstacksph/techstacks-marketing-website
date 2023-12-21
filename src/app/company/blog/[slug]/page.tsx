@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { type Metadata } from 'next';
-import format from 'date-fns/esm/format';
+import { format } from 'date-fns';
 import { Main, Section } from '@/components/default-elements';
 import { getPostBySlug } from '@/lib/blog/content/api/get-post-by-slug';
 import { BlogArticle } from '@/components/blog-article';
