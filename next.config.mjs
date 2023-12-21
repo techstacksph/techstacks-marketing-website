@@ -10,15 +10,7 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        hostname: '0.gravatar.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'picsum.photos',
-      },
-      {
-        protocol: 'http',
-        hostname: 'localhost',
+        hostname: 'www.datocms-assets.com',
       },
     ],
   },

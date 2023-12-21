@@ -1,11 +1,10 @@
 import Image from 'next/image';
-import formatRelative from 'date-fns/esm/formatRelative';
+import { formatRelative, format } from 'date-fns/esm';
 import Link from 'next/link';
-import type { JSX } from 'react';
 import { NavRoutes } from '@/constants/nav-routes';
+import { toSentenceCase } from '@/utils/change-case';
 import { Button } from './ui/button';
-import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
-import { H3 } from './ui/typography';
+import { H3, Subheading } from './ui/typography';
 
 interface BaseImageProps {
   src: string;
@@ -13,25 +12,20 @@ interface BaseImageProps {
   height: number;
 }
 
-interface Author {
-  avatar: BaseImageProps;
-  name: string;
-}
-
 export interface BlogCardProps {
   slug: string;
   title: string;
-  Description: JSX.Element;
+  description: string;
   bannerImage: BaseImageProps;
-  author: Author;
   postDate: Date;
 }
 
 export function BlogCard({
   slug,
   title,
-  Description,
+  description,
   bannerImage,
+  postDate,
 }: BlogCardProps) {
   return (
     <Link
@@ -39,9 +33,14 @@ export function BlogCard({
       href={`${NavRoutes.Company.Blog}/${slug}`}
     >
       <div className="relative flex gap-2">
-        <div className="w-full p-3 pb-4 space-y-2">
-          <H3>{title}</H3>
-          <div className="break-all line-clamp-2">{Description}</div>
+        <div className="flex flex-col justify-between w-full gap-2 p-3 pb-4">
+          <div className="space-y-2">
+            <H3>{title}</H3>
+            <div className="break-all line-clamp-2">{description}</div>
+          </div>
+          <Subheading className="text-sm italic break-all truncate lg:text-sm">
+            {format(postDate, 'MMM. d, yyyy')}
+          </Subheading>
         </div>
         <div className="absolute top-0 left-0 w-full h-full -z-10 lg:w-36 lg:aspect-square lg:shrink-0 lg:static">
           <Image
@@ -60,9 +59,8 @@ export function BlogCard({
 export function BlogCarouselItem({
   slug,
   title,
-  Description,
+  description,
   bannerImage,
-  author,
   postDate,
 }: BlogCardProps) {
   return (
@@ -75,7 +73,7 @@ export function BlogCarouselItem({
                 <H3 asChild className="line-clamp-1">
                   <h2>{title}</h2>
                 </H3>
-                <div className="line-clamp-4">{Description}</div>
+                <div className="line-clamp-4">{description}</div>
                 <div className="flex justify-end">
                   <Button asChild variant="outline">
                     <Link href={`${NavRoutes.Company.Blog}/${slug}`}>
@@ -86,17 +84,8 @@ export function BlogCarouselItem({
               </div>
             </div>
             <div className="flex flex-col gap-2">
-              <div className="flex items-center gap-2">
-                <Image
-                  {...author.avatar}
-                  alt={`${author.name} Profile image`}
-                  className="w-10 h-10 rounded-full"
-                  priority
-                />
-                <span className="text-lg font-medium">{author.name}</span>
-              </div>
               <p className="text-sm italic text-muted-foreground">
-                {formatRelative(postDate, Date.now())}
+                {toSentenceCase(formatRelative(postDate, Date.now()))}
               </p>
             </div>
           </div>
@@ -118,9 +107,8 @@ export function BlogCarouselItem({
 export function HighlightedCard({
   slug,
   title,
-  Description,
+  description,
   bannerImage,
-  author,
   postDate,
 }: BlogCardProps) {
   return (
@@ -135,7 +123,7 @@ export function HighlightedCard({
       </div>
       <div className="p-8 space-y-4">
         <H3>{title}</H3>
-        <div className="line-clamp-3">{Description}</div>
+        <div className="line-clamp-3">{description}</div>
         <div className="flex justify-end">
           <Button asChild variant="outline">
             <Link href={`${NavRoutes.Company.Blog}/${slug}`}>Read more</Link>
@@ -144,21 +132,8 @@ export function HighlightedCard({
       </div>
       <div className="p-8 pt-0">
         <div className="flex flex-col gap-2">
-          <div className="flex items-center gap-2">
-            <Avatar>
-              <AvatarImage asChild src={author.avatar.src}>
-                <Image
-                  {...author.avatar}
-                  alt={`${author.name} profile image`}
-                />
-              </AvatarImage>
-              <AvatarFallback>{author.name}</AvatarFallback>
-            </Avatar>
-
-            <span className="text-lg font-medium">{author.name}</span>
-          </div>
           <p className="text-sm italic text-muted-foreground">
-            {formatRelative(postDate, Date.now())}
+            {toSentenceCase(formatRelative(postDate, Date.now()))}
           </p>
         </div>
       </div>

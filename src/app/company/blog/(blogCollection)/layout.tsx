@@ -4,7 +4,7 @@ import { H1, Subheading } from '@/components/ui/typography';
 import { BreadCrumbItem, BreadCrumbs } from '@/components/bread-crumbs';
 import { createMetadata } from '@/utils/create-metadata';
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 3600;
 
 export const metadata = createMetadata({
   title: 'Blogs',

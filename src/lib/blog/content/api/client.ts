@@ -2,6 +2,10 @@ import { ApolloClient, InMemoryCache } from '@apollo/client';
 import { env } from '@/env.mjs';
 
 export const client = new ApolloClient({
-  uri: env.WORDPRESS_API_URL,
+  uri: 'https://graphql.datocms.com/',
+  headers: {
+    authorization: `Bearer ${env.DATOCMS_API_KEY}`,
+    'X-Exclude-Invalid': 'true',
+  },
   cache: new InMemoryCache(),
 });
