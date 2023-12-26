@@ -1,6 +1,5 @@
 import { AboutIcon } from '@/components/icons/about-icon';
 import { OurTeamIcon } from '@/components/icons/our-team-icon';
-import { BlogIcon } from '@/components/icons/blog-icon';
 import { CareerNavIcon } from '@/components/icons/career-nav-icon';
 import { NavRoutes } from './nav-routes';
 
