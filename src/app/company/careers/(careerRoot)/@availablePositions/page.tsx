@@ -8,16 +8,27 @@ import { Section } from '@/components/default-elements';
 import { cn } from '@/utils/cn';
 import { SAMPLE_JOBS } from '@/lib/faker';
 import type { Job } from '@/constants/jobs';
-import { POSITIONS } from '@/constants/jobs';
+import { POSITIONS} from '@/constants/jobs';
 import { JobCard } from '@/components/job-card';
 import { H2 } from '@/components/ui/typography';
 
 const TABS = ['All', ...POSITIONS] as const;
 
 const AVAILABLE_JOBS: Job[] = [
-  /**
-   * Add open jobs here!
-   */
+    {
+        description: "Are you passionate about digital marketing and SEO? We're on the lookout for a Marketing and SEO Assistant to join our team and contribute to our online success! Be one of us!",
+        employment: "Full-time",
+        location: "Cabanatuan City, Nueva Ecija",
+        name: "Marketing and SEO Assistant",
+        type: "Marketing / SEO",
+    },
+    {
+        description: "Are you highly organized, detail-oriented, and ready to contribute your administrative skills to a dynamic team? We are looking for a dedicated Administrative Assistant to support our operations and ensure smooth day-to-day functioning of the team.",
+        employment: "Full-time",
+        location: "Cabanatuan City, Nueva Ecija",
+        name: "Admin Assistant",
+        type: "Admin",
+    }
 ];
 
 export default function AvailablePositionsSection() {

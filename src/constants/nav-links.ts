@@ -22,13 +22,13 @@ export const companyLink = [
           'Get to know the people behind our success—the dynamic individuals that form our web development family.',
         Icon: OurTeamIcon,
       },
-      {
-        label: 'Blogs',
-        href: NavRoutes.Company.Blog,
-        description:
-          'Explore, learn, and embark on a journey towards digital excellence.',
-        Icon: BlogIcon,
-      },
+      // {
+      //   label: 'Blogs',
+      //   href: NavRoutes.Company.Blog,
+      //   description:
+      //     'Explore, learn, and embark on a journey towards digital excellence.',
+      //   Icon: BlogIcon,
+      // },
       {
         label: 'Careers',
         href: NavRoutes.Company.Careers,
