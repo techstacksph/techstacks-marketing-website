@@ -19,22 +19,24 @@ export function PaginationButtons({ next, prev }: PaginationButtonsProps) {
   function getLink(page: number | boolean) {
     if (typeof page === 'boolean') return pathname;
 
-    const sp = new URLSearchParams(Object.fromEntries(searchParams.entries()));
-    sp.set('page', page.toString());
+    const sp =
+      searchParams &&
+      new URLSearchParams(Object.fromEntries(searchParams.entries()));
+    sp?.set('page', page.toString());
 
-    return `${pathname}?${sp.toString()}`;
+    return `${pathname}?${sp?.toString()}`;
   }
 
   return (
     <div className="flex justify-center gap-4">
       <Button asChild disabled={!prev} size="icon" variant="outline">
-        <Link href={getLink(prev)} scroll={false}>
+        <Link href={getLink(prev) || '#'} scroll={false}>
           <ChevronLeft />
         </Link>
       </Button>
 
       <Button asChild disabled={!next} size="icon" variant="outline">
-        <Link href={getLink(next)} scroll={false}>
+        <Link href={getLink(next) || '#'} scroll={false}>
           <ChevronRight />
         </Link>
       </Button>

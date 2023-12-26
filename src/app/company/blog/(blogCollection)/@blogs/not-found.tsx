@@ -4,7 +4,7 @@ import { useSearchParams } from 'next/navigation';
 
 export default function BlogSearchNotFound() {
   const searchParams = useSearchParams();
-  const query = searchParams.get('q');
+  const query = searchParams?.get('q');
 
   return (
     <div className="py-8">

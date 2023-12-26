@@ -12,7 +12,7 @@ export default function BlogCollectionLayout({
   children: ReactNode;
 }) {
   const searchParams = useSearchParams();
-  const query = searchParams.get('q');
+  const query = searchParams?.get('q');
 
   return (
     <Section>
