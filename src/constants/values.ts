@@ -1,4 +1,4 @@
-import { oldOffice, careerTeam, teamImage } from '@/assets/images';
+import { careerTeam, oldOffice, teamImage } from '@/assets/images';
 
 export const values = [
   {
@@ -14,7 +14,7 @@ export const values = [
     heading: 'Web Excellence in ',
     highlight: 'Headless CMS',
     description:
-      'Our mission is to provide high-quality web design and development solutions that helps our clients achieve their online business objectives.',
+      'Our mission is to provide high-quality web design and development solutions that helps our clients achieve their business objectives.',
     image: careerTeam,
   },
   {
@@ -22,7 +22,7 @@ export const values = [
     heading: 'Opportunities and Innovative',
     highlight: 'Web solutions',
     description:
-      'To be the leading trusted partner in delivering high-performance websites to our clients. Additionally, we aspire to provide an opportunity to deserving IT developers from Nueva Ecija, unlocking their potential to contribute to making the web a better place.',
+      'To be the leading trusted partner in delivering high-performance websites to our clients.',
     image: teamImage,
   },
 ];
