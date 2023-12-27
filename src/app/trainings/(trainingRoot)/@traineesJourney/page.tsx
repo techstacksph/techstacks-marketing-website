@@ -1,8 +1,7 @@
-import React from 'react';
 import { Section } from '@/components/default-elements';
 // import { TechstacksLogo } from '@/components/icons/techstacks-logo';
-import { H2, Subheading } from '@/components/ui/typography';
 import TraineesCarousel from '@/components/trainees-carousel';
+import { H2, Subheading } from '@/components/ui/typography';
 
 export default function TraineesJourney() {
   return (
@@ -12,7 +11,7 @@ export default function TraineesJourney() {
           <div className="flex flex-col gap-8">
             <H2 className="text-center" data-aos="fade-up" data-aos-delay={100}>
               Explore the journey of our OJT trainees, including their
-              achievements, project, and valueble learnings.
+              achievements, project, and valuable learnings.
             </H2>
             <Subheading
               className="text-center"
