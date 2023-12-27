@@ -16,6 +16,6 @@ export const workWithUs = [
   {
     title: 'Design System',
     Icon: DesignSystemIcon,
-    desc: "Crafting Cohesive Excellence. Our comprehensive design system unifies your brand's visual language and user experience, ensuring consistency and excellence across every touch-point.",
+    desc: "Our comprehensive design system unifies your brand's visual language and user experience, ensuring consistency and excellence across every touch-point.",
   },
 ];
