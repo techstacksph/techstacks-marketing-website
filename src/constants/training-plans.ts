@@ -1,13 +1,13 @@
-import { LearningIcon } from '@/components/icons/learning-icon';
-import { SupportIcon } from '@/components/icons/support-icon';
-import { ProjectIcon } from '@/components/icons/project-icon';
-import { WorkEnviIcon } from '@/components/icons/work-envi-icon';
-import { ExposureIcon } from '@/components/icons/exposure-icon';
 import { CareerIcon } from '@/components/icons/career-icon';
+import { ExposureIcon } from '@/components/icons/exposure-icon';
+import { LearningIcon } from '@/components/icons/learning-icon';
+import { ProjectIcon } from '@/components/icons/project-icon';
+import { SupportIcon } from '@/components/icons/support-icon';
+import { WorkEnviIcon } from '@/components/icons/work-envi-icon';
 
 export const TRAINING_PLANS = [
   [
-    'Customize learning',
+    'Customized learning',
     'Ensuring our trainees receive the training and development opportunities that align with their career goals and aspirations.',
     LearningIcon,
   ],
