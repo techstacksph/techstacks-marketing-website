@@ -2,27 +2,27 @@ import { oldOffice, careerTeam, teamImage } from '@/assets/images';
 
 export const values = [
   {
-    title: 'Our history',
-    heading: 'A Vision Ignited: The Birth of',
-    highlight: 'Techstacks Ph',
+    title: 'Our Story',
+    heading: 'A Vision Ignited: The Birth of ',
+    highlight: 'Techstacks',
     description:
-      'Founded in April 2022, Techstacks Ph emerged with a vision to transform the web development landscape. We specialize in crafting websites that not only showcase beauty but also boast exceptional speed, security, and conversion potential. Our journey has been marked by an unwavering commitment to staying at the cutting edge of technology, ensuring we deliver top-tier solutions to our diverse clientele.',
+      'We had our humble beginning during the global pandemic. Our primary purpose was to enable opportunities for web developers with potential from Nueva Ecija by allowing them to experience industry-level IT and web development practices through training. We then started to offer quality web development services to our clients mid-pandemic. From a single full-stack developer to a team of 8 developers and designers, our journey has been marked by a commitment to staying at the cutting edge of technology, ensuring we deliver industry based solutions to our clients.',
     image: oldOffice,
   },
   {
-    title: 'Our vision',
-    heading: 'Leading the way in Innovative',
-    highlight: 'Web solutions',
+    title: 'Our Mission',
+    heading: 'Web Excellence in ',
+    highlight: 'Headless CMS',
     description:
-      'Our vision is to become the go-to agency for web design and development in Cabanatuan City, Philippines, and beyond. We strive to be at the forefront of the industry, constantly innovating and delivering cutting-edge solutions that drive our clients digital growth. Through our dedication to excellence and customer satisfaction, we aim to be a trusted partner for businesses looking to succeed in the digital world.',
-    image: teamImage,
+      'Our mission is to provide high-quality web design and development solutions that helps our clients achieve their online business objectives.',
+    image: careerTeam,
   },
   {
-    title: 'Our mission',
-    heading: 'Driving Web Excellence and leading in Jamstacks/Headless CMS',
-    highlight: '',
+    title: 'Our Vision',
+    heading: 'Opportunities and Innovative',
+    highlight: 'Web solutions',
     description:
-      'Our mission is to provide high-quality web design and development services that help our clients achieve their business goals through engaging user- friendly websites. We aim to be a leading provider of Jamstack and Headless CMS solutions, using the latest technologies and best practices to deliver exceptional results.',
-    image: careerTeam,
+      'To be the leading trusted partner in delivering high-performance websites to our clients. Additionally, we aspire to provide an opportunity to deserving IT developers from Nueva Ecija, unlocking their potential to contribute to making the web a better place.',
+    image: teamImage,
   },
 ];

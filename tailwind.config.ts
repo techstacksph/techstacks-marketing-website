@@ -98,11 +98,27 @@ const config = {
           '75%': { translate: '+2px 0px' },
           '100%': { translate: '0 0' },
         },
+        maskFlare: {
+          '0%': {
+            'mask-image':
+              'linear-gradient(60deg, rgb(0, 0, 0) 25%, rgba(0, 0, 0, 0.4) 50%, rgb(0, 0, 0) 75%)',
+            'mask-size': '400%',
+            'mask-position': '0px center',
+          },
+          '100%': {
+            'mask-image':
+              'linear-gradient(60deg, rgb(0, 0, 0) 25%, rgba(0, 0, 0, 0.4) 50%, rgb(0, 0, 0) 75%)',
+            'mask-size': '400%',
+            'mask-position': '100% center',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         unsteady: 'unsteady 2s linear infinite',
+        'mask-logo':
+          '1.8s cubic-bezier(0.16, 1, 0.3, 1) 0s 1 normal forwards running maskFlare',
       },
       screens: {
         xs: '320px',

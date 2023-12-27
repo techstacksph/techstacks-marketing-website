@@ -26,7 +26,7 @@ import teamImg5 from './team/5-kai.png';
 import teamImg6 from './team/6-jayvee.png';
 import teamImg7 from './team/7-aira.png';
 import teamImg8 from './team/8-ara.png';
-import oldOffice from './about-us/old-office.jpg';
+import oldOffice from './about-us/old-office.png';
 import tailwindLogo from './about-us/service-tools-logo/tailwind-logo.png';
 import franzProfile from './team/franz-profile.png';
 import samProfile from './team/sam-profile.jpg';

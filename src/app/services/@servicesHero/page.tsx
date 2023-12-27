@@ -59,8 +59,8 @@ export default function ServicesHero() {
                 data-aos="fade-up"
                 data-aos-delay={200}
               >
-                We specialize in delivering top-notch IT services tailored to
-                meet your unique business needs.
+                We specialize in delivering top-notch IT services and web
+                solutions tailored to meet your unique business needs.
               </Subheading>
               <div className="flex flex-col gap-4 md:flex-row">
                 <Link

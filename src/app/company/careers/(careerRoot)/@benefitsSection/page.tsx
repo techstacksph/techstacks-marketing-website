@@ -2,7 +2,6 @@ import Image from 'next/image';
 import { careerTeam } from '@/assets/images';
 import { BenefitCard } from '@/components/benefit-card';
 import { Section } from '@/components/default-elements';
-import { TechstacksLogo } from '@/components/icons/techstacks-logo';
 import { H2, Subheading } from '@/components/ui/typography';
 
 const BENEFITS = [
@@ -12,9 +11,9 @@ const BENEFITS = [
       'We are one. We are a Team. Everyone is involved and nobody is left behind.',
   },
   {
-    title: 'Health & Wellness',
+    title: 'Good Balance',
     description:
-      'Experience a range of health and wellness perks to support your well-being and work-life balance',
+      "We value everyone's time. Experience the good work-life balance with Techstacks.",
   },
   {
     title: 'We are Modern',
@@ -48,10 +47,8 @@ export default function BenefitsSection() {
               className="[&&]:leading-tight whitespace-pre-wrap md:text-left text-center"
               data-aos="fade-up"
             >
-              <span className="text-primary-static">Perks & benefits</span> of
-              working at{'\n'}
+              <span className="text-primary-static">Be one of us</span> at{'\n'}
               <span className="text-primary-static font-poppins">
-                <TechstacksLogo className="inline" />{' '}
                 <span className="tracking-normal">Techstacks</span>
               </span>
             </H2>
@@ -60,8 +57,8 @@ export default function BenefitsSection() {
               data-aos="fade-up"
               data-aos-delay={100}
             >
-              We provides benefits to boost productivity, support personal and
-              professional growth.
+              If you enjoy working with motivated peers, collaborating to solve
+              challenging problems about the web, we’d love to hear from you..
             </Subheading>
 
             <Image

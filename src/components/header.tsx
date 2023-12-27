@@ -38,7 +38,7 @@ export default function Header() {
               <Menu />
             </Button>
           </NavDrawer>
-          <Link href={NavRoutes.Home}>
+          <Link className="hover:animate-mask-logo" href={NavRoutes.Home}>
             <BrandLogo
               className={cn(
                 'text-primary-static dark:text-primary-foreground',
@@ -66,7 +66,7 @@ export default function Header() {
                           <ListItem
                             className="flex flex-row w-full gap-2 cursor-pointer"
                             href={href}
-                            icon={<Icon className="w-8 h-8" />}
+                            icon={<Icon className="w-8 h-6" />}
                             key={label}
                             title={label}
                           >

@@ -19,13 +19,13 @@ export default function WhyChooseUs() {
       icon: SvgSupport,
       title: 'Support',
       description:
-        'We commit to help your business stand out and gain the digital-competitive advantage through user-friendly, fast, secure, high converting, engaging websites.',
+        'We commit to help your business gain the digital-competitive advantage through fast and secure websites.',
     },
     {
       icon: SvgSpaceShip,
       title: 'Dedicated team',
       description:
-        'An agile web dev team equipped with knowledge of modern web technologies, best practices, experience and skills to build a website that delivers results.',
+        'An agile web dev team equipped with knowledge of modern web technologies to build your idea',
     },
   ];
 
@@ -40,12 +40,12 @@ export default function WhyChooseUs() {
           >
             <BiSolidCircle className="text-lg text-yellow-500" />
             <Subheading className="text-center lg:text-left">
-              Why Choose us
+              Why Choose Us
             </Subheading>
           </div>
-          <div className="text-center">
+          <div className="text-center mb-12">
             <H2 className="text-center" data-aos="fade-up" data-aos-delay={200}>
-              We make beautiful, high converting, engaging, secure websites.
+              We make beautiful, high converting, fast, and secure websites.
             </H2>
           </div>
 

@@ -21,10 +21,9 @@ export default function OurTeam() {
             <H2 className="text-center" data-aos="fade-up" data-aos-delay={300}>
               <span className="relative inline-block">
                 <DotsIcon className="absolute animate-pulse text-primary-static top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block" />
-                <span className="relative">Welcome</span>
-              </span>{' '}
-              our talented Team of{' '}
-              <span className="text-primary-static">Professionals</span>
+                <span className="relative">Our talented Team of</span>
+              </span>
+              <span className="text-primary-static"> Professionals</span>
             </H2>
             <Subheading
               className="text-center w-full max-w-3xl"
@@ -33,8 +32,7 @@ export default function OurTeam() {
             >
               We&apos;re a dynamic team of IT professionals, specializing in
               cutting-edge development solutions for today&apos;s digital
-              landscape. Our passion is innovation, and our mission is to shape
-              the future of technology.
+              landscape.
             </Subheading>
           </div>
           <OurTeamTooltip />

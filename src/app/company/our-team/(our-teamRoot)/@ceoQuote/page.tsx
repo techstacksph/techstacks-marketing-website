@@ -20,9 +20,14 @@ export default function CeoQuote() {
                 <BiSolidQuoteAltLeft />
               </div>
               <Subheading className="text-center lg:text-3xl">
-                Our team is a blend of creative designers, brilliant developers,
-                and strategic thinkers who work in harmony to bring your visions
-                to life.
+                Let&apos;s build something together.
+              </Subheading>
+              <Subheading className="text-center lg:text-3xl">
+                Let&apos;s talk about your ideas and how Techstacks can help
+                bring it to life.
+              </Subheading>
+              <Subheading className="font-bold italic text-center lg:text-md mt-8">
+                Third Sugian, Owner / CTO
               </Subheading>
               <div className="text-3xl xl:text-5xl self-end">
                 <BiSolidQuoteAltRight />

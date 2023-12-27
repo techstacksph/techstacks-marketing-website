@@ -22,8 +22,11 @@ export default function OurTeamGallery() {
             <div className="space-y-4">
               <H1 asChild className="text-center lg:text-left">
                 <h2>
-                  Unveiling{' '}
-                  <span className="text-primary-static">Employee Insights</span>
+                  <span className="block">Unveiling </span>
+                  <span className="text-primary-static block">Employee </span>
+                  <span className="text-primary-static block mt-4">
+                    Insights
+                  </span>
                 </h2>
               </H1>
 

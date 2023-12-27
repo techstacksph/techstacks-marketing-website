@@ -36,7 +36,7 @@ export default function ApplyHeroSection() {
                       <span className="absolute top-0 left-0 text-5xl -z-10 text-muted/50">
                         <FaQuoteLeft />
                       </span>
-                      Your Trusted Partner in I.T Services Excellence
+                      Grow your web presence with Techstacks. 🚀
                     </span>
                   </Subheading>
                 </div>

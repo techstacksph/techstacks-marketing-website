@@ -20,8 +20,8 @@ export default function ContactLayout({ form }: ContactLayoutProps) {
             <h1>Get in touch</h1>
           </H1>
           <Subheading className="text-center">
-            Reach out to us today to initiate a discussion and explore how we
-            can meet your requirements and support your team&apos;s growth.
+            Reach out to us now and let&apos;s explore how we can meet your
+            requirements and support your online growth.
           </Subheading>
         </div>
         <div className="max-w-md">{form}</div>

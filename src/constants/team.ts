@@ -210,8 +210,8 @@ export const TEAM1 = [
     src: thirdProfile,
     profile: thirdProfile,
     socialMedia: {
-      github: 'https://github.com',
-      linkedin: 'https://github.com',
+      github: 'https://github.com/fmsthird',
+      linkedin: 'https://github.com/fmsthird',
     },
   },
 ] as const;

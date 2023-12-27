@@ -64,10 +64,9 @@ export default function CoreValues() {
                 data-aos="fade-left"
                 data-aos-delay={300}
               >
-                Discover the core values that drive our website&apos;s mission
-                and shape our every decision. Explore the bedrock principles
-                that define our commitment to excellence, integrity, and
-                innovation.
+                Discover the core values that drive our team&apos;s mission and
+                shape our every decision. Explore the principles that define our
+                commitment to excellence, and innovation.
               </Subheading>
             </div>
           </div>

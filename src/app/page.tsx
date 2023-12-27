@@ -42,8 +42,8 @@ export default function Home() {
                 data-aos-delay={100}
               >
                 We specialize in designing and building beautiful, fast, secure,
-                and high converting, engaging websites with excellent
-                performance and SEO score.
+                and high converting websites with excellent performance and SEO
+                score.
               </Subheading>
               <div className="flex gap-4 place-content-center lg:place-content-start">
                 <Link
@@ -66,8 +66,8 @@ export default function Home() {
                 </Link>
               </div>
               <div className="flex flex-col py-0 lg:py-8">
-                <Subheading className="pb-8 text-center lg:text-left">
-                  Working with the best
+                <Subheading className="pb-8 text-center lg:text-left lg:text-lg">
+                  They trusted and were satisfied with our work:
                 </Subheading>
                 <SocialProof />
               </div>

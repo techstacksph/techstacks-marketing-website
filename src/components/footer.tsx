@@ -26,13 +26,15 @@ export default function Footer() {
             <div className="flex flex-col w-full gap-8 md:w-1/2">
               <H1 asChild className="text-center md:text-left">
                 <h2>
-                  Ready to upgrade your website? <br />
-                  <span className="text-primary-static">give us a try. 🤝</span>
+                  <span className="block mb-0">Ready to upgrade your</span>
+                  <span className="mt-4 block"> website?</span>
+                  <span className="text-primary-static block">
+                    give us a try. 🚀
+                  </span>
                 </h2>
               </H1>
               <Subheading className="text-center md:text-left">
-                Cultivate Your Online Presence with Our Website Upgrade
-                Solutions
+                Grow Your Web Presence with Our Website Upgrade Solutions
               </Subheading>
             </div>
             <div className="flex flex-col gap-8">
