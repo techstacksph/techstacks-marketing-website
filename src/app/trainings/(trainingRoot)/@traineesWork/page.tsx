@@ -1,7 +1,6 @@
-import React from 'react';
 import { Section } from '@/components/default-elements';
-import { Subheading, H1 } from '@/components/ui/typography';
 import TraineesWorksParallax from '@/components/trainees-works-parallax';
+import { H1, Subheading } from '@/components/ui/typography';
 
 export default function TraineesWork() {
   return (
@@ -14,7 +13,7 @@ export default function TraineesWork() {
             data-aos="fade-up"
             data-aos-delay={100}
           >
-            <h2>Discover the Outstanding Works of our OJT Interns</h2>
+            <h2>Discover the outstanding Works of our Interns</h2>
           </H1>
           <Subheading
             className="text-center"
