@@ -1,0 +1,93 @@
+import Link from 'next/link';
+import { careerHeroOne, careerHeroTwo, careerHeroThree } from '@/assets/images';
+import { Section } from '@/components/default-elements';
+import { TechstacksLogo } from '@/components/icons/techstacks-logo';
+import { Hexagon } from '@/components/hexagon';
+import { H1, Subheading } from '@/components/ui/typography';
+import { BreadCrumbItem, BreadCrumbs } from '@/components/bread-crumbs';
+import { NavRoutes } from '@/constants/nav-routes';
+
+export default function CareerHero() {
+  return (
+    <Section className="h-fit">
+      <div className="grid items-center h-full gap-8 md:gap-4 md:grid-cols-2">
+        <div className="flex flex-col items-center gap-4 md:gap-8 md:items-start">
+          <BreadCrumbs className="self-start">
+            <BreadCrumbItem>Careers</BreadCrumbItem>
+          </BreadCrumbs>
+
+          <H1
+            className="tracking-wide text-center whitespace-pre-wrap md:text-left font-dm-sans"
+            data-aos="fade-up"
+          >
+            Elevate your career with{'\n'}
+            <span className="text-primary-static font-poppins">
+              <TechstacksLogo
+                className="inline"
+                data-aos="fade-left"
+                data-aos-delay={100}
+              />{' '}
+              <span
+                className="tracking-normal"
+                data-aos="fade-up"
+                data-aos-delay={200}
+              >
+                Techstacks
+              </span>
+            </span>
+          </H1>
+          <Subheading
+            className="font-medium tracking-wider text-center md:text-left"
+            data-aos="fade-up"
+            data-aos-delay={300}
+          >
+            Where Exceptional Individuals Thrive on Complex Web Ventures.
+          </Subheading>
+
+          <Link
+            className="relative inline-flex items-center justify-start p-3 overflow-hidden font-medium transition-all border rounded w-28 lg:w-44 h-14 border-primary-static group bg-primary-static dark:bg-transparent"
+            data-aos="fade-up"
+            data-aos-delay={400}
+            href={NavRoutes.Contact}
+          >
+            <span className="w-48 h-48 rounded rotate-[-40deg] bg-white dark:bg-primary-static absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0" />
+            <span className="relative w-full text-center text-white transition-colors duration-300 ease-in-out dark:text-foreground group-hover:text-primary-static dark:group-hover:text-background">
+              Apply now!
+            </span>
+          </Link>
+        </div>
+        <div className="h-fit">
+          <div className="grid items-center h-full grid-cols-2">
+            <div className="flex flex-col gap-8 translate-x-1/4">
+              <div data-aos="fade-right">
+                <Hexagon
+                  alt="alt"
+                  className="hover:animate-none hover:scale-125 transition-transform animate-unsteady duration-[2400] h-60 drop-shadow-2xl"
+                  src={careerHeroOne}
+                />
+              </div>
+              <div data-aos="fade-left" data-aos-delay={100}>
+                <Hexagon
+                  alt="alt"
+                  className="hover:animate-none hover:scale-125 transition-transform animate-unsteady direction-alternate duration-[5800] h-60 drop-shadow-2xl"
+                  src={careerHeroTwo}
+                />
+              </div>
+            </div>
+            <div
+              className="flex items-center h-full"
+              data-aos="fade-up"
+              data-aos-delay={200}
+            >
+              <Hexagon
+                alt="alt"
+                className="hover:animate-none hover:scale-125 transition-transform animate-unsteady direction-alternate-reverse duration-[9300] h-60 drop-shadow-2xl"
+                src={careerHeroThree}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </Section>
+  );
+}
