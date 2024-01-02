@@ -8,27 +8,29 @@ import { Section } from '@/components/default-elements';
 import { cn } from '@/utils/cn';
 import { SAMPLE_JOBS } from '@/lib/faker';
 import type { Job } from '@/constants/jobs';
-import { POSITIONS} from '@/constants/jobs';
+import { POSITIONS } from '@/constants/jobs';
 import { JobCard } from '@/components/job-card';
 import { H2 } from '@/components/ui/typography';
 
 const TABS = ['All', ...POSITIONS] as const;
 
 const AVAILABLE_JOBS: Job[] = [
-    {
-        description: "Are you passionate about digital marketing and SEO? We're on the lookout for a Marketing and SEO Assistant to join our team and contribute to our online success! Be one of us!",
-        employment: "Full-time",
-        location: "Cabanatuan City, Nueva Ecija",
-        name: "Marketing and SEO Assistant",
-        type: "Marketing / SEO",
-    },
-    {
-        description: "Are you highly organized, detail-oriented, and ready to contribute your administrative skills to a dynamic team? We are looking for a dedicated Administrative Assistant to support our operations and ensure smooth day-to-day functioning of the team.",
-        employment: "Full-time",
-        location: "Cabanatuan City, Nueva Ecija",
-        name: "Admin Assistant",
-        type: "Admin",
-    }
+  {
+    description:
+      "Are you passionate about digital marketing and SEO? We're on the lookout for a Marketing and SEO Assistant to join our team and contribute to our online success! Be one of us!",
+    employment: 'Full-time',
+    location: 'Cabanatuan City, Nueva Ecija',
+    name: 'Marketing and SEO Assistant',
+    type: 'Marketing / SEO',
+  },
+  {
+    description:
+      'Are you highly organized, detail-oriented, and ready to contribute your administrative skills to a dynamic team? We are looking for a dedicated Administrative Assistant to support our operations and ensure smooth day-to-day functioning of the team.',
+    employment: 'Full-time',
+    location: 'Cabanatuan City, Nueva Ecija',
+    name: 'Admin Assistant',
+    type: 'Admin',
+  },
 ];
 
 export default function AvailablePositionsSection() {
@@ -52,18 +54,16 @@ export default function AvailablePositionsSection() {
       </H2>
 
       <div className="mt-2 md:mt-5">
-        <ul className="flex gap-4 md:gap-12">
+        <ul className="flex flex-wrap gap-4 py-4 md:gap-12">
           {TABS.map((jobTab, i) => {
             return (
-              <li className="py-4" key={jobTab}>
+              <li data-aos="fade-left" data-aos-delay={i * 100} key={jobTab}>
                 <button
                   className={cn(
-                    'text-lg md:text-xl font-medium tracking-wide text-foreground/50',
+                    'text-lg md:text-xl font-medium tracking-wide text-foreground/50 transition-colors',
                     tab === jobTab && 'text-foreground',
                     !jobs.length && 'text-foreground/50',
                   )}
-                  data-aos="fade-left"
-                  data-aos-delay={i * 100}
                   disabled={!jobs.length}
                   onClick={() => {
                     setTab(jobTab);
