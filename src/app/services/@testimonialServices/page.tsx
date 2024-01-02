@@ -24,14 +24,14 @@ export default function TestimonialServices() {
         <Section>
           <div className="flex flex-col items-center gap-8">
             <div
-              className="flex flex-row gap-2 items-center justify-center"
+              className="flex flex-row items-center justify-center gap-2"
               data-aos="fade-up"
               data-aos-delay={100}
             >
               <div className="text-lg text-yellow-500">
                 <BiSolidCircle />
               </div>
-              <p className="text-lg text-muted text-center">Testimonials</p>
+              <p className="text-lg text-center text-muted">Testimonials</p>
             </div>
             <H2
               className="text-center "
@@ -52,7 +52,7 @@ export default function TestimonialServices() {
             </Subheading>
             <div className="flex flex-col items-center w-full gap-8">
               <div
-                className="grid grid-cols-2 items-center sm:grid-cols-4 justify-evenly gap-0 lg:gap-20"
+                className="grid items-center grid-cols-2 gap-0 md:grid-cols-4 justify-evenly lg:gap-20"
                 data-aos="fade-up"
                 data-aos-delay={400}
               >
@@ -68,7 +68,7 @@ export default function TestimonialServices() {
                       setTab(Logo);
                     }}
                   >
-                    <div className="flex justify-center items-center h-full gap-2">
+                    <div className="flex items-center justify-center h-full gap-2">
                       <div
                         className={cn(
                           ' transition duration-300 ease-in-out hover:scale-110 grayscale hover:grayscale-0',
@@ -91,22 +91,22 @@ export default function TestimonialServices() {
                   ([Logo, title, name, desc]) =>
                     Logo === tab && (
                       <div className="flex flex-col md:flex-row " key={title}>
-                        <div className="flex flex-col gap-4 justify-center items-center md:items-start bg-primary-static/20 w-full md:w-96 p-8">
-                          <h3 className="text-xl md:text-2xl font-semibold">
+                        <div className="flex flex-col items-center justify-center w-full gap-4 p-8 md:items-start bg-primary-static/20 md:w-96">
+                          <h3 className="text-xl font-semibold md:text-2xl">
                             {name}
                           </h3>
-                          <p className="text-base md:text-lg text-muted font-semibold">
+                          <p className="text-base font-semibold md:text-lg text-muted">
                             {title}
                           </p>
                         </div>
-                        <div className="flex flex-col gap-4 p-4 md:p-8 items-center justify-center w-full">
-                          <div className="text-5xl self-start">
+                        <div className="flex flex-col items-center justify-center w-full gap-4 p-4 md:p-8">
+                          <div className="self-start text-5xl">
                             <BiSolidQuoteAltLeft />
                           </div>
-                          <p className="text-xl md:text-2xl text-center">
+                          <p className="text-xl text-center md:text-2xl">
                             {desc}
                           </p>
-                          <div className="text-5xl self-end">
+                          <div className="self-end text-5xl">
                             <BiSolidQuoteAltRight />
                           </div>
                         </div>
