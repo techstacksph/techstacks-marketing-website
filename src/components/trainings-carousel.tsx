@@ -1,5 +1,8 @@
+'use client';
+
 import { TRAINING_PLANS } from '@/constants/training-plans';
 import { cn } from '@/utils/cn';
+import { AutoPlay } from '@/lib/plugins/keen-slider/auto-play';
 import { Carousel, CarouselItem } from './ui/carousel';
 import { H3, Subheading } from './ui/typography';
 
@@ -20,7 +23,9 @@ export function TrainingsCarousel() {
         },
         vertical: true,
         mode: 'free-snap',
+        loop: true,
       }}
+      plugIns={[AutoPlay(2000)]}
     >
       {TRAINING_PLANS.map(([title, description, Icon], idx) => (
         <CarouselItem
