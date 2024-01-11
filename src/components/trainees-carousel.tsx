@@ -1,22 +1,21 @@
 'use client';
 
+import { TRAINEES_IMG } from '@/constants/trainees-img';
+import { AutoPlay } from '@/lib/plugins/keen-slider/auto-play';
+import { twConfig } from '@/lib/tw-config';
+import Image from 'next/image';
 import {
+  FaBookmark,
   FaCheckCircle,
   FaGlobeAsia,
   FaHeart,
-  FaBookmark,
 } from 'react-icons/fa';
-import React from 'react';
-import Image from 'next/image';
-import { GoDotFill } from 'react-icons/go';
 import { FaRegCommentDots } from 'react-icons/fa6';
+import { GoDotFill } from 'react-icons/go';
 import { PiShareFat } from 'react-icons/pi';
-import { twConfig } from '@/lib/tw-config';
-import { TRAINEES_IMG } from '@/constants/trainees-img';
-import { AutoPlay } from '@/lib/plugins/keen-slider/auto-play';
+import { TechstacksLogo } from './icons/techstacks-logo';
 import { Carousel, CarouselItem } from './ui/carousel';
 import { H3, Subheading } from './ui/typography';
-import { TechstacksLogo } from './icons/techstacks-logo';
 
 export default function TraineesCarousel() {
   return (
@@ -53,7 +52,7 @@ export default function TraineesCarousel() {
                   <div className="flex flex-col gap-1">
                     <div className="flex flex-row items-center gap-4">
                       <H3 className="text-base  lg:text-lg xl:text-2xl">
-                        Techstacks ojt&apos;s intern
+                        Techstacks
                       </H3>
                       <div className="text-blue-700">
                         <FaCheckCircle />

@@ -1,16 +1,16 @@
 'use client';
 
-import React, { useMemo, useRef } from 'react';
+import { trainingBg } from '@/assets/images';
+import { BreadCrumbItem, BreadCrumbs } from '@/components/bread-crumbs';
+import { Section } from '@/components/default-elements';
+import { StarsIcon } from '@/components/icons/stars-icon';
+import { TvIcon } from '@/components/icons/tv-icon';
+import { H1, Subheading } from '@/components/ui/typography';
+import { NavRoutes } from '@/constants/nav-routes';
+import { useWindowScroll } from '@uidotdev/usehooks';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useWindowScroll } from '@uidotdev/usehooks';
-import { Section } from '@/components/default-elements';
-import { trainingBg } from '@/assets/images';
-import { NavRoutes } from '@/constants/nav-routes';
-import { H1, Subheading } from '@/components/ui/typography';
-import { BreadCrumbItem, BreadCrumbs } from '@/components/bread-crumbs';
-import { TvIcon } from '@/components/icons/tv-icon';
-import { StarsIcon } from '@/components/icons/stars-icon';
+import { useMemo, useRef } from 'react';
 
 export default function Trainings() {
   const [{ y }] = useWindowScroll();
@@ -46,7 +46,7 @@ export default function Trainings() {
                 <BreadCrumbs className="self-start">
                   <BreadCrumbItem>Trainings</BreadCrumbItem>
                 </BreadCrumbs>
-                <H1 className="xl:text-6xl">
+                <H1>
                   Elevate your web development prospects and unlock a world of{' '}
                   <span className="inline-block border-b-8 border-yellow-400 dark:border-white px-1 font-bold text-primary-static">
                     opportunities
