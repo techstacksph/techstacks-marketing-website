@@ -1,22 +1,22 @@
 import {
+  cjPort,
+  danPort,
   danProfile,
-  ezeProfile,
-  hannahProfile,
-  jedediahProfile,
-  jhonasProfile,
-  joyProfile,
-  rinandProfile,
-  testi1,
-  rinandPort,
   // iTravels,
   ezePort,
-  jedediahPort,
+  ezeProfile,
+  hannahProfile,
   // redServe,
   ivanPort,
-  danPort,
-  cjPort,
+  jedediahPort,
+  jedediahProfile,
   jhonasPort,
+  jhonasProfile,
+  joyProfile,
+  rinandPort,
+  rinandProfile,
   techstacksLogo,
+  testi1,
 } from '@/assets/images';
 
 export const OJT_TEAM = [
@@ -47,7 +47,7 @@ export const OJT_TEAM = [
   {
     id: 3,
     quote:
-      'I gained a wealth of information and practical expertise in web development during my internship at Techstacks. In fact, I can certainly declare that my internship taught me more than school. The teams assistance and mentorship were fantastic they were always accessible to answer any questions I had. I appreciated the unrestricted learning atmosphere, allowing me to experiment and explore new technologies.',
+      'I gained a wealth of information and practical expertise in web development during my internship at Techstacks. In fact, I can certainly declare that my internship taught me more than school. The teams assistance and mentorship were fantastic they were always accessible to answer any questions I had. I appreciate the unrestricted learning atmosphere, allowing me to experiment and explore new technologies.',
     author: 'John Ezeriel Pineda',
     position: 'Former Intern | N.E.U.S.T',
     avatar: ezeProfile,
@@ -83,7 +83,7 @@ export const OJT_TEAM = [
   {
     id: 6,
     quote:
-      'Through my internship program with TECHSTACKS, I learned how to appreciate their effort to teach us. How to faced the real world and talk to different people. To realized the importance of time management in this practicum. Learned to follow instructions what the superiors has given to me. I am grateful for the experience and the skills I acquired, and I believe they will be valuable to my future career in IT/ Computer Science.',
+      'Through my internship program with TECHSTACKS, I learned how to appreciate their effort to teach us. How to face the real world and talk to different people. To realize the importance of time management in this practicum. Learned to follow instructions what the superiors has given to me. I am grateful for the experience and the skills I acquired, and I believe they will be valuable to my future career in IT/ Computer Science.',
     author: 'Hannah Mangulabnan',
     position: 'Former Intern | A.M.A',
     avatar: hannahProfile,
@@ -107,7 +107,7 @@ export const OJT_TEAM = [
   {
     id: 8,
     quote:
-      'I am grateful for the incredible opportunity to have interned at Techstacks, and I am thrilled to share my reflections on this enriching experience. During my time at Techstacks, I had the privilege of working alongside a talented and supportive team. From day one, I was welcomed with open arms, and the inclusive culture fostered a positive and collaborative work environment.',
+      'I am grateful for the incredible opportunity to have my internship at Techstacks, and I am thrilled to share my reflections on this enriching experience. During my time at Techstacks, I had the privilege of working alongside a talented and supportive team. From day one, I was welcomed with open arms, and the inclusive culture fostered a positive and collaborative work environment.',
     author: 'Cecile Joy Chua Tak',
     position: 'Former Intern | A.M.A',
     avatar: joyProfile,
