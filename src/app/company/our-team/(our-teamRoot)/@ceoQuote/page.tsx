@@ -9,8 +9,8 @@ export default function CeoQuote() {
     <div className="w-full flex justify-center py-16 ">
       <Section>
         <div className="flex justify-center items-center w-full h-full overflow-hidden">
-          <div className="flex flex-col lg:flex-row justify-between relative items-center w-full">
-            <div className="flex flex-col items-center gap-1 w-full max-w-4xl p-10 lg:py-20 lg:px-16">
+          <div className="flex flex-col lg:flex-row justify-between relative items-center w-full p-4">
+            <div className="flex flex-col items-center gap-1 w-full max-w-4xl p-10">
               <div
                 className="text-3xl xl:text-5xl self-start"
                 data-aos="fade-up"
@@ -33,12 +33,12 @@ export default function CeoQuote() {
               </div>
             </div>
             <div
-              className="w-full max-w-xs p-0 lg:pr-4"
+              className="w-full max-w-xs pb-2 lg:pb-auto"
               data-aos="fade-up"
               data-aos-delay={200}
             >
-              <div className="flex justify-center bg-primary-static ">
-                <Image alt="asd" className="h-[359px]" src={sirThirdImg} />
+              <div className="flex justify-center bg-primary-static">
+                <Image alt="asd" src={sirThirdImg} />
               </div>
             </div>
             <div
