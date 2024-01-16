@@ -17,7 +17,7 @@ import {
 export const OUR_TEAM = [
   {
     id: 1,
-    name: 'Florante Sugian III',
+    name: 'Third',
     position: 'Owner/CTO',
     img: sirThirdImg,
   },

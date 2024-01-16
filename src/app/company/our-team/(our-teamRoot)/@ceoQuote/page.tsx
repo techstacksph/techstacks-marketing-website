@@ -1,9 +1,8 @@
-import React from 'react';
+import { sirThirdImg } from '@/assets/images';
+import { Section } from '@/components/default-elements';
+import { Subheading } from '@/components/ui/typography';
 import Image from 'next/image';
 import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from 'react-icons/bi';
-import { Section } from '@/components/default-elements';
-import { sirThirdImg } from '@/assets/images';
-import { Subheading } from '@/components/ui/typography';
 
 export default function CeoQuote() {
   return (
@@ -27,7 +26,7 @@ export default function CeoQuote() {
                 bring it to life.
               </Subheading>
               <Subheading className="font-bold italic text-center lg:text-md mt-8">
-                Third Sugian, Owner / CTO
+                Third, Owner / CTO
               </Subheading>
               <div className="text-3xl xl:text-5xl self-end">
                 <BiSolidQuoteAltRight />

@@ -1,5 +1,18 @@
-import { type StaticImageData } from 'next/image';
 import {
+  airaProfile,
+  airateam,
+  araProfile,
+  arateam,
+  franzProfile,
+  franzteam,
+  jayveeProfile,
+  jayveeteam,
+  kaiProfile,
+  kaiteam,
+  marcusProfile,
+  marcusteam,
+  samProfile,
+  samteam,
   teamImg1,
   teamImg2,
   teamImg3,
@@ -8,22 +21,9 @@ import {
   teamImg6,
   teamImg7,
   teamImg8,
-  franzProfile,
-  marcusProfile,
-  samProfile,
-  jayveeProfile,
   thirdProfile,
-  kaiProfile,
-  airaProfile,
-  araProfile,
-  kaiteam,
-  jayveeteam,
-  arateam,
-  airateam,
-  samteam,
-  marcusteam,
-  franzteam,
 } from '@/assets/images';
+import { type StaticImageData } from 'next/image';
 
 export interface MemberData {
   id: string;
@@ -205,7 +205,7 @@ export const TEAM1 = [
   },
   {
     id: 8,
-    name: 'Florante Sugian III',
+    name: 'Third',
     position: 'Owner/CTO',
     src: thirdProfile,
     profile: thirdProfile,
