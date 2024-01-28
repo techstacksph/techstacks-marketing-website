@@ -1,14 +1,16 @@
 'use client';
 
-import Link from 'next/link';
-import { ArrowRight, Menu } from 'lucide-react';
-import { useWindowScroll } from '@uidotdev/usehooks';
+import { companyLink, pagesLink } from '@/constants/nav-links';
 import { NavRoutes } from '@/constants/nav-routes';
 import { cn } from '@/utils/cn';
-import { companyLink, pagesLink } from '@/constants/nav-links';
+import { useWindowScroll } from '@uidotdev/usehooks';
+import { ArrowRight, Menu } from 'lucide-react';
+import Link from 'next/link';
+import BrandLogo from './brand-logo';
 import { ListItem } from './list-item';
-import { Button } from './ui/button';
+import { ModeToggle } from './mode-toggle';
 import NavDrawer from './nav-drawer';
+import { Button } from './ui/button';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -18,8 +20,6 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from './ui/navigation-menu';
-import { ModeToggle } from './mode-toggle';
-import BrandLogo from './brand-logo';
 
 export default function Header() {
   const [{ y }] = useWindowScroll();
@@ -91,7 +91,7 @@ export default function Header() {
                       variant: 'link',
                     })}
                   >
-                    <Link href={page.href} target={page.target}>
+                    <Link href={page.href}>
                       {page.title}
                     </Link>
                   </NavigationMenuLink>
