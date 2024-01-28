@@ -1,6 +1,6 @@
 import { AboutIcon } from '@/components/icons/about-icon';
-import { OurTeamIcon } from '@/components/icons/our-team-icon';
 import { CareerNavIcon } from '@/components/icons/career-nav-icon';
+import { OurTeamIcon } from '@/components/icons/our-team-icon';
 import { NavRoutes } from './nav-routes';
 
 export const companyLink = [
@@ -40,11 +40,11 @@ export const companyLink = [
 ];
 
 export const pagesLink = [
-  {
-    title: 'Shop',
-    href: 'https://shop.techstacksph.com/',
-    target: '_blank',
-  },
+  // {
+  //   title: 'Shop',
+  //   href: 'https://shop.techstacksph.com/',
+  //   target: '_blank',
+  // },
   {
     title: 'Services',
     href: NavRoutes.Services,
