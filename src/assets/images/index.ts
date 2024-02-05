@@ -30,7 +30,7 @@ import oldOffice from './about-us/old-office.png';
 import tailwindLogo from './about-us/service-tools-logo/tailwind-logo.png';
 import franzProfile from './team/franz-profile.png';
 import samProfile from './team/sam-profile.jpg';
-import marcusProfile from './team/marcus-profile.png';
+import marviuzProfile from './team/marcus-profile.png';
 import jayveeProfile from './team/jayvee-profile.jpg';
 import thirdProfile from './team/third-profile.png';
 import airaProfile from './team/aira-profile.png';
@@ -41,7 +41,7 @@ import jayveeteam from './team/jayvee-team.png';
 import arateam from './team/ara-team.png';
 import airateam from './team/aira-team.png';
 import samteam from './team/sam-team.png';
-import marcusteam from './team/marcus-team.png';
+import marviuzteam from './team/marcus-team.png';
 import franzteam from './team/franz-team.png';
 import teamImage from './about-us/team-img.jpg';
 import creative from './services/creative.png';
@@ -64,7 +64,7 @@ import airaImg from './team/our-team/aira.png';
 import araImg from './team/our-team/ara.png';
 import franzImg from './team/our-team/franz.png';
 import jayveeImg from './team/our-team/jayvee.png';
-import marcusImg from './team/our-team/marcus.png';
+import marviuzImg from './team/our-team/marcus.png';
 import samImg from './team/our-team/sam.png';
 import sirThirdImg from './team/our-team/sir-third.png';
 import neilImg from './team/our-team/neil.png';
@@ -200,7 +200,7 @@ export {
   teamImg8,
   franzProfile,
   samProfile,
-  marcusProfile,
+  marviuzProfile,
   jayveeProfile,
   thirdProfile,
   airaProfile,
@@ -211,13 +211,13 @@ export {
   arateam,
   airateam,
   samteam,
-  marcusteam,
+  marviuzteam,
   franzteam,
   kaiImg,
   araImg,
   jayveeImg,
   airaImg,
-  marcusImg,
+  marviuzImg,
   franzImg,
   samImg,
   sirThirdImg,

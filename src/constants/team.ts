@@ -1,3 +1,4 @@
+import { type StaticImageData } from 'next/image';
 import {
   airaProfile,
   airateam,
@@ -9,8 +10,8 @@ import {
   jayveeteam,
   kaiProfile,
   kaiteam,
-  marcusProfile,
-  marcusteam,
+  marviuzProfile,
+  marviuzteam,
   samProfile,
   samteam,
   teamImg1,
@@ -23,7 +24,6 @@ import {
   teamImg8,
   thirdProfile,
 } from '@/assets/images';
-import { type StaticImageData } from 'next/image';
 
 export interface MemberData {
   id: string;
@@ -47,10 +47,10 @@ export const TEAM = [
   },
   {
     id: 2,
-    name: 'Marcus Leviticus Dela Cruz',
+    name: 'Marviuz',
     position: 'Front-end Developer',
     src: teamImg2,
-    profile: marcusProfile,
+    profile: marviuzProfile,
     teamGallery: {
       title: 'Elevating Tech Skills and Team Harmony.',
       body: "I'm truly thankful for my time with the Techstacks team. It's been an incredible journey that not only deepened my knowledge of the tech I work with but also showed me the ropes of effective teamwork. Being part of this team has been a key player in shaping my professional growth, and I couldn't be happier about it.",
@@ -183,10 +183,10 @@ export const TEAM1 = [
   },
   {
     id: 6,
-    name: 'Marcus Leviticus Dela Cruz',
+    name: 'Marviuz',
     position: 'Front-end Developer',
-    src: marcusteam,
-    profile: marcusProfile,
+    src: marviuzteam,
+    profile: marviuzProfile,
     socialMedia: {
       github: 'https://github.com',
       linkedin: 'https://github.com',

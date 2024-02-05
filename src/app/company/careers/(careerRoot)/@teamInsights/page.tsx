@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { jayveeImg, marcusProfile, araProfile } from '@/assets/images';
+import { jayveeImg, marviuzProfile, araProfile } from '@/assets/images';
 import { Section } from '@/components/default-elements';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { cn } from '@/utils/cn';
@@ -18,9 +18,9 @@ const [mem1, ...otherMembers] = [
     title: 'Teamwork = Success',
     description:
       "Our collaborative spirit is the cornerstone of our achievements, and it's what sets us apart.",
-    member: 'Marcus Leviticus Dela Cruz',
+    member: 'Marviuz',
     position: 'Frontend Developer',
-    image: marcusProfile,
+    image: marviuzProfile,
   },
   {
     title: 'Strive for Excellence',
