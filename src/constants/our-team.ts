@@ -18,7 +18,7 @@ export const OUR_TEAM = [
   {
     id: 1,
     name: 'Third',
-    position: 'Owner/CTO',
+    position: '',
     img: sirThirdImg,
   },
   {

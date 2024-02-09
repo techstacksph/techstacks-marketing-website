@@ -40,8 +40,8 @@ export interface MemberData {
 export const TEAM = [
   {
     id: 1,
-    name: 'Florante Sugian III',
-    position: 'Owner/CTO',
+    name: 'Third Sugian',
+    position: '',
     src: teamImg1,
     profile: thirdProfile,
   },
@@ -206,7 +206,7 @@ export const TEAM1 = [
   {
     id: 8,
     name: 'Third',
-    position: 'Owner/CTO',
+    position: '',
     src: thirdProfile,
     profile: thirdProfile,
     socialMedia: {
