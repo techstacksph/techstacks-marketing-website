@@ -205,7 +205,7 @@ export const TEAM1 = [
   },
   {
     id: 8,
-    name: 'Third',
+    name: 'Third Sugian',
     position: '',
     src: thirdProfile,
     profile: thirdProfile,

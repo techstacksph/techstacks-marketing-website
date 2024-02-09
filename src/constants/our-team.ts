@@ -1,23 +1,23 @@
 import {
-  kaiImg,
-  araImg,
-  jayveeImg,
   airaImg,
-  marcusImg,
+  araImg,
   franzImg,
+  jaysonImg,
+  jayveeImg,
+  jhonasImg,
+  kaiImg,
+  kennethImg,
+  marcusImg,
+  neilImg,
   samImg,
   sirThirdImg,
-  kennethImg,
-  neilImg,
   toniImg,
-  jaysonImg,
-  jhonasImg,
 } from '@/assets/images';
 
 export const OUR_TEAM = [
   {
     id: 1,
-    name: 'Third',
+    name: 'Third Sugian',
     position: '',
     img: sirThirdImg,
   },
