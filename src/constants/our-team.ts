@@ -7,7 +7,7 @@ import {
   jhonasImg,
   kaiImg,
   kennethImg,
-  marcusImg,
+  marviuzImg,
   neilImg,
   samImg,
   sirThirdImg,
@@ -23,9 +23,9 @@ export const OUR_TEAM = [
   },
   {
     id: 2,
-    name: 'Marcus Leviticus Dela Cruz',
+    name: 'Marviuz',
     position: 'Front-end Developer',
-    img: marcusImg,
+    img: marviuzImg,
   },
   {
     id: 3,
