@@ -7,6 +7,7 @@ export const env = createEnv({
   server: {
     VERCEL_URL: z.string(),
     RESEND_API_KEY: z.string(),
+    RESEND_EMAIL: z.string().email(),
     DATOCMS_API_KEY: z.string(),
   },
   client: {
@@ -16,6 +17,7 @@ export const env = createEnv({
     NEXT_PUBLIC_GA_MEASUREMENT_ID: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID,
     VERCEL_URL: process.env.VERCEL_URL,
     RESEND_API_KEY: process.env.RESEND_API_KEY,
+    RESEND_EMAIL: process.env.RESEND_EMAIL,
     DATOCMS_API_KEY: process.env.DATOCMS_API_KEY,
   },
   skipValidation: SKIP_VALIDATION_SCRIPTS.some(
