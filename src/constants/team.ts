@@ -1,4 +1,3 @@
-import { type StaticImageData } from 'next/image';
 import {
   airaProfile,
   airateam,
@@ -24,6 +23,7 @@ import {
   teamImg8,
   thirdProfile,
 } from '@/assets/images';
+import { type StaticImageData } from 'next/image';
 
 export interface MemberData {
   id: string;
@@ -40,7 +40,7 @@ export interface MemberData {
 export const TEAM = [
   {
     id: 1,
-    name: 'Third Sugian',
+    name: '',
     position: '',
     src: teamImg1,
     profile: thirdProfile,
@@ -205,7 +205,7 @@ export const TEAM1 = [
   },
   {
     id: 8,
-    name: 'Third Sugian',
+    name: '',
     position: '',
     src: thirdProfile,
     profile: thirdProfile,

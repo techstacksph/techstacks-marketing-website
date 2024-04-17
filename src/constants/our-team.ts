@@ -17,7 +17,7 @@ import {
 export const OUR_TEAM = [
   {
     id: 1,
-    name: 'Third Sugian',
+    name: '',
     position: '',
     img: sirThirdImg,
   },

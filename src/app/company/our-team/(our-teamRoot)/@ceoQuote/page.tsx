@@ -25,9 +25,7 @@ export default function CeoQuote() {
                 Let&apos;s talk about your ideas and how Techstacks can help
                 bring it to life.
               </Subheading>
-              <Subheading className="font-bold italic text-center lg:text-md mt-8">
-                Third Sugian
-              </Subheading>
+              <Subheading className="font-bold italic text-center lg:text-md mt-8" />
               <div className="text-3xl xl:text-5xl self-end">
                 <BiSolidQuoteAltRight />
               </div>
