@@ -10,7 +10,7 @@ export default function CeoQuote() {
       <Section>
         <div className="flex justify-center items-center w-full h-full overflow-hidden">
           <div className="flex flex-col lg:flex-row justify-between relative items-center w-full p-4">
-            <div className="flex flex-col items-center gap-1 w-full max-w-4xl p-10">
+            <div className="flex flex-col items-center gap-1 w-full p-10">
               <div
                 className="text-3xl xl:text-5xl self-start"
                 data-aos="fade-up"
@@ -33,7 +33,7 @@ export default function CeoQuote() {
               </div>
             </div>
             <div
-              className="w-full max-w-xs pb-2 lg:pb-auto"
+              className="w-full max-w-xs pb-2 lg:pb-auto hidden"
               data-aos="fade-up"
               data-aos-delay={200}
             >
