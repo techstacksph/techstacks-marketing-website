@@ -61,7 +61,11 @@ export default function OurTeam() {
             <div key={id}>
               <HoverCard closeDelay={0} openDelay={0}>
                 <HoverCardTrigger asChild>
-                  <Image alt={name} className="pointer-events-auto" src={src} />
+                  <Image
+                    alt={name}
+                    className="pointer-events-auto opacity-0"
+                    src={src}
+                  />
                 </HoverCardTrigger>
                 <HoverCardContent
                   className="bg-popover/75 backdrop-blur"
