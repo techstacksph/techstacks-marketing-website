@@ -15,4 +15,5 @@ export const NavRoutes = {
   OjtWorks: '/trainings/ojt-works',
   PrivacyPolicy: '/privacy-policy',
   Contact: '/contact',
+  BlackbearTechstacks: '/blackbear-techstacks',
 } as const;

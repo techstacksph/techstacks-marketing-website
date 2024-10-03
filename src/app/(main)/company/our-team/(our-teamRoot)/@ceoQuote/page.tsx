@@ -1,8 +1,8 @@
+import Image from 'next/image';
+import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from 'react-icons/bi';
 import { sirThirdImg } from '@/assets/images';
 import { Section } from '@/components/default-elements';
 import { Subheading } from '@/components/ui/typography';
-import Image from 'next/image';
-import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from 'react-icons/bi';
 
 export default function CeoQuote() {
   return (
