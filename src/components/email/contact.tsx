@@ -1,4 +1,6 @@
-import { type ContactFormData } from '@/app/contact/@form/form';
+// import { type ContactFormData } from '@/app/contact/@form/form';
+
+import { type ContactFormData } from '@/app/(main)/contact/@form/form';
 
 export function ContactEmailTemplate({
   name,

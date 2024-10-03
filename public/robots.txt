@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://techstacksph.com/
+
+# Sitemaps
+Sitemap: https://techstacksph.com/sitemap.xml
+Sitemap: https://techstacksph.com/server-sitemap.xml

@@ -1,5 +1,9 @@
 'use client';
 
+import { useWindowScroll } from '@uidotdev/usehooks';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useMemo, useRef } from 'react';
 import { trainingBg } from '@/assets/images';
 import { BreadCrumbItem, BreadCrumbs } from '@/components/bread-crumbs';
 import { Section } from '@/components/default-elements';
@@ -7,10 +11,6 @@ import { StarsIcon } from '@/components/icons/stars-icon';
 import { TvIcon } from '@/components/icons/tv-icon';
 import { H1, Subheading } from '@/components/ui/typography';
 import { NavRoutes } from '@/constants/nav-routes';
-import { useWindowScroll } from '@uidotdev/usehooks';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useMemo, useRef } from 'react';
 
 export default function Trainings() {
   const [{ y }] = useWindowScroll();

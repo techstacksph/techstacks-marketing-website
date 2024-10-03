@@ -115,6 +115,15 @@ import ImageFour from './careers/career-image/image-04.png';
 import ImageFive from './careers/career-image/image-05.png';
 import techstacksLogo from './logo/logo-techstacks.png';
 
+//Blackbear Image
+import blackbearLogo from './blackbear-img/blackbear.png';
+import innovativeLogo from './blackbear-img/innovative-logo.png';
+import cybersecurityBanner from './blackbear-img/cybersecurity-banner.png';
+import hatImg from './blackbear-img/hat.png';
+import puzzleImg from './blackbear-img/puzzle.png';
+import benefitsImg from './blackbear-img/benefits.png';
+import crossImg from './blackbear-img/cross.png';
+
 export {
   // Testimonials
   testi1,
@@ -255,4 +264,13 @@ export {
 
   //logo
   techstacksLogo,
+
+  //BlackBear
+  blackbearLogo,
+  innovativeLogo,
+  cybersecurityBanner,
+  hatImg,
+  puzzleImg,
+  benefitsImg,
+  crossImg,
 };
