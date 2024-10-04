@@ -2,6 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { crossImg } from '@/assets/images';
 import { events } from '@/constants/blackbear-constants/events';
+import { Subheading } from '../ui/typography';
+import { Button } from '../ui/button';
 
 export function EventDetails() {
   return (
@@ -9,7 +11,7 @@ export function EventDetails() {
       <div className="grid  grid-cols-1 xl:grid-cols-2 gap-10 xl:gap-20 w-full p-4">
         {events.map((e) => (
           <div
-            className="p-4 md:p-8 flex flex-col  gap-10 h-full   justify-between border border-background shadow-background shadow-2xl"
+            className="p-4 md:p-8 flex flex-col  gap-10 h-full   justify-between border border-background shadow-background dark:shadow-background shadow-2xl"
             key={e.title}
           >
             <div className="flex-col">
@@ -32,7 +34,29 @@ export function EventDetails() {
                 </li>
               ))}
             </ul>
-            <div className="flex justify-center  w-full px-2 md:px-5 md:px-0 ">
+
+            <div className="flex flex-col md:flex-row gap-4 md:justify-between">
+              <div className="flex flex-col gap-4 w-full max-w-52">
+                <Subheading className="w-full p-6  text-2xl font-bold  text-gray-500 bg-amber-400">
+                  PHP {e.newPrice}
+                </Subheading>
+                <div className="relative">
+                  <Image
+                    alt="err"
+                    className="absolute red-cross w-16 left-5 "
+                    src={crossImg}
+                  />
+                  <Subheading className="w-full text-2xl font-bold text-destructive">
+                    PHP {e.oldPrice}
+                  </Subheading>
+                </div>
+              </div>
+              <Button className="bg-background dark:bg-foreground h-16 text-muted/50 w-52 rounded-full text-xl p-6">
+                I want this
+              </Button>
+            </div>
+
+            {/* <div className="flex justify-center  w-full px-2 md:px-5 md:px-0 ">
               <div className="flex-col md:flex md:flex-row w-full pt-5 justify-between space-y-4 md:space-y-0 md:space-x-4 ">
                 <div className=" text-gray-500 bg-amber-400 px-2 py-5 text-xl   md:w-fit font-bold md:text-2xl w-full ">
                   <div className="flex justify-between w-full space-x-10">
@@ -44,7 +68,9 @@ export function EventDetails() {
                       />
                       PHP<span className="">{e.oldPrice}</span>
                     </div>
-                    <div>{e.newPrice}</div>
+                    <div>
+                      PHP <span>{e.newPrice}</span>
+                    </div>
                   </div>
                 </div>
                 <div className="w-full flex justify-center md:justify-end">
@@ -58,8 +84,12 @@ export function EventDetails() {
                   </a>
                 </div>
               </div>
-            </div>
-            <Link href={e.pdfLink} target="_blank">
+            </div> */}
+            <Link
+              className="text-background dark:text-foreground"
+              href={e.pdfLink}
+              target="_blank"
+            >
               Learn more
             </Link>
           </div>
