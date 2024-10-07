@@ -25,13 +25,15 @@ export function AcademyFeatures() {
                   />
                 </div>
                 <div className="flex flex-col gap-8">
-                  <Subheading className="text-center font-bold text-background text-2xl">
+                  <Subheading className="text-center font-bold text-foreground dark:text-background text-2xl">
                     {feat.title}
                   </Subheading>
                   <div className="p-4">
                     {feat.feat.map((f, idx) => (
                       <ul className="list-disc" key={idx}>
-                        <li className="text-background">{f}</li>
+                        <li className="text-foreground dark:text-background">
+                          {f}
+                        </li>
                       </ul>
                     ))}
                   </div>

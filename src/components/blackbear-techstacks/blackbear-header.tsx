@@ -18,7 +18,7 @@ export function BlackBearHeader() {
         ))}
       </div>
       <div className="  py-5 md:py-10  ">
-        <H2 className="text-center">
+        <H2 className="text-center text-background dark:text-foreground">
           {' '}
           Do you want to secure a high-paying job?
         </H2>

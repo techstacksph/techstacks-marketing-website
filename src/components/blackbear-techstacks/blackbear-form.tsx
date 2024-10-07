@@ -72,7 +72,7 @@ export function BlackBearForm() {
       >
         {inputDetails.map((data, index) => (
           <div key={index}>
-            <div className="text-foreground">
+            <div className="text-background dark:text-foreground ">
               {data.placeHolder}
               {data.required ? '*' : null}
             </div>
@@ -81,7 +81,7 @@ export function BlackBearForm() {
                 <div>
                   {data.field !== 'feedBackEssay' ? (
                     <input
-                      className="w-full text-background bg-foreground border-2 border-gray-500 h-12 p-2"
+                      className="w-full text-background bg-background dark:bg-foreground border-2 border-gray-500 h-12 p-2"
                       placeholder={data.placeHolder}
                       type={getInputType(data.field)}
                       {...register(data.field, {
@@ -93,7 +93,7 @@ export function BlackBearForm() {
                     />
                   ) : (
                     <textarea
-                      className="w-full text-background bg-foreground border-2 border-gray-500 h-24 p-2"
+                      className="w-full text-background bg-background dark:bg-foreground border-2 border-gray-500 h-24 p-2"
                       placeholder={data.placeHolder}
                       {...register(data.field, {
                         required: data.required
@@ -106,12 +106,12 @@ export function BlackBearForm() {
               ) : (
                 <div>
                   <select
-                    className="w-full h-12 bg-foreground text-background"
+                    className="w-full h-12 bg-background dark:bg-foreground text-foreground dark:text-background"
                     {...register(data.field, { required: data.required })}
                   >
                     {data.courseSelect.map((course, i) => (
                       <option
-                        className="text-background"
+                        className="text-foreground dark:text-background"
                         key={i}
                         value={course}
                       >
@@ -141,7 +141,7 @@ export function BlackBearForm() {
             {otherCourse.map((course, idx) => (
               <div key={idx}>
                 <label
-                  className="hover:cursor-pointer flex"
+                  className="hover:cursor-pointer flex "
                   style={{ background: 'none' }}
                 >
                   <input
@@ -155,7 +155,7 @@ export function BlackBearForm() {
                   <div
                     className={`w-[1.5rem] h-[1.5rem]  border-2  border-gray-500 rounded flex items-center justify-center ${
                       selectedCourses.includes(course)
-                        ? ' text-foreground'
+                        ? 'text-background dark:text-foreground'
                         : 'bg-transparent'
                     }`}
                   >
@@ -176,7 +176,9 @@ export function BlackBearForm() {
                       </svg>
                     )}
                   </div>
-                  <div className="pl-2">{course}</div>
+                  <div className="pl-2 text-background dark:text-foreground">
+                    {course}
+                  </div>
                 </label>
               </div>
             ))}
