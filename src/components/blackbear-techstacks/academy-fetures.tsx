@@ -29,8 +29,8 @@ export function AcademyFeatures() {
                     {feat.title}
                   </Subheading>
                   <div className="p-4">
-                    {feat.feat.map((f, idx) => (
-                      <ul className="list-disc" key={idx}>
+                    {feat.feat.map((f) => (
+                      <ul className="list-disc" key={f}>
                         <li className="text-foreground dark:text-background">
                           {f}
                         </li>

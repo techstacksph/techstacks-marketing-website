@@ -1,8 +1,5 @@
 'use client';
 
-import { TRAINEES_IMG } from '@/constants/trainees-img';
-import { AutoPlay } from '@/lib/plugins/keen-slider/auto-play';
-import { twConfig } from '@/lib/tw-config';
 import Image from 'next/image';
 import {
   FaBookmark,
@@ -13,6 +10,9 @@ import {
 import { FaRegCommentDots } from 'react-icons/fa6';
 import { GoDotFill } from 'react-icons/go';
 import { PiShareFat } from 'react-icons/pi';
+import { twConfig } from '@/lib/tw-config';
+import { AutoPlay } from '@/lib/plugins/keen-slider/auto-play';
+import { TRAINEES_IMG } from '@/constants/trainees-img';
 import { TechstacksLogo } from './icons/techstacks-logo';
 import { Carousel, CarouselItem } from './ui/carousel';
 import { H3, Subheading } from './ui/typography';

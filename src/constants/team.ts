@@ -1,3 +1,4 @@
+import { type StaticImageData } from 'next/image';
 import {
   airaProfile,
   airateam,
@@ -20,9 +21,8 @@ import {
   teamImg6,
   teamImg7,
   teamImg8,
-  thirdProfile
+  thirdProfile,
 } from '@/assets/images';
-import { type StaticImageData } from 'next/image';
 
 export interface MemberData {
   id: string;
