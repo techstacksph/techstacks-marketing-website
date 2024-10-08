@@ -3,9 +3,13 @@ import Link from 'next/link';
 import { crossImg } from '@/assets/images';
 import { events } from '@/constants/blackbear-constants/events';
 import { Subheading } from '../ui/typography';
-import { Button } from '../ui/button';
 
 export function EventDetails() {
+  const formatPrice = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'PHP',
+  });
+
   return (
     <div className="flex justify-center py-8">
       <div className="grid  grid-cols-1 xl:grid-cols-2 gap-10 xl:gap-20 w-full p-4">
@@ -28,63 +32,37 @@ export function EventDetails() {
               Total Instructions: {e.days} {e.days === 1 ? 'DAY' : 'DAYS'}
             </div>
             <ul className="px-5 md:px-10 text-md roboto-regular tracking-wide text-white font-bold">
-              {e.benefits.map((ben, index) => (
-                <li className="list-disc" key={index}>
+              {e.benefits.map((ben) => (
+                <li className="list-disc" key={ben}>
                   {ben}
                 </li>
               ))}
             </ul>
 
             <div className="flex flex-col md:flex-row gap-4 md:justify-between">
-              <div className="flex flex-col gap-4 w-full max-w-52">
-                <Subheading className="w-full p-6  text-2xl font-bold  text-gray-500 bg-amber-400">
-                  PHP {e.newPrice}
-                </Subheading>
+              <div className="flex flex-col p-6 gap-4 w-full max-w-52 bg-amber-400">
                 <div className="relative">
                   <Image
                     alt="err"
                     className="absolute red-cross w-16 left-5 "
                     src={crossImg}
                   />
-                  <Subheading className="w-full text-2xl font-bold text-destructive">
-                    PHP {e.oldPrice}
+                  <Subheading className="w-full text-2xl font-bold text-muted ">
+                    {/* PHP {e.oldPrice} */}
+                    {formatPrice.format(e.oldPrice)}
                   </Subheading>
                 </div>
+                <Subheading className="w-full   text-2xl font-bold text-foreground dark:text-background ">
+                  {formatPrice.format(e.newPrice)}
+                </Subheading>
               </div>
-              <Button className="bg-background dark:bg-foreground h-16 text-muted/50 w-52 rounded-full text-xl p-6">
+              <Link
+                className="flex justify-center items-center text-center bg-background dark:bg-foreground h-16 text-muted/50 w-52 rounded-full text-xl p-6"
+                href="#form"
+              >
                 I want this
-              </Button>
+              </Link>
             </div>
-
-            {/* <div className="flex justify-center  w-full px-2 md:px-5 md:px-0 ">
-              <div className="flex-col md:flex md:flex-row w-full pt-5 justify-between space-y-4 md:space-y-0 md:space-x-4 ">
-                <div className=" text-gray-500 bg-amber-400 px-2 py-5 text-xl   md:w-fit font-bold md:text-2xl w-full ">
-                  <div className="flex justify-between w-full space-x-10">
-                    <div className="relative">
-                      <Image
-                        alt="err"
-                        className="absolute red-cross w-14 left-[60%] "
-                        src={crossImg}
-                      />
-                      PHP<span className="">{e.oldPrice}</span>
-                    </div>
-                    <div>
-                      PHP <span>{e.newPrice}</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-full flex justify-center md:justify-end">
-                  <a
-                    className="w-full md:w-fit"
-                    href="https://www.innovatemarketing.co.nz/blackbearacademy"
-                  >
-                    <div className="text-gray-500 bg-gray-200 rounded-full py-5 px-3   md:w-56  flex justify-center items-center drop-shadow-glow hover:cursor-pointer">
-                      <div> I Want This</div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div> */}
             <Link
               className="text-background dark:text-foreground"
               href={e.pdfLink}

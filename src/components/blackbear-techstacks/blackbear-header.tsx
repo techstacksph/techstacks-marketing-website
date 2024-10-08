@@ -7,8 +7,8 @@ export function BlackBearHeader() {
   return (
     <div className="w-full">
       <div className=" flex flex-col md:flex-row md:justify-between">
-        {logos.map((l, index) => (
-          <a className="flex justify-center " href={l.link} key={index}>
+        {logos.map((l) => (
+          <a className="flex justify-center " href={l.link} key={l.name}>
             <Image
               alt={l.name}
               className="h-14 object-contain w-[40%] min-w-[150px] md:w-56 m-1"

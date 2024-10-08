@@ -3,8 +3,8 @@ interface EventType {
   date: string;
   days: number;
   benefits: string[];
-  oldPrice: string;
-  newPrice: string;
+  oldPrice: number;
+  newPrice: number;
   pdfLink: string;
 }
 
@@ -25,8 +25,8 @@ export const events: EventType[] = [
       'Stay updated with evolving cybersecurity threats.',
       'Foster continuous training and awareness initiatives.',
     ],
-    oldPrice: '5,630',
-    newPrice: '2,815',
+    oldPrice: 5630,
+    newPrice: 2815,
     pdfLink:
       'https://www.innovatemarketing.co.nz/_files/ugd/89fa3f_aef3e1cf0fb34c9c9e416554c7b8bd46.pdf',
   },
@@ -46,8 +46,8 @@ export const events: EventType[] = [
       'Communicate technical information to non-technical audiences.',
       'Validate your expertise with a recognized certification.',
     ],
-    oldPrice: '50,671',
-    newPrice: '39,411',
+    oldPrice: 50671,
+    newPrice: 39411,
     pdfLink:
       'https://www.innovatemarketing.co.nz/_files/ugd/89fa3f_6afab90c811f4723b527fff3e9c61555.pdf',
   },
@@ -67,8 +67,8 @@ export const events: EventType[] = [
       'Get hands-on experience with popular pentesting tools like Nmap, Burp Suite, and Metasploit.',
       'Learn effective reporting and communication of findings to stakeholders.',
     ],
-    oldPrice: '53,486',
-    newPrice: '39,411',
+    oldPrice: 53486,
+    newPrice: 39411,
     pdfLink:
       'https://www.innovatemarketing.co.nz/_files/ugd/89fa3f_4c7ae3e2e21b4ab582d837d131fa1850.pdf',
   },
@@ -88,8 +88,8 @@ export const events: EventType[] = [
       'Get a detailed After-Action Report outlining key observations and recommendations.',
       'Enhance your organization’s readiness for real-world cyber threats.',
     ],
-    oldPrice: '281,507',
-    newPrice: '230,836',
+    oldPrice: 281507,
+    newPrice: 230836,
     pdfLink:
       'https://www.innovatemarketing.co.nz/_files/ugd/89fa3f_91c86fe94e7544df8316e982b7ce0538.pdf',
   },

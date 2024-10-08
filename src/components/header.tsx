@@ -1,11 +1,11 @@
 'use client';
 
-import { companyLink, pagesLink } from '@/constants/nav-links';
-import { NavRoutes } from '@/constants/nav-routes';
-import { cn } from '@/utils/cn';
 import { useWindowScroll } from '@uidotdev/usehooks';
 import { ArrowRight, Menu } from 'lucide-react';
 import Link from 'next/link';
+import { companyLink, pagesLink } from '@/constants/nav-links';
+import { NavRoutes } from '@/constants/nav-routes';
+import { cn } from '@/utils/cn';
 import BrandLogo from './brand-logo';
 import { ListItem } from './list-item';
 import { ModeToggle } from './mode-toggle';
@@ -91,9 +91,7 @@ export default function Header() {
                       variant: 'link',
                     })}
                   >
-                    <Link href={page.href}>
-                      {page.title}
-                    </Link>
+                    <Link href={page.href}>{page.title}</Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
               ))}

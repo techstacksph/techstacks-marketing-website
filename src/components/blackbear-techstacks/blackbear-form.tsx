@@ -6,6 +6,9 @@ import {
   inputDetails,
   otherCourse,
 } from '@/constants/blackbear-constants/form';
+import { useToast } from '../ui/use-toast';
+import { Button } from '../ui/button';
+import { blackbearAction } from './action/blackbear-action';
 
 export interface FormInput {
   firstName: string;
@@ -24,16 +27,26 @@ export function BlackBearForm() {
     register,
     handleSubmit,
     reset,
+    watch,
     formState: { errors },
   } = useForm<FormInput>();
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [selectedCourses, setSelectedCourses] = useState<string[]>([]);
+  const { toast } = useToast();
 
-  const onSubmit: SubmitHandler<FormInput> = (data) => {
-    setIsSubmitted(false);
-    data.feedBackCheck = selectedCourses;
+  const onSubmit: SubmitHandler<FormInput> = async (data) => {
+    setIsLoading(true);
 
-    setIsSubmitted(true);
+    const response = await blackbearAction(data);
+
+    if (response.type === 'success') {
+      setIsLoading(false);
+      toast({
+        title: 'Submitted!',
+        description: 'Thanks, we received your submission.',
+      });
+    }
+
     reset({
       firstName: '',
       lastName: '',
@@ -41,7 +54,7 @@ export function BlackBearForm() {
       phone: '',
       countryAddress: '',
       itPosition: '',
-      course: 'Cybersecurity Awareness',
+      course: '',
       feedBackEssay: '',
       feedBackCheck: '',
     });
@@ -70,8 +83,8 @@ export function BlackBearForm() {
         className="flex-col flex  w-full max-w-lg space-y-4 p-3 shadow-3xl "
         onSubmit={handleSubmit(onSubmit)}
       >
-        {inputDetails.map((data, index) => (
-          <div key={index}>
+        {inputDetails.map((data) => (
+          <div key={data.placeHolder}>
             <div className="text-background dark:text-foreground ">
               {data.placeHolder}
               {data.required ? '*' : null}
@@ -183,16 +196,21 @@ export function BlackBearForm() {
               </div>
             ))}
           </div>
-          <input
-            className="w-full bg-amber-500 drop-shadow-md py-2 text-white hover:cursor-pointer shadow-xl"
-            type="submit"
-          />
 
-          {isSubmitted ? (
-            <div className="py-5  text-gray-200 italic drop-shadow-whiteLine text-center font-bold text-2xl">
-              Thanks, we received your submission.
-            </div>
-          ) : null}
+          <Button
+            className="w-full bg-amber-500 drop-shadow-md py-2 text-white hover:cursor-pointer shadow-xl"
+            disabled={
+              isLoading ||
+              !watch('firstName') ||
+              !watch('lastName') ||
+              !watch('email') ||
+              !watch('phone') ||
+              !watch('countryAddress')
+            }
+            type="submit"
+          >
+            {isLoading ? 'Submitting...' : 'Submit'}
+          </Button>
         </div>
       </form>
     </div>
