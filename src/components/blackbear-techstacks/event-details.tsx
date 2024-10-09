@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import Link from 'next/link';
 import { crossImg } from '@/assets/images';
 import { events } from '@/constants/blackbear-constants/events';
+import Image from 'next/image';
+import Link from 'next/link';
 import { Subheading } from '../ui/typography';
 
 export function EventDetails() {
@@ -57,7 +57,7 @@ export function EventDetails() {
                 </Subheading>
               </div>
               <Link
-                className="flex justify-center items-center text-center bg-background dark:bg-foreground h-16 text-muted/50 w-52 rounded-full text-xl p-6"
+                className="flex justify-center items-center text-center bg-background dark:bg-foreground h-16 text-black w-52 rounded-full text-xl p-6"
                 href="#form"
               >
                 I want this
