@@ -1,7 +1,7 @@
-import { crossImg } from '@/assets/images';
-import { events } from '@/constants/blackbear-constants/events';
 import Image from 'next/image';
 import Link from 'next/link';
+import { crossImg } from '@/assets/images';
+import { events } from '@/constants/blackbear-constants/events';
 import { Subheading } from '../ui/typography';
 
 export function EventDetails() {

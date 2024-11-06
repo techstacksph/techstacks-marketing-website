@@ -28,12 +28,22 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="font-inter">
+        <noscript>
+          <iframe
+            className="hidden invisible"
+            height="0"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-PTNRQ3KQ"
+            title="gtag-frame"
+            width="0"
+          />
+        </noscript>
         <SkipToMain />
         <Providers>
           <Loader />
           {children}
         </Providers>
         <Toaster />
+
         <CookieBanner />
       </body>
     </html>

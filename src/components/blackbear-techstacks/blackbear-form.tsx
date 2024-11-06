@@ -122,10 +122,10 @@ export function BlackBearForm() {
                     className="w-full h-12 bg-background dark:bg-foreground text-foreground dark:text-background"
                     {...register(data.field, { required: data.required })}
                   >
-                    {data.courseSelect.map((course, i) => (
+                    {data.courseSelect.map((course) => (
                       <option
                         className="text-foreground dark:text-background"
-                        key={i}
+                        key={course}
                         value={course}
                       >
                         {course}
@@ -151,8 +151,8 @@ export function BlackBearForm() {
             What other courses do you want to see in the future?
           </div>
           <div className="px-2 md:px-4 space-y-2 tracking-normal md:tracking-wide py-4">
-            {otherCourse.map((course, idx) => (
-              <div key={idx}>
+            {otherCourse.map((course) => (
+              <div key={course}>
                 <label
                   className="hover:cursor-pointer flex "
                   style={{ background: 'none' }}
