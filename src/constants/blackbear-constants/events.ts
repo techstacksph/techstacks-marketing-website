@@ -32,7 +32,7 @@ export const events: EventType[] = [
   },
   {
     title: 'Certified digital forensic & incident responder',
-    date: 'November 21-23',
+    date: 'January 30-February 1',
     days: 3,
     benefits: [
       'Understand the fundamentals of digital forensics and incident response.',
@@ -53,7 +53,7 @@ export const events: EventType[] = [
   },
   {
     title: 'Certified pentester - VAPT',
-    date: 'November 14-16',
+    date: 'January 24-26',
     days: 3,
     benefits: [
       'Gain real-world insights into the daily activities of an ethical hacker.',
