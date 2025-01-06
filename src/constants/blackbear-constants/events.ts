@@ -11,7 +11,7 @@ interface EventType {
 export const events: EventType[] = [
   {
     title: 'Cybersecurity Awareness',
-    date: 'NOVEMBER 14',
+    date: 'JANUARY 24, 2025',
     days: 1,
     benefits: [
       ' Understand the core principles of cybersecurity.',
@@ -32,7 +32,7 @@ export const events: EventType[] = [
   },
   {
     title: 'Certified digital forensic & incident responder',
-    date: 'January 30-February 1',
+    date: 'JAN 30-FEB 1, 2025',
     days: 3,
     benefits: [
       'Understand the fundamentals of digital forensics and incident response.',
@@ -52,8 +52,8 @@ export const events: EventType[] = [
       'https://www.innovatemarketing.co.nz/_files/ugd/89fa3f_6afab90c811f4723b527fff3e9c61555.pdf',
   },
   {
-    title: 'Certified pentester - VAPT',
-    date: 'January 24-26',
+    title: 'Certified Pentester - VAPT',
+    date: 'JANUARY 24-26, 2025',
     days: 3,
     benefits: [
       'Gain real-world insights into the daily activities of an ethical hacker.',
@@ -73,8 +73,8 @@ export const events: EventType[] = [
       'https://www.innovatemarketing.co.nz/_files/ugd/89fa3f_4c7ae3e2e21b4ab582d837d131fa1850.pdf',
   },
   {
-    title: 'Table-top exercise Technical',
-    date: 'November 28',
+    title: 'Table-top Exercise Technical',
+    date: 'FEBRUARY 7, 2025',
     days: 1,
     benefits: [
       'Gain a deep understanding of your organization’s workflow and cyber threat landscape.',
