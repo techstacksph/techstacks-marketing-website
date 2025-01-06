@@ -53,7 +53,7 @@ export const events: EventType[] = [
   },
   {
     title: 'Certified Pentester - VAPT',
-    date: 'January 24-26, 2025',
+    date: 'JANUARY 24-26, 2025',
     days: 3,
     benefits: [
       'Gain real-world insights into the daily activities of an ethical hacker.',
