@@ -52,7 +52,7 @@ export default function TestimonialServices() {
             </Subheading>
             <div className="flex flex-col items-center w-full gap-8">
               <div
-                className="grid items-center grid-cols-2 gap-0 md:grid-cols-4 justify-evenly lg:gap-20"
+                className="flex items-center flex-wrap gap-0 justify-evenly lg:gap-20"
                 data-aos="fade-up"
                 data-aos-delay={400}
               >
