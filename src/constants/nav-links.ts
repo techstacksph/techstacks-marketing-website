@@ -1,6 +1,7 @@
 import { AboutIcon } from '@/components/icons/about-icon';
 import { CareerNavIcon } from '@/components/icons/career-nav-icon';
 import { OurTeamIcon } from '@/components/icons/our-team-icon';
+import { BlogIcon } from '@/components/icons/blog-icon';
 import { NavRoutes } from './nav-routes';
 
 export const companyLink = [
@@ -21,13 +22,13 @@ export const companyLink = [
           'Get to know the people behind our success—the dynamic individuals that form our web development family.',
         Icon: OurTeamIcon,
       },
-      // {
-      //   label: 'Blogs',
-      //   href: NavRoutes.Company.Blog,
-      //   description:
-      //     'Explore, learn, and embark on a journey towards digital excellence.',
-      //   Icon: BlogIcon,
-      // },
+      {
+        label: 'Blogs',
+        href: NavRoutes.Company.Blog,
+        description:
+          'Explore, learn, and embark on a journey towards digital excellence.',
+        Icon: BlogIcon,
+      },
       {
         label: 'Careers',
         href: NavRoutes.Company.Careers,
