@@ -6,7 +6,7 @@ import { H3 } from '@/components/ui/typography';
 import { createExcerpt } from '@/utils/create-excerpt';
 import { type BlogPageProps } from '../page-props';
 
-const LIMIT = 5 as const;
+const LIMIT = 3 as const;
 
 export default async function BlogCollectionPage({
   searchParams,
