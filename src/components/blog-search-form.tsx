@@ -21,7 +21,7 @@ export function BlogSearchForm() {
   const form = useForm<z.infer<typeof blogSearchSchema>>({
     resolver: zodResolver(blogSearchSchema),
     defaultValues: {
-      q: searchParams?.get('q') || '',
+      q: searchParams.get('q') || '',
     },
   });
 

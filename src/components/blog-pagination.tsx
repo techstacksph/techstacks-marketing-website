@@ -19,12 +19,10 @@ export function PaginationButtons({ next, prev }: PaginationButtonsProps) {
   function getLink(page: number | boolean) {
     if (typeof page === 'boolean') return pathname;
 
-    const sp =
-      searchParams &&
-      new URLSearchParams(Object.fromEntries(searchParams.entries()));
-    sp?.set('page', page.toString());
+    const sp = new URLSearchParams(Object.fromEntries(searchParams.entries()));
+    sp.set('page', page.toString());
 
-    return `${pathname}?${sp?.toString()}`;
+    return `${pathname}?${sp.toString()}`;
   }
 
   return (
