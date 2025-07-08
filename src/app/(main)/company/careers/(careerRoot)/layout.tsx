@@ -29,7 +29,7 @@ export default function CareersLayout(props: Record<string, ReactNode>) {
       <Section role="none">
         <Separator variant="horizon" />
       </Section>
-      <div className="py-8 md:py-16">{props.availablePositions}</div>
+      {/* <div className="py-8 md:py-16">{props.availablePositions}</div> */}
     </Main>
   );
 }

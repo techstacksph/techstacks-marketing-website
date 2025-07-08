@@ -7,6 +7,7 @@ import {
   ezeDream,
   ezePort,
   iTravels,
+  jakePort,
   jedediahPort,
   nft,
   odyssey,
@@ -79,5 +80,10 @@ export const OJT_PORTFOLIOS = [
     id: 13,
     name: 'Rinnand-port',
     src: rinandPort,
+  },
+  {
+    id: 14,
+    name: 'Jake-port',
+    src: jakePort,
   },
 ];

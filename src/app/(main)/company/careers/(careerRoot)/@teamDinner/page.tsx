@@ -1,10 +1,13 @@
 import Image from 'next/image';
 import {
-  ImageOne,
-  ImageTwo,
-  ImageThree,
+  // ImageOne,
+  // ImageTwo,
+  // ImageThree,
   ImageFour,
   ImageFive,
+  ImageSix,
+  ImageSeven,
+  ImageEight,
 } from '@/assets/images';
 import { cn } from '@/utils/cn';
 
@@ -12,17 +15,17 @@ const CAREERIMAGE = [
   {
     id: 1,
     title: 'Image-one',
-    imgSrc: ImageOne,
+    imgSrc: ImageEight,
   },
   {
     id: 2,
     title: 'Image-two',
-    imgSrc: ImageTwo,
+    imgSrc: ImageSix,
   },
   {
     id: 3,
     title: 'Image-three',
-    imgSrc: ImageThree,
+    imgSrc: ImageSeven,
   },
   {
     id: 4,

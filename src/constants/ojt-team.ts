@@ -8,6 +8,8 @@ import {
   hannahProfile,
   // redServe,
   ivanPort,
+  jakePort,
+  jakeProfile,
   jedediahPort,
   jedediahProfile,
   jhonasPort,
@@ -115,5 +117,17 @@ export const OJT_TEAM = [
     time: 'February - March 2023',
     // web: { portfolioImg: rinandPort, dreamImg: redServe },
     web: cjPort,
+  },
+  {
+    id: 9,
+    quote:
+      'Techstacks provided the ideal environment to turn theory into practice and challenges into growth. Our first task was building our own portfolios using Next.js, which gave us early hands-on experience with modern frontend tools. What made the experience even more memorable was the amazing team and owner at Techstacks, who created a fun, supportive, and motivating workplace.',
+    author: 'Jake P. Rupisan',
+    position: 'Former Intern | A.M.A',
+    avatar: jakeProfile,
+    portfolioLink: 'https://jakesportfolio.vercel.app/',
+    time: 'September 2024 - January 2025',
+    // web: { portfolioImg: rinandPort, dreamImg: redServe },
+    web: jakePort,
   },
 ];
