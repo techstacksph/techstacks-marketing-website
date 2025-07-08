@@ -1,22 +1,22 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { ourTeam } from '@/assets/images';
-import { NavRoutes } from '@/constants/nav-routes';
-import { TEAM } from '@/constants/team';
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from '@/components/ui/hover-card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Section } from '@/components/default-elements';
-import { H2, Subheading } from '@/components/ui/typography';
+// import Image from 'next/image';
+// import Link from 'next/link';
+// import { ourTeam } from '@/assets/images';
+// import { NavRoutes } from '@/constants/nav-routes';
+// import { TEAM } from '@/constants/team';
+// import {
+//   HoverCard,
+//   HoverCardContent,
+//   HoverCardTrigger,
+// } from '@/components/ui/hover-card';
+// import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+// import { Section } from '@/components/default-elements';
+// import { H2, Subheading } from '@/components/ui/typography';
 
 export default function OurTeam() {
   return (
     <div className="pt-16">
       <div className="relative">
-        <Section>
+        {/* <Section>
           <div className="p-6">
             <div className="flex flex-col items-center gap-4 md:gap-8">
               <H2
@@ -47,16 +47,16 @@ export default function OurTeam() {
               </Link>
             </div>
           </div>
-        </Section>
-        <div className="z-0 w-full h-full relative after:top-0 after:left-0  after:absolute after:bg-gradient-to-b  after:from-background after:from-5% after:to-transparent after:to-30% after:w-full after:h-full">
+        </Section> */}
+        {/* <div className="z-0 w-full h-full relative after:top-0 after:left-0  after:absolute after:bg-gradient-to-b  after:from-background after:from-5% after:to-transparent after:to-30% after:w-full after:h-full">
           <Image
             alt="Team image"
             className="pointer-events-none"
             src={ourTeam}
           />
-        </div>
+        </div> */}
 
-        <div className="absolute top-0 bottom-0 flex items-end w-full h-full pointer-events-none">
+        {/* <div className="absolute top-0 bottom-0 flex items-end w-full h-full pointer-events-none">
           {TEAM.map(({ name, src, id, position, profile }) => (
             <div key={id}>
               <HoverCard closeDelay={0} openDelay={0}>
@@ -87,7 +87,7 @@ export default function OurTeam() {
               </HoverCard>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );
