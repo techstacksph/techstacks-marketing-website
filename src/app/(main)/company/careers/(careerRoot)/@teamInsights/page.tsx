@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { jayveeImg, marviuzProfile, araProfile } from '@/assets/images';
+import { jayveeImg, airaProfile, jessicaImage } from '@/assets/images';
 import { Section } from '@/components/default-elements';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { cn } from '@/utils/cn';
@@ -9,25 +9,25 @@ const [mem1, ...otherMembers] = [
   {
     title: 'The Best Team',
     description:
-      'Our exceptional professionals are at the core of our success, and together, we create extraordinary results. Discover opportunities to be part of a team that values excellence, collaboration, and innovation.',
+      'As Operations Manager at Techstacks PH, I ensure our workflows run smoothly and our teams stay aligned. I focus on creating efficient systems, solving day-to-day challenges, and fostering a collaborative environment—because I believe that success starts with strong teamwork.',
     member: 'Jayvee Ramos',
-    position: 'IT Engineering Manager',
+    position: 'Operations Manager',
     image: jayveeImg,
   },
   {
-    title: 'Teamwork = Success',
+    title: 'Code with Purpose',
     description:
-      "Our collaborative spirit is the cornerstone of our achievements, and it's what sets us apart.",
-    member: 'Marviuz',
-    position: 'Frontend Developer',
-    image: marviuzProfile,
+      'Creating clean, functional code that powers seamless digital experiences.',
+    member: 'John Aira Feleo',
+    position: 'Web Developer',
+    image: airaProfile,
   },
   {
-    title: 'Strive for Excellence',
+    title: 'Systems that Support People',
     description: ' Striving for excellence is our daily commitment.',
-    member: 'Ara Belle Agarem',
-    position: 'Marketing & Seo Specialist',
-    image: araProfile,
+    member: 'Jessica Natividad',
+    position: 'Admin/HR/Accounting',
+    image: jessicaImage,
   },
 ] as const;
 

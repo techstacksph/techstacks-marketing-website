@@ -1,19 +1,20 @@
 import {
   breakIcon,
-  graphIcon,
+  // graphIcon,
   servicesIcon,
   maintenanceIcon,
+  cybersecurityIcon,
 } from '@/assets/images';
 
 export const coreServices = [
   {
-    title: 'Web and UI/UX Development',
+    title: 'Web and App Development',
     icon: breakIcon,
   },
-  {
-    title: 'Marketing, Data, and SEO',
-    icon: graphIcon,
-  },
+  // {
+  //   title: 'Marketing, Data, and SEO',
+  //   icon: graphIcon,
+  // },
   {
     title: 'Development Team as Services',
     icon: servicesIcon,
@@ -21,5 +22,9 @@ export const coreServices = [
   {
     title: 'Website Maintenance',
     icon: maintenanceIcon,
+  },
+  {
+    title: 'Cybersecurity Services',
+    icon: cybersecurityIcon,
   },
 ];

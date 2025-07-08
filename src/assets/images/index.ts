@@ -18,6 +18,7 @@ import breakIcon from './services/breakIcon.png';
 import graphIcon from './services/graphIcon.png';
 import maintenanceIcon from './services/maintenanceIcon.png';
 import servicesIcon from './services/servicesIcon.png';
+import cybersecurityIcon from './services/cybersecurityIcon.png';
 import teamImg1 from './team/1-third.png';
 import teamImg2 from './team/2-marcus.png';
 import teamImg3 from './team/3-franz.png';
@@ -107,11 +108,13 @@ import nft from './trainings/ojt-portfolios/nft.png';
 import odyssey from './trainings/ojt-portfolios/odyssey.png';
 import redServe from './trainings/ojt-portfolios/redserve.png';
 import rinandPort from './trainings/ojt-portfolios/rinand-port.png';
+import jakePort from './trainings/ojt-portfolios/jake-port.png';
 import danProfile from './trainings/ojt-profile/dan.jpg';
 import hannahProfile from './trainings/ojt-profile/hannah.jpg';
 import jedediahProfile from './trainings/ojt-profile/jedediah.jpg';
 import jhonasProfile from './trainings/ojt-profile/jhonas.png';
 import joyProfile from './trainings/ojt-profile/joy.jpg';
+import jakeProfile from './trainings/ojt-profile/jake.jpg';
 import rinandProfile from './trainings/ojt-profile/rinand.jpg';
 import ezeProfile from './trainings/ojt-profile/eze.jpg';
 import ivanPort from './trainings/ojt-portfolios/ivanPort.png';
@@ -124,6 +127,9 @@ import ImageTwo from './careers/career-image/image-02.png';
 import ImageThree from './careers/career-image/image-03.png';
 import ImageFour from './careers/career-image/image-04.png';
 import ImageFive from './careers/career-image/image-05.png';
+import ImageSix from './careers/career-image/team-building.jpg';
+import ImageSeven from './careers/career-image/year-end-party.jpg';
+import ImageEight from './careers/career-image/team-dinner.jpg';
 import techstacksLogo from './logo/logo-techstacks.png';
 //Blackbear Image
 import blackbearLogo from './blackbear-img/blackbear.png';
@@ -165,6 +171,7 @@ export {
   joyProfile,
   rinandProfile,
   ezeProfile,
+  jakeProfile,
 
   //training/ojt's-portfolio
   aaronPort,
@@ -182,12 +189,14 @@ export {
   rinandPort,
   ivanPort,
   jhonasPort,
+  jakePort,
 
   //services
   breakIcon,
   graphIcon,
   maintenanceIcon,
   servicesIcon,
+  cybersecurityIcon,
   creative,
   creativeDesign,
   system,
@@ -282,6 +291,9 @@ export {
   ImageThree,
   ImageFour,
   ImageFive,
+  ImageSix,
+  ImageSeven,
+  ImageEight,
 
   //logo
   techstacksLogo,
