@@ -72,6 +72,17 @@ import jhonasImg from './team/our-team/jhonas.png';
 import toniImg from './team/our-team/toni.png';
 import jaysonImg from './team/our-team/jayson.png';
 import kennethImg from './team/our-team/kenneth.png';
+import thirdImage from './team/our-team/thirdImage.jpg';
+import paulImage from './team/our-team/paulImage.jpg';
+import jayveeImage from './team/our-team/jayveeImage.jpg';
+import airaImage from './team/our-team/airaImage.jpg';
+import samImage from './team/our-team/samImage.jpg';
+import adalineImage from './team/our-team/adalineImage.jpg';
+import rubeanImage from './team/our-team/rubeanImage.jpg';
+import jessicaImage from './team/our-team/jessicaImage.jpg';
+import fayeImage from './team/our-team/fayeImage.jpg';
+import sirThirdImage from './team/our-team/sirThirdImage.jpg';
+import jhonasImage from './team/our-team/jhonasImage.jpg';
 import traineesImgOne from './trainings/trainees-img/trainees-1.jpg';
 import traineesImgTwo from './trainings/trainees-img/trainees-2.jpg';
 import traineesImgThree from './trainings/trainees-img/trainees-3.jpg';
@@ -234,6 +245,17 @@ export {
   jaysonImg,
   kennethImg,
   neilImg,
+  paulImage,
+  thirdImage,
+  jayveeImage,
+  airaImage,
+  samImage,
+  adalineImage,
+  rubeanImage,
+  jessicaImage,
+  fayeImage,
+  sirThirdImage,
+  jhonasImage,
 
   //about-us/service-tools-logo
   bootstrapLogo,

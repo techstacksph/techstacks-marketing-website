@@ -74,7 +74,7 @@ export const TEAM = [
     profile: samProfile,
     teamGallery: {
       title: 'Continuous Learning in Digital Innovation',
-      body: "Being a Frontend Developer at TechStacks PH is truly exhilarating. It's more than just coding; it's about shaping the interface of our digital products.",
+      body: "Being a Frontend Developer at Techstacks PH is truly exhilarating. It's more than just coding; it's about shaping the interface of our digital products.",
     },
   },
   {
@@ -85,7 +85,7 @@ export const TEAM = [
     profile: kaiProfile,
     teamGallery: {
       title: 'Streamlining Operations',
-      body: 'As an Administrative Officer at TechStacks PH, I oversee and streamline administrative processes, ensuring the smooth and efficient operation of various tasks and contributing to the overall organizational effectiveness.',
+      body: 'As an Administrative Officer at Techstacks PH, I oversee and streamline administrative processes, ensuring the smooth and efficient operation of various tasks and contributing to the overall organizational effectiveness.',
     },
   },
   {
@@ -107,7 +107,7 @@ export const TEAM = [
     profile: airaProfile,
     teamGallery: {
       title: 'Optimizing Performance',
-      body: 'In my role as a backend developer at TechStacks PH, I contribute to the design and implementation of resilient server-side solutions, focusing on effective data management and optimal performance for our digital platforms.',
+      body: 'In my role as a backend developer at Techstacks PH, I contribute to the design and implementation of resilient server-side solutions, focusing on effective data management and optimal performance for our digital platforms.',
     },
   },
   {
@@ -118,7 +118,7 @@ export const TEAM = [
     profile: araProfile,
     teamGallery: {
       title: 'Amplifying Digital Impact',
-      body: 'As a marketing and SEO specialist at TechStacks PH, I leverage my expertise to enhance online visibility, optimize search engine rankings, and drive strategic initiatives that amplify our digital presence and outreach.',
+      body: 'As a marketing and SEO specialist at Techstacks PH, I leverage my expertise to enhance online visibility, optimize search engine rankings, and drive strategic initiatives that amplify our digital presence and outreach.',
     },
   },
 ].map(({ id, ...rest }) => ({ id: `t1-${id}`, ...rest })) as MemberData[];
