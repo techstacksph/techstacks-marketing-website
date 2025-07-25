@@ -139,6 +139,20 @@ import hatImg from './blackbear-img/hat.png';
 import puzzleImg from './blackbear-img/puzzle.png';
 import benefitsImg from './blackbear-img/benefits.png';
 import crossImg from './blackbear-img/cross.png';
+// Website templates
+import websiteTemplate1 from './web-templates/web-template-1.png';
+import websiteTemplate2 from './web-templates/web-template-2.png';
+import websiteTemplate3 from './web-templates/web-template-3.png';
+import websiteTemplate4 from './web-templates/web-template-4.png';
+import websiteTemplate5 from './web-templates/web-template-5.png';
+import websiteTemplate6 from './web-templates/web-template-6.png';
+// Website Mobile Templates
+import websiteTempalte1M from './web-templates/web-template-m-1.png';
+import websiteTempalte2M from './web-templates/web-template-m-2.png';
+import websiteTempalte3M from './web-templates/web-template-m-3.png';
+import websiteTempalte4M from './web-templates/web-template-m-4.png';
+import websiteTempalte5M from './web-templates/web-template-m-5.png';
+import websiteTempalte6M from './web-templates/web-template-m-6.png';
 
 export {
   // Testimonials
@@ -306,4 +320,20 @@ export {
   puzzleImg,
   benefitsImg,
   crossImg,
+
+  // Website templates
+  websiteTemplate1,
+  websiteTemplate2,
+  websiteTemplate3,
+  websiteTemplate4,
+  websiteTemplate5,
+  websiteTemplate6,
+
+  //Mobile Website Templates
+  websiteTempalte1M,
+  websiteTempalte2M,
+  websiteTempalte3M,
+  websiteTempalte4M,
+  websiteTempalte5M,
+  websiteTempalte6M,
 };
