@@ -6,7 +6,7 @@ import { BreadCrumbItem, BreadCrumbs } from '@/components/bread-crumbs';
 import { H1, Subheading } from '@/components/ui/typography';
 import { DotsIcon } from '@/components/icons/dots-icon';
 
-export default function ProductsHero() {
+export function ProductHero() {
   const [{ y }] = useWindowScroll();
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -22,7 +22,6 @@ export default function ProductsHero() {
 
     return value > 0 ? value : 0;
   }, [y]);
-
   return (
     <div className="w-full">
       <div className="w-full flex justify-center py-16 bg-primary-static/10 rounded-bl-[150px] md:rounded-bl-[250px] lg:rounded-bl-[450px] ">

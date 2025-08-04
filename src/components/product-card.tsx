@@ -1,5 +1,6 @@
 import Image, { type StaticImageData } from 'next/image';
 import { useState } from 'react';
+import Link from 'next/link';
 import { type TemplateFeatures } from '@/constants/products-templates';
 import { Button } from './ui/button';
 import { ProductFeature } from './product-feature';
@@ -12,6 +13,7 @@ interface ProductCardProps {
   image: StaticImageData;
   index: number;
   imageMobile: StaticImageData;
+  id: number;
 }
 
 export function ProductCard({
@@ -19,6 +21,7 @@ export function ProductCard({
   features,
   image,
   imageMobile,
+  id,
 }: ProductCardProps) {
   const [open, setOpen] = useState(false);
 
@@ -55,17 +58,20 @@ export function ProductCard({
           >
             View
           </Button>
-          <Button className="relative inline-flex items-center justify-start w-full p-3 overflow-hidden font-medium transition-all bg-white border rounded dark:bg-transparent border-primary-static group">
-            <span className="w-48 h-48 rounded rotate-[-40deg] bg-primary-static absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0" />
-            <span className="relative w-full text-center text-black transition-colors duration-300 ease-in-out dark:text-white group-hover:text-white dark:group-hover:text-black">
-              Inquire
-            </span>
-          </Button>
+          <Link href={`/products/inquire?item=${encodeURIComponent(id)}`}>
+            <Button className="relative inline-flex items-center justify-start w-full p-3 overflow-hidden font-medium transition-all bg-white border rounded dark:bg-transparent border-primary-static group">
+              <span className="w-48 h-48 rounded rotate-[-40deg] bg-primary-static absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0" />
+              <span className="relative w-full text-center text-black transition-colors duration-300 ease-in-out dark:text-white group-hover:text-white dark:group-hover:text-black">
+                Inquire
+              </span>
+            </Button>
+          </Link>
         </div>
       </div>
 
       <ProductModal
         features={features}
+        id={id}
         image={image}
         imageMobile={imageMobile}
         onClose={handleClose}

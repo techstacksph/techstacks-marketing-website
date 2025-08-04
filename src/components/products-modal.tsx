@@ -2,6 +2,7 @@
 
 import Image, { type StaticImageData } from 'next/image';
 import { Tabs, TabsContent, TabsList } from '@radix-ui/react-tabs';
+import Link from 'next/link';
 import { type TemplateFeatures } from '@/constants/products-templates';
 import { Modal } from './ui/modal';
 import { ProductFeature } from './product-feature';
@@ -11,7 +12,7 @@ import { Button } from './ui/button';
 interface ProductModalProps {
   open: boolean;
   onClose: () => void;
-
+  id: number;
   features: TemplateFeatures[];
   image: StaticImageData;
   imageMobile: StaticImageData;
@@ -22,6 +23,7 @@ export function ProductModal({
   onClose,
   image,
   features,
+  id,
   imageMobile,
 }: ProductModalProps) {
   return (
@@ -74,11 +76,13 @@ export function ProductModal({
         </div>
 
         <div className="sticky p-5 px-10  z-10 justify-center flex bottom-0">
-          <Button className="relative inline-flex  items-center justify-start w-40 p-4 overflow-hidden font-medium transition-all bg-primary-static border-2 rounded  border-primary-static group hover:scale-105 delay-200 shadow-sm shadow-primary">
-            <span className="w-48 h-48 rounded rotate-[-40deg] bg-white absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0" />
-            <span className="relative w-full text-center  transition-colors duration-300 ease-in-out text-lg dark:text-white group-hover:text-primary-static dark:group-hover:text-primary">
-              Inquire
-            </span>
+          <Button className="relative inline-flex  items-center justify-center w-40 p-4 overflow-hidden font-medium transition-all bg-primary-static border-2 rounded  border-primary-static group hover:scale-105 delay-200 shadow-sm shadow-primary">
+            <Link href={`/products/inquire?item=${encodeURIComponent(id)}`}>
+              <span className="w-48 h-48 rounded rotate-[-40deg] bg-white absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0" />
+              <span className="relative w-full text-center  transition-colors duration-300 ease-in-out text-lg dark:text-white group-hover:text-primary-static dark:group-hover:text-primary">
+                Inquire
+              </span>
+            </Link>
           </Button>
         </div>
       </div>
