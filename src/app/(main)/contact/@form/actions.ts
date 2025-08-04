@@ -35,7 +35,7 @@ export async function productInquiryAction(formData: InquiryFormType) {
   const cid = 'template-image';
 
   const response = await resend.emails.send({
-    from: 'onboarding@resend.dev',
+    from: 'techstacksph.com <techstacksph@resend.dev>',
     to: [env.RESEND_EMAIL],
     subject: 'Product Inquiry',
     react: ProductInquiryEmailTemplate({
