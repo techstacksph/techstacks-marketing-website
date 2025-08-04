@@ -146,13 +146,49 @@ import websiteTemplate3 from './web-templates/web-template-3.png';
 import websiteTemplate4 from './web-templates/web-template-4.png';
 import websiteTemplate5 from './web-templates/web-template-5.png';
 import websiteTemplate6 from './web-templates/web-template-6.png';
+import websiteTemplate7 from './web-templates/web-template-7.png';
+import websiteTemplate8 from './web-templates/web-template-8.png';
+import websiteTemplate9 from './web-templates/web-template-9.png';
+import websiteTemplate10 from './web-templates/web-template-10.png';
+import websiteTemplate11 from './web-templates/web-template-11.png';
+import websiteTemplate12 from './web-templates/web-template-12.png';
+import websiteTemplate13 from './web-templates/web-template-13.png';
+import websiteTemplate14 from './web-templates/web-template-14.png';
+import websiteTemplate15 from './web-templates/web-template-15.png';
+import websiteTemplate16 from './web-templates/web-template-16.png';
+import websiteTemplate17 from './web-templates/web-template-17.png';
+import websiteTemplate18 from './web-templates/web-template-18.png';
+import websiteTemplate19 from './web-templates/web-template-19.png';
+import websiteTemplate20 from './web-templates/web-template-20.png';
+import websiteTemplate21 from './web-templates/web-template-21.png';
+import websiteTemplate22 from './web-templates/web-template-22.png';
+import websiteTemplate23 from './web-templates/web-template-23.png';
+import websiteTemplate24 from './web-templates/web-template-24.png';
 // Website Mobile Templates
-import websiteTempalte1M from './web-templates/web-template-m-1.png';
-import websiteTempalte2M from './web-templates/web-template-m-2.png';
-import websiteTempalte3M from './web-templates/web-template-m-3.png';
-import websiteTempalte4M from './web-templates/web-template-m-4.png';
-import websiteTempalte5M from './web-templates/web-template-m-5.png';
-import websiteTempalte6M from './web-templates/web-template-m-6.png';
+import websiteTemplate1M from './web-templates/web-template-m-1.png';
+import websiteTemplate2M from './web-templates/web-template-m-2.png';
+import websiteTemplate3M from './web-templates/web-template-m-3.png';
+import websiteTemplate4M from './web-templates/web-template-m-4.png';
+import websiteTemplate5M from './web-templates/web-template-m-5.png';
+import websiteTemplate6M from './web-templates/web-template-m-6.png';
+import websiteTemplate7M from './web-templates/web-template-m-7.png';
+import websiteTemplate8M from './web-templates/web-template-m-8.png';
+import websiteTemplate9M from './web-templates/web-template-m-9.png';
+import websiteTemplate10M from './web-templates/web-template-m-10.png';
+import websiteTemplate11M from './web-templates/web-template-m-11.png';
+import websiteTemplate12M from './web-templates/web-template-m-12.png';
+import websiteTemplate13M from './web-templates/web-template-m-13.png';
+import websiteTemplate14M from './web-templates/web-template-m-14.png';
+import websiteTemplate15M from './web-templates/web-template-m-15.png';
+import websiteTemplate16M from './web-templates/web-template-m-16.png';
+import websiteTemplate17M from './web-templates/web-template-m-17.png';
+import websiteTemplate18M from './web-templates/web-template-m-18.png';
+import websiteTemplate19M from './web-templates/web-template-m-19.png';
+import websiteTemplate20M from './web-templates/web-template-m-20.png';
+import websiteTemplate21M from './web-templates/web-template-m-21.png';
+import websiteTemplate22M from './web-templates/web-template-m-22.png';
+import websiteTemplate23M from './web-templates/web-template-m-23.png';
+import websiteTemplate24M from './web-templates/web-template-m-24.png';
 
 export {
   // Testimonials
@@ -328,12 +364,48 @@ export {
   websiteTemplate4,
   websiteTemplate5,
   websiteTemplate6,
+  websiteTemplate7,
+  websiteTemplate8,
+  websiteTemplate9,
+  websiteTemplate10,
+  websiteTemplate11,
+  websiteTemplate12,
+  websiteTemplate13,
+  websiteTemplate14,
+  websiteTemplate15,
+  websiteTemplate16,
+  websiteTemplate17,
+  websiteTemplate18,
+  websiteTemplate19,
+  websiteTemplate20,
+  websiteTemplate21,
+  websiteTemplate22,
+  websiteTemplate23,
+  websiteTemplate24,
 
   //Mobile Website Templates
-  websiteTempalte1M,
-  websiteTempalte2M,
-  websiteTempalte3M,
-  websiteTempalte4M,
-  websiteTempalte5M,
-  websiteTempalte6M,
+  websiteTemplate1M,
+  websiteTemplate2M,
+  websiteTemplate3M,
+  websiteTemplate4M,
+  websiteTemplate5M,
+  websiteTemplate6M,
+  websiteTemplate7M,
+  websiteTemplate8M,
+  websiteTemplate9M,
+  websiteTemplate10M,
+  websiteTemplate11M,
+  websiteTemplate12M,
+  websiteTemplate13M,
+  websiteTemplate14M,
+  websiteTemplate15M,
+  websiteTemplate16M,
+  websiteTemplate17M,
+  websiteTemplate18M,
+  websiteTemplate19M,
+  websiteTemplate20M,
+  websiteTemplate21M,
+  websiteTemplate22M,
+  websiteTemplate23M,
+  websiteTemplate24M,
 };
