@@ -24,6 +24,10 @@ import {
   websiteTemplate22,
   websiteTemplate23,
   websiteTemplate24,
+  websiteTemplate25,
+  websiteTemplate26,
+  websiteTemplate27,
+  // Mobile Templates
   websiteTemplate1M,
   websiteTemplate2M,
   websiteTemplate3M,
@@ -48,6 +52,9 @@ import {
   websiteTemplate22M,
   websiteTemplate23M,
   websiteTemplate24M,
+  websiteTemplate25M,
+  websiteTemplate26M,
+  websiteTemplate27M,
 } from '@/assets/images';
 
 export enum TemplateFeatures {
@@ -404,5 +411,48 @@ export const WEBTEMPLATES: ProductsTemplates[] = [
       TemplateFeatures.Blog,
     ],
     imgsrc: 'src/assets/images/web-templates/web-template-24.png',
+  },
+  {
+    id: 25,
+    title: 'web-template-25',
+    image: websiteTemplate25,
+    imageMobile: websiteTemplate25M,
+    features: [
+      TemplateFeatures.Home,
+      TemplateFeatures.About,
+      TemplateFeatures.Features,
+      TemplateFeatures.Services,
+      TemplateFeatures.Contact,
+      TemplateFeatures.Blog,
+    ],
+    imgsrc: 'src/assets/images/web-templates/web-template-25.png',
+  },
+  {
+    id: 26,
+    title: 'web-template-26',
+    image: websiteTemplate26,
+    imageMobile: websiteTemplate26M,
+    features: [
+      TemplateFeatures.Home,
+      TemplateFeatures.About,
+      TemplateFeatures.Services,
+      TemplateFeatures.Contact,
+      TemplateFeatures.Blog,
+    ],
+    imgsrc: 'src/assets/images/web-templates/web-template-26.png',
+  },
+  {
+    id: 27,
+    title: 'web-template-27',
+    image: websiteTemplate27,
+    imageMobile: websiteTemplate27M,
+    features: [
+      TemplateFeatures.Home,
+      TemplateFeatures.About,
+      TemplateFeatures.Services,
+      TemplateFeatures.Contact,
+      TemplateFeatures.Blog,
+    ],
+    imgsrc: 'src/assets/images/web-templates/web-template-27.png',
   },
 ];
