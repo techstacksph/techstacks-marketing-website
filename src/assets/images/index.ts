@@ -164,6 +164,9 @@ import websiteTemplate21 from './web-templates/web-template-21.png';
 import websiteTemplate22 from './web-templates/web-template-22.png';
 import websiteTemplate23 from './web-templates/web-template-23.png';
 import websiteTemplate24 from './web-templates/web-template-24.png';
+import websiteTemplate25 from './web-templates/web-template-25.png';
+import websiteTemplate26 from './web-templates/web-template-26.png';
+import websiteTemplate27 from './web-templates/web-template-27.png';
 // Website Mobile Templates
 import websiteTemplate1M from './web-templates/web-template-m-1.png';
 import websiteTemplate2M from './web-templates/web-template-m-2.png';
@@ -189,6 +192,9 @@ import websiteTemplate21M from './web-templates/web-template-m-21.png';
 import websiteTemplate22M from './web-templates/web-template-m-22.png';
 import websiteTemplate23M from './web-templates/web-template-m-23.png';
 import websiteTemplate24M from './web-templates/web-template-m-24.png';
+import websiteTemplate25M from './web-templates/web-template-m-25.png';
+import websiteTemplate26M from './web-templates/web-template-m-26.png';
+import websiteTemplate27M from './web-templates/web-template-m-27.png';
 
 export {
   // Testimonials
@@ -382,6 +388,9 @@ export {
   websiteTemplate22,
   websiteTemplate23,
   websiteTemplate24,
+  websiteTemplate25,
+  websiteTemplate26,
+  websiteTemplate27,
 
   //Mobile Website Templates
   websiteTemplate1M,
@@ -408,4 +417,7 @@ export {
   websiteTemplate22M,
   websiteTemplate23M,
   websiteTemplate24M,
+  websiteTemplate25M,
+  websiteTemplate26M,
+  websiteTemplate27M,
 };
