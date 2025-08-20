@@ -2,7 +2,6 @@
 
 import path from 'node:path';
 import fs from 'node:fs';
-import sharp from 'sharp';
 import { resend } from '@/lib/resend';
 import { ContactEmailTemplate } from '@/components/email/contact';
 import { env } from '@/env.mjs';
@@ -27,10 +26,6 @@ export async function productInquiryAction(formData: InquiryFormType) {
   if (!fs.existsSync(imagePath)) {
     throw new Error('Image file does not exist at the specified path');
   }
-  const compressedBuffer = await sharp(imagePath)
-    .resize(800)
-    .png({ compressionLevel: 9, adaptiveFiltering: true })
-    .toBuffer();
 
   const cid = 'template-image';
 
@@ -45,7 +40,6 @@ export async function productInquiryAction(formData: InquiryFormType) {
     attachments: [
       {
         filename: `${formData.item.title}.png`,
-        content: compressedBuffer,
       },
     ],
   });
