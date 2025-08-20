@@ -15,6 +15,7 @@ export default function MessengerChat() {
 
     (window as any).fbAsyncInit = () => {
       (window as any).FB.init({
+        appId: "1337528334395112",
         xfbml: true,
         version: "v23.0",
       });
