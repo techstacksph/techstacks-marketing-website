@@ -8,15 +8,13 @@ export default function MainLayout({ children }: { children: ReactNode }) {
     <>
       <Header />
       {children}
-      <script>
-        {`window.fbAsyncInit = function() {
+      <script dangerouslySetInnerHTML={{ __html: `window.fbAsyncInit = function() {
           FB.init({
             appId            : '1337528334395112',
             xfbml            : true,
             version          : 'v23.0'
           });
-        };`}
-      </script>
+        };` }} />
       <script async defer crossOrigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
       {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment -- no */}
       {/* @ts-expect-error */}
