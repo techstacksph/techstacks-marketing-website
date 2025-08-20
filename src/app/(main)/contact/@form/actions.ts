@@ -29,7 +29,7 @@ export async function productInquiryAction(formData: InquiryFormType) {
   }
   const compressedBuffer = await sharp(imagePath)
     .resize(800)
-    .png({ quality: 70 })
+    .png({ compressionLevel: 9, adaptiveFiltering: true })
     .toBuffer();
 
   const cid = 'template-image';
