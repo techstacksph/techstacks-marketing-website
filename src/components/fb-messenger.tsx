@@ -27,8 +27,11 @@ export default function MessengerChat() {
         id="fb-customer-chat"
         // @ts-ignore
         attribution="biz_inbox"
-        className="fb-customerchat"
+        messenger_app_id="1337528334395112"
+        className="fb-messengermessageus"
         page_id="103524484853667"
+        color="blue"
+        size="standard"
       />
   );
 }
