@@ -8,9 +8,10 @@ export default function MessengerChat() {
 
     const script = document.createElement("script");
     script.id = "facebook-jssdk";
-    script.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+    script.src = "https://connect.facebook.net/en_US/sdk.js";
     script.async = true;
     script.defer = true;
+    script.crossOrigin = "anonymous";
     document.body.appendChild(script);
 
     (window as any).fbAsyncInit = () => {
