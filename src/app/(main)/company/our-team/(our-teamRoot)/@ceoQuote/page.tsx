@@ -26,7 +26,7 @@ export default function CeoQuote() {
                 bring it to life.
               </Subheading>
               <Subheading className="font-bold italic text-center lg:text-md mt-8">
-                fms third
+                third
               </Subheading>
               <div className="text-3xl xl:text-5xl self-end">
                 <BiSolidQuoteAltRight />

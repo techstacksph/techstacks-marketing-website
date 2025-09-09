@@ -25,7 +25,7 @@ import {
   teamImg6,
   teamImg7,
   teamImg8,
-  thirdProfile,
+  // thirdProfile,
 } from '@/assets/images';
 
 export interface MemberData {
@@ -206,15 +206,15 @@ export const TEAM1 = [
       linkedin: 'https://github.com',
     },
   },
-  {
-    id: 8,
-    name: 'fms third',
-    position: '',
-    src: thirdProfile,
-    profile: thirdProfile,
-    socialMedia: {
-      github: 'https://github.com/fmsthird',
-      linkedin: 'https://github.com/fmsthird',
-    },
-  },
+  // {
+  //   id: 8,
+  //   name: 'fms third',
+  //   position: '',
+  //   src: thirdProfile,
+  //   profile: thirdProfile,
+  //   socialMedia: {
+  //     github: 'https://github.com/fmsthird',
+  //     linkedin: 'https://github.com/fmsthird',
+  //   },
+  // },
 ] as const;
