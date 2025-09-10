@@ -29,7 +29,7 @@ export default function Home() {
                 data-aos="fade-up"
                 data-aos-delay={100}
               >
-                We Deliver secure, scalable web technologies — from responsive websites to enterprise-grade applications.
+                We deliver secured, scalable web technologies — from responsive websites to enterprise-grade applications.
               </Subheading>
               <div className="flex gap-4 place-content-center lg:place-content-start">
                 <Link
