@@ -31,7 +31,7 @@ export default function Home() {
               >
                 We deliver secured, scalable web technologies — from responsive websites to enterprise-grade applications.
               </Subheading>
-              <div className="flex gap-4 place-content-center lg:place-content-start">
+              <div className="flex flex-col lg:flex-row gap-4 place-content-center lg:place-content-start">
                 <Link
                   className="relative inline-flex items-center justify-start w-full p-3 overflow-hidden font-medium transition-all border rounded bg-primary-static dark:bg-white md:w-52 h-14 border-primary-static dark:border-white group"
                   href={NavRoutes.Services}
