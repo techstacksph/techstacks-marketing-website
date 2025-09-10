@@ -21,7 +21,7 @@ function Model() {
 
 export default function Hero() {
   return (
-    <Canvas>
+    <Canvas className='!pointer-events-none lg:pointer-events-auto'>
       <Suspense fallback="Loading...">
         <ambientLight intensity={0.1} />
         <directionalLight intensity={3} position={[10, 10, 10]} />
