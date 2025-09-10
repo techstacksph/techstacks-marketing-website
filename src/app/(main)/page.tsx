@@ -58,7 +58,7 @@ export default function Home() {
                 <SocialProof />
               </div>
             </div>
-            <div className="aspect-square">
+            <div className="aspect-square pointer-events-none lg:pointer-events-auto">
               <Hero />
             </div>
           </div>
