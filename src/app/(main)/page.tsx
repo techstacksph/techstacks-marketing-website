@@ -17,33 +17,20 @@ export default function Home() {
       <BgHero className="absolute block w-full m-auto -z-10" />
       <div className="flex justify-center w-full py-16 [&&&]:mt-0">
         <Section>
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:justify-center lg:items-center">
+          <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:justify-center lg:items-center">
             <div className="flex flex-col gap-8">
               <H1
-                className="text-center whitespace-pre-wrap lg:text-left"
+                className="text-center whitespace-pre-wrap lg:text-left xl:text-5xl"
                 data-aos="fade-up"
               >
-                Building websites{'\n'}
-                <Typewriter
-                  component="span"
-                  options={{
-                    wrapperClassName: 'text-primary-static',
-                    strings: ['with a purpose', 'beyond limits', 'with style'],
-                    autoStart: true,
-                    loop: true,
-                    delay: 50,
-                    deleteSpeed: 50,
-                  }}
-                />
+                Building scalable websites and powerful web applications with modern technologies.
               </H1>
               <Subheading
-                className="text-center lg:text-left"
+                className="text-center lg:text-left leading-none"
                 data-aos="fade-up"
                 data-aos-delay={100}
               >
-                We specialize in designing and building beautiful, fast, secure,
-                and high converting websites with excellent performance and SEO
-                score.
+                Delivering secure, scalable web technologies — from responsive websites to enterprise-grade applications.
               </Subheading>
               <div className="flex gap-4 place-content-center lg:place-content-start">
                 <Link
