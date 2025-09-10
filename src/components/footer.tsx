@@ -45,8 +45,7 @@ export default function Footer() {
                   </Link>
 
                   <p className="text-center text-muted lg:text-left">
-                    High level experience in web design and development
-                    knowledge, producing quality work.
+                    Extensive experience in web design and web application development, producing high-quality work.
                   </p>
                   <ul className="flex justify-center gap-4">
                     {socialMedia.map(({ Icon, title, url }) => (
