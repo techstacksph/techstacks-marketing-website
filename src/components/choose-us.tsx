@@ -45,7 +45,7 @@ export default function WhyChooseUs() {
           </div>
           <div className="text-center mb-12">
             <H2 className="text-center" data-aos="fade-up" data-aos-delay={200}>
-              We make beautiful, high converting, fast, and secure websites.
+              We build fast, secure, and scalable websites and web applications that drive results.
             </H2>
           </div>
 

@@ -23,17 +23,14 @@ export default function Footer() {
         </div>
         <Section>
           <div className="relative flex flex-col gap-10 items-center md:items-start w-full">
-            <div className="flex flex-col w-full gap-8 md:w-1/2">
-              <H1 asChild className="text-center md:text-left">
-                <h2>
-                  <span className="block mb-0">Ready to upgrade your</span>
-                  <span className="mt-4 block"> website?</span>
+            <div className="flex flex-col w-full gap-4 mb-12">
+                <h2 className='text-2xl font-semibold text-center lg:text-3xl xl:text-5xl'>
+                  <span className="block mb-0">Ready to upgrade your digital presence?</span>
                   <span className="text-primary-static block">
-                    give us a try. 🚀
+                    From websites to web applications, we build solutions that scale. 🚀
                   </span>
                 </h2>
-              </H1>
-              <Subheading className="text-center md:text-left">
+              <Subheading className="text-center">
                 Grow Your Web Presence with Our Website Upgrade Solutions
               </Subheading>
             </div>
