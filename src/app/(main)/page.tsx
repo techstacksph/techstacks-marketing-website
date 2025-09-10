@@ -5,7 +5,6 @@ import { Main, Section } from '@/components/default-elements';
 import { Testimonials } from '@/components/testimonials';
 import SocialProof from '@/components/social-proof';
 import { NavRoutes } from '@/constants/nav-routes';
-import { Typewriter } from '@/components/typewriter';
 import { H1, Subheading } from '@/components/ui/typography';
 import { BgHero } from '@/components/icons/bg-hero';
 import { Separator } from '@/components/ui/separator';

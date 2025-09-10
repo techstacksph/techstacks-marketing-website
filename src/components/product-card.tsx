@@ -46,6 +46,7 @@ export function ProductCard({
         <div className="text-primary-static font-semibold gap-1 flex items-end flex-wrap">
           <span className="text-md">Features:</span>
           {features.map((feature, index) => (
+            // eslint-disable-next-line react/no-array-index-key -- index is fine here
             <ProductFeature feature={feature} key={title + feature + index} />
           ))}
         </div>

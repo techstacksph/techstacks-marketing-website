@@ -121,6 +121,7 @@ export default function InquirePage() {
           {selectedTemplate.features.map((feature, index) => (
             <ProductFeature
               feature={feature}
+              // eslint-disable-next-line react/no-array-index-key -- index is fine here
               key={`${selectedTemplate.title}-${feature}-${index}`}
             />
           ))}

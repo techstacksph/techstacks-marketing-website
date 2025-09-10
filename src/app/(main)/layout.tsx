@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unknown-property -- no */
 import { type ReactNode } from 'react';
 import Footer from '@/components/footer';
 import Header from '@/components/header';

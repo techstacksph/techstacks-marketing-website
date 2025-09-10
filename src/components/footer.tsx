@@ -9,7 +9,7 @@ import { Button } from './ui/button';
 import { Separator } from './ui/separator';
 import { Section } from './default-elements';
 import BrandLogo from './brand-logo';
-import { H1, Subheading } from './ui/typography';
+import { Subheading } from './ui/typography';
 import { TechstacksLogo } from './icons/techstacks-logo';
 
 export default function Footer() {
