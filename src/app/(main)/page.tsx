@@ -17,7 +17,7 @@ export default function Home() {
       <div className="flex justify-center w-full py-16 [&&&]:mt-0">
         <Section>
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:justify-center lg:items-center">
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-4 lg:gap-6">
               <H1
                 className="text-center whitespace-pre-wrap lg:text-left xl:text-5xl"
                 data-aos="fade-up"
