@@ -1,5 +1,6 @@
 'use client';
 
+import { Suspense } from 'react';
 import { z } from 'zod';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -14,7 +15,7 @@ const blogSearchSchema = z.object({
   q: z.string(),
 });
 
-export function BlogSearchForm() {
+function SearchFormContent() {
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const router = useRouter();
@@ -59,5 +60,13 @@ export function BlogSearchForm() {
         />
       </form>
     </Form>
+  );
+}
+
+export function BlogSearchForm() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <SearchFormContent />
+    </Suspense>
   );
 }

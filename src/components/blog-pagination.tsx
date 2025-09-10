@@ -1,5 +1,6 @@
 'use client';
 
+import { Suspense } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { usePathname, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
@@ -12,7 +13,7 @@ interface PaginationButtonsProps {
   total: number;
 }
 
-export function PaginationButtons({ next, prev }: PaginationButtonsProps) {
+function PaginationContent({ next, prev }: PaginationButtonsProps) {
   const searchParams = useSearchParams();
   const pathname = usePathname();
 
@@ -39,5 +40,13 @@ export function PaginationButtons({ next, prev }: PaginationButtonsProps) {
         </Link>
       </Button>
     </div>
+  );
+}
+
+export function PaginationButtons(props: PaginationButtonsProps) {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <PaginationContent {...props} />
+    </Suspense>
   );
 }

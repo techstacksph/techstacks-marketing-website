@@ -1,8 +1,9 @@
 'use client';
 
+import { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 
-export default function BlogSearchNotFound() {
+function NotFoundContent() {
   const searchParams = useSearchParams();
   const query = searchParams.get('q');
 
@@ -15,5 +16,13 @@ export default function BlogSearchNotFound() {
         </strong>
       </p>
     </div>
+  );
+}
+
+export default function BlogSearchNotFound() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <NotFoundContent />
+    </Suspense>
   );
 }

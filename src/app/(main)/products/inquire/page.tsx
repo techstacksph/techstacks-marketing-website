@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
+import { Suspense, useEffect, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import Image from 'next/image';
@@ -34,7 +34,7 @@ import { Button } from '@/components/ui/button';
 import { productInquiryAction } from '../../contact/@form/actions';
 import { inquiryFormSchema, type InquiryFormType } from './form';
 
-export default function InquirePage() {
+function InquireContent() {
   const searchParams = useSearchParams();
   const item = searchParams.get('item');
   const [selectedTemplate, setSelectedTemplate] = useState<
@@ -245,5 +245,13 @@ export default function InquirePage() {
         </div>
       </div>
     </Section>
+  );
+}
+
+export default function InquirePage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <InquireContent />
+    </Suspense>
   );
 }
