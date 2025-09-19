@@ -58,10 +58,10 @@ export const pagesLink = [
   //   title: 'Pricing',
   //   href: NavRoutes.Pricing,
   // },
-  {
-    title: 'Trainings',
-    href: NavRoutes.Trainings,
-  },
+  // {
+  //   title: 'Trainings',
+  //   href: NavRoutes.Trainings,
+  // },
 ];
 
 export const portfolioLink = [
