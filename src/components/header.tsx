@@ -1,5 +1,6 @@
 'use client';
 
+// eslint-disable-next-line import/named -- no
 import { useWindowScroll } from '@uidotdev/usehooks';
 import { ArrowRight, Menu } from 'lucide-react';
 import Link from 'next/link';
@@ -91,7 +92,7 @@ export default function Header() {
                       variant: 'link',
                     })}
                   >
-                    <Link href={page.href}>{page.title}</Link>
+                    <Link href={page.href as string}>{page.title}</Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
               ))}

@@ -32,15 +32,17 @@ export default function Home() {
                 We deliver secured, scalable web technologies — from responsive websites to enterprise-grade applications.
               </Subheading>
               <div className="flex flex-col lg:flex-row gap-4 place-content-center lg:place-content-start">
-                <Link
+                <a
                   className="relative inline-flex items-center justify-start w-full p-3 overflow-hidden font-medium transition-all border rounded bg-primary-static dark:bg-white md:w-52 h-14 border-primary-static dark:border-white group"
-                  href={NavRoutes.Services}
+                  href="https://forms.gle/QxQsMcbo7eLNnAAb8"
+                  rel="noopener noreferrer"
+                  target='_blank'
                 >
                   <span className="w-48 h-48 rounded rotate-[-40deg] bg-white dark:bg-primary-static absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0" />
                   <span className="relative w-full text-center text-white transition-colors duration-300 ease-in-out dark:text-black group-hover:text-black">
                     Let&apos;s start
                   </span>
-                </Link>
+                </a>
                 <Link
                   className="relative inline-flex items-center justify-start w-full p-3 overflow-hidden font-medium transition-all bg-transparent border rounded md:w-52 h-14 border-primary-static group"
                   href={NavRoutes.Company.AboutUs}
