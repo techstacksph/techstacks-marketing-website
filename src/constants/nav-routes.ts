@@ -11,8 +11,6 @@ export const NavRoutes = {
   Products: '/products',
   Pricing: '/pricing',
   Services: '/services',
-  // Trainings: '/trainings',
-  // OjtWorks: '/trainings/ojt-works',
   PrivacyPolicy: '/privacy-policy',
   Contact: '/contact',
   BlackbearTechstacks: '/blackbear-techstacks',
