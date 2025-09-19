@@ -90,7 +90,7 @@ export default function Footer() {
                         className="flex flex-col justify-center font-semibold text-primary-static"
                         key={page.title}
                       >
-                        <Link href={page.href}>{page.title}</Link>
+                        <Link href={page.href as string}>{page.title}</Link>
                       </li>
                     ))}
                   </ul>
