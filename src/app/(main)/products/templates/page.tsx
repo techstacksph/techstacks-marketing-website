@@ -1,5 +1,4 @@
 'use client';
-
 import { useState } from 'react';
 import { Section } from '@/components/default-elements';
 import { ProductCard } from '@/components/product-card';
@@ -10,7 +9,7 @@ import { ProductHero } from '@/components/product-hero';
 
 const TEMPLATES_PER_PAGE = 9;
 
-export default function WebsiteTemplate() {
+export default function TemplatesPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(WEBTEMPLATES.length / TEMPLATES_PER_PAGE);
 
@@ -29,11 +28,10 @@ export default function WebsiteTemplate() {
   return (
     <div>
       <ProductHero />
-
-      <div className="w-full bg-primary-static/10  ">
-        <div className="w-full flex  justify-center py-16  bg-background  rounded-tr-[150px] md:rounded-tr-[250px] lg:rounded-tr-[450px]   ">
+      <div className="w-full bg-primary-static/10">
+        <div className="w-full flex justify-center py-16 bg-background rounded-tr-[150px] md:rounded-tr-[250px] lg:rounded-tr-[450px]">
           <Section className="space-y-8">
-            <div className="flex flex-col items-center  w-full">
+            <div className="flex flex-col items-center w-full">
               <div className="flex flex-col items-center gap-4">
                 <H2
                   className="text-center [&>span]:text-primary-static"
@@ -44,8 +42,7 @@ export default function WebsiteTemplate() {
                 </H2>
               </div>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-6 ">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-6">
               {paginatedTemplates.map((template, index) => (
                 <ProductCard
                   data-aos="fade-up"
@@ -60,8 +57,7 @@ export default function WebsiteTemplate() {
                 />
               ))}
             </div>
-
-            <div className="">
+            <div>
               <ProductsPagination
                 current={currentPage}
                 next={currentPage < totalPages}

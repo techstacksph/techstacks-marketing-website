@@ -41,27 +41,32 @@ export const companyLink = [
 ];
 
 export const pagesLink = [
-  // {
-  //   title: 'Shop',
-  //   href: 'https://shop.techstacksph.com/',
-  //   target: '_blank',
-  // },
   {
     title: 'Services',
     href: NavRoutes.Services,
   },
+];
+
+export const productsLink = [
   {
     title: 'Products',
-    href: NavRoutes.Products,
+    link: [
+      {
+        label: 'Templates',
+        href: '/products/templates',
+        description:
+          'Choose from expertly crafted website templates to launch your vision.',
+        // Optionally add an icon here
+      },
+      {
+        label: 'LED Products',
+        href: '/products/led-products',
+        description:
+          'Explore our selection of LED products for your business needs.',
+        // Optionally add an icon here
+      },
+    ],
   },
-  // {
-  //   title: 'Pricing',
-  //   href: NavRoutes.Pricing,
-  // },
-  // {
-  //   title: 'Trainings',
-  //   href: NavRoutes.Trainings,
-  // },
 ];
 
 export const portfolioLink = [

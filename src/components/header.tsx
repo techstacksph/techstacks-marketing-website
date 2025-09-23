@@ -1,8 +1,7 @@
 'use client';
 
-// eslint-disable-next-line import/named -- no
 import { useWindowScroll } from '@uidotdev/usehooks';
-import { ArrowRight, Menu } from 'lucide-react';
+import { ArrowRight, Menu, MonitorIcon, LightbulbIcon } from 'lucide-react';
 import Link from 'next/link';
 import { companyLink, pagesLink } from '@/constants/nav-links';
 import { NavRoutes } from '@/constants/nav-routes';
@@ -96,6 +95,38 @@ export default function Header() {
                   </NavigationMenuLink>
                 </NavigationMenuItem>
               ))}
+
+              {/* Products Dropdown */}
+              <NavigationMenuItem className="hidden lg:block">
+                <NavigationMenuTrigger
+                  className="bg-transparent border-transparent font-poppins"
+                  variant="link"
+                >
+                  Products
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="w-[450px] px-2 py-2">
+                    <ListItem
+                      className="flex flex-row w-full gap-2 cursor-pointer"
+                      href="/products/templates"
+                      icon={<MonitorIcon className="w-8 h-6" />}
+                      title="Templates"
+                    >
+                      Choose from expertly crafted website templates to launch
+                      your vision.
+                    </ListItem>
+                    <ListItem
+                      className="flex flex-row w-full gap-2 cursor-pointer"
+                      href="/products/led-products"
+                      icon={<LightbulbIcon className="w-8 h-6" />}
+                      title="LED Products"
+                    >
+                      Explore our selection of LED products for your business
+                      needs.
+                    </ListItem>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
               <NavigationMenuItem className="hidden lg:block">
                 <Button asChild className="items-center" variant="outline">
                   <Link href={NavRoutes.Contact}>
