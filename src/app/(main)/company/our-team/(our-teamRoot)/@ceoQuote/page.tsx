@@ -1,6 +1,6 @@
-import Image from 'next/image';
+// import Image from 'next/image';
 import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from 'react-icons/bi';
-import { sirThirdImg } from '@/assets/images';
+// import { sirThirdImg } from '@/assets/images';
 import { Section } from '@/components/default-elements';
 import { Subheading } from '@/components/ui/typography';
 
@@ -38,7 +38,7 @@ export default function CeoQuote() {
               data-aos-delay={200}
             >
               <div className="flex justify-center bg-primary-static">
-                <Image alt="asd" src={sirThirdImg} />
+                {/* <Image alt="asd" src={sirThirdImg} /> */}
               </div>
             </div>
             <div
