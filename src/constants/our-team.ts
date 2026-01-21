@@ -20,7 +20,7 @@ import {
   // samImg,
   // thirdImage,
   // sirThirdImg,
-  sirThirdImage,
+  // sirThirdImage,
   jhonasImage,
 } from '@/assets/images';
 
@@ -31,12 +31,12 @@ export const OUR_TEAM = [
     position: 'Chief Executive Officer (CEO)',
     img: paulImage,
   },
-  {
-    id: 2,
-    name: 'Third',
-    position: 'Chief Operations Officer (COO)',
-    img: sirThirdImage,
-  },
+  // {
+  //   id: 2,
+  //   name: 'Third',
+  //   position: 'Chief Operations Officer (COO)',
+  //   img: sirThirdImage,
+  // },
   {
     id: 3,
     name: 'Faye',
