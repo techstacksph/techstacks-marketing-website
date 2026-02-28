@@ -11,18 +11,18 @@ export const values = [
   },
   {
     title: 'Our Mission',
-    heading: 'Web Excellence in ',
-    highlight: 'Headless CMS',
+    heading: 'Empowering Growth through ',
+    highlight: 'Reliable Tech & AI',
     description:
-      'Our mission is to provide high-quality web design and development solutions that helps our clients achieve their business objectives.',
+      'We empower local and global businesses to thrive by providing dependable web development, SaaS support, and intelligent automation. Leveraging modern technologies including AI, we build scalable, long-term digital solutions through a highly skilled team, uncompromising engineering standards, and close client partnerships.',
     image: careerTeam,
   },
   {
     title: 'Our Vision',
-    heading: 'Opportunities and Innovative',
-    highlight: 'Web solutions',
+    heading: 'Your Trusted Global ',
+    highlight: 'Technology Backbone',
     description:
-      'To be the leading trusted partner in delivering high-performance websites to our clients.',
+      'To be the trusted global technology backbone for businesses—delivering reliable, forward-thinking digital systems today for the challenges of tomorrow.',
     image: teamImage,
   },
 ];
