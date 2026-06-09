@@ -24,12 +24,15 @@ export default function Footer() {
         <Section>
           <div className="relative flex flex-col gap-10 items-center md:items-start w-full">
             <div className="flex flex-col w-full gap-4 mb-12">
-                <h2 className='text-2xl font-semibold text-center lg:text-3xl xl:text-5xl'>
-                  <span className="block mb-0">Ready to upgrade your digital presence?</span>
-                  <span className="text-primary-static block">
-                    From websites to web applications, we build solutions that scale. 🚀
-                  </span>
-                </h2>
+              <h2 className="text-2xl font-semibold text-center lg:text-3xl xl:text-5xl">
+                <span className="block mb-0">
+                  Ready to upgrade your digital presence?
+                </span>
+                <span className="text-primary-static block">
+                  From websites to web applications, we build solutions that
+                  scale. 🚀
+                </span>
+              </h2>
               <Subheading className="text-center">
                 Grow Your Web Presence with Our Website Upgrade Solutions
               </Subheading>
@@ -45,7 +48,8 @@ export default function Footer() {
                   </Link>
 
                   <p className="text-center text-muted lg:text-left">
-                    Extensive experience in web design and web application development, producing high-quality work.
+                    Extensive experience in web design and web application
+                    development, producing high-quality work.
                   </p>
                   <ul className="flex justify-center gap-4">
                     {socialMedia.map(({ Icon, title, url }) => (
@@ -119,9 +123,9 @@ export default function Footer() {
                           <h4 className="text-sm">Email:</h4>
                           <Link
                             className="text-sm underline"
-                            href="mailto:techstacks.2022@gmail.com"
+                            href="mailto:info@techstacksph.com"
                           >
-                            techstacks.2022@gmail.com
+                            info@techstacksph.com
                           </Link>
                         </div>
                       </div>
