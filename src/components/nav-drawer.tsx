@@ -97,9 +97,7 @@ export default function NavDrawer(props: NavDrawerProps) {
                   <div className="text-sm text-primary-static">
                     <MdEmail />
                   </div>
-                  <p className="text-muted text-sm">
-                    techstacks.2022@gmail.com
-                  </p>
+                  <p className="text-muted text-sm">info@techstacksph.com</p>
                 </div>
                 <div className="flex flex-row gap-4 items-center">
                   <div className="text-sm text-primary-static">

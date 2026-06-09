@@ -26,4 +26,4 @@ export const socialMedia = [
   },
 ];
 
-export const EMAIL = 'techstacks.2022@gmail.com' as const;
+export const EMAIL = 'info@techstacksph.com' as const;
