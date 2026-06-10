@@ -44,6 +44,14 @@ const TESTIMONIALS = [
     from: 'Owner | Fancypants Design Co.',
     src: testi3,
   },
+  {
+    star: 5,
+    testimonial:
+      'Working with Tech Stacks was a great experience—they were proactive, friendly, and incredibly fast in delivering exactly what we needed. Their responsiveness and attention to detail made the entire process smooth and efficient from start to finish. Their well-rounded, industry-oriented approach has been an exceptional element for a resounding success of the project.',
+    name: 'Danilo Dela Pena',
+    from: 'CEO | Shoe Crew PH',
+    src: testi2,
+  },
 ] as const;
 
 export function TestimonialCarousel() {

@@ -10,9 +10,7 @@ export function createMetadata({
   description,
 }: CreateStaticMetadataParams = {}): Metadata {
   return {
-    title: title
-      ? `${title} | Techstacks`
-      : 'Techstacks IT Web Development Services',
+    title: title ? `${title} | Techstacks` : 'Techstacks IT Services Inc',
     description: description
       ? description
       : 'Techstacks is a team of developers dedicated to helping clients stand out and harness the power of the web. We create beautiful, user-friendly, fast, and secure websites and web applications designed with purpose. Partner with us today and accelerate your business growth.',
