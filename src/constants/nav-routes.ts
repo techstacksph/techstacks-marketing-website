@@ -8,6 +8,8 @@ export const NavRoutes = {
     OurTeam: '/company/our-team',
     Portfolios: '/company/portfolios',
   },
+  LED: '/led',
+  LEDInquire: '/led/inquire',
   Products: '/products',
   Pricing: '/pricing',
   Services: '/services',

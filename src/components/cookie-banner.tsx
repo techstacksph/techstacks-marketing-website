@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { NavRoutes } from '@/constants/nav-routes';
 import { Button } from './ui/button';
 import { Subheading } from './ui/typography';
+import BrandLogo from './brand-logo';
 
 export function CookieBanner() {
   return (
@@ -16,17 +17,19 @@ export function CookieBanner() {
       cookieName="techstacks-cookie"
       disableStyles
     >
-      <Subheading>
-        We use cookies to enhance the user experience. By using our website, you
-        agree to our{' '}
-        <Link
-          className="font-bold text-primary-static"
-          href={NavRoutes.PrivacyPolicy}
-        >
-          Privacy Policy
-        </Link>
-        .
-      </Subheading>
+      <div className="flex items-center gap-4">
+        <BrandLogo className="shrink-0" />
+        <Subheading className="!m-0">
+          . By using our website, you agree to our{' '}
+          <Link
+            className="font-bold text-primary-static"
+            href={NavRoutes.PrivacyPolicy}
+          >
+            Privacy Policy
+          </Link>
+          .
+        </Subheading>
+      </div>
     </ReactCookieConsent>
   );
 }
