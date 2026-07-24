@@ -25,7 +25,7 @@ export default function Home() {
               >
                 Building intelligent, scalable digital experiences for the{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-static to-blue-500 font-extrabold pb-2 inline-block">
-                   AI Era.
+                  AI Era.
                 </span>
               </H1>
               <Subheading
@@ -33,19 +33,34 @@ export default function Home() {
                 data-aos="fade-up"
                 data-aos-delay={100}
               >
-                We construct reliable, future-proof web ecosystems — combining cutting-edge design, resilient enterprise architectures, and intelligent automation.
+                We construct reliable, future-proof web ecosystems — combining
+                cutting-edge design, resilient enterprise architectures, and
+                intelligent automation.
               </Subheading>
               <div className="flex flex-col lg:flex-row gap-4 place-content-center lg:place-content-start mt-4">
                 <a
                   className="relative inline-flex items-center justify-center w-full p-3 font-medium transition-all rounded-full bg-primary-static hover:bg-primary-static/90 hover:-translate-y-0.5 shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(var(--primary-static),0.3)] md:w-52 h-14 group"
                   href="https://forms.gle/QxQsMcbo7eLNnAAb8"
                   rel="noopener noreferrer"
-                  target='_blank'
+                  target="_blank"
                 >
                   <span className="relative text-white font-semibold">
                     Let&apos;s Build Together
                   </span>
-                  <svg className="ml-2 w-5 h-5 text-white group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                  <svg
+                    className="ml-2 w-5 h-5 text-white group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                     />
+                  </svg>
                 </a>
                 <Link
                   className="relative inline-flex items-center justify-center w-full p-3 font-medium transition-all bg-transparent border border-neutral-200 dark:border-neutral-800 rounded-full hover:bg-neutral-50 dark:hover:bg-neutral-900 md:w-52 h-14 hover:-translate-y-0.5"

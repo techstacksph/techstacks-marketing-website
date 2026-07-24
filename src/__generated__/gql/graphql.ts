@@ -2167,10 +2167,27 @@ export enum ItemStatus {
   Updated = 'updated',
 }
 
+export enum MuxThumbnailFitMode {
+  Crop = 'crop',
+  Pad = 'pad',
+  Preserve = 'preserve',
+  Smartcrop = 'smartcrop',
+  Stretch = 'stretch',
+}
+
 export enum MuxThumbnailFormatType {
   Gif = 'gif',
   Jpg = 'jpg',
   Png = 'png',
+}
+
+export enum MuxThumbnailRotation {
+  /** Rotate 90° clockwise */
+  Rotate_90 = 'ROTATE_90',
+  /** Rotate 180° clockwise */
+  Rotate_180 = 'ROTATE_180',
+  /** Rotate 270° clockwise */
+  Rotate_270 = 'ROTATE_270',
 }
 
 /** Specifies how to filter by image orientation */
@@ -2777,6 +2794,8 @@ export type UploadVideoField = {
   mp4Url?: Maybe<Scalars['String']['output']>;
   muxAssetId: Scalars['String']['output'];
   muxPlaybackId: Scalars['String']['output'];
+  /** Default poster frame, in seconds into the video. Resolves to the record-level field override when present, otherwise the upload-level default. `null` means Mux's default (middle of the video). */
+  posterTime?: Maybe<Scalars['Float']['output']>;
   streamingUrl: Scalars['String']['output'];
   thumbhash?: Maybe<Scalars['String']['output']>;
   thumbnailUrl: Scalars['String']['output'];
@@ -2802,7 +2821,14 @@ export type UploadVideoFieldMp4UrlArgs = {
 };
 
 export type UploadVideoFieldThumbnailUrlArgs = {
+  fitMode?: InputMaybe<MuxThumbnailFitMode>;
+  flipH?: InputMaybe<Scalars['Boolean']['input']>;
+  flipV?: InputMaybe<Scalars['Boolean']['input']>;
   format?: InputMaybe<MuxThumbnailFormatType>;
+  height?: InputMaybe<Scalars['Int']['input']>;
+  rotate?: InputMaybe<MuxThumbnailRotation>;
+  time?: InputMaybe<Scalars['Float']['input']>;
+  width?: InputMaybe<Scalars['Int']['input']>;
 };
 
 export type UploadVideoFieldTitleArgs = {

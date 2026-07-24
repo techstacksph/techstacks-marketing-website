@@ -11,8 +11,13 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
  * 3. It does not support dead code elimination, so it will add unused operations.
  *
  * Therefore it is highly recommended to use the babel or swc plugin for production.
+ * Learn more about it here: https://the-guild.dev/graphql/codegen/plugins/presets/preset-client#reducing-bundle-size
  */
-const documents = {
+type Documents = {
+  '\n        query GetBlog($slug: String!) {\n          blog(filter: { slug: { eq: $slug } }) {\n            title\n            content\n            createdAt: _createdAt\n            updatedAt: _updatedAt\n            featuredImage {\n              width\n              url\n              height\n            }\n          }\n        }\n      ': typeof types.GetBlogDocument;
+  '\n        query GetBlogs($offset: IntType, $search: String!, $size: IntType) {\n          allBlogs(\n            skip: $offset\n            orderBy: _createdAt_DESC\n            filter: { title: { matches: { pattern: $search } } }\n            first: $size\n          ) {\n            id\n            slug\n            title\n            featuredImage {\n              width\n              url\n              height\n            }\n            content\n            createdAt: _createdAt\n            updatedAt: _updatedAt\n          }\n          meta: _allBlogsMeta(\n            filter: { title: { matches: { pattern: $search } } }\n          ) {\n            totalBlogs: count\n          }\n        }\n      ': typeof types.GetBlogsDocument;
+};
+const documents: Documents = {
   '\n        query GetBlog($slug: String!) {\n          blog(filter: { slug: { eq: $slug } }) {\n            title\n            content\n            createdAt: _createdAt\n            updatedAt: _updatedAt\n            featuredImage {\n              width\n              url\n              height\n            }\n          }\n        }\n      ':
     types.GetBlogDocument,
   '\n        query GetBlogs($offset: IntType, $search: String!, $size: IntType) {\n          allBlogs(\n            skip: $offset\n            orderBy: _createdAt_DESC\n            filter: { title: { matches: { pattern: $search } } }\n            first: $size\n          ) {\n            id\n            slug\n            title\n            featuredImage {\n              width\n              url\n              height\n            }\n            content\n            createdAt: _createdAt\n            updatedAt: _updatedAt\n          }\n          meta: _allBlogsMeta(\n            filter: { title: { matches: { pattern: $search } } }\n          ) {\n            totalBlogs: count\n          }\n        }\n      ':

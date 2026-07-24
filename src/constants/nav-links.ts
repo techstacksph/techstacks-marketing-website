@@ -54,6 +54,10 @@ export const pagesLink = [
     title: 'Products',
     href: NavRoutes.Products,
   },
+  {
+    title: 'LED Display',
+    href: NavRoutes.LED,
+  },
   // {
   //   title: 'Pricing',
   //   href: NavRoutes.Pricing,
