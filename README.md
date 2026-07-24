@@ -1,1 +1,1 @@
-## Techstacks Official Marketing Website V.2.1.0  🚀
+## Techstacks Official Marketing Website 🚀

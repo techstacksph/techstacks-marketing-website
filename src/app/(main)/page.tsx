@@ -3,6 +3,7 @@ import Hero from '@/components/hero';
 import WebsiteLifecycle from '@/components/website-lifecycle';
 import { Main, Section } from '@/components/default-elements';
 import { Testimonials } from '@/components/testimonials';
+import VisionMissionSection from '@/components/vision-mission-section';
 import SocialProof from '@/components/social-proof';
 import { NavRoutes } from '@/constants/nav-routes';
 import { H1, Subheading } from '@/components/ui/typography';
@@ -17,45 +18,62 @@ export default function Home() {
       <div className="flex justify-center w-full py-16 [&&&]:mt-0">
         <Section>
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:justify-center lg:items-center">
-            <div className="flex flex-col gap-4 lg:gap-6">
+            <div className="flex flex-col gap-4 lg:gap-8">
               <H1
                 className="text-center whitespace-pre-wrap lg:text-left xl:text-5xl"
                 data-aos="fade-up"
               >
-                Building scalable websites and powerful web applications with modern technologies.
+                Building intelligent, scalable digital experiences for the{' '}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-static to-blue-500 font-extrabold pb-2 inline-block">
+                  AI Era.
+                </span>
               </H1>
               <Subheading
-                className="text-center lg:text-left leading-none"
+                className="text-center lg:text-left leading-relaxed text-muted-foreground"
                 data-aos="fade-up"
                 data-aos-delay={100}
               >
-                We deliver secured, scalable web technologies — from responsive websites to enterprise-grade applications.
+                We construct reliable, future-proof web ecosystems — combining
+                cutting-edge design, resilient enterprise architectures, and
+                intelligent automation.
               </Subheading>
-              <div className="flex flex-col lg:flex-row gap-4 place-content-center lg:place-content-start">
+              <div className="flex flex-col lg:flex-row gap-4 place-content-center lg:place-content-start mt-4">
                 <a
-                  className="relative inline-flex items-center justify-start w-full p-3 overflow-hidden font-medium transition-all border rounded bg-primary-static dark:bg-white md:w-52 h-14 border-primary-static dark:border-white group"
+                  className="relative inline-flex items-center justify-center w-full p-3 font-medium transition-all rounded-full bg-primary-static hover:bg-primary-static/90 hover:-translate-y-0.5 shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(var(--primary-static),0.3)] md:w-52 h-14 group"
                   href="https://forms.gle/QxQsMcbo7eLNnAAb8"
                   rel="noopener noreferrer"
-                  target='_blank'
+                  target="_blank"
                 >
-                  <span className="w-48 h-48 rounded rotate-[-40deg] bg-white dark:bg-primary-static absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0" />
-                  <span className="relative w-full text-center text-white transition-colors duration-300 ease-in-out dark:text-black group-hover:text-black">
-                    Let&apos;s start
+                  <span className="relative text-white font-semibold">
+                    Let&apos;s Build Together
                   </span>
+                  <svg
+                    className="ml-2 w-5 h-5 text-white group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                     />
+                  </svg>
                 </a>
                 <Link
-                  className="relative inline-flex items-center justify-start w-full p-3 overflow-hidden font-medium transition-all bg-transparent border rounded md:w-52 h-14 border-primary-static group"
+                  className="relative inline-flex items-center justify-center w-full p-3 font-medium transition-all bg-transparent border border-neutral-200 dark:border-neutral-800 rounded-full hover:bg-neutral-50 dark:hover:bg-neutral-900 md:w-52 h-14 hover:-translate-y-0.5"
                   href={NavRoutes.Company.AboutUs}
                 >
-                  <span className="w-48 h-48 rounded rotate-[-40deg] bg-primary-static absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0" />
-                  <span className="relative w-full text-center text-black transition-colors duration-300 ease-in-out dark:text-white group-hover:text-black">
-                    About us
+                  <span className="relative text-black dark:text-white font-semibold">
+                    Explore Our Vision
                   </span>
                 </Link>
               </div>
-              <div className="flex flex-col py-0 lg:py-8">
-                <Subheading className="pb-8 text-center lg:text-left lg:text-lg">
-                  They trusted and were satisfied with our work:
+              <div className="flex flex-col py-0 lg:py-6">
+                <Subheading className="pb-6 text-center lg:text-left lg:text-lg font-medium text-muted-foreground/80">
+                  Trusted by resilient global brands:
                 </Subheading>
                 <SocialProof />
               </div>
@@ -67,7 +85,11 @@ export default function Home() {
         </Section>
       </div>
       <Section role="none">
-        <Separator variant="horizon" />
+        <Separator className="opacity-50" variant="horizon" />
+      </Section>
+      <VisionMissionSection />
+      <Section role="none">
+        <Separator className="opacity-50" variant="horizon" />
       </Section>
       <WebsiteLifecycle />
       <Section role="none">
