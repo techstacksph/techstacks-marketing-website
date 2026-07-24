@@ -91,8 +91,8 @@ export default function LedPage() {
     <Main className="overflow-clip">
       <LedHero />
 
-      <Section className="space-y-16  py-14 lg:py-20">
-        <div className="mx-auto space-y-8 ">
+      <Section className="space-y-10 py-10 sm:space-y-12 sm:py-14 lg:space-y-16 lg:py-20">
+        <div className="mx-auto space-y-6 sm:space-y-8">
           <div className="flex flex-col items-center gap-4 text-center">
             <div className="inline-flex items-center justify-center rounded-full bg-primary-static/10 px-4 py-2 text-sm font-semibold uppercase tracking-[0.22em] text-primary-static">
               Global Partnership
@@ -110,10 +110,10 @@ export default function LedPage() {
               </p>
             </div>
           </div>
-          <div className="mx-auto grid w-auto max-w-3xl grid-cols-1 gap-6 md:grid-cols-2">
+          <div className="mx-auto grid w-full max-w-3xl grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2">
             <GlowCard>
-              <GlowCardContent className="flex flex-col gap-4 p-6">
-                <div className="relative h-72 w-full overflow-hidden rounded-lg">
+              <GlowCardContent className="flex flex-col gap-4 p-5 sm:p-6">
+                <div className="relative h-56 w-full overflow-hidden rounded-lg sm:h-72">
                   <Image
                     alt="Lead Vision logo"
                     className="object-contain"
@@ -146,9 +146,9 @@ export default function LedPage() {
       </Section>
       <Separator variant="horizon" />
 
-      <div className="w-full ">
-        <div className="w-full flex justify-center py-16 px-16 bg-background rounded-tr-[150px] md:rounded-tr-[250px] lg:rounded-tr-[450px]">
-          <Section className="space-y-16">
+      <div className="w-full">
+        <div className="flex w-full justify-center bg-background px-4 py-10 sm:px-8 sm:py-14 md:px-10 md:py-16 lg:px-16 lg:py-20 rounded-tr-[80px] sm:rounded-tr-[120px] md:rounded-tr-[250px] lg:rounded-tr-[450px]">
+          <Section className="space-y-10 md:space-y-16">
             <div className="flex flex-col items-center gap-8">
               <div className="flex flex-col items-center gap-4">
                 <H2
@@ -161,7 +161,7 @@ export default function LedPage() {
                 </H2>
               </div>
             </div>
-            <div className="grid  mx-10 xl:grid-cols-[1.05fr_0.95fr] xl:items-center space-x-6">
+            <div className="grid gap-8 md:gap-10 xl:grid-cols-[1.05fr_0.95fr] xl:items-center xl:gap-8">
               <div className="space-y-6">
                 <Subheading className="max-w-3xl text-muted-foreground">
                   If you run events regularly, you already know:
@@ -255,10 +255,10 @@ export default function LedPage() {
                     </Subheading>
                   </div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-stretch gap-4">
+                <div className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-2 lg:grid-cols-4">
                   {TECHSTACKS_SOLUTION_CARDS.map(({ title, icon: Icon }) => (
                     <GlowCard
-                      className="h-full min-h-[280px] w-full"
+                      className="h-full min-h-[220px] w-full sm:min-h-[260px] lg:min-h-[280px]"
                       key={title}
                     >
                       <GlowCardContent className="p-6 h-full flex flex-col">
@@ -301,13 +301,13 @@ export default function LedPage() {
                   </Subheading>
                 </div>
               </div>
-              <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  gap-6 max-w-6xl mx-auto">
+              <div className="mx-auto mt-6 grid max-w-6xl grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
                 {IDEAL_USE_CASE_CARDS.map(({ title, subtitle, image }) => (
                   <GlowCard
-                    className="overflow-hidden h-full min-h-[420px]"
+                    className="h-full min-h-[320px] overflow-hidden sm:min-h-[360px] lg:min-h-[420px]"
                     key={title}
                   >
-                    <div className="relative h-48 w-full">
+                    <div className="relative h-44 w-full sm:h-48">
                       <Image
                         alt={title}
                         className="object-cover"
@@ -387,8 +387,8 @@ export default function LedPage() {
               </div>
             </div> */}
 
-            <div className="w-full rounded-2xl overflow-hidden">
-              <div className="relative w-full h-44 md:h-56 lg:h-72">
+            <div className="w-full overflow-hidden rounded-2xl">
+              <div className="relative h-auto min-h-72 w-full md:min-h-56 lg:min-h-72">
                 <Image
                   alt="LED Banner"
                   className="object-cover opacity-50"
@@ -396,23 +396,23 @@ export default function LedPage() {
                   src={ledBanner}
                 />
                 <div className="absolute inset-0 bg-black/30" />
-                <div className="absolute inset-0 flex items-center">
-                  <div className="w-full max-w-7xl mx-auto px-4">
-                    <div className="flex items-center justify-between py-6">
-                      <div className="mx-10 ">
-                        <H2 className="text-white text-lg md:text-xl">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-full max-w-7xl px-4 py-8 sm:px-10 sm:py-10">
+                    <div className="grid gap-2 md:grid-cols-2 md:items-center md:justify-between">
+                      <div>
+                        <H2 className="text-lg text-white md:text-xl">
                           Turn LED Screens Into a Profit-Generating Asset
                         </H2>
-                        <p className="mt-2 text-white/90">
+                        <p className="mt-2 text-sm text-white/90 sm:text-base">
                           Get pricing, specs and payment options today
                         </p>
                       </div>
-                      <div className="mx-10">
+                      <div className="flex justify-center md:justify-end">
                         <Link
-                          className="relative inline-flex items-center justify-start w-full p-3 overflow-hidden font-medium transition-all bg-transparent border rounded md:w-52 h-14 border-primary-static group"
+                          className="relative inline-flex h-14 w-full items-center justify-start overflow-hidden rounded border border-primary-static bg-transparent p-3 font-medium transition-all sm:w-52 group"
                           href={NavRoutes.LEDInquire}
                         >
-                          <span className="w-48 h-48 rounded rotate-[-40deg] bg-primary-static absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0" />
+                          <span className="absolute bottom-0 left-0 mb-9 ml-9 h-48 w-48 translate-y-full rotate-[-40deg] rounded bg-primary-static transition-all duration-500 ease-out -translate-x-full group-hover:mb-32 group-hover:ml-0 group-hover:translate-x-0" />
                           <span className="relative w-full text-center text-white transition-colors duration-300 ease-in-out group-hover:text-white">
                             Inquire Now
                           </span>
