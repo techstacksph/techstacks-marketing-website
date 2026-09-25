@@ -1,4 +1,5 @@
 'use client';
+// eslint-disable-next-line import/named -- package exports the hook from its implementation
 import { useWindowScroll } from '@uidotdev/usehooks';
 import { useMemo, useRef } from 'react';
 import { Section } from '@/components/default-elements';

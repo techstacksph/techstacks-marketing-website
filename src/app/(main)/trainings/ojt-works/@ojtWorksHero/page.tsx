@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import React, { useMemo, useRef } from 'react';
+// eslint-disable-next-line import/named -- package exports the hook from its implementation
 import { useWindowScroll } from '@uidotdev/usehooks';
 import { Section } from '@/components/default-elements';
 import { BottomShape } from '@/components/icons/bottom-shape';
