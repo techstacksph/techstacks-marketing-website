@@ -254,26 +254,30 @@ export default function LedPage() {
                   </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-stretch gap-4">
-                  {TECHSTACKS_SOLUTION_CARDS.map(({ title, icon: Icon }) => (
-                    <GlowCard
-                      className="h-full min-h-[280px] w-full"
-                      key={title}
-                    >
-                      <GlowCardContent className="p-6 h-full flex flex-col">
-                        <div className="flex flex-col justify-between h-full gap-6">
-                          <div className="space-y-4">
-                            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-950/80 text-primary-static">
-                              <Icon className="h-6 w-6" />
+                  {TECHSTACKS_SOLUTION_CARDS.map(
+                    ({ title, icon: Icon }, index) => (
+                      <GlowCard
+                        className="h-full min-h-[280px] w-full"
+                        data-aos="fade-up"
+                        data-aos-delay={200 + index * 100}
+                        key={title}
+                      >
+                        <GlowCardContent className="p-6 h-full flex flex-col">
+                          <div className="flex flex-col justify-between h-full gap-6">
+                            <div className="space-y-4">
+                              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-950/80 text-primary-static">
+                                <Icon className="h-6 w-6" />
+                              </div>
+                              <H3 className="leading-tight text-slate-900 dark:text-slate-100">
+                                {title}
+                              </H3>
                             </div>
-                            <H3 className="leading-tight text-slate-900 dark:text-slate-100">
-                              {title}
-                            </H3>
+                            <div className="h-1 w-20 rounded-full bg-primary-static" />
                           </div>
-                          <div className="h-1 w-20 rounded-full bg-primary-static" />
-                        </div>
-                      </GlowCardContent>
-                    </GlowCard>
-                  ))}
+                        </GlowCardContent>
+                      </GlowCard>
+                    ),
+                  )}
                 </div>
               </div>
             </div>
@@ -300,22 +304,24 @@ export default function LedPage() {
                 </div>
               </div>
               <div className="mx-auto mt-6 grid max-w-6xl grid-cols-1 items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                {IDEAL_USE_CASE_CARDS.map(({ title, subtitle, image }) => (
-                  <GlowCard
-                    className="flex h-full flex-col overflow-hidden lg:min-h-[420px]"
-                    key={title}
-                  >
-                    <div className="relative h-36 w-full sm:h-48">
-                      <Image
-                        alt={title}
-                        className="object-cover"
-                        fill
-                        src={image}
-                      />
-                    </div>
-                    <GlowCardContent className="flex flex-1 flex-col p-4 text-center sm:p-6">
-                      <div>
-                        <div>
+                {IDEAL_USE_CASE_CARDS.map(
+                  ({ title, subtitle, image }, index) => (
+                    <GlowCard
+                      className="flex h-full flex-col overflow-hidden lg:min-h-[420px]"
+                      data-aos="fade-up"
+                      data-aos-delay={200 + index * 100}
+                      key={title}
+                    >
+                      <GlowCardContent className="flex flex-1 flex-col overflow-hidden p-0 text-center">
+                        <div className="relative h-36 w-full shrink-0 sm:h-48">
+                          <Image
+                            alt={title}
+                            className="object-cover"
+                            fill
+                            src={image}
+                          />
+                        </div>
+                        <div className="flex flex-1 flex-col p-4 sm:p-6">
                           <H3 className="whitespace-pre-line text-xl leading-tight text-slate-900 dark:text-slate-100 sm:text-2xl">
                             {title}
                           </H3>
@@ -323,10 +329,10 @@ export default function LedPage() {
                             {subtitle}
                           </p>
                         </div>
-                      </div>
-                    </GlowCardContent>
-                  </GlowCard>
-                ))}
+                      </GlowCardContent>
+                    </GlowCard>
+                  ),
+                )}
               </div>
             </div>
             <Separator variant="horizon" />
