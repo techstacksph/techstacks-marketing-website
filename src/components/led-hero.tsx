@@ -30,7 +30,7 @@ export function LedHero() {
     const FULL_PERCENT = 100 as const;
     const SECTION_HALF = sectionHeight / 2;
 
-    if (SECTION_HALF === 0) {
+    if (SECTION_HALF === 0) { 
       return 1;
     }
 
