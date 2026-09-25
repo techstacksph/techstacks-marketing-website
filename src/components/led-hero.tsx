@@ -30,6 +30,10 @@ export function LedHero() {
     const FULL_PERCENT = 100 as const;
     const SECTION_HALF = sectionHeight / 2;
 
+    if (SECTION_HALF === 0) { 
+      return 1;
+    }
+
     const value =
       (FULL_PERCENT - (scrollProgress / SECTION_HALF) * FULL_PERCENT) /
       FULL_PERCENT;
@@ -39,8 +43,9 @@ export function LedHero() {
 
   return (
     <div className="w-full">
-      <div className="w-full flex justify-center py-16 bg-primary-static/10 rounded-bl-[150px] md:rounded-bl-[250px] lg:rounded-bl-[450px] ">
+      <div className="w-full bg-primary-static/10 py-16 rounded-bl-[150px] md:rounded-bl-[250px] lg:rounded-bl-[450px]">
         <Section
+          className="px-4"
           ref={sectionRef}
           style={{ opacity: visibility, scale: visibility }}
         >

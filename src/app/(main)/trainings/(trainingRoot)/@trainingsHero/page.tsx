@@ -1,5 +1,6 @@
 'use client';
 
+// eslint-disable-next-line import/named -- package exports the hook from its implementation
 import { useWindowScroll } from '@uidotdev/usehooks';
 import Image from 'next/image';
 import Link from 'next/link';
