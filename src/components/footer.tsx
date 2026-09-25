@@ -84,6 +84,14 @@ export default function Footer() {
                             </Link>
                           </li>
                         ))}
+                        <li>
+                          <Link
+                            className="text-sm text-muted-foreground-static"
+                            href={NavRoutes.PrivacyPolicy}
+                          >
+                            Privacy Policy
+                          </Link>
+                        </li>
                       </ul>
                     </li>
                   ))}
@@ -151,7 +159,8 @@ export default function Footer() {
               <div className="flex flex-col items-center justify-center gap-2 md:flex-row">
                 <div className="flex flex-col items-center gap-2 md:flex-row">
                   <p>
-                    Copyright &copy; {new Date().getFullYear()} Techstacks |{' '}
+                    Copyright &copy; {new Date().getFullYear()} Techstacks
+                    |{' '}
                   </p>
                   <p>All Rights Reserved.</p>
                 </div>
