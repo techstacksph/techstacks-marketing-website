@@ -1,11 +1,12 @@
 import Image from 'next/image';
+import techstacksDpoSeal from '@/assets/images/logo/techstacks-dpo-seal.png';
 import { Main, Section } from '@/components/default-elements';
 import { createMetadata } from '@/utils/create-metadata';
 import { PrivacyPolicyHero } from './privacy-policy-hero';
 import Content from './content.mdx';
 
 export const metadata = createMetadata({
-  title: 'Privacy Notice',
+  title: 'Privacy Policy',
   description:
     'Learn how Techstacks IT Services Inc. collects, uses, shares, and protects personal data.',
 });
@@ -42,7 +43,8 @@ export default function PrivacyPolicyPage() {
                 alt="Techstacks data protection officer seal"
                 className="aspect-square w-full rounded-xl object-contain"
                 height={400}
-                src="/images/techstacks-dpo-seal.png"
+                src={techstacksDpoSeal}
+                unoptimized
                 width={400}
               />
             </div>

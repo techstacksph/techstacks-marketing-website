@@ -9,10 +9,11 @@ import {
   franzteam,
   jayveeProfile,
   jayveeteam,
-  jessicaImage,
+  // jessicaImage,
   jhonasImage,
   kaiProfile,
   kaiteam,
+  laizaImage,
   marviuzProfile,
   marviuzteam,
   rubeanImage,
@@ -83,10 +84,10 @@ export const TEAM = [
   },
   {
     id: 5,
-    name: 'Jessica Natividad',
+    name: 'Laiza Polyana Amurao',
     position: 'Admin/HR/Accounting',
     src: teamImg5,
-    profile: jessicaImage,
+    profile: laizaImage,
     teamGallery: {
       title: 'Keeping Systems in Sync',
       body: 'At Techstacks PH, I manage administrative, HR, and accounting tasks to ensure everything runs smoothly behind the scenes—supporting both people and processes so the entire team can thrive and stay on track.',
@@ -117,7 +118,7 @@ export const TEAM = [
   {
     id: 8,
     name: 'Adaline Cruz',
-    position: 'Web Developer / Marketing Officer',
+    position: 'Marketing Officer / Tech Sales',
     src: teamImg8,
     profile: adalineImage,
     teamGallery: {
