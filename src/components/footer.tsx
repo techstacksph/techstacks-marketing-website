@@ -84,14 +84,6 @@ export default function Footer() {
                             </Link>
                           </li>
                         ))}
-                        <li>
-                          <Link
-                            className="text-sm text-muted-foreground-static"
-                            href={NavRoutes.PrivacyPolicy}
-                          >
-                            Privacy Policy
-                          </Link>
-                        </li>
                       </ul>
                     </li>
                   ))}
@@ -143,12 +135,29 @@ export default function Footer() {
                         </div>
                         <div>
                           <h4 className="text-sm">Phone:</h4>
+
                           <Link
                             className="text-sm underline"
                             href="tel:+443314514"
                           >
                             (44) 331-4514
                           </Link>
+                          <div>
+                            <Link
+                              className="text-sm underline"
+                              href="tel:+445115859"
+                            >
+                              (044) 511-5859
+                            </Link>
+                          </div>
+                          <div>
+                            <Link
+                              className="text-sm underline"
+                              href="tel:+639171323561"
+                            >
+                              0917-132-3561
+                            </Link>
+                          </div>
                         </div>
                       </div>
                     </li>
@@ -159,22 +168,9 @@ export default function Footer() {
               <div className="flex flex-col items-center justify-center gap-2 md:flex-row">
                 <div className="flex flex-col items-center gap-2 md:flex-row">
                   <p>
-                    Copyright &copy; {new Date().getFullYear()} Techstacks
-                    |{' '}
+                    Copyright &copy; {new Date().getFullYear()} Techstacks | All
+                    rights reserved |
                   </p>
-                  <p>All Rights Reserved.</p>
-                </div>
-                <div>
-                  {/* <Link className="underline text-neutral-600" href="#">
-                    Terms and Conditions
-                  </Link>{' '} */}
-                  |{' '}
-                  <Link
-                    className="underline text-neutral-600"
-                    href={NavRoutes.PrivacyPolicy}
-                  >
-                    Privacy Policy
-                  </Link>
                 </div>
               </div>
             </div>

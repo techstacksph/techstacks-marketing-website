@@ -8,7 +8,7 @@ import {
   // franzImg,
   // jaysonImg,
   // jayveeImg,
-  jessicaImage,
+  // jessicaImage,
   // jhonasImg,
   paulImage,
   rubeanImage,
@@ -22,6 +22,15 @@ import {
   // sirThirdImg,
   // sirThirdImage,
   jhonasImage,
+  laizaImage,
+  paulineImage,
+  jannelleImage,
+  aaronImage,
+  auxiImage,
+  noelImage,
+  allenImage,
+  bainImage,
+  franzImage,
 } from '@/assets/images';
 
 export const OUR_TEAM = [
@@ -70,14 +79,14 @@ export const OUR_TEAM = [
   {
     id: 8,
     name: 'Adaline',
-    position: 'Web Developer / Marketing Officer',
+    position: 'Marketing Officer / Tech Sales',
     img: adalineImage,
   },
   {
     id: 9,
-    name: 'Jessica',
+    name: 'Laiza',
     position: 'Admin/HR/Accounting',
-    img: jessicaImage,
+    img: laizaImage,
   },
 
   // {
@@ -109,5 +118,53 @@ export const OUR_TEAM = [
     name: 'Jhonas',
     position: 'Web Developer',
     img: jhonasImage,
+  },
+  {
+    id: 11,
+    name: 'Franz',
+    position: 'Web Developer',
+    img: franzImage,
+  },
+  {
+    id: 12,
+    name: 'Pauline',
+    position: 'Web Developer',
+    img: paulineImage,
+  },
+  {
+    id: 13,
+    name: 'Allen',
+    position: 'Web Developer',
+    img: allenImage,
+  },
+  {
+    id: 14,
+    name: 'Aaron',
+    position: 'Web Developer',
+    img: aaronImage,
+  },
+  {
+    id: 15,
+    name: 'Bain',
+    position: 'Web Developer',
+    img: bainImage,
+  },
+  {
+    id: 16,
+    name: 'Jannelle',
+    position: 'Web Developer',
+    img: jannelleImage,
+  },
+  {
+    id: 17,
+    name: 'Auxi',
+    position: 'Web Developer',
+    img: auxiImage,
+  },
+  {
+    id: 18,
+    name: 'Noel',
+    position: 'Warehouse Staff',
+    img: noelImage,
   },
 ] as const;
