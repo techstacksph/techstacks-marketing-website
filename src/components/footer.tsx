@@ -84,14 +84,6 @@ export default function Footer() {
                             </Link>
                           </li>
                         ))}
-                        <li>
-                          <Link
-                            className="text-sm text-muted-foreground-static"
-                            href={NavRoutes.PrivacyPolicy}
-                          >
-                            Privacy Policy
-                          </Link>
-                        </li>
                       </ul>
                     </li>
                   ))}
@@ -179,12 +171,6 @@ export default function Footer() {
                     Copyright &copy; {new Date().getFullYear()} Techstacks | All
                     rights reserved |
                   </p>
-                  <Link
-                    className="hover:underline"
-                    href={NavRoutes.PrivacyPolicy}
-                  >
-                    Privacy Policy
-                  </Link>
                 </div>
               </div>
             </div>
