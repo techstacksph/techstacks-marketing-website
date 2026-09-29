@@ -84,6 +84,14 @@ export default function Footer() {
                             </Link>
                           </li>
                         ))}
+                        <li>
+                          <Link
+                            className="text-sm text-muted-foreground-static"
+                            href={NavRoutes.PrivacyPolicy}
+                          >
+                            Privacy Policy
+                          </Link>
+                        </li>
                       </ul>
                     </li>
                   ))}
@@ -138,9 +146,9 @@ export default function Footer() {
 
                           <Link
                             className="text-sm underline"
-                            href="tel:+443296245"
+                            href="tel:+443314514"
                           >
-                            (044) 329-6245
+                            (44) 331-4514
                           </Link>
                           <div>
                             <Link

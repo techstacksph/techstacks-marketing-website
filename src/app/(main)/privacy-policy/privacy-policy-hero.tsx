@@ -48,7 +48,7 @@ export function PrivacyPolicyHero() {
                   data-aos="fade-up"
                   data-aos-delay={100}
                 >
-                  Privacy Policy
+                  Privacy Notice
                 </span>
               </span>
             </H1>

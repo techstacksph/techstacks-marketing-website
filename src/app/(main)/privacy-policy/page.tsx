@@ -6,7 +6,7 @@ import { PrivacyPolicyHero } from './privacy-policy-hero';
 import Content from './content.mdx';
 
 export const metadata = createMetadata({
-  title: 'Privacy Policy',
+  title: 'Privacy Notice',
   description:
     'Learn how Techstacks IT Services Inc. collects, uses, shares, and protects personal data.',
 });
