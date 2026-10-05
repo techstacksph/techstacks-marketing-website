@@ -82,6 +82,15 @@ import adalineImage from './team/our-team/adalineImage.jpg';
 import rubeanImage from './team/our-team/rubeanImage.jpg';
 import jessicaImage from './team/our-team/jessicaImage.jpg';
 import fayeImage from './team/our-team/fayeImage.jpg';
+import laizaImage from './team/our-team/laizaImage.png';
+import paulineImage from './team/our-team/paulineImage.png';
+import jannelleImage from './team/our-team/jannelleImage.png';
+import aaronImage from './team/our-team/aaronImage.png';
+import auxiImage from './team/our-team/auxiImage.png';
+import noelImage from './team/our-team/noelImage.png';
+import allenImage from './team/our-team/allenImage.png';
+import bainImage from './team/our-team/bainImage.png';
+import franzImage from './team/our-team/franzImage.png';
 import sirThirdImage from './team/our-team/sirThirdImage.jpg';
 import jhonasImage from './team/our-team/jhonasImage.jpg';
 import traineesImgOne from './trainings/trainees-img/trainees-1.jpg';
@@ -321,6 +330,15 @@ export {
   fayeImage,
   sirThirdImage,
   jhonasImage,
+  laizaImage,
+  paulineImage,
+  jannelleImage,
+  aaronImage,
+  auxiImage,
+  noelImage,
+  allenImage,
+  bainImage,
+  franzImage,
 
   //about-us/service-tools-logo
   bootstrapLogo,

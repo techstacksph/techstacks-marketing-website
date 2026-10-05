@@ -25,7 +25,7 @@ const [mem1, ...otherMembers] = [
   {
     title: 'Systems that Support People',
     description: ' Striving for excellence is our daily commitment.',
-    member: 'Jessica Natividad',
+    member: 'Laiza Polyana Amurao',
     position: 'Admin/HR/Accounting',
     image: jessicaImage,
   },
