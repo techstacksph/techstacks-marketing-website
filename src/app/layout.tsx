@@ -11,6 +11,18 @@ import { Toaster } from '@/components/ui/toaster';
 
 export const metadata = createMetadata();
 
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': 'https://techstacksph.com/#organization',
+  name: 'Techstacks IT Services Inc.',
+  legalName: 'Techstacks IT Services Inc.',
+  alternateName: 'Techstacks',
+  url: 'https://techstacksph.com/',
+  disambiguatingDescription:
+    'Techstacks IT Services Inc. is a corporation and is not affiliated with, owned by, or operated under Techstacks IT Web Development Services, a separate sole proprietorship.',
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -28,6 +40,10 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="font-inter">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         <SkipToMain />
         <Providers>
           <Loader />
