@@ -1,12 +1,14 @@
-import { Inter, Plus_Jakarta_Sans as PlusJakartaSans } from 'next/font/google';
+import localFont from 'next/font/local';
 
-export const display = PlusJakartaSans({
-  weight: ['500', '600', '700', '800'],
-  subsets: ['latin'],
+// Self-hosted so that builds never depend on a response from Google Fonts.
+export const display = localFont({
+  src: '../assets/fonts/plus-jakarta-sans-latin-variable.woff2',
+  weight: '200 800',
   variable: '--font-display',
 });
 
-export const inter = Inter({
-  subsets: ['latin', 'latin-ext'],
+export const inter = localFont({
+  src: '../assets/fonts/inter-latin-variable.woff2',
+  weight: '100 900',
   variable: '--font-inter',
 });
