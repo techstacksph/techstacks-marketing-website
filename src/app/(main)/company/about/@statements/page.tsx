@@ -1,67 +1,59 @@
-'use client';
-
-import React, { useRef } from 'react';
 import Image from 'next/image';
-import { useScroll, useSpring, useTransform } from 'framer-motion';
+import { careerTeam } from '@/assets/images';
+import { Band, Eyebrow } from '@/components/marketing';
+import { H2, Subheading } from '@/components/ui/typography';
 import { values } from '@/constants/values';
 import { cn } from '@/utils/cn';
 import { isOdd } from '@/utils/is-odd';
-import { Section } from '@/components/default-elements';
-import { H2, Subheading } from '@/components/ui/typography';
-import { MovingLine } from '@/components/icons/moving-line';
 
 export default function StatementsSection() {
-  const ref = useRef<HTMLDivElement>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['end end', 'start start'],
-  });
-
-  const pathLengthValue = useTransform(scrollYProgress, [0, 1], [1, 0]);
-
-  const pathSpring = useSpring(pathLengthValue, {
-    stiffness: 500,
-    damping: 100,
-  });
-
   return (
-    <div className="w-full flex justify-center py-16">
-      <Section ref={ref}>
-        <div className="flex flex-row gap-20 items-start w-full ">
-          <MovingLine
-            className="hidden flex-shrink-0 md:block w-1"
-            progress={pathSpring}
-          />
-          <div className="flex flex-col gap-10 lg:gap-20 w-full">
-            {values.map((value, i) => (
+    <Band>
+      <div className="flex flex-col gap-16 lg:gap-24">
+        {values.map((value, index) =>
+          value.image ? (
+            <div
+              className="grid items-center gap-8 lg:grid-cols-2 lg:gap-16"
+              data-aos="fade-up"
+              key={value.title}
+            >
               <div
                 className={cn(
-                  'flex flex-col md:flex-row gap-8 items-center md:items-start',
-                  isOdd(i) && 'md:flex-row-reverse',
+                  'flex flex-col gap-4',
+                  isOdd(index) && 'lg:order-last',
                 )}
-                data-aos="fade-up"
-                data-aos-delay={i * 100}
-                key={value.title}
               >
-                <div className="w-full md:w-1/2">
-                  <Subheading>{value.title}</Subheading>
-                  <H2>
-                    {value.heading}{' '}
-                    <span className="text-primary-static">
-                      {value.highlight}
-                    </span>
-                  </H2>
-                  <Subheading>{value.description}</Subheading>
-                </div>
-                <div className="contents md:flex w-full md:w-1/2">
-                  <Image alt={`${value.title} image`} src={value.image} />
-                </div>
+                <Eyebrow>{value.title}</Eyebrow>
+                <H2>{value.heading}</H2>
+                <Subheading>{value.description}</Subheading>
               </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-    </div>
+              <Image
+                alt={`${value.title} at Techstacks`}
+                className={cn(
+                  'w-full',
+                  value.image === careerTeam
+                    ? 'mx-auto max-w-md'
+                    : 'rounded-2xl border',
+                )}
+                sizes="(min-width: 992px) 50vw, 100vw"
+                src={value.image}
+              />
+            </div>
+          ) : (
+            <div
+              className="mx-auto flex max-w-4xl flex-col items-center gap-4 rounded-2xl bg-ink p-8 text-center text-ink-foreground lg:p-14"
+              data-aos="fade-up"
+              key={value.title}
+            >
+              <Eyebrow className="text-mint">{value.title}</Eyebrow>
+              <H2>{value.heading}</H2>
+              <Subheading className="text-ink-foreground/75">
+                {value.description}
+              </Subheading>
+            </div>
+          ),
+        )}
+      </div>
+    </Band>
   );
 }

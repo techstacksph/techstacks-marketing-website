@@ -2,7 +2,7 @@ import './globals.css';
 
 import { Providers } from '@/components/providers';
 import Loader from '@/components/route-progress-bar';
-import { dmSans, inter, poppins } from '@/lib/fonts';
+import { display, inter } from '@/lib/fonts';
 import { cn } from '@/utils/cn';
 import { SkipToMain } from '@/components/skip-main-btn';
 import { CookieBanner } from '@/components/cookie-banner';
@@ -30,19 +30,16 @@ export default function RootLayout({
 }) {
   return (
     <html
-      className={cn(
-        'scroll-smooth',
-        dmSans.variable,
-        poppins.variable,
-        inter.variable,
-      )}
+      className={cn('scroll-smooth', display.variable, inter.variable)}
       lang="en"
       suppressHydrationWarning
     >
       <body className="font-inter">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
+          }}
         />
         <SkipToMain />
         <Providers>

@@ -11,7 +11,7 @@ interface PricingLayoutProps {
 
 export const metadata = createMetadata({
   title: 'Pricing',
-  description: 'Your perfect plan for your perfect business',
+  description: 'Dedicated team plans priced to fit your business.',
 });
 
 export default function PricingLayout({

@@ -33,12 +33,12 @@ export const coreValues = [
     key: 'S',
     title: 'Service',
     description:
-      " Service is not merely a core value; it's a way of life. Our unwavering commitment to service excellence drives everything we do. It's about more than just meeting the needs of our clients; it's about anticipating and exceeding them.",
+      "Service is not merely a core value; it's a way of life. Our unwavering commitment to service excellence drives everything we do. It's about more than just meeting the needs of our clients; it's about anticipating and exceeding them.",
     icon: puzzleDynamic,
   },
   {
     key: 'T',
-    title: 'Transparancy',
+    title: 'Transparency',
     description:
       'Transparency is fundamental at Techstacks. It signifies our commitment to open, honest, and accountable conduct in all we do. Our dedication to integrity ensures clear, accurate, and complete communication, fostering trust in every aspect of our work.',
     icon: puzzleDynamic,

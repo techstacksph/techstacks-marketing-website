@@ -11,7 +11,7 @@ export default function BrandLogo({ className, ...props }: BrandLogoProps) {
       {...props}
     >
       <TechstacksLogo className="text-4xl" />
-      <span className="text-sm font-semibold tracking-wide font-poppins">
+      <span className="text-sm font-semibold tracking-wide font-display">
         Techstacks
       </span>
     </div>

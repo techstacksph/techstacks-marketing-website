@@ -1,12 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import { Section } from '@/components/default-elements';
 import { ProductCard } from '@/components/product-card';
 import { ProductsPagination } from '@/components/products-pagination';
-import { H2 } from '@/components/ui/typography';
 import { WEBTEMPLATES } from '@/constants/products-templates';
-import { ProductHero } from '@/components/product-hero';
+import { Band, PageHero } from '@/components/marketing';
 
 const TEMPLATES_PER_PAGE = 9;
 
@@ -28,52 +26,43 @@ export default function WebsiteTemplate() {
 
   return (
     <div>
-      <ProductHero />
+      <PageHero
+        breadcrumb="Products"
+        description="Get a professional website online sooner and at a lower upfront investment. Choose a ready-made template and our team will tailor it to your brand."
+        eyebrow="Website templates"
+        title="Launch faster, without starting from scratch"
+      />
 
-      <div className="w-full bg-primary-static/10  ">
-        <div className="w-full flex  justify-center py-16  bg-background  rounded-tr-[150px] md:rounded-tr-[250px] lg:rounded-tr-[450px]   ">
-          <Section className="space-y-8">
-            <div className="flex flex-col items-center  w-full">
-              <div className="flex flex-col items-center gap-4">
-                <H2
-                  className="text-center [&>span]:text-primary-static"
-                  data-aos="fade-up"
-                  data-aos-delay={100}
-                >
-                  Choose from expertly crafted templates to launch your vision
-                </H2>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-6 ">
-              {paginatedTemplates.map((template, index) => (
-                <ProductCard
-                  data-aos="fade-up"
-                  data-aos-delay={200 + index * 100}
-                  features={template.features}
-                  id={template.id}
-                  image={template.image}
-                  imageMobile={template.imageMobile}
-                  index={index}
-                  key={template.title + template.id}
-                  title={template.title}
-                />
-              ))}
-            </div>
-
-            <div className="">
-              <ProductsPagination
-                current={currentPage}
-                next={currentPage < totalPages}
-                onNext={handleNext}
-                onPrev={handlePrev}
-                prev={currentPage > 1}
-                total={totalPages}
+      <Band>
+        <div className="space-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-6 ">
+            {paginatedTemplates.map((template, index) => (
+              <ProductCard
+                data-aos="fade-up"
+                data-aos-delay={200 + index * 100}
+                features={template.features}
+                id={template.id}
+                image={template.image}
+                imageMobile={template.imageMobile}
+                index={index}
+                key={template.title + template.id}
+                title={template.title}
               />
-            </div>
-          </Section>
+            ))}
+          </div>
+
+          <div className="">
+            <ProductsPagination
+              current={currentPage}
+              next={currentPage < totalPages}
+              onNext={handleNext}
+              onPrev={handlePrev}
+              prev={currentPage > 1}
+              total={totalPages}
+            />
+          </div>
         </div>
-      </div>
+      </Band>
     </div>
   );
 }

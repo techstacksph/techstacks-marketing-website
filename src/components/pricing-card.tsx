@@ -103,10 +103,7 @@ export function PricingCard(pricing: Pricing) {
             ))}
           </ul>
 
-          <Button
-            asChild
-            className="w-full h-16 text-xl bg-primary-static hover:bg-primary-static/75 text-foreground"
-          >
+          <Button asChild className="w-full">
             <Link href={NavRoutes.Contact}>Get Started</Link>
           </Button>
         </div>

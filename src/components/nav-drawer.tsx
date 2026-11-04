@@ -24,6 +24,7 @@ import {
 } from './ui/accordion';
 import { Separator } from './ui/separator';
 import BrandLogo from './brand-logo';
+import { Button } from './ui/button';
 
 interface NavDrawerProps {
   children: ReactNode;
@@ -44,7 +45,7 @@ export default function NavDrawer(props: NavDrawerProps) {
             </Link>
           </SheetTitle>
           <SheetDescription className="font-medium">
-            Design. Innovate. Create.
+            Technology your business can rely on
           </SheetDescription>
         </SheetHeader>
         <Separator />
@@ -61,9 +62,11 @@ export default function NavDrawer(props: NavDrawerProps) {
                 </AccordionTrigger>
                 {company.link.map((link) => (
                   <AccordionContent className="px-3 w-full" key={link.label}>
-                    <Link className="text-muted w-full" href={link.href}>
-                      {link.label}
-                    </Link>
+                    <SheetClose asChild>
+                      <Link className="text-muted w-full" href={link.href}>
+                        {link.label}
+                      </Link>
+                    </SheetClose>
                   </AccordionContent>
                 ))}
               </AccordionItem>
@@ -72,11 +75,18 @@ export default function NavDrawer(props: NavDrawerProps) {
           <div className="flex flex-col gap-4">
             {pagesLink.map((page) => (
               <div className="w-full" key={page.title}>
-                <Link className="w-full font-semibold" href={page.href}>
-                  {page.title}
-                </Link>
+                <SheetClose asChild>
+                  <Link className="w-full font-semibold" href={page.href}>
+                    {page.title}
+                  </Link>
+                </SheetClose>
               </div>
             ))}
+            <SheetClose asChild>
+              <Button asChild className="mt-2 w-full">
+                <Link href={NavRoutes.Contact}>Talk to our team</Link>
+              </Button>
+            </SheetClose>
           </div>
         </div>
         <Separator />
@@ -90,7 +100,7 @@ export default function NavDrawer(props: NavDrawerProps) {
                     <IoPaperPlaneSharp />
                   </div>
                   <p className="text-muted text-sm">
-                    Cabanatuan city, Nueva Ecija, Ph 3100
+                    Cabanatuan City, Nueva Ecija, Philippines 3100
                   </p>
                 </div>
                 <div className="flex flex-row gap-4 items-center">
@@ -103,7 +113,7 @@ export default function NavDrawer(props: NavDrawerProps) {
                   <div className="text-sm text-primary-static">
                     <BsFillTelephoneFill />
                   </div>
-                  <p className="text-muted text-sm">(44) 331-4514</p>
+                  <p className="text-muted text-sm">(044) 331-4514</p>
                 </div>
               </div>
             </div>

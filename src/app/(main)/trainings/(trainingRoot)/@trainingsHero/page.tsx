@@ -32,7 +32,7 @@ export default function Trainings() {
 
   return (
     <div className="w-full bg-background ">
-      <div className="w-full flex justify-center py-16 bg-primary-static/10 rounded-bl-[450px] rounded-tr-[450px]">
+      <div className="w-full flex justify-center py-16 bg-primary-static/10">
         <Section
           ref={sectionRef}
           style={{ opacity: visibility, scale: visibility }}

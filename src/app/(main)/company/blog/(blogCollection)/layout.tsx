@@ -8,7 +8,8 @@ export const revalidate = 3600;
 
 export const metadata = createMetadata({
   title: 'Blogs',
-  description: 'Learn, Reflect, and Grow with Us',
+  description:
+    'Practical insights on technology, security, and running a modern digital business.',
 });
 
 export default function BlogLayout({
@@ -21,12 +22,13 @@ export default function BlogLayout({
         <Section>
           <div className="space-y-8">
             <BreadCrumbs>
-              <BreadCrumbItem>Blogs</BreadCrumbItem>
+              <BreadCrumbItem>Insights</BreadCrumbItem>
             </BreadCrumbs>
             <div className="space-y-4">
-              <H1 className="text-center">Gain Wisdom Through Our Insights</H1>
+              <H1 className="text-center">Insights for growing businesses</H1>
               <Subheading className="text-center">
-                Learn, Reflect, and Grow with Us
+                Practical thinking on technology, security, and running a modern
+                digital business.
               </Subheading>
             </div>
           </div>

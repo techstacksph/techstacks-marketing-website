@@ -3,12 +3,12 @@ import { type HTMLAttributes, forwardRef } from 'react';
 import { cva } from 'class-variance-authority';
 import { cn } from '@/utils/cn';
 
-const headingVariants = cva('font-poppins', {
+const headingVariants = cva('font-display', {
   variants: {
     level: {
-      1: 'text-3xl font-semibold leading-tight lg:text-5xl xl:text-7xl',
-      2: 'text-3xl font-semibold [&]:leading-normal lg:text-4xl xl:text-5xl',
-      3: 'text-2xl font-medium',
+      1: 'text-4xl font-bold leading-[1.12] tracking-[-0.01em] lg:text-5xl xl:text-6xl',
+      2: 'text-3xl font-bold leading-[1.18] tracking-[-0.01em] lg:text-4xl xl:text-[2.75rem]',
+      3: 'text-xl font-semibold lg:text-2xl',
       4: 'text-xl font-semibold uppercase',
     },
   },
@@ -84,7 +84,7 @@ export const Subheading = forwardRef<HTMLParagraphElement, SubheadingProps>(
       <Comp
         {...props}
         className={cn(
-          'text-base leading-loose text-muted-foreground lg:text-xl',
+          'text-base leading-relaxed text-muted-foreground lg:text-lg',
           className,
         )}
         ref={ref}

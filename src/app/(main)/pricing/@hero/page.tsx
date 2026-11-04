@@ -25,18 +25,11 @@ export default function PricingHero() {
           data-aos-delay={100}
         >
           <H1 className="text-center whitespace-pre-wrap">
-            Your{' '}
-            <span className="font-black text-primary-foreground">
-              Perfect Plan
-            </span>{' '}
-            for
-            {'\n'}Your{' '}
-            <span className="font-black text-primary-foreground">
-              Perfect Business
-            </span>
+            A dedicated team, priced to fit your business
           </H1>
           <Subheading className="text-center">
-            Tailored Solutions to Fuel Your Success
+            Choose the level of delivery capacity you need today, and adjust as
+            you grow.
           </Subheading>
         </div>
 

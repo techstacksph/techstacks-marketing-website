@@ -9,7 +9,7 @@ function NotFoundContent() {
 
   return (
     <div className="py-8">
-      <p className="text-2xl italic text-center text-muted-foreground font-poppins">
+      <p className="text-2xl italic text-center text-muted-foreground font-display">
         Cannot find posts related to{' '}
         <strong className="not-italic text-foreground">
           &quot;{query}&quot;

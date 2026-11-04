@@ -8,7 +8,10 @@ import { env } from '@/env.mjs';
 
 export function Providers({ children }: PropsWithChildren) {
   useEffect(() => {
-    AOS.init({ once: true });
+    AOS.init({
+      once: true,
+      disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+    });
   }, []);
 
   return (
@@ -18,7 +21,7 @@ export function Providers({ children }: PropsWithChildren) {
         trackPageViews
       />
       <ThemeProvider
-        defaultTheme="system"
+        defaultTheme="light"
         enableColorScheme
         enableSystem
         storageKey="theme"

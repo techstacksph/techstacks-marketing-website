@@ -11,11 +11,11 @@ function CareerHero() {
       <div className="grid items-center h-full gap-8 md:gap-4 md:grid-cols-2">
         <div className="flex flex-col items-center gap-4 md:gap-8 md:items-start">
           <h1
-            className="text-3xl font-medium leading-tight tracking-wide text-center whitespace-pre-wrap md:text-7xl md:text-left font-dm-sans"
+            className="text-3xl font-medium leading-tight tracking-wide text-center whitespace-pre-wrap md:text-7xl md:text-left font-display"
             data-aos="fade-up"
           >
             Elevate your career with{'\n'}
-            <span className="text-primary-static font-poppins">
+            <span className="text-primary-static font-display">
               <TechstacksLogo
                 className="inline"
                 data-aos="fade-left"

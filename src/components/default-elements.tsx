@@ -12,7 +12,7 @@ export const Main = forwardRef<HTMLElement, MainProps>(
     const Comp = asChild ? Slot : 'main';
     return (
       <Comp
-        className={cn('space-y-8 overflow-x-clip', className)}
+        className={cn('overflow-x-clip', className)}
         id={id}
         {...props}
         ref={ref}

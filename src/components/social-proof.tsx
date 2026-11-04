@@ -1,49 +1,37 @@
-'use client';
-
 import Image from 'next/image';
-import dynamic from 'next/dynamic';
-import AliceCarousel from 'react-alice-carousel';
 
-const BRANDS = [
-  '/images/social-proof/jobbrew-black.png',
-  '/images/social-proof/dediabetes-black.png',
-  '/images/social-proof/pi-black.png',
-  '/images/social-proof/unpuzzle-black.png',
-  '/images/social-proof/release-black.png',
-  '/images/social-proof/np-black.png',
-  '/images/social-proof/mnm-black.png',
-  '/images/social-proof/agassiz-black.png',
-  '/images/social-proof/thunder-black.png',
+const CLIENTS = [
+  { name: 'NextPay', src: '/images/social-proof/np-black.png' },
+  { name: 'Release Media', src: '/images/social-proof/release-black.png' },
+  { name: 'Portfolio Insider', src: '/images/social-proof/pi-black.png' },
+  { name: 'Unpuzzle', src: '/images/social-proof/unpuzzle-black.png' },
+  { name: 'MNM Customs Brokerage', src: '/images/social-proof/mnm-black.png' },
+  {
+    name: 'Agassiz All Storage',
+    src: '/images/social-proof/agassiz-black.png',
+  },
+  {
+    name: 'Thunder Enterprises',
+    src: '/images/social-proof/thunder-black.png',
+  },
+  { name: 'DeDiabetes', src: '/images/social-proof/dediabetes-black.png' },
+  { name: 'Jobbrew', src: '/images/social-proof/jobbrew-black.png' },
 ] as const;
 
-function SocialProof() {
+export default function SocialProof() {
   return (
-    <AliceCarousel
-      autoPlay
-      autoPlayInterval={3000}
-      controlsStrategy="alternate"
-      disableButtonsControls
-      disableDotsControls
-      infinite
-      items={BRANDS.map((brand, i) => (
-        <div className="flex place-content-center" key={brand}>
+    <ul className="mx-auto flex max-w-4xl flex-wrap items-center justify-center gap-x-10 gap-y-6 lg:gap-x-14">
+      {CLIENTS.map(({ name, src }) => (
+        <li key={name}>
           <Image
-            alt={`Brand ${i}`}
-            className="dark:invert"
-            data-value={i}
+            alt={name}
+            className="h-8 w-auto opacity-70 transition-opacity hover:opacity-100 dark:invert lg:h-9"
             height={36}
-            src={brand}
+            src={src}
             width={125}
           />
-        </div>
+        </li>
       ))}
-      mouseTracking
-      responsive={{
-        0: { items: 2 },
-        768: { items: 4 },
-      }}
-    />
+    </ul>
   );
 }
-
-export default dynamic(() => Promise.resolve(SocialProof), { ssr: false });

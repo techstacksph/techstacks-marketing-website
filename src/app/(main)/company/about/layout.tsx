@@ -1,31 +1,21 @@
 import { type ReactNode } from 'react';
-import { Main, Section } from '@/components/default-elements';
-import { Separator } from '@/components/ui/separator';
+import { Main } from '@/components/default-elements';
 import { createMetadata } from '@/utils/create-metadata';
 
 export const metadata = createMetadata({
   title: 'About us',
-  description: 'Your Trusted Partner in I.T Services Excellence',
+  description:
+    'Techstacks IT Services Inc. helps local and global businesses grow with dependable websites, software, automation, and support.',
 });
 
 export default function AboutLayout(props: Record<string, ReactNode>) {
   return (
     <Main>
-      <div> {props.hero}</div>
-      <Section role="none">
-        <Separator variant="horizon" />
-      </Section>
-      <div> {props.partners}</div>
-      <div> {props.statements}</div>
-      <Section role="none">
-        <Separator variant="horizon" />
-      </Section>
-      <div> {props.coreValues}</div>
-      <div> {props.serviceTools}</div>
-      <Section role="none">
-        <Separator variant="horizon" />
-      </Section>
-      <div> {props.ourTeam}</div>
+      {props.hero}
+      {props.statements}
+      {props.coreValues}
+      {props.serviceTools}
+      {props.ourTeam}
     </Main>
   );
 }

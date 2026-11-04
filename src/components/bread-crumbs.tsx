@@ -13,11 +13,14 @@ export const BreadCrumbs = forwardRef<HTMLDivElement, BreadCrumbsProps>(
   ({ children, className, ...props }, ref) => {
     return (
       <div
-        className={cn('flex flex-row items-center gap-2 text-lg', className)}
+        className={cn(
+          'flex flex-row items-center gap-2 text-sm text-muted-foreground',
+          className,
+        )}
         ref={ref}
         {...props}
       >
-        <Link href={NavRoutes.Home}>
+        <Link aria-label="Home" href={NavRoutes.Home}>
           <GoHome />
         </Link>
         <IoIosArrowForward />
@@ -50,11 +53,7 @@ export const BreadCrumbItem = forwardRef<
 >(({ asChild, className, ...props }, ref) => {
   const Comp = asChild ? Slot : 'p';
   return (
-    <Comp
-      className={cn('text-muted max-w-xs truncate', className)}
-      {...props}
-      ref={ref}
-    />
+    <Comp className={cn('max-w-xs truncate', className)} {...props} ref={ref} />
   );
 });
 BreadCrumbItem.displayName = 'bread-crumb-item';

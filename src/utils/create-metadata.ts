@@ -13,7 +13,7 @@ export function createMetadata({
     title: title ? `${title} | Techstacks` : 'Techstacks IT Services Inc',
     description: description
       ? description
-      : 'Techstacks IT Services Inc. is a team of developers dedicated to helping clients stand out and harness the power of the web. We create beautiful, user-friendly, fast, and secure websites and web applications designed with purpose. Not affiliated with Techstacks IT Web Development Services (sole proprietorship).',
+      : 'Techstacks IT Services Inc. is a technology partner for growing businesses, delivering websites, web applications, automation, cybersecurity, and ongoing support that drive real business results. Not affiliated with Techstacks IT Web Development Services (sole proprietorship).',
     applicationName: 'Techstacks IT Services Inc.',
     publisher: 'Techstacks IT Services Inc.',
     metadataBase:

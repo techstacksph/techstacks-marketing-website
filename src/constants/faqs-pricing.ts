@@ -24,7 +24,7 @@ export const CompanyFaqs: Faq[] = [
       {
         q: 'How can I get in touch with your team?',
         // TODO: contact number within the answer below.
-        a: 'You can reach us through our techstacksph.com on our website. Alternatively, you can email us at techstacks@gmail.com or call us at (44) 331-4514.',
+        a: 'You can reach us through the contact form on our website. Alternatively, you can email us at info@techstacksph.com or call us at (044) 331-4514.',
       },
     ],
   },

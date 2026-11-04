@@ -2,7 +2,7 @@
 
 // eslint-disable-next-line import/named -- no
 import { useWindowScroll } from '@uidotdev/usehooks';
-import { ArrowRight, Menu } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import Link from 'next/link';
 import { companyLink, pagesLink } from '@/constants/nav-links';
 import { NavRoutes } from '@/constants/nav-routes';
@@ -28,46 +28,63 @@ export default function Header() {
   return (
     <header
       className={cn(
-        'sticky top-0 z-50 h-16 transition-all backdrop-blur-sm border-b border-transparent bg-gradient-to-r from-primary/0 to-transparent',
-        Boolean(y) && 'from-primary/100 border-border',
+        'sticky top-0 z-50 h-16 border-b border-transparent bg-background/95 backdrop-blur-sm transition-colors',
+        Boolean(y) && 'border-border',
       )}
     >
-      <div className="h-full px-4 mx-auto max-w-7xl">
-        <div className="flex items-center justify-between h-full">
+      <div className="mx-auto h-full max-w-7xl px-4">
+        <div className="flex h-full items-center justify-between">
           <NavDrawer className="block lg:hidden">
-            <Button className="flex self-center" size="icon" variant="ghost">
+            <Button
+              aria-label="Open menu"
+              className="flex self-center"
+              size="icon"
+              variant="ghost"
+            >
               <Menu />
             </Button>
           </NavDrawer>
-          <Link className="hover:animate-mask-logo" href={NavRoutes.Home}>
-            <BrandLogo
-              className={cn(
-                'text-primary-static dark:text-primary-foreground',
-                Boolean(y) && 'text-white',
-              )}
-            />
+          <Link aria-label="Techstacks home" href={NavRoutes.Home}>
+            <BrandLogo className="text-primary-static" />
           </Link>
           <NavigationMenu>
-            <NavigationMenuList className="flex flex-row gap-4">
+            <NavigationMenuList className="flex flex-row gap-1">
+              {pagesLink.map((page) => (
+                <NavigationMenuItem
+                  className="hidden lg:block"
+                  key={page.title}
+                >
+                  <NavigationMenuLink
+                    asChild
+                    className={navigationMenuTriggerStyle({
+                      className:
+                        'border-transparent bg-transparent font-display',
+                      variant: 'link',
+                    })}
+                  >
+                    <Link href={page.href}>{page.title}</Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+              ))}
               {companyLink.map((company) => (
                 <NavigationMenuItem
                   className="hidden lg:block"
                   key={company.title}
                 >
                   <NavigationMenuTrigger
-                    className="bg-transparent border-transparent font-poppins"
+                    className="border-transparent bg-transparent font-display"
                     variant="link"
                   >
                     {company.title}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="w-[450px] px-2 py-2">
+                    <ul className="w-[420px] p-2">
                       {company.link.map(
                         ({ Icon, description, href, label }) => (
                           <ListItem
-                            className="flex flex-row w-full gap-2 cursor-pointer"
+                            className="flex w-full cursor-pointer flex-row gap-2"
                             href={href}
-                            icon={<Icon className="w-8 h-6" />}
+                            icon={<Icon className="h-6 w-8" />}
                             key={label}
                             title={label}
                           >
@@ -79,29 +96,9 @@ export default function Header() {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
               ))}
-              {pagesLink.map((page) => (
-                <NavigationMenuItem
-                  className="hidden lg:block"
-                  key={page.title}
-                >
-                  <NavigationMenuLink
-                    asChild
-                    className={navigationMenuTriggerStyle({
-                      className:
-                        'font-poppins border-transparent bg-transparent',
-                      variant: 'link',
-                    })}
-                  >
-                    <Link href={page.href as string}>{page.title}</Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-              ))}
-              <NavigationMenuItem className="hidden lg:block">
-                <Button asChild className="items-center" variant="outline">
-                  <Link href={NavRoutes.Contact}>
-                    Get in touch
-                    <ArrowRight className="inline w-4 h-4 ml-2" />
-                  </Link>
+              <NavigationMenuItem className="ml-3 hidden lg:block">
+                <Button asChild>
+                  <Link href={NavRoutes.Contact}>Talk to our team</Link>
                 </Button>
               </NavigationMenuItem>
               <NavigationMenuItem>

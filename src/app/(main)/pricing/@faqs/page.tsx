@@ -39,10 +39,10 @@ export default function FaqsSection() {
       </div>
       <div className="py-28 flex flex-col justify-center gap-6 items-center">
         <H2 data-aos="fade-up" data-aos-delay={200}>
-          Still have a questions?
+          Still have questions?
         </H2>
         <Subheading data-aos="fade-up" data-aos-delay={300}>
-          Get in Touch for Answers and Assistance
+          Our team is happy to help.
         </Subheading>
         <Button
           asChild

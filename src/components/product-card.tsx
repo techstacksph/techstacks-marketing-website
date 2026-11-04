@@ -35,11 +35,11 @@ export function ProductCard({
 
   return (
     <GlowCard data-aos="fade-up" data-aos-delay={100}>
-      <div className="border h-full flex flex-col w-full hover:shadow-primary-static/2 p-4 rounded-lg shadow hover:shadow-lg hover:shadow-primary-static/20 delay-20 hover:scale-105 hover:border transition-all ease-in-out duration-300 space-y-3">
+      <div className="flex h-full w-full flex-col space-y-3 p-4">
         <div className="hover:cursor-pointer w-full">
           <Image
             alt={title}
-            className="w-full h-48 object-cover object-top border-2 shadow-sm rounded-md"
+            className="w-full h-48 object-cover object-top rounded-lg border"
             src={image}
           />
         </div>
@@ -52,21 +52,14 @@ export function ProductCard({
         </div>
 
         <div className="grid grid-cols-2 gap-4 items-end">
-          <Button
-            className="items-center w-full border-2"
-            onClick={handleOpen}
-            variant="outline"
-          >
+          <Button className="w-full" onClick={handleOpen} variant="outline">
             View
           </Button>
-          <Link href={`/products/inquire?item=${encodeURIComponent(id)}`}>
-            <Button className="relative inline-flex items-center justify-start w-full p-3 overflow-hidden font-medium transition-all bg-white border rounded dark:bg-transparent border-primary-static group">
-              <span className="w-48 h-48 rounded rotate-[-40deg] bg-primary-static absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0" />
-              <span className="relative w-full text-center text-black transition-colors duration-300 ease-in-out dark:text-white group-hover:text-white dark:group-hover:text-black">
-                Inquire
-              </span>
-            </Button>
-          </Link>
+          <Button asChild className="w-full">
+            <Link href={`/products/inquire?item=${encodeURIComponent(id)}`}>
+              Inquire
+            </Link>
+          </Button>
         </div>
       </div>
 
