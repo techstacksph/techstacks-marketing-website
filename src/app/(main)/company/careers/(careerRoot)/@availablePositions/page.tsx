@@ -47,7 +47,7 @@ export default function AvailablePositionsSection() {
   return (
     <Section>
       <H2
-        className="[&&]:leading-tight whitespace-pre-wrap  font-dm-sans"
+        className="[&&]:leading-tight whitespace-pre-wrap  font-display"
         data-aos="fade-up"
       >
         Browse Current Open Positions

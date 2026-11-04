@@ -14,6 +14,7 @@ import ledConference from '@/assets/images/led/conference-led.jpg';
 import leadVisionLogo from '@/assets/images/led/lead-vision-squared.png';
 import ledBanner from '@/assets/images/led/led-banner.webp';
 import techstacksLogoBox from '@/assets/images/logo/techstacks-box-logo.jpg';
+import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import {
   Accordion,
@@ -25,7 +26,7 @@ import {
 export const metadata = createMetadata({
   title: 'LED Display',
   description:
-    'High-impact LED display solutions for retail, events, signage, and brand experiences.',
+    'Own your LED displays instead of renting. Event-grade LED solutions for retail, events, signage, and brand experiences in the Philippines.',
 });
 
 // const FEATURES = [
@@ -88,20 +89,20 @@ const TECHSTACKS_SOLUTION_CARDS = [
 
 export default function LedPage() {
   return (
-    <Main className="overflow-clip">
+    <Main>
       <LedHero />
 
       <Section className="space-y-16  py-14 lg:py-20">
         <div className="mx-auto space-y-8 ">
           <div className="flex flex-col items-center gap-4 text-center">
-            <div className="inline-flex items-center justify-center rounded-full bg-primary-static/10 px-4 py-2 text-sm font-semibold uppercase tracking-[0.22em] text-primary-static">
-              Global Partnership
+            <div className="inline-flex items-center justify-center text-xs font-bold uppercase tracking-[0.16em] text-primary-static lg:text-sm">
+              Global partnership
             </div>
             <H2>Partnered with Lead Vision</H2>
             <div className="max-w-3xl space-y-4 text-sm leading-7 text-slate-700 dark:text-slate-300">
               <p>
-                Lead Vision is a professional and high-tech company which
-                majorly engages in all kinds of LED Display.
+                Lead Vision is a professional, high-tech company specializing in
+                all kinds of LED displays.
               </p>
               <p>
                 With 20 years of manufacturing experience, they have reached
@@ -147,7 +148,7 @@ export default function LedPage() {
       <Separator variant="horizon" />
 
       <div className="w-full ">
-        <div className="w-full flex justify-center py-16 bg-background rounded-tr-[150px] md:rounded-tr-[250px] lg:rounded-tr-[450px]">
+        <div className="w-full flex justify-center py-16 bg-background ">
           <Section className="space-y-16">
             <div className="flex flex-col items-center gap-8">
               <div className="flex flex-col items-center gap-4">
@@ -157,7 +158,7 @@ export default function LedPage() {
                   data-aos-delay={100}
                 >
                   {' '}
-                  Renting LED Screens Is Costing You More Than You Think{' '}
+                  Renting LED screens is costing you more than you think{' '}
                 </H2>
               </div>
             </div>
@@ -192,7 +193,7 @@ export default function LedPage() {
 
                   <AccordionItem value="item-3">
                     <AccordionTrigger className="text-left">
-                      You &apos; re dependent on other suppliers
+                      You&apos;re dependent on other suppliers
                     </AccordionTrigger>
                     <AccordionContent>
                       Relying on rental providers means your projects are
@@ -240,7 +241,7 @@ export default function LedPage() {
                       data-aos="fade-up"
                       data-aos-delay={100}
                     >
-                      Why Smart Event Businesses Buy from Techstacks
+                      Why smart event businesses buy from Techstacks
                     </H2>
                     <Subheading
                       className="text-center"
@@ -257,7 +258,7 @@ export default function LedPage() {
                   {TECHSTACKS_SOLUTION_CARDS.map(
                     ({ title, icon: Icon }, index) => (
                       <GlowCard
-                        className="h-full min-h-[280px] w-full"
+                        className="h-full w-full"
                         data-aos="fade-up"
                         data-aos-delay={200 + index * 100}
                         key={title}
@@ -265,14 +266,13 @@ export default function LedPage() {
                         <GlowCardContent className="p-6 h-full flex flex-col">
                           <div className="flex flex-col justify-between h-full gap-6">
                             <div className="space-y-4">
-                              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-950/80 text-primary-static">
+                              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-accent text-accent-foreground">
                                 <Icon className="h-6 w-6" />
                               </div>
                               <H3 className="leading-tight text-slate-900 dark:text-slate-100">
                                 {title}
                               </H3>
                             </div>
-                            <div className="h-1 w-20 rounded-full bg-primary-static" />
                           </div>
                         </GlowCardContent>
                       </GlowCard>
@@ -291,7 +291,7 @@ export default function LedPage() {
                     data-aos="fade-up"
                     data-aos-delay={100}
                   >
-                    Ideal Use Cases
+                    Ideal use cases
                   </H2>
                   <Subheading
                     className="text-center"
@@ -391,11 +391,11 @@ export default function LedPage() {
               </div>
             </div> */}
 
-            <div className="w-full rounded-2xl overflow-hidden">
+            <div className="w-full overflow-hidden rounded-2xl bg-ink">
               <div className="relative h-64 w-full md:h-56 lg:h-72">
                 <Image
                   alt="LED Banner"
-                  className="object-cover opacity-50 "
+                  className="object-cover opacity-40"
                   fill
                   src={ledBanner}
                 />
@@ -404,23 +404,22 @@ export default function LedPage() {
                   <div className="w-full max-w-7xl mx-auto px-4">
                     <div className="flex flex-col items-start gap-6 py-6 md:flex-row md:items-center md:justify-between">
                       <div className="md:pl-4 lg:pl-6">
-                        <H2 className="text-white text-lg md:text-xl">
-                          Turn LED Screens Into a Profit-Generating Asset
+                        <H2 className="text-xl text-white md:text-2xl">
+                          Turn LED screens into a profit-generating asset
                         </H2>
                         <p className="mt-2 text-white/90">
                           Get pricing, specs and payment options today
                         </p>
                       </div>
                       <div className="w-full md:w-auto">
-                        <Link
-                          className="relative inline-flex h-14 w-full items-center justify-start overflow-hidden rounded border border-primary-static bg-transparent p-3 font-medium transition-all group md:w-52"
-                          href={NavRoutes.LEDInquire}
+                        <Button
+                          asChild
+                          className="w-full md:w-auto"
+                          size="lg"
+                          variant="mint"
                         >
-                          <span className="absolute bottom-0 left-0 hidden h-48 w-48 translate-y-full -translate-x-full rotate-[-40deg] rounded bg-primary-static ease-out transition-all duration-500 md:block md:mb-9 md:ml-9 md:group-hover:mb-32 md:group-hover:ml-0 md:group-hover:translate-x-0" />
-                          <span className="relative w-full text-center text-white transition-colors duration-300 ease-in-out md:group-hover:text-white">
-                            Inquire Now
-                          </span>
-                        </Link>
+                          <Link href={NavRoutes.LEDInquire}>Inquire now</Link>
+                        </Button>
                       </div>
                     </div>
                   </div>

@@ -78,7 +78,7 @@ export function BlackBearForm() {
   // const emailPattern = /^S+@S+$/i;
 
   return (
-    <div className="flex justify-center w-full py-10 px-3 font-poppins ">
+    <div className="flex justify-center w-full py-10 px-3 font-display ">
       <form
         className="flex-col flex  w-full max-w-lg space-y-4 p-3 shadow-3xl "
         onSubmit={handleSubmit(onSubmit)}

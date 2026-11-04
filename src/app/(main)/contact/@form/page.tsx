@@ -86,9 +86,9 @@ export default function ContactForm() {
           })}
         >
           <CardHeader>
-            <CardDescription className="text-center">
-              We&apos;re eager to hear from you! Fill out the form below, and
-              we&apos;ll reach out to you at our earliest convenience.
+            <CardDescription>
+              Fill out the form below, and we&apos;ll reach out to you at our
+              earliest convenience.
             </CardDescription>
           </CardHeader>
 
@@ -200,7 +200,7 @@ export default function ContactForm() {
                 name="message"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Message</FormLabel>
+                    <FormLabel>What can we help you with?</FormLabel>
                     <FormControl>
                       <Textarea {...field} />
                     </FormControl>
@@ -211,8 +211,8 @@ export default function ContactForm() {
             </div>
           </CardContent>
 
-          <CardFooter className="justify-center">
-            <SubmitButton variant="secondary">Submit</SubmitButton>
+          <CardFooter>
+            <SubmitButton className="w-full">Send message</SubmitButton>
           </CardFooter>
         </form>
       </Form>

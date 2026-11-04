@@ -76,6 +76,12 @@ const config = {
         neutral: {
           600: 'hsl(var(--neutral-600))',
         },
+        surface: 'hsl(var(--surface))',
+        ink: {
+          DEFAULT: 'hsl(var(--ink))',
+          foreground: 'hsl(var(--ink-foreground))',
+        },
+        mint: 'hsl(var(--mint))',
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -129,8 +135,7 @@ const config = {
         '2xl': '1536px',
       },
       fontFamily: {
-        'dm-sans': 'var(--font-dm-sans)',
-        poppins: 'var(--font-poppins)',
+        display: 'var(--font-display)',
         inter: 'var(--font-inter)',
       },
       backgroundImage: {

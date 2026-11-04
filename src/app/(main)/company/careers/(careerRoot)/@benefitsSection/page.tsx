@@ -1,80 +1,53 @@
-import Image from 'next/image';
-import { careerTeam } from '@/assets/images';
 import { BenefitCard } from '@/components/benefit-card';
-import { Section } from '@/components/default-elements';
-import { H2, Subheading } from '@/components/ui/typography';
+import { Band, SectionHeader } from '@/components/marketing';
 
 const BENEFITS = [
   {
-    title: 'We are Team',
+    title: 'One team',
     description:
-      'We are one. We are a Team. Everyone is involved and nobody is left behind.',
+      'Everyone is involved and nobody is left behind. We succeed together.',
   },
   {
-    title: 'Good Balance',
+    title: 'Good balance',
     description:
-      "We value everyone's time. Experience the good work-life balance with Techstacks.",
+      "We value everyone's time, and we support a healthy work-life balance.",
   },
   {
-    title: 'We are Modern',
+    title: 'Modern work',
     description:
-      'We work on cutting edge technology to develop and grow as a professional.',
+      'Grow as a professional by working with current, in-demand technology.',
   },
   {
     title: 'Accountability',
     description:
-      "We're committed to transparency and honesty, earning the trust of our customers and partners",
+      'We are committed to transparency and honesty, earning the trust of our customers and partners.',
   },
   {
     title: 'Flexibility',
     description:
-      'Choose your work location, and have the opportunity to meet up with your colleagues in a fresh setting',
+      'Choose your work location, with the chance to meet up with colleagues in a fresh setting.',
   },
   {
     title: 'Growth',
     description:
-      'Nurture professional growth as you embark on a journey with us, discovering new opportunities',
+      'Build your career with us and discover new opportunities as you take on more.',
   },
 ] as const;
 
 export default function BenefitsSection() {
   return (
-    <Section>
-      <div className="relative flex flex-col items-center md:items-start gap-20 md:flex-row">
-        <div className="w-full max-w-md md:sticky top-24">
-          <div className="w-full  space-y-2">
-            <H2
-              className="[&&]:leading-tight whitespace-pre-wrap md:text-left text-center"
-              data-aos="fade-up"
-            >
-              <span className="text-primary-static">Be one of us</span> at{'\n'}
-              <span className="text-primary-static font-poppins">
-                <span className="tracking-normal">Techstacks</span>
-              </span>
-            </H2>
-            <Subheading
-              className="text-base text-center md:text-lg text-muted md:text-left"
-              data-aos="fade-up"
-              data-aos-delay={100}
-            >
-              If you enjoy working with motivated peers, collaborating to solve
-              challenging problems about the web, we’d love to hear from you..
-            </Subheading>
-
-            <Image
-              alt="Career team"
-              data-aos="fade-up"
-              data-aos-delay={200}
-              src={careerTeam}
-            />
-          </div>
-        </div>
-        <div className="grid w-full lg:grid-rows-3 lg:grid-cols-2 gap-x-6 gap-y-8 md:gap-y-10">
-          {BENEFITS.map((benefit, i) => (
-            <BenefitCard index={i} key={benefit.title} {...benefit} />
-          ))}
-        </div>
+    <Band>
+      <SectionHeader
+        className="mb-10 lg:mb-14"
+        description="If you enjoy working with motivated peers and solving challenging problems on the web, we'd love to hear from you."
+        eyebrow="Why join us"
+        title="A place to do your best work"
+      />
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {BENEFITS.map((benefit) => (
+          <BenefitCard key={benefit.title} {...benefit} />
+        ))}
       </div>
-    </Section>
+    </Band>
   );
 }

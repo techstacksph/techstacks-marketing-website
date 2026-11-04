@@ -9,7 +9,7 @@ import {
   ImageSeven,
   ImageEight,
 } from '@/assets/images';
-import { cn } from '@/utils/cn';
+import { Section } from '@/components/default-elements';
 
 const CAREERIMAGE = [
   {
@@ -41,26 +41,21 @@ const CAREERIMAGE = [
 
 export default function TeamDinnerSection() {
   return (
-    <div className="flex justify-center w-full">
-      <div className="w-full">
-        <div className="flex flex-row items-center justify-center w-full">
-          {CAREERIMAGE.map(({ id, imgSrc, title }, index) => (
-            <div
-              className={cn(
-                'w-full max-w-fit  ',
-                index % 2 ? 'rotate-12' : '-rotate-12',
-              )}
-              key={id}
-            >
+    <div className="w-full bg-surface">
+      <Section className="py-12 lg:py-16">
+        <ul className="grid grid-cols-2 gap-4 md:grid-cols-5">
+          {CAREERIMAGE.map(({ id, imgSrc }) => (
+            <li key={id}>
               <Image
-                alt={title}
-                className="w-full h-auto opacity-80 hover:opacity-100 hover:transition hover:delay-100"
+                alt="Techstacks team gathering"
+                className="aspect-square w-full rounded-xl object-cover"
+                sizes="(min-width: 768px) 20vw, 50vw"
                 src={imgSrc}
               />
-            </div>
+            </li>
           ))}
-        </div>
-      </div>
+        </ul>
+      </Section>
     </div>
   );
 }

@@ -47,7 +47,7 @@ export default function TraineesWorksParallax() {
           <div className="border pointer-events-auto bg-primary/80 backdrop-blur border-border rounded-2xl">
             <div className="px-6 py-4">
               <Link
-                className=" flex flex-row gap-2 items-center font-poppins text-xl md:text-3xl lg:text-5xl hover:text-white hover:dark:text-primary-static [&>span]:hover:animate-bounce"
+                className=" flex flex-row gap-2 items-center font-display text-xl md:text-3xl lg:text-5xl hover:text-white hover:dark:text-primary-static [&>span]:hover:animate-bounce"
                 href={NavRoutes.OjtWorks}
               >
                 Explore their works

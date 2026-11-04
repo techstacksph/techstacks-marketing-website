@@ -28,10 +28,10 @@ const ListItem = forwardRef<ElementRef<'a'>, ListItemProps>(
             ) : null}{' '}
             {/* Add icon here */}
             <div className="flex flex-col gap-1">
-              <p className="text-sm font-medium leading-none font-poppins">
+              <p className="text-sm font-medium leading-none font-display">
                 {title}
               </p>
-              <p className="text-sm leading-snug font-dm-sans line-clamp-2 text-muted-foreground group-hover:text-black dark:group-hover:text-white">
+              <p className="text-sm leading-snug font-display line-clamp-2 text-muted-foreground group-hover:text-black dark:group-hover:text-white">
                 {children}
               </p>
             </div>
@@ -61,10 +61,10 @@ export { ListItem };
 //           ref={ref}
 //           {...props}
 //         >
-//           <p className="text-sm font-medium leading-none font-poppins">
+//           <p className="text-sm font-medium leading-none font-display">
 //             {title}
 //           </p>
-//           <p className="text-sm leading-snug font-dm-sans line-clamp-2   text-muted-foreground group-hover:text-accent-foreground">
+//           <p className="text-sm leading-snug font-display line-clamp-2   text-muted-foreground group-hover:text-accent-foreground">
 //             {children}
 //           </p>
 //         </Link>

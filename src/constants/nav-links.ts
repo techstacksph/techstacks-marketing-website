@@ -12,28 +12,27 @@ export const companyLink = [
         label: 'About us',
         href: NavRoutes.Company.AboutUs,
         description:
-          'Our team is passionate about assisting clients in making a standout online presence. We specialize in creating visually stunning, user-centric, speedy, and safe websites that drive exceptional engagement and conversions.',
+          'Who we are, what we stand for, and why businesses trust us as their technology partner.',
         Icon: AboutIcon,
       },
       {
         label: 'Our team',
         href: NavRoutes.Company.OurTeam,
         description:
-          'Get to know the people behind our success—the dynamic individuals that form our web development family.',
+          'Meet the leaders, developers, and specialists behind your project.',
         Icon: OurTeamIcon,
       },
       {
-        label: 'Blogs',
+        label: 'Insights',
         href: NavRoutes.Company.Blog,
         description:
-          'Explore, learn, and embark on a journey towards digital excellence.',
+          'Practical insights on technology and running a digital business.',
         Icon: BlogIcon,
       },
       {
         label: 'Careers',
         href: NavRoutes.Company.Careers,
-        description:
-          'Discover exciting career prospects at our firm, where innovation meets expertise.',
+        description: 'Build your career on real projects for real businesses.',
         Icon: CareerNavIcon,
       },
     ],
